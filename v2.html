@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ภูเก็ตเลิฟพาราไดซ์ — ทัวร์หรูหราในภูเก็ต</title>
+<meta name="description" content="ภูเก็ตเลิฟพาราไดซ์ บริการทัวร์หรูหราในภูเก็ต สัมผัสความงดงามของทะเลอันดามันกับทีมงานมืออาชีพ พร้อมบริการส่วนตัวที่ใส่ใจทุกรายละเอียด" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@0.460.0"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0a1628;
+  --navy-mid:#112240;
+  --navy-soft:#1a2e4a;
+  --gold:#c9a040;
+  --gold-light:#e8c56a;
+  --gold-dim:#9a7830;
+  --ivory:#faf6ee;
+  --ivory-dk:#f0e8d5;
+  --teal:#1d6a7a;
+  --txt-dark:#1a1a2e;
+  --txt-mid:#4a506a;
+  --txt-lt:#f0ead6;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'IBM Plex Sans Thai','Sukhumvit Set',sans-serif;
+  font-size:16px;
+  line-height:1.85;
+  color:var(--txt-dark);
+  background:var(--ivory);
+  word-break:break-word;
+  overflow-wrap:break-word;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+
+/* ── NAVBAR ── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 1.25rem;
+  transition:background .4s,padding .4s,box-shadow .4s;
+}
+.nav.scrolled{
+  background:rgba(10,22,40,.96);
+  backdrop-filter:blur(14px);
+  padding:.7rem 1.25rem;
+  box-shadow:0 2px 28px rgba(0,0,0,.45);
+}
+.nav__brand{line-height:1.2}
+.nav__brand-th{font-size:.78rem;font-weight:600;color:var(--gold)}
+.nav__brand-en{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:#fff;letter-spacing:.05em}
+.nav__right{display:flex;align-items:center;gap:1rem}
+.nav__links{display:none;list-style:none;gap:1.6rem;align-items:center}
+.nav__links a{color:rgba(255,255,255,.82);font-size:.875rem;font-weight:500;padding:.45rem 0;transition:color .2s}
+.nav__links a:hover{color:var(--gold)}
+.lang-sw{
+  display:flex;align-items:center;gap:.3rem;
+  color:rgba(255,255,255,.75);font-size:.78rem;font-weight:600;
+  padding:.3rem .45rem;border-radius:4px;transition:color .2s;
+  white-space:nowrap;
+}
+.lang-sw:hover{color:var(--gold)}
+.nav__burger{background:none;border:none;cursor:pointer;color:#fff;padding:.2rem;display:flex;align-items:center;min-height:44px;min-width:44px;justify-content:center}
+.nav__drawer{
+  display:none;flex-direction:column;
+  position:absolute;top:100%;left:0;right:0;
+  background:rgba(10,22,40,.98);backdrop-filter:blur(14px);
+  border-top:1px solid rgba(201,160,64,.25);
+  padding:.5rem 1.25rem 1.25rem;
+}
+.nav__drawer.open{display:flex}
+.nav__drawer a{
+  color:rgba(255,255,255,.82);font-size:1rem;font-weight:500;
+  padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.07);transition:color .2s;
+}
+.nav__drawer a:last-child{border-bottom:none}
+.nav__drawer a:hover{color:var(--gold)}
+@media(min-width:768px){
+  .nav{padding:1.3rem 3rem}
+  .nav.scrolled{padding:.8rem 3rem}
+  .nav__links{display:flex}
+  .nav__burger{display:none}
+}
+
+/* ── HERO ── */
+.hero{
+  position:relative;height:100vh;min-height:580px;
+  display:flex;align-items:flex-end;overflow:hidden;
+}
+.hero__bg{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1697160527165-b8c94eabcff7?w=1600&h=900&fit=crop') center/cover no-repeat;
+  animation:kbzoom 20s ease-in-out infinite alternate;
+}
+@keyframes kbzoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+.hero__veil{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,22,40,.92) 0%,rgba(10,22,40,.45) 55%,rgba(10,22,40,.15) 100%);
+}
+.hero__content{
+  position:relative;z-index:2;width:100%;
+  padding:2.5rem 1.25rem 4.5rem;
+  max-width:860px;
+}
+.hero__badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(201,160,64,.18);border:1px solid rgba(201,160,64,.45);
+  color:var(--gold-light);font-size:.75rem;font-weight:600;
+  padding:.38rem .9rem;border-radius:100px;margin-bottom:1.1rem;
+}
+.hero__title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,6.5vw,4.2rem);
+  font-weight:700;color:#fff;line-height:1.45;
+  margin-bottom:.9rem;
+}
+.hero__title .gold{color:var(--gold)}
+.hero__sub{
+  color:rgba(240,234,214,.82);
+  font-size:clamp(.9rem,2.2vw,1.05rem);
+  line-height:1.95;max-width:520px;
+  margin-bottom:2rem;
+}
+.hero__btns{display:flex;flex-direction:column;gap:.8rem}
+.btn-gold{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  background:var(--gold);color:var(--navy);
+  font-family:inherit;font-weight:700;font-size:.9rem;
+  padding:.9rem 1.9rem;border-radius:100px;border:none;cursor:pointer;
+  transition:background .3s,transform .3s,box-shadow .3s;
+  min-height:48px;white-space:nowrap;
+}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 22px rgba(201,160,64,.45)}
+.btn-ghost{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  background:transparent;color:#fff;
+  font-family:inherit;font-weight:600;font-size:.9rem;
+  padding:.9rem 1.9rem;border-radius:100px;border:1px solid rgba(255,255,255,.45);cursor:pointer;
+  transition:border-color .3s,color .3s,transform .3s;min-height:48px;white-space:nowrap;
+}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.hero__scroll{
+  position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.35rem;
+  color:rgba(255,255,255,.45);font-size:.7rem;
+  animation:bounce 2.2s ease-in-out infinite;z-index:3;
+}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+@media(min-width:768px){
+  .hero__content{padding:3rem 4rem 5.5rem}
+  .hero__btns{flex-direction:row}
+}
+
+/* ── WAVE SEPARATOR ── */
+.wsep{display:block;line-height:0;overflow:hidden}
+.wsep svg{display:block;width:100%}
+
+/* ── SHARED SECTION ── */
+.sec{padding:4.5rem 1.25rem}
+@media(min-width:768px){.sec{padding:6rem 4rem}}
+@media(min-width:1200px){.sec{padding:6.5rem 6rem}}
+.container{max-width:1160px;margin:0 auto}
+.sec-label{
+  display:flex;align-items:center;gap:.6rem;
+  color:var(--gold);font-size:.72rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.14em;margin-bottom:.65rem;
+}
+.sec-label::after{content:'';display:block;width:2rem;height:1px;background:var(--gold)}
+.sec-label.center{justify-content:center}
+.sec-label.center::before{content:'';display:block;width:2rem;height:1px;background:var(--gold)}
+.sec-label.center::after{display:none}
+.sec-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.7rem,4.5vw,2.6rem);
+  font-weight:700;line-height:1.45;color:var(--navy);
+  margin-bottom:.9rem;
+}
+.sec-title.lt{color:#fff}
+.sec-desc{color:var(--txt-mid);font-size:.95rem;line-height:1.95;max-width:560px}
+.sec-desc.lt{color:rgba(240,234,214,.72)}
+.center-text{text-align:center}
+.center-text .sec-desc{margin:0 auto}
+
+/* ── ABOUT ── */
+.about{background:var(--navy)}
+.about__inner{display:flex;flex-direction:column;gap:3rem}
+.about__imgs{position:relative;height:320px;flex-shrink:0}
+.about__img-a{
+  position:absolute;right:0;top:0;width:72%;height:88%;
+  object-fit:cover;border-radius:16px;
+}
+.about__img-b{
+  position:absolute;left:0;bottom:0;width:52%;height:55%;
+  object-fit:cover;border-radius:14px;
+  border:4px solid var(--navy);
+}
+.about__badge{
+  position:absolute;top:50%;left:calc(52% - 44px);transform:translate(-50%,-50%);
+  background:var(--gold);color:var(--navy);border-radius:50%;
+  width:78px;height:78px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-weight:700;font-size:1.1rem;line-height:1.1;z-index:2;
+  box-shadow:0 4px 18px rgba(201,160,64,.55);
+}
+.about__badge small{font-size:.58rem;font-weight:600}
+.about__feats{display:flex;flex-direction:column;gap:.9rem;margin-top:1.75rem}
+.about__feat{
+  display:flex;align-items:flex-start;gap:.9rem;
+  background:rgba(255,255,255,.05);border:1px solid rgba(201,160,64,.14);
+  border-radius:12px;padding:1.1rem;
+  transition:background .3s,border-color .3s;
+}
+.about__feat:hover{background:rgba(201,160,64,.08);border-color:rgba(201,160,64,.3)}
+.about__feat-ic{color:var(--gold);flex-shrink:0;margin-top:.15rem}
+.about__feat h4{color:#fff;font-size:.9rem;font-weight:600;margin-bottom:.2rem;line-height:1.5}
+.about__feat p{color:rgba(240,234,214,.6);font-size:.82rem;line-height:1.85}
+@media(min-width:768px){
+  .about__inner{flex-direction:row;align-items:center;gap:5rem}
+  .about__text{flex:1}
+  .about__imgs{flex:0 0 420px;height:440px}
+  .about__img-a{width:74%;height:86%}
+  .about__img-b{width:54%;height:54%}
+}
+
+/* ── TOURS ── */
+.tours{background:var(--ivory)}
+.tour-row{
+  display:flex;flex-direction:column;gap:1.75rem;
+  background:#fff;border-radius:22px;
+  box-shadow:0 4px 30px rgba(0,0,0,.07);
+  padding:2rem;margin-bottom:2.5rem;
+  transition:box-shadow .3s,transform .3s;
+}
+.tour-row:hover{box-shadow:0 14px 48px rgba(0,0,0,.13);transform:translateY(-4px)}
+.tour-row:last-child{margin-bottom:0}
+.tour-row__pic{
+  position:relative;border-radius:14px;overflow:hidden;height:230px;flex-shrink:0;
+}
+.tour-row__pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.tour-row:hover .tour-row__pic img{transform:scale(1.05)}
+.tour-row__tag{
+  position:absolute;top:.85rem;left:.85rem;
+  background:var(--gold);color:var(--navy);
+  font-size:.7rem;font-weight:700;padding:.3rem .8rem;border-radius:100px;
+}
+.tour-row__body h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.35rem;font-weight:700;color:var(--navy);
+  line-height:1.5;margin-bottom:.65rem;
+}
+.tour-row__body p{color:var(--txt-mid);font-size:.9rem;line-height:1.95;margin-bottom:1.1rem}
+.tour-meta{display:flex;flex-wrap:wrap;gap:.85rem;margin-bottom:1.1rem}
+.tour-meta-i{display:flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--txt-mid)}
+.tour-meta-i svg{color:var(--gold)}
+.tour-hl{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem}
+.tour-hl li{display:flex;align-items:flex-start;gap:.5rem;font-size:.87rem;color:var(--txt-mid);line-height:1.85}
+.tour-hl li svg{color:var(--gold);flex-shrink:0;margin-top:.22rem}
+.tour-price{display:flex;align-items:baseline;gap:.35rem;margin-bottom:1.1rem}
+.tour-price .lbl{font-size:.75rem;color:var(--txt-mid)}
+.tour-price .amt{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--navy)}
+.tour-price .per{font-size:.75rem;color:var(--txt-mid)}
+@media(min-width:768px){
+  .tour-row{flex-direction:row;align-items:stretch;gap:2.5rem}
+  .tour-row:nth-child(even){flex-direction:row-reverse}
+  .tour-row__pic{flex:0 0 380px;height:320px}
+  .tour-row__body{flex:1;display:flex;flex-direction:column;justify-content:center}
+}
+
+/* ── EXPERIENCES ── */
+.exp{background:var(--navy)}
+.exp__hdr .sec-title{color:#fff}
+.exp__scroll{
+  display:flex;gap:1.1rem;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom:1rem;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:thin;scrollbar-color:var(--gold) rgba(255,255,255,.1);
+}
+.exp__scroll::-webkit-scrollbar{height:3px}
+.exp__scroll::-webkit-scrollbar-track{background:rgba(255,255,255,.1);border-radius:2px}
+.exp__scroll::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+.exp-card{
+  flex:0 0 250px;scroll-snap-align:start;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(201,160,64,.18);
+  border-radius:18px;overflow:hidden;
+  transition:transform .3s,border-color .3s;
+}
+.exp-card:hover{transform:translateY(-6px);border-color:rgba(201,160,64,.45)}
+.exp-card__img{height:160px;position:relative;overflow:hidden}
+.exp-card__img img{width:100%;height:100%;object-fit:cover}
+.exp-card__img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,22,40,.7) 0%,transparent 55%);
+}
+.exp-card__body{padding:1.1rem}
+.exp-card__ic{
+  width:36px;height:36px;border-radius:9px;
+  background:rgba(201,160,64,.15);display:flex;align-items:center;justify-content:center;
+  color:var(--gold);margin-bottom:.65rem;
+}
+.exp-card__ttl{color:#fff;font-size:.95rem;font-weight:600;margin-bottom:.4rem;line-height:1.5}
+.exp-card__txt{color:rgba(240,234,214,.62);font-size:.8rem;line-height:1.85}
+
+/* ── STATS ── */
+.stats{position:relative;overflow:hidden}
+.stats__bg{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1585970745101-353702d5a32a?w=1600&h=700&fit=crop') center/cover no-repeat;
+}
+.stats__veil{position:absolute;inset:0;background:rgba(10,22,40,.84)}
+.stats__inner{position:relative;z-index:2;padding:4.5rem 1.25rem;text-align:center}
+.stats__ttl{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.5rem,3.5vw,2rem);
+  color:#fff;line-height:1.5;margin-bottom:2.5rem;
+}
+.stats__grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;
+  max-width:760px;margin:0 auto;
+}
+.stat__num{
+  display:block;font-family:'Playfair Display',serif;
+  font-size:clamp(2.4rem,5.5vw,3.6rem);font-weight:700;
+  color:var(--gold);line-height:1;margin-bottom:.35rem;
+}
+.stat__lbl{color:rgba(240,234,214,.72);font-size:.875rem;line-height:1.85}
+@media(min-width:640px){.stats__grid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:768px){.stats__inner{padding:5.5rem 4rem}}
+
+/* ── HOW IT WORKS ── */
+.how{background:var(--ivory)}
+.steps{display:flex;flex-direction:column;gap:1.75rem}
+.step{display:flex;gap:1.1rem;align-items:flex-start}
+.step__n{
+  width:56px;height:56px;flex-shrink:0;
+  background:var(--navy);color:var(--gold);
+  font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(10,22,40,.2);
+}
+.step__body{padding-top:.7rem}
+.step__body h4{
+  font-family:'Playfair Display',serif;font-size:1.05rem;
+  font-weight:700;color:var(--navy);margin-bottom:.35rem;line-height:1.5;
+}
+.step__body p{color:var(--txt-mid);font-size:.875rem;line-height:1.9}
+@media(min-width:768px){.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 3rem}}
+@media(min-width:1024px){.steps{grid-template-columns:repeat(4,1fr)}}
+
+/* ── TESTIMONIALS ── */
+.testi{background:var(--navy-mid)}
+.testi__grid{display:flex;flex-direction:column;gap:1.25rem}
+.testi-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;padding:1.6rem;
+  transition:background .3s,transform .3s;
+}
+.testi-card:hover{background:rgba(255,255,255,.09);transform:translateY(-4px)}
+.testi-stars{display:flex;gap:.2rem;color:var(--gold);margin-bottom:.9rem}
+.testi-txt{
+  color:rgba(240,234,214,.78);font-size:.9rem;
+  line-height:1.95;font-style:italic;margin-bottom:1.25rem;
+}
+.testi-author{display:flex;align-items:center;gap:.8rem}
+.testi-avatar{
+  width:46px;height:46px;border-radius:50%;object-fit:cover;
+  border:2px solid var(--gold);flex-shrink:0;
+}
+.testi-name{color:#fff;font-size:.88rem;font-weight:600;display:block}
+.testi-origin{color:rgba(240,234,214,.5);font-size:.78rem}
+@media(min-width:768px){.testi__grid{display:grid;grid-template-columns:repeat(3,1fr)}}
+
+/* ── GALLERY ── */
+.gallery{background:var(--ivory)}
+.gallery__grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows:auto;gap:.9rem;
+}
+.gal-item{border-radius:14px;overflow:hidden;position:relative}
+.gal-item:nth-child(1){grid-column:span 2;height:220px}
+.gal-item:nth-child(2){height:160px}
+.gal-item:nth-child(3){height:160px}
+.gal-item:nth-child(4){grid-column:span 2;height:200px}
+.gal-item:nth-child(5){height:160px}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item::after{content:'';position:absolute;inset:0;background:rgba(10,22,40,0);transition:background .3s}
+.gal-item:hover::after{background:rgba(10,22,40,.18)}
+@media(min-width:768px){
+  .gallery__grid{
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:260px 240px;gap:1.1rem;
+  }
+  .gal-item{height:auto !important}
+  .gal-item:nth-child(1){grid-column:span 2;grid-row:span 1}
+  .gal-item:nth-child(4){grid-column:span 1;grid-row:span 1}
+  .gal-item:nth-child(5){grid-column:span 1}
+}
+
+/* ── BOOKING ── */
+.booking{background:var(--navy);position:relative;overflow:hidden}
+.booking::before{
+  content:'';position:absolute;top:-120px;right:-100px;
+  width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,160,64,.1) 0%,transparent 70%);
+}
+.booking__inner{display:flex;flex-direction:column;gap:2.5rem;position:relative;z-index:2}
+.booking__text .sec-title{color:#fff}
+.booking__text .sec-desc{color:rgba(240,234,214,.68)}
+.booking__perks{display:flex;flex-direction:column;gap:.85rem;margin-top:1.5rem}
+.booking__perk{display:flex;align-items:flex-start;gap:.7rem;color:rgba(240,234,214,.72);font-size:.875rem;line-height:1.9}
+.booking__perk svg{color:var(--gold);flex-shrink:0;margin-top:.2rem}
+.booking__form{
+  background:rgba(255,255,255,.05);border:1px solid rgba(201,160,64,.2);
+  border-radius:20px;padding:1.75rem;backdrop-filter:blur(8px);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{margin-bottom:1.1rem}
+.fg label{display:block;color:rgba(240,234,214,.78);font-size:.8rem;font-weight:500;margin-bottom:.4rem}
+.fg input,.fg select,.fg textarea{
+  width:100%;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);border-radius:10px;
+  color:#fff;font-family:inherit;font-size:.9rem;
+  padding:.78rem 1rem;line-height:1.85;outline:none;
+  transition:border-color .2s,background .2s;
+}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.28)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{
+  border-color:var(--gold);background:rgba(255,255,255,.12);
+}
+.fg select option{background:var(--navy);color:#fff}
+.fg textarea{resize:vertical;min-height:90px}
+@media(min-width:768px){
+  .booking__inner{flex-direction:row;align-items:flex-start;gap:5rem}
+  .booking__text{flex:1;padding-top:.75rem}
+  .booking__form{flex:1}
+}
+
+/* ── FOOTER ── */
+.footer{
+  background:var(--navy);
+  border-top:1px solid rgba(201,160,64,.14);
+  padding:3rem 1.25rem 1.75rem;
+}
+.footer__inner{display:flex;flex-direction:column;gap:2.25rem;margin-bottom:2.25rem}
+.footer__brand-name{font-family:'Playfair Display',serif;font-size:1.15rem;color:#fff;font-weight:700;margin-bottom:.2rem}
+.footer__brand-sub{color:var(--gold);font-size:.8rem;margin-bottom:.9rem}
+.footer__brand p{color:rgba(240,234,214,.5);font-size:.83rem;line-height:1.9;max-width:300px}
+.footer__socials{display:flex;gap:.6rem;margin-top:1.1rem}
+.footer__soc{
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;
+  color:rgba(240,234,214,.55);transition:background .2s,color .2s;
+}
+.footer__soc:hover{background:var(--gold);color:var(--navy)}
+.footer__col h5{
+  color:rgba(240,234,214,.85);font-size:.78rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;margin-bottom:.9rem;
+}
+.footer__links{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.footer__links a{color:rgba(240,234,214,.5);font-size:.83rem;line-height:1.85;transition:color .2s}
+.footer__links a:hover{color:var(--gold)}
+.footer__ci{display:flex;flex-direction:column;gap:.65rem}
+.footer__ci-item{display:flex;align-items:flex-start;gap:.55rem;color:rgba(240,234,214,.5);font-size:.83rem;line-height:1.85}
+.footer__ci-item svg{color:var(--gold);flex-shrink:0;margin-top:.22rem}
+.footer__bottom{
+  border-top:1px solid rgba(255,255,255,.06);
+  padding-top:1.25rem;text-align:center;
+  color:rgba(240,234,214,.3);font-size:.75rem;
+}
+@media(min-width:768px){
+  .footer{padding:4rem 4rem 2.5rem}
+  .footer__inner{flex-direction:row;gap:4rem}
+  .footer__brand-col{flex:1.6}
+  .footer__col{flex:1}
+}
+
+/* ── REVEAL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.1s}
+.rd2{transition-delay:.2s}
+.rd3{transition-delay:.3s}
+.rd4{transition-delay:.4s}
+.reveal-left{opacity:0;transform:translateX(-30px);transition:opacity .65s ease,transform .65s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(30px);transition:opacity .65s ease,transform .65s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* ── HERO LOAD ANIMATIONS ── */
+.hero__badge{animation:fadein .8s ease .3s both}
+.hero__title{animation:fadein .8s ease .5s both}
+.hero__sub{animation:fadein .8s ease .7s both}
+.hero__btns{animation:fadein .8s ease .9s both}
+@keyframes fadein{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── GOLD ORNAMENT LINE ── */
+.ornament{
+  display:flex;align-items:center;gap:.75rem;
+  margin-bottom:1.75rem;
+}
+.ornament-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+.ornament-diamond{
+  width:8px;height:8px;background:var(--gold);
+  transform:rotate(45deg);flex-shrink:0;
+}
+/* Thai letter-spacing overrides — never apply letter-spacing to Thai text */
+html[lang="th"] .sec-label{letter-spacing:0}
+html[lang="th"] .footer__col h5{letter-spacing:0}
+html[lang="th"] .hero__badge span{letter-spacing:0}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<nav class="nav" id="navbar">
+  <div class="nav__brand">
+    <div class="nav__brand-th">ภูเก็ตเลิฟพาราไดซ์</div>
+    <div class="nav__brand-en">Phuket Love Paradise</div>
+  </div>
+  <div class="nav__right">
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About">เกี่ยวกับเรา</a></li>
+      <li><a href="#tours" data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours">โปรแกรมทัวร์</a></li>
+      <li><a href="#experiences" data-lang-th="ประสบการณ์" data-lang-en="Experiences">ประสบการณ์</a></li>
+      <li><a href="#booking" data-lang-th="จองทัวร์" data-lang-en="Book Now">จองทัวร์</a></li>
+    </ul>
+    <button class="lang-sw" aria-label="Switch language">
+      <i data-lucide="globe" width="14" height="14"></i>
+      <span class="lang-sw__label">TH</span>
+    </button>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <i data-lucide="menu" width="22" height="22"></i>
+    </button>
+  </div>
+  <div class="nav__drawer" id="drawer">
+    <a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About">เกี่ยวกับเรา</a>
+    <a href="#tours" data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours">โปรแกรมทัวร์</a>
+    <a href="#experiences" data-lang-th="ประสบการณ์" data-lang-en="Experiences">ประสบการณ์</a>
+    <a href="#how" data-lang-th="ขั้นตอนการจอง" data-lang-en="How It Works">ขั้นตอนการจอง</a>
+    <a href="#booking" data-lang-th="จองทัวร์" data-lang-en="Book Now">จองทัวร์</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__veil"></div>
+  <div class="hero__content">
+    <div class="hero__badge">
+      <i data-lucide="anchor" width="13" height="13"></i>
+      <span data-lang-th="ภูเก็ต · ทะเลอันดามัน" data-lang-en="Phuket · Andaman Sea">ภูเก็ต · ทะเลอันดามัน</span>
+    </div>
+    <h1 class="hero__title">
+      <span data-lang-th="ดำดิ่งสู่สวรรค์" data-lang-en="Immerse Yourself">ดำดิ่งสู่สวรรค์</span><br>
+      <span class="gold" data-lang-th="แห่งทะเลอันดามัน" data-lang-en="in Andaman Paradise">แห่งทะเลอันดามัน</span>
+    </h1>
+    <p class="hero__sub" data-lang-th="ออกแบบประสบการณ์ท่องเที่ยวสุดหรูในภูเก็ต ด้วยทีมงานมืออาชีพที่ดูแลทุกรายละเอียด เพื่อให้การเดินทางของคุณสมบูรณ์แบบที่สุด" data-lang-en="Bespoke luxury travel experiences in Phuket, crafted by expert local guides dedicated to making every moment of your journey truly unforgettable.">ออกแบบประสบการณ์ท่องเที่ยวสุดหรูในภูเก็ต ด้วยทีมงานมืออาชีพที่ดูแลทุกรายละเอียด เพื่อให้การเดินทางของคุณสมบูรณ์แบบที่สุด</p>
+    <div class="hero__btns">
+      <a href="#booking" class="btn-gold">
+        <i data-lucide="calendar-check" width="16" height="16"></i>
+        <span data-lang-th="จองทัวร์ตอนนี้" data-lang-en="Book Your Tour">จองทัวร์ตอนนี้</span>
+      </a>
+      <a href="#tours" class="btn-ghost">
+        <span data-lang-th="ดูโปรแกรมทัวร์" data-lang-en="Explore Tours">ดูโปรแกรมทัวร์</span>
+        <i data-lucide="arrow-right" width="16" height="16"></i>
+      </a>
+    </div>
+  </div>
+  <div class="hero__scroll">
+    <i data-lucide="chevrons-down" width="18" height="18"></i>
+  </div>
+</section>
+
+<!-- wave hero→about -->
+<div class="wsep" style="background:var(--navy)">
+  <svg viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L0,36 C240,72 480,0 720,36 C960,72 1200,0 1440,36 L1440,0 Z" fill="#0a1628"/>
+    <path d="M0,72 L1440,72 L1440,36 C1200,0 960,72 720,36 C480,0 240,72 0,36 Z" fill="#0a1628"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+<section class="sec about" id="about">
+  <div class="container">
+    <div class="about__inner">
+      <div class="about__text reveal">
+        <div class="sec-label">
+          <i data-lucide="sparkles" width="14" height="14"></i>
+          <span data-lang-th="เกี่ยวกับเรา" data-lang-en="About Us">เกี่ยวกับเรา</span>
+        </div>
+        <h2 class="sec-title lt" data-lang-th="ความหรูหราคือหัวใจของทุกการเดินทาง" data-lang-en="Luxury Is the Heart of Every Journey">ความหรูหราคือหัวใจของทุกการเดินทาง</h2>
+        <p class="sec-desc lt" data-lang-th="ภูเก็ตเลิฟพาราไดซ์ก่อตั้งขึ้นด้วยความตั้งใจให้นักเดินทางได้สัมผัสภูเก็ตในแบบที่แตกต่าง เราคัดสรรเส้นทาง จัดทีมไกด์ผู้เชี่ยวชาญ และออกแบบประสบการณ์ส่วนตัวที่ตอบโจทย์ทุกความต้องการ" data-lang-en="Founded with a passion for extraordinary travel, Phuket Love Paradise crafts personalized itineraries beyond ordinary tours — expert guides, private charters, and impeccable attention to every detail.">ภูเก็ตเลิฟพาราไดซ์ก่อตั้งขึ้นด้วยความตั้งใจให้นักเดินทางได้สัมผัสภูเก็ตในแบบที่แตกต่าง เราคัดสรรเส้นทาง จัดทีมไกด์ผู้เชี่ยวชาญ และออกแบบประสบการณ์ส่วนตัวที่ตอบโจทย์ทุกความต้องการ</p>
+        <div class="about__feats">
+          <div class="about__feat reveal rd1">
+            <div class="about__feat-ic"><i data-lucide="users" width="18" height="18"></i></div>
+            <div>
+              <h4 data-lang-th="ทีมไกด์ผู้เชี่ยวชาญ" data-lang-en="Expert Local Guides">ทีมไกด์ผู้เชี่ยวชาญ</h4>
+              <p data-lang-th="ไกด์ท้องถิ่นที่รู้จักภูเก็ตดีที่สุด พร้อมดูแลคุณตลอดการเดินทาง" data-lang-en="Local guides with deep knowledge of Phuket, ensuring a seamless and enriching experience.">ไกด์ท้องถิ่นที่รู้จักภูเก็ตดีที่สุด พร้อมดูแลคุณตลอดการเดินทาง</p>
+            </div>
+          </div>
+          <div class="about__feat reveal rd2">
+            <div class="about__feat-ic"><i data-lucide="ship" width="18" height="18"></i></div>
+            <div>
+              <h4 data-lang-th="เรือยอชต์ส่วนตัว" data-lang-en="Private Yacht Charters">เรือยอชต์ส่วนตัว</h4>
+              <p data-lang-th="เรือยอชต์หรูพร้อมลูกเรือมืออาชีพ สำหรับประสบการณ์บนทะเลสุดเอ็กซ์คลูซีฟ" data-lang-en="Luxury yachts with professional crew for a truly exclusive Andaman Sea experience.">เรือยอชต์หรูพร้อมลูกเรือมืออาชีพ สำหรับประสบการณ์บนทะเลสุดเอ็กซ์คลูซีฟ</p>
+            </div>
+          </div>
+          <div class="about__feat reveal rd3">
+            <div class="about__feat-ic"><i data-lucide="shield-check" width="18" height="18"></i></div>
+            <div>
+              <h4 data-lang-th="ความปลอดภัยสูงสุด" data-lang-en="Safety First, Always">ความปลอดภัยสูงสุด</h4>
+              <p data-lang-th="มาตรฐานความปลอดภัยระดับสากล ประกันการเดินทางครอบคลุมทุกกิจกรรม" data-lang-en="International safety standards and comprehensive travel insurance covering all activities.">มาตรฐานความปลอดภัยระดับสากล ประกันการเดินทางครอบคลุมทุกกิจกรรม</p>
+            </div>
+          </div>
+          <div class="about__feat reveal rd4">
+            <div class="about__feat-ic"><i data-lucide="gem" width="18" height="18"></i></div>
+            <div>
+              <h4 data-lang-th="บริการส่วนตัวพิเศษ" data-lang-en="Personalized Service">บริการส่วนตัวพิเศษ</h4>
+              <p data-lang-th="ปรับแต่งทุกรายละเอียดตามความต้องการ ตั้งแต่อาหาร ที่พัก จนถึงเส้นทาง" data-lang-en="Every detail — dining preferences, accommodation, and route — tailored specifically for you.">ปรับแต่งทุกรายละเอียดตามความต้องการ ตั้งแต่อาหาร ที่พัก จนถึงเส้นทาง</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about__imgs reveal-right">
+        <img class="about__img-a" src="https://images.unsplash.com/photo-1618161851494-df498fc0123c?w=700&h=520&fit=crop" alt="เรือยอชต์ชมพระอาทิตย์ตก" />
+        <img class="about__img-b" src="https://images.unsplash.com/photo-1704549931312-432d26dd53c3?w=480&h=360&fit=crop" alt="ชายหาดสวยงามในภูเก็ต" />
+        <div class="about__badge">
+          <span>10+</span>
+          <small data-lang-th="ปีแห่งประสบการณ์" data-lang-en="Years Exp.">ปีแห่งประสบการณ์</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave about(navy)→tours(ivory) -->
+<div class="wsep" style="background:var(--navy)">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C360,70 1080,0 1440,70 L1440,70 L0,70 Z" fill="#faf6ee"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════ TOURS ═══════════════════════ -->
+<section class="sec tours" id="tours">
+  <div class="container">
+    <div class="center-text reveal" style="margin-bottom:3rem">
+      <div class="sec-label center">
+        <span data-lang-th="โปรแกรมทัวร์" data-lang-en="Tour Programs">โปรแกรมทัวร์</span>
+      </div>
+      <h2 class="sec-title" data-lang-th="เส้นทางสู่ความประทับใจ" data-lang-en="Journeys to Remember">เส้นทางสู่ความประทับใจ</h2>
+      <p class="sec-desc" data-lang-th="คัดสรรโปรแกรมทัวร์หรูหราที่ออกแบบมาเพื่อสร้างความประทับใจที่คงอยู่ตลอดไป" data-lang-en="Curated luxury tour programs designed to create memories that last a lifetime.">คัดสรรโปรแกรมทัวร์หรูหราที่ออกแบบมาเพื่อสร้างความประทับใจที่คงอยู่ตลอดไป</p>
+    </div>
+
+    <!-- Tour 1 -->
+    <div class="tour-row reveal">
+      <div class="tour-row__pic">
+        <img src="https://images.unsplash.com/photo-1586302836983-d1efb5eee221?w=760&h=560&fit=crop" alt="หมู่เกาะพีพีจากมุมสูง" />
+        <div class="tour-row__tag" data-lang-th="ยอดนิยม" data-lang-en="Popular">ยอดนิยม</div>
+      </div>
+      <div class="tour-row__body">
+        <h3 data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Andaman Island Hopping">ล่องเกาะหมู่เกาะอันดามัน</h3>
+        <p data-lang-th="สำรวจความมหัศจรรย์ของหมู่เกาะในทะเลอันดามัน ตั้งแต่เกาะพีพี เกาะราชา ไปจนถึงอ่าวมาหยาอันเลื่องชื่อ ด้วยเรือสปีดโบทส่วนตัวและไกด์ผู้ชำนาญ" data-lang-en="Discover the magic of the Andaman Islands — from Phi Phi and Racha to the legendary Maya Bay — aboard a private speedboat with expert local guides.">สำรวจความมหัศจรรย์ของหมู่เกาะในทะเลอันดามัน ตั้งแต่เกาะพีพี เกาะราชา ไปจนถึงอ่าวมาหยาอันเลื่องชื่อ ด้วยเรือสปีดโบทส่วนตัวและไกด์ผู้ชำนาญ</p>
+        <div class="tour-meta">
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="8 ชั่วโมง" data-lang-en="8 Hours">8 ชั่วโมง</span></div>
+          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–12 คน" data-lang-en="2–12 People">2–12 คน</span></div>
+          <div class="tour-meta-i"><i data-lucide="map-pin" width="14" height="14"></i><span data-lang-th="ออกจากภูเก็ต" data-lang-en="Departs Phuket">ออกจากภูเก็ต</span></div>
+        </div>
+        <ul class="tour-hl">
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อ่าวมาหยา เกาะพีพีเล" data-lang-en="Maya Bay, Phi Phi Leh">อ่าวมาหยา เกาะพีพีเล</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="ดำน้ำดูปะการังสีสันสวยงาม" data-lang-en="Vibrant coral reef snorkeling">ดำน้ำดูปะการังสีสันสวยงาม</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารกลางวันบนเรือ + รับ-ส่งโรงแรม" data-lang-en="Onboard lunch + hotel transfers">อาหารกลางวันบนเรือ + รับ-ส่งโรงแรม</span></li>
+        </ul>
+        <div class="tour-price">
+          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From">เริ่มต้นที่</span>
+          <span class="amt">฿3,500</span>
+          <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person">/ ท่าน</span>
+        </div>
+        <a href="#booking" class="btn-gold" style="align-self:flex-start">
+          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour">จองโปรแกรมนี้</span>
+          <i data-lucide="arrow-right" width="15" height="15"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Tour 2 -->
+    <div class="tour-row reveal rd1">
+      <div class="tour-row__pic">
+        <img src="https://images.unsplash.com/photo-1764462102766-7ee93c850fb3?w=760&h=560&fit=crop" alt="ล่องเรือชมพระอาทิตย์ตก" />
+        <div class="tour-row__tag" data-lang-th="โรแมนติก" data-lang-en="Romantic">โรแมนติก</div>
+      </div>
+      <div class="tour-row__body">
+        <h3 data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Luxury Sunset Yacht Cruise">ล่องเรือยอชต์ชมพระอาทิตย์ตก</h3>
+        <p data-lang-th="สัมผัสบรรยากาศโรแมนติกสุดพิเศษบนเรือยอชต์หรู ล่องชมทัศนียภาพอันตระการตาของพระอาทิตย์ตกเหนือทะเลอันดามัน พร้อมอาหารค่ำสุดพิเศษโดยเชฟส่วนตัว" data-lang-en="Experience unrivalled romance on a luxury yacht as the sun dips below the Andaman horizon. Savour a private chef's curated dinner while the sky blazes gold.">สัมผัสบรรยากาศโรแมนติกสุดพิเศษบนเรือยอชต์หรู ล่องชมทัศนียภาพอันตระการตาของพระอาทิตย์ตกเหนือทะเลอันดามัน พร้อมอาหารค่ำสุดพิเศษโดยเชฟส่วนตัว</p>
+        <div class="tour-meta">
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="4 ชั่วโมง" data-lang-en="4 Hours">4 ชั่วโมง</span></div>
+          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–8 คน" data-lang-en="2–8 People">2–8 คน</span></div>
+          <div class="tour-meta-i"><i data-lucide="wine" width="14" height="14"></i><span data-lang-th="รวมอาหารค่ำ" data-lang-en="Dinner Included">รวมอาหารค่ำ</span></div>
+        </div>
+        <ul class="tour-hl">
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="เรือยอชต์หรูส่วนตัว + ลูกเรือมืออาชีพ" data-lang-en="Private luxury yacht + professional crew">เรือยอชต์หรูส่วนตัว + ลูกเรือมืออาชีพ</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารค่ำ 5 คอร์สโดยเชฟส่วนตัว" data-lang-en="5-course private chef dinner">อาหารค่ำ 5 คอร์สโดยเชฟส่วนตัว</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="เครื่องดื่มพรีเมียมตลอดเส้นทาง" data-lang-en="Premium drinks throughout">เครื่องดื่มพรีเมียมตลอดเส้นทาง</span></li>
+        </ul>
+        <div class="tour-price">
+          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From">เริ่มต้นที่</span>
+          <span class="amt">฿8,900</span>
+          <span class="per" data-lang-th="/ คู่" data-lang-en="/ couple">/ คู่</span>
+        </div>
+        <a href="#booking" class="btn-gold" style="align-self:flex-start">
+          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour">จองโปรแกรมนี้</span>
+          <i data-lucide="arrow-right" width="15" height="15"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Tour 3 -->
+    <div class="tour-row reveal rd2">
+      <div class="tour-row__pic">
+        <img src="https://images.unsplash.com/photo-1764099906807-d25cd5fbaafc?w=760&h=560&fit=crop" alt="ดำน้ำในทะเลใสสวยงาม" />
+        <div class="tour-row__tag" data-lang-th="ผจญภัย" data-lang-en="Adventure">ผจญภัย</div>
+      </div>
+      <div class="tour-row__body">
+        <h3 data-lang-th="ดำน้ำดูปะการังทะเลสวรรค์" data-lang-en="Coral Paradise Snorkeling">ดำน้ำดูปะการังทะเลสวรรค์</h3>
+        <p data-lang-th="ดำดิ่งสู่โลกใต้ทะเลอันดามันที่เต็มไปด้วยสีสัน สำรวจแนวปะการังอันอุดมสมบูรณ์ พบปลานานาชนิด และสัมผัสความสวยงามของท้องทะเลไทยในแบบที่คุณไม่เคยเห็น" data-lang-en="Plunge into the kaleidoscopic world beneath the Andaman Sea. Explore thriving coral reefs, colourful tropical fish, and the pristine underwater beauty of Thailand.">ดำดิ่งสู่โลกใต้ทะเลอันดามันที่เต็มไปด้วยสีสัน สำรวจแนวปะการังอันอุดมสมบูรณ์ พบปลานานาชนิด และสัมผัสความสวยงามของท้องทะเลไทยในแบบที่คุณไม่เคยเห็น</p>
+        <div class="tour-meta">
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="6 ชั่วโมง" data-lang-en="6 Hours">6 ชั่วโมง</span></div>
+          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–10 คน" data-lang-en="2–10 People">2–10 คน</span></div>
+          <div class="tour-meta-i"><i data-lucide="package" width="14" height="14"></i><span data-lang-th="รวมอุปกรณ์ครบ" data-lang-en="Equipment Included">รวมอุปกรณ์ครบ</span></div>
+        </div>
+        <ul class="tour-hl">
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="3 จุดดำน้ำสุดสวยในอันดามัน" data-lang-en="3 stunning Andaman snorkel spots">3 จุดดำน้ำสุดสวยในอันดามัน</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อุปกรณ์ดำน้ำมาตรฐาน + ครูฝึก" data-lang-en="Professional equipment + certified instructor">อุปกรณ์ดำน้ำมาตรฐาน + ครูฝึก</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารกลางวันอาหารทะเลสด" data-lang-en="Fresh seafood lunch onboard">อาหารกลางวันอาหารทะเลสด</span></li>
+        </ul>
+        <div class="tour-price">
+          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From">เริ่มต้นที่</span>
+          <span class="amt">฿2,800</span>
+          <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person">/ ท่าน</span>
+        </div>
+        <a href="#booking" class="btn-gold" style="align-self:flex-start">
+          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour">จองโปรแกรมนี้</span>
+          <i data-lucide="arrow-right" width="15" height="15"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave tours(ivory)→exp(navy) -->
+<div class="wsep" style="background:var(--ivory)">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,70 C360,0 1080,70 1440,0 L1440,70 L0,70 Z" fill="#0a1628"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════ EXPERIENCES ═══════════════════════ -->
+<section class="sec exp" id="experiences">
+  <div class="container">
+    <div class="exp__hdr reveal" style="margin-bottom:2rem">
+      <div class="sec-label">
+        <i data-lucide="star" width="14" height="14"></i>
+        <span data-lang-th="ประสบการณ์พิเศษ" data-lang-en="Exclusive Experiences">ประสบการณ์พิเศษ</span>
+      </div>
+      <h2 class="sec-title lt" data-lang-th="สัมผัสสิ่งที่มากกว่าทัวร์ทั่วไป" data-lang-en="More Than Just a Tour">สัมผัสสิ่งที่มากกว่าทัวร์ทั่วไป</h2>
+      <p class="sec-desc lt" data-lang-th="เลือกกิจกรรมสุดพิเศษที่เพิ่มมิติใหม่ให้กับการเดินทางของคุณ" data-lang-en="Add a new dimension to your journey with our exclusive curated activities.">เลือกกิจกรรมสุดพิเศษที่เพิ่มมิติใหม่ให้กับการเดินทางของคุณ</p>
+    </div>
+    <div class="exp__scroll">
+      <!-- Card 1 -->
+      <div class="exp-card">
+        <div class="exp-card__img">
+          <img src="https://images.unsplash.com/photo-1587691254941-bbd1faa13154?w=500&h=320&fit=crop" alt="เช่าเรือยอชต์ส่วนตัว" />
+        </div>
+        <div class="exp-card__body">
+          <div class="exp-card__ic"><i data-lucide="ship" width="18" height="18"></i></div>
+          <div class="exp-card__ttl" data-lang-th="เช่าเรือยอชต์ส่วนตัว" data-lang-en="Private Yacht Charter">เช่าเรือยอชต์ส่วนตัว</div>
+          <div class="exp-card__txt" data-lang-th="เรือยอชต์หรูพร้อมลูกเรือ ออกแบบเส้นทางตามใจคุณ" data-lang-en="Luxury yacht with full crew — chart your own course across the Andaman.">เรือยอชต์หรูพร้อมลูกเรือ ออกแบบเส้นทางตามใจคุณ</div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="exp-card">
+        <div class="exp-card__img">
+          <img src="https://images.unsplash.com/photo-1776347645256-844c8d7302fb?w=500&h=320&fit=crop" alt="ดำน้ำลึกสกูบาไดฟ์วิ่ง" />
+        </div>
+        <div class="exp-card__body">
+          <div class="exp-card__ic"><i data-lucide="waves" width="18" height="18"></i></div>
+          <div class="exp-card__ttl" data-lang-th="สกูบาไดฟ์วิ่ง" data-lang-en="Scuba Diving">สกูบาไดฟ์วิ่ง</div>
+          <div class="exp-card__txt" data-lang-th="ดำน้ำลึกกับครูผู้เชี่ยวชาญ สัมผัสโลกใต้ทะเลที่ลึกกว่า" data-lang-en="Dive deep with certified instructors into Phuket's stunning underwater world.">ดำน้ำลึกกับครูผู้เชี่ยวชาญ สัมผัสโลกใต้ทะเลที่ลึกกว่า</div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="exp-card">
+        <div class="exp-card__img">
+          <img src="https://images.unsplash.com/photo-1728525978104-b84e5a95578e?w=500&h=320&fit=crop" alt="พายคายัคในป่าโกงกาง" />
+        </div>
+        <div class="exp-card__body">
+          <div class="exp-card__ic"><i data-lucide="map" width="18" height="18"></i></div>
+          <div class="exp-card__ttl" data-lang-th="พายคายัคป่าโกงกาง" data-lang-en="Mangrove Kayaking">พายคายัคป่าโกงกาง</div>
+          <div class="exp-card__txt" data-lang-th="สำรวจระบบนิเวศป่าโกงกางอันเงียบสงบ ท่ามกลางธรรมชาติที่งดงาม" data-lang-en="Glide through serene mangrove forests and discover Phuket's hidden natural side.">สำรวจระบบนิเวศป่าโกงกางอันเงียบสงบ ท่ามกลางธรรมชาติที่งดงาม</div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="exp-card">
+        <div class="exp-card__img">
+          <img src="https://images.unsplash.com/photo-1612176876591-196abbaa8e79?w=500&h=320&fit=crop" alt="ล่องเรือชมพระอาทิตย์ขึ้น" />
+        </div>
+        <div class="exp-card__body">
+          <div class="exp-card__ic"><i data-lucide="sunrise" width="18" height="18"></i></div>
+          <div class="exp-card__ttl" data-lang-th="ทัวร์ชมพระอาทิตย์ขึ้น" data-lang-en="Sunrise Boat Tour">ทัวร์ชมพระอาทิตย์ขึ้น</div>
+          <div class="exp-card__txt" data-lang-th="ตื่นเช้าออกเรือชมพระอาทิตย์ขึ้นเหนือทะเลอันดามัน ประสบการณ์ที่หาที่ไหนไม่ได้" data-lang-en="Rise early and watch the Andaman sunrise from the deck — an experience like no other.">ตื่นเช้าออกเรือชมพระอาทิตย์ขึ้นเหนือทะเลอันดามัน ประสบการณ์ที่หาที่ไหนไม่ได้</div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="exp-card">
+        <div class="exp-card__img">
+          <img src="https://images.unsplash.com/photo-1592128954603-1e4a4bc0aed7?w=500&h=320&fit=crop" alt="เรียนทำอาหารไทย" />
+        </div>
+        <div class="exp-card__body">
+          <div class="exp-card__ic"><i data-lucide="utensils" width="18" height="18"></i></div>
+          <div class="exp-card__ttl" data-lang-th="เรียนทำอาหารไทย" data-lang-en="Thai Cooking Class">เรียนทำอาหารไทย</div>
+          <div class="exp-card__txt" data-lang-th="เรียนรู้ศิลปะการทำอาหารไทยแท้ กับเชฟท้องถิ่นผู้มากประสบการณ์" data-lang-en="Master authentic Thai cuisine alongside experienced local chefs in a hands-on class.">เรียนรู้ศิลปะการทำอาหารไทยแท้ กับเชฟท้องถิ่นผู้มากประสบการณ์</div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="exp-card">
+        <div class="exp-card__img">
+          <img src="https://images.unsplash.com/photo-1519915247718-1703f9c6bb15?w=500&h=320&fit=crop" alt="เยี่ยมชมช้างไทย" />
+        </div>
+        <div class="exp-card__body">
+          <div class="exp-card__ic"><i data-lucide="leaf" width="18" height="18"></i></div>
+          <div class="exp-card__ttl" data-lang-th="เยี่ยมชมช้างไทย" data-lang-en="Elephant Sanctuary Visit">เยี่ยมชมช้างไทย</div>
+          <div class="exp-card__txt" data-lang-th="ใกล้ชิดช้างไทยในสถานที่ดูแลที่มีจริยธรรม ไม่มีการขี่ช้าง" data-lang-en="A close and ethical encounter with Thailand's beloved elephants — no riding, just respect.">ใกล้ชิดช้างไทยในสถานที่ดูแลที่มีจริยธรรม ไม่มีการขี่ช้าง</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ STATS ═══════════════════════ -->
+<section class="stats">
+  <div class="stats__bg"></div>
+  <div class="stats__veil"></div>
+  <div class="stats__inner">
+    <h2 class="stats__ttl reveal" data-lang-th="ความไว้วางใจจากนักเดินทางทั่วโลก" data-lang-en="Trusted by Travellers Worldwide">ความไว้วางใจจากนักเดินทางทั่วโลก</h2>
+    <div class="stats__grid">
+      <div class="reveal rd1">
+        <span class="stat__num">10+</span>
+        <span class="stat__lbl" data-lang-th="ปีแห่งประสบการณ์" data-lang-en="Years of Experience">ปีแห่งประสบการณ์</span>
+      </div>
+      <div class="reveal rd2">
+        <span class="stat__num">5,000+</span>
+        <span class="stat__lbl" data-lang-th="นักเดินทางพึงพอใจ" data-lang-en="Happy Travellers">นักเดินทางพึงพอใจ</span>
+      </div>
+      <div class="reveal rd3">
+        <span class="stat__num">4.9</span>
+        <span class="stat__lbl" data-lang-th="คะแนนเฉลี่ยจากลูกค้า" data-lang-en="Average Rating">คะแนนเฉลี่ยจากลูกค้า</span>
+      </div>
+      <div class="reveal rd4">
+        <span class="stat__num">25+</span>
+        <span class="stat__lbl" data-lang-th="จุดหมายสุดพิเศษ" data-lang-en="Unique Destinations">จุดหมายสุดพิเศษ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+<section class="sec how" id="how">
+  <div class="container">
+    <div class="center-text reveal" style="margin-bottom:3rem">
+      <div class="sec-label center">
+        <span data-lang-th="ขั้นตอนการจอง" data-lang-en="How It Works">ขั้นตอนการจอง</span>
+      </div>
+      <h2 class="sec-title" data-lang-th="เริ่มต้นการเดินทางง่ายๆ ใน 4 ขั้นตอน" data-lang-en="Start Your Journey in 4 Simple Steps">เริ่มต้นการเดินทางง่ายๆ ใน 4 ขั้นตอน</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step__n">1</div>
+        <div class="step__body">
+          <h4 data-lang-th="เลือกโปรแกรมที่ใช่" data-lang-en="Choose Your Program">เลือกโปรแกรมที่ใช่</h4>
+          <p data-lang-th="เลือกจากโปรแกรมทัวร์ที่คัดสรรแล้ว หรือแจ้งความต้องการพิเศษกับทีมงานของเรา" data-lang-en="Browse our curated programs or tell us your dream trip and we'll design it just for you.">เลือกจากโปรแกรมทัวร์ที่คัดสรรแล้ว หรือแจ้งความต้องการพิเศษกับทีมงานของเรา</p>
+        </div>
+      </div>
+      <div class="step reveal rd1">
+        <div class="step__n">2</div>
+        <div class="step__body">
+          <h4 data-lang-th="ปรับแต่งตามใจคุณ" data-lang-en="Customize Your Itinerary">ปรับแต่งตามใจคุณ</h4>
+          <p data-lang-th="ทีมงานจะช่วยปรับแต่งทุกรายละเอียด ตั้งแต่เส้นทาง อาหาร ไปจนถึงกิจกรรมเสริม" data-lang-en="We'll tailor every detail — route, dining preferences, and add-on activities — to your wishes.">ทีมงานจะช่วยปรับแต่งทุกรายละเอียด ตั้งแต่เส้นทาง อาหาร ไปจนถึงกิจกรรมเสริม</p>
+        </div>
+      </div>
+      <div class="step reveal rd2">
+        <div class="step__n">3</div>
+        <div class="step__body">
+          <h4 data-lang-th="ยืนยันและชำระเงิน" data-lang-en="Confirm & Pay Securely">ยืนยันและชำระเงิน</h4>
+          <p data-lang-th="ยืนยันการจองและชำระเงินอย่างปลอดภัย รับใบยืนยันการจองทันที" data-lang-en="Confirm your booking and pay securely online. Receive an instant booking confirmation.">ยืนยันการจองและชำระเงินอย่างปลอดภัย รับใบยืนยันการจองทันที</p>
+        </div>
+      </div>
+      <div class="step reveal rd3">
+        <div class="step__n">4</div>
+        <div class="step__body">
+          <h4 data-lang-th="เพลิดเพลินกับสวรรค์" data-lang-en="Enjoy Paradise">เพลิดเพลินกับสวรรค์</h4>
+          <p data-lang-th="ทีมงานรับท่านถึงโรงแรม พร้อมดูแลตลอดการเดินทาง ให้คุณเพลิดเพลินได้เต็มที่" data-lang-en="We pick you up from your hotel and take care of everything — just sit back and enjoy.">ทีมงานรับท่านถึงโรงแรม พร้อมดูแลตลอดการเดินทาง ให้คุณเพลิดเพลินได้เต็มที่</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave how(ivory)→testi(navy) -->
+<div class="wsep" style="background:var(--ivory)">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,70 C480,0 960,70 1440,0 L1440,70 L0,70 Z" fill="#112240"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+<section class="sec testi" id="testimonials">
+  <div class="container">
+    <div class="center-text reveal" style="margin-bottom:2.75rem">
+      <div class="sec-label center">
+        <span data-lang-th="รีวิวจากลูกค้า" data-lang-en="Guest Reviews">รีวิวจากลูกค้า</span>
+      </div>
+      <h2 class="sec-title lt" data-lang-th="เสียงจากนักเดินทางของเรา" data-lang-en="Words from Our Travellers">เสียงจากนักเดินทางของเรา</h2>
+    </div>
+    <div class="testi__grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+        </div>
+        <p class="testi-txt" data-lang-th="&quot;ประสบการณ์ที่ดีที่สุดในชีวิต ทีมงานดูแลทุกอย่างอย่างเป็นมืออาชีพ ตั้งแต่รับจากโรงแรมจนถึงส่งกลับ ไม่มีอะไรให้ต้องกังวลเลย แนะนำ 100%&quot;" data-lang-en="&quot;The best experience of our lives. Every detail was handled flawlessly — from hotel pickup to sunset drop-off. We didn't have to worry about a single thing. 100% recommended.&quot;">"ประสบการณ์ที่ดีที่สุดในชีวิต ทีมงานดูแลทุกอย่างอย่างเป็นมืออาชีพ ตั้งแต่รับจากโรงแรมจนถึงส่งกลับ ไม่มีอะไรให้ต้องกังวลเลย แนะนำ 100%"</p>
+        <div class="testi-author">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1564856629496-2ee8f8d05fde?w=100&h=100&fit=crop&faces" alt="นลิน วงศ์สุวรรณ" />
+          <div>
+            <strong class="testi-name">นลิน วงศ์สุวรรณ</strong>
+            <span class="testi-origin" data-lang-th="กรุงเทพฯ, ประเทศไทย" data-lang-en="Bangkok, Thailand">กรุงเทพฯ, ประเทศไทย</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal rd1">
+        <div class="testi-stars">
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+        </div>
+        <p class="testi-txt" data-lang-th="&quot;โปรแกรม Sunset Yacht Cruise สุดยอดมาก อาหารอร่อยมาก วิวสวยงาม ทีมงานเป็นกันเองและมืออาชีพมาก จะกลับมาอีกแน่นอน&quot;" data-lang-en="&quot;The Sunset Yacht Cruise was absolutely spectacular. The food, the views, the crew — everything was perfect. We've already booked our return trip with Phuket Love Paradise.&quot;">"โปรแกรม Sunset Yacht Cruise สุดยอดมาก อาหารอร่อยมาก วิวสวยงาม ทีมงานเป็นกันเองและมืออาชีพมาก จะกลับมาอีกแน่นอน"</p>
+        <div class="testi-author">
+          <img class="testi-avatar" src="https://picsum.photos/seed/sarah-t/100/100" alt="Sarah Thompson" />
+          <div>
+            <strong class="testi-name">Sarah &amp; James Thompson</strong>
+            <span class="testi-origin" data-lang-th="ลอนดอน, สหราชอาณาจักร" data-lang-en="London, United Kingdom">ลอนดอน, สหราชอาณาจักร</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal rd2">
+        <div class="testi-stars">
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+          <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
+        </div>
+        <p class="testi-txt" data-lang-th="&quot;พาครอบครัวมาเที่ยว ทีมงานดูแลทั้งผู้ใหญ่และเด็กได้ดีมาก ไกด์พูดภาษาไทยและอังกฤษได้คล่อง ทุกคนประทับใจมาก ขอบคุณมากครับ&quot;" data-lang-en="&quot;Brought the whole family and the guides were brilliant with everyone — adults and children alike. Fluent Thai and English, endlessly patient, and genuinely knowledgeable. Truly remarkable.&quot;">"พาครอบครัวมาเที่ยว ทีมงานดูแลทั้งผู้ใหญ่และเด็กได้ดีมาก ไกด์พูดภาษาไทยและอังกฤษได้คล่อง ทุกคนประทับใจมาก ขอบคุณมากครับ"</p>
+        <div class="testi-author">
+          <img class="testi-avatar" src="https://picsum.photos/seed/wipada/100/100" alt="วิภาดา ศรีสุข" />
+          <div>
+            <strong class="testi-name">วิภาดา ศรีสุข</strong>
+            <span class="testi-origin" data-lang-th="เชียงใหม่, ประเทศไทย" data-lang-en="Chiang Mai, Thailand">เชียงใหม่, ประเทศไทย</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave testi(navy)→gallery(ivory) -->
+<div class="wsep" style="background:var(--navy-mid)">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C360,70 1080,0 1440,70 L1440,0 L0,0 Z" fill="#faf6ee"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════ GALLERY ═══════════════════════ -->
+<section class="sec gallery" id="gallery">
+  <div class="container">
+    <div class="center-text reveal" style="margin-bottom:2.25rem">
+      <div class="sec-label center">
+        <span data-lang-th="แกลเลอรีภาพ" data-lang-en="Photo Gallery">แกลเลอรีภาพ</span>
+      </div>
+      <h2 class="sec-title" data-lang-th="ความงามที่รอให้คุณค้นพบ" data-lang-en="Beauty Waiting to Be Discovered">ความงามที่รอให้คุณค้นพบ</h2>
+    </div>
+    <div class="gallery__grid">
+      <div class="gal-item reveal">
+        <img src="https://images.unsplash.com/photo-1708656705549-14bcdf9b4921?w=1000&h=500&fit=crop" alt="ชายหาดภูเก็ตและเรือหลากสี" />
+      </div>
+      <div class="gal-item reveal rd1">
+        <img src="https://images.unsplash.com/photo-1704549931312-432d26dd53c3?w=500&h=400&fit=crop" alt="ชายหาดสวยล้อมด้วยต้นไม้" />
+      </div>
+      <div class="gal-item reveal rd2">
+        <img src="https://images.unsplash.com/photo-1729717809162-c661ad4046d8?w=500&h=400&fit=crop" alt="สระว่ายน้ำอินฟินิตี้ริมทะเล" />
+      </div>
+      <div class="gal-item reveal rd1">
+        <img src="https://images.unsplash.com/photo-1618161851494-df498fc0123c?w=900&h=450&fit=crop" alt="เงาเรือบนทะเลยามพระอาทิตย์ตก" />
+      </div>
+      <div class="gal-item reveal rd2">
+        <img src="https://images.unsplash.com/photo-1776347645256-844c8d7302fb?w=500&h=400&fit=crop" alt="เรือใบบนทะเลสีฟ้า" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave gallery(ivory)→booking(navy) -->
+<div class="wsep" style="background:var(--ivory)">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,70 C360,0 1080,70 1440,0 L1440,70 L0,70 Z" fill="#0a1628"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════ BOOKING ═══════════════════════ -->
+<section class="sec booking" id="booking">
+  <div class="container">
+    <div class="booking__inner">
+      <div class="booking__text reveal-left">
+        <div class="sec-label">
+          <i data-lucide="calendar" width="14" height="14"></i>
+          <span data-lang-th="จองทัวร์" data-lang-en="Book a Tour">จองทัวร์</span>
+        </div>
+        <h2 class="sec-title lt" data-lang-th="พร้อมออกเดินทางสู่สวรรค์แล้วหรือยัง?" data-lang-en="Ready to Journey to Paradise?">พร้อมออกเดินทางสู่สวรรค์แล้วหรือยัง?</h2>
+        <p class="sec-desc lt" data-lang-th="กรอกแบบฟอร์มด้านข้าง และทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อช่วยวางแผนการเดินทางที่สมบูรณ์แบบสำหรับคุณ" data-lang-en="Fill in the form and our team will respond within 24 hours to plan the perfect journey for you.">กรอกแบบฟอร์มด้านข้าง และทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อช่วยวางแผนการเดินทางที่สมบูรณ์แบบสำหรับคุณ</p>
+        <div class="booking__perks">
+          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ทีมงานตอบกลับภายใน 24 ชั่วโมง" data-lang-en="Team responds within 24 hours">ทีมงานตอบกลับภายใน 24 ชั่วโมง</span></div>
+          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ไม่มีค่าใช้จ่ายในการสอบถาม" data-lang-en="No charge for enquiries">ไม่มีค่าใช้จ่ายในการสอบถาม</span></div>
+          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ปรับแต่งโปรแกรมได้ตามต้องการ" data-lang-en="Fully customizable itinerary">ปรับแต่งโปรแกรมได้ตามต้องการ</span></div>
+          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="บริการรับ-ส่งโรงแรมฟรี" data-lang-en="Complimentary hotel transfers">บริการรับ-ส่งโรงแรมฟรี</span></div>
+        </div>
+      </div>
+      <div class="booking__form reveal-right">
+        <div class="form-row">
+          <div class="fg">
+            <label data-lang-th="ชื่อ" data-lang-en="First Name">ชื่อ</label>
+            <input type="text" placeholder="ชื่อของคุณ" data-ph-th="ชื่อของคุณ" data-ph-en="Your first name" />
+          </div>
+          <div class="fg">
+            <label data-lang-th="นามสกุล" data-lang-en="Last Name">นามสกุล</label>
+            <input type="text" placeholder="นามสกุลของคุณ" data-ph-th="นามสกุลของคุณ" data-ph-en="Your last name" />
+          </div>
+        </div>
+        <div class="fg">
+          <label data-lang-th="อีเมล" data-lang-en="Email">อีเมล</label>
+          <input type="email" placeholder="your@email.com" />
+        </div>
+        <div class="fg">
+          <label data-lang-th="เบอร์โทรศัพท์" data-lang-en="Phone Number">เบอร์โทรศัพท์</label>
+          <input type="tel" placeholder="+66 8x-xxxx-xxxx" />
+        </div>
+        <div class="form-row">
+          <div class="fg">
+            <label data-lang-th="โปรแกรมที่สนใจ" data-lang-en="Tour of Interest">โปรแกรมที่สนใจ</label>
+            <select>
+              <option value="" data-lang-th="เลือกโปรแกรม" data-lang-en="Select a tour">เลือกโปรแกรม</option>
+              <option value="island" data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Andaman Island Hopping">ล่องเกาะหมู่เกาะอันดามัน</option>
+              <option value="sunset" data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Luxury Sunset Yacht Cruise">ล่องเรือยอชต์ชมพระอาทิตย์ตก</option>
+              <option value="snorkel" data-lang-th="ดำน้ำดูปะการัง" data-lang-en="Coral Paradise Snorkeling">ดำน้ำดูปะการัง</option>
+              <option value="custom" data-lang-th="ออกแบบเองตามต้องการ" data-lang-en="Custom Itinerary">ออกแบบเองตามต้องการ</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label data-lang-th="จำนวนผู้เดินทาง" data-lang-en="Number of Travellers">จำนวนผู้เดินทาง</label>
+            <input type="number" min="1" max="20" placeholder="2" />
+          </div>
+        </div>
+        <div class="fg">
+          <label data-lang-th="ข้อความเพิ่มเติม" data-lang-en="Additional Message">ข้อความเพิ่มเติม</label>
+          <textarea placeholder="บอกเราเพิ่มเติมเกี่ยวกับทริปในฝันของคุณ..." data-ph-th="บอกเราเพิ่มเติมเกี่ยวกับทริปในฝันของคุณ..." data-ph-en="Tell us more about your dream trip..."></textarea>
+        </div>
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center">
+          <i data-lucide="send" width="16" height="16"></i>
+          <span data-lang-th="ส่งคำขอจอง" data-lang-en="Send Booking Request">ส่งคำขอจอง</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand-col">
+        <div class="footer__brand-name">Phuket Love Paradise</div>
+        <div class="footer__brand-sub">ภูเก็ตเลิฟพาราไดซ์</div>
+        <p data-lang-th="บริการทัวร์หรูหราในภูเก็ต ออกแบบประสบการณ์สุดพิเศษบนทะเลอันดามัน กับทีมงานมืออาชีพที่ใส่ใจในทุกรายละเอียด" data-lang-en="Luxury tour specialists in Phuket, crafting extraordinary Andaman Sea experiences with an expert team dedicated to every detail.">บริการทัวร์หรูหราในภูเก็ต ออกแบบประสบการณ์สุดพิเศษบนทะเลอันดามัน กับทีมงานมืออาชีพที่ใส่ใจในทุกรายละเอียด</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__soc" aria-label="Facebook"><i data-lucide="facebook" width="16" height="16"></i></a>
+          <a href="#" class="footer__soc" aria-label="Instagram"><i data-lucide="instagram" width="16" height="16"></i></a>
+          <a href="#" class="footer__soc" aria-label="Line"><i data-lucide="message-circle" width="16" height="16"></i></a>
+          <a href="#" class="footer__soc" aria-label="TikTok"><i data-lucide="video" width="16" height="16"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5 data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours">โปรแกรมทัวร์</h5>
+        <ul class="footer__links">
+          <li><a href="#tours" data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Island Hopping">ล่องเกาะหมู่เกาะอันดามัน</a></li>
+          <li><a href="#tours" data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Sunset Yacht Cruise">ล่องเรือยอชต์ชมพระอาทิตย์ตก</a></li>
+          <li><a href="#tours" data-lang-th="ดำน้ำดูปะการัง" data-lang-en="Snorkeling">ดำน้ำดูปะการัง</a></li>
+          <li><a href="#experiences" data-lang-th="ประสบการณ์พิเศษทั้งหมด" data-lang-en="All Experiences">ประสบการณ์พิเศษทั้งหมด</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5 data-lang-th="บริษัท" data-lang-en="Company">บริษัท</h5>
+        <ul class="footer__links">
+          <li><a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About Us">เกี่ยวกับเรา</a></li>
+          <li><a href="#testimonials" data-lang-th="รีวิวจากลูกค้า" data-lang-en="Reviews">รีวิวจากลูกค้า</a></li>
+          <li><a href="#booking" data-lang-th="ติดต่อเรา" data-lang-en="Contact Us">ติดต่อเรา</a></li>
+          <li><a href="#" data-lang-th="นโยบายความเป็นส่วนตัว" data-lang-en="Privacy Policy">นโยบายความเป็นส่วนตัว</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5 data-lang-th="ติดต่อ" data-lang-en="Contact">ติดต่อ</h5>
+        <div class="footer__ci">
+          <div class="footer__ci-item">
+            <i data-lucide="phone" width="14" height="14"></i>
+            <span>+66 76-XXX-XXXX</span>
+          </div>
+          <div class="footer__ci-item">
+            <i data-lucide="mail" width="14" height="14"></i>
+            <span>info@phuketloveparadise.com</span>
+          </div>
+          <div class="footer__ci-item">
+            <i data-lucide="map-pin" width="14" height="14"></i>
+            <span data-lang-th="ภูเก็ต, ประเทศไทย 83000" data-lang-en="Phuket, Thailand 83000">ภูเก็ต, ประเทศไทย 83000</span>
+          </div>
+          <div class="footer__ci-item">
+            <i data-lucide="clock" width="14" height="14"></i>
+            <span data-lang-th="ทุกวัน 08:00–20:00 น." data-lang-en="Daily 08:00–20:00">ทุกวัน 08:00–20:00 น.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p data-lang-th="© 2025 ภูเก็ตเลิฟพาราไดซ์ สงวนลิขสิทธิ์" data-lang-en="© 2025 Phuket Love Paradise. All rights reserved.">© 2025 ภูเก็ตเลิฟพาราไดซ์ สงวนลิขสิทธิ์</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Lucide icons
+lucide.createIcons();
+
+// Navbar scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, {passive: true});
+
+// Hamburger
+const burger = document.getElementById('burger');
+const drawer = document.getElementById('drawer');
+burger.addEventListener('click', () => drawer.classList.toggle('open'));
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+
+// Scroll reveals
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObserver.observe(el));
+</script>
+
+<!-- Language switcher (exact required JS) -->
+<script>(function(){var K='site-lang',L=localStorage.getItem(K)||'th';function S(l){L=l;localStorage.setItem(K,l);document.documentElement.lang=l;document.querySelectorAll('[data-lang-th]').forEach(function(e){var t=e.getAttribute('data-lang-'+l);if(t!==null){e.textContent=t}});var lb=document.querySelector('.lang-sw__label');if(lb){lb.textContent=l.toUpperCase()}}var sw=document.querySelector('.lang-sw');if(sw){sw.addEventListener('click',function(){S(L==='th'?'en':'th')});sw.style.cursor='pointer'}if(L!=='th'){S(L)}})();</script>
+</body>
+</html>

@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ภูเก็ตเลิฟพาราไดซ์ — ทัวร์หรูหราภูเก็ต</title>
+  <meta name="description" content="ภูเก็ตเลิฟพาราไดซ์ ให้บริการทัวร์หรูหราส่วนตัวในภูเก็ต ด้วยสไตล์เรียบหรูและประสบการณ์ระดับพรีเมียม">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.460.0"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'IBM Plex Sans Thai', 'Sukhumvit Set', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #f5e6c8;
+      background: #0a0e1a;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      overflow-x: hidden;
+    }
+    :root {
+      --navy: #0a0e1a;
+      --charcoal: #141824;
+      --gold: #c9a96e;
+      --gold-light: #e8c98a;
+      --cream: #f5e6c8;
+      --text-dim: rgba(245,230,200,0.6);
+      --text-dimmer: rgba(245,230,200,0.32);
+      --glass-border: rgba(201,169,110,0.2);
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', 'IBM Plex Sans Thai', Georgia, serif;
+      line-height: 1.5;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1.25rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.4s ease;
+    }
+    .navbar.scrolled {
+      background: rgba(10,14,26,0.96);
+      backdrop-filter: blur(16px);
+      padding: 0.8rem 1.5rem;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .logo { display: flex; flex-direction: column; gap: 0; text-decoration: none; }
+    .logo__th {
+      font-family: 'IBM Plex Sans Thai', sans-serif;
+      font-weight: 700; font-size: 0.98rem; color: var(--gold); line-height: 1.4;
+    }
+    .logo__en {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400; font-style: italic; font-size: 0.68rem;
+      color: var(--text-dim); letter-spacing: 0.12em; line-height: 1.2;
+    }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links { display: none; list-style: none; gap: 2rem; align-items: center; }
+    .nav-links a {
+      color: var(--cream); text-decoration: none; font-size: 0.875rem;
+      opacity: 0.75; transition: opacity 0.2s, color 0.2s;
+      padding: 0.6rem 0;
+    }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .lang-sw {
+      display: flex; align-items: center; gap: 0.3rem;
+      color: var(--text-dim); font-size: 0.78rem; font-weight: 500;
+      transition: color 0.2s; user-select: none; padding: 0.4rem 0;
+      background: none; border: none;
+    }
+    .lang-sw:hover { color: var(--gold); }
+    .lang-sw svg { flex-shrink: 0; opacity: 0.75; }
+    .hamburger {
+      display: flex; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 0.5rem;
+      color: var(--cream);
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 1.5px; background: var(--cream);
+      transition: all 0.3s ease; transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-menu {
+      position: fixed; inset: 0; background: rgba(10,14,26,0.98);
+      z-index: 999; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 0.25rem;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+    }
+    .mobile-menu.open { opacity: 1; pointer-events: all; }
+    .mobile-menu a {
+      color: var(--cream); text-decoration: none;
+      font-family: 'Playfair Display', serif; font-size: 1.55rem;
+      padding: 0.7rem 2rem; opacity: 0.8; transition: color 0.2s, opacity 0.2s;
+      line-height: 1.8;
+    }
+    .mobile-menu a:hover { color: var(--gold); opacity: 1; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; height: 100vh; min-height: 600px;
+      overflow: hidden; display: flex; align-items: center; justify-content: center;
+    }
+    .hero__bg {
+      position: absolute; inset: -8%;
+      background: url('https://images.unsplash.com/photo-1741232896843-4e00b1c4d9c8?w=1800&h=1100&fit=crop') center/cover no-repeat;
+      animation: heroZoom 22s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1); }
+      to   { transform: scale(1.08); }
+    }
+    .hero__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(150deg, rgba(10,14,26,0.78) 0%, rgba(10,14,26,0.38) 55%, rgba(10,14,26,0.68) 100%);
+    }
+    .hero__content {
+      position: relative; z-index: 2;
+      padding: 2rem 1.5rem; max-width: 760px; text-align: center;
+    }
+    .hero__eyebrow {
+      font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; margin-bottom: 1.4rem;
+      opacity: 0; animation: fadeUp 0.8s 0.3s ease forwards;
+    }
+    .hero__title {
+      font-size: clamp(2.3rem, 8vw, 5rem);
+      font-weight: 700; line-height: 1.5; color: #fff;
+      margin-bottom: 1.25rem;
+      opacity: 0; animation: fadeUp 0.9s 0.55s ease forwards;
+    }
+    .hero__title em { font-style: italic; color: var(--gold-light); }
+    .hero__sub {
+      font-size: 1rem; color: rgba(255,255,255,0.72); line-height: 1.9;
+      margin-bottom: 2.5rem;
+      opacity: 0; animation: fadeUp 0.9s 0.75s ease forwards;
+    }
+    .hero__cta {
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      background: var(--gold); color: var(--navy);
+      text-decoration: none; font-weight: 700; font-size: 0.9rem;
+      padding: 1rem 2.2rem; border-radius: 50px; min-height: 52px;
+      transition: all 0.3s ease;
+      opacity: 0; animation: fadeUp 0.9s 0.95s ease forwards;
+    }
+    .hero__cta:hover {
+      background: var(--gold-light); transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(201,169,110,0.38);
+    }
+    .hero__scroll {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      opacity: 0; animation: fadeIn 1s 1.5s ease forwards;
+    }
+    .hero__scroll span {
+      font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .scroll-line {
+      width: 1px; height: 38px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%,100% { opacity: 0.4; transform: scaleY(1); }
+      50%      { opacity: 1;   transform: scaleY(1.2); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal       { opacity: 0; transform: translateY(38px);  transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-left  { opacity: 0; transform: translateX(-38px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-right { opacity: 0; transform: translateX(38px);  transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible, .reveal-left.visible, .reveal-right.visible {
+      opacity: 1; transform: none;
+    }
+
+    /* ── WAVE DIVIDER ── */
+    .wave { display: block; width: 100%; margin-top: -2px; }
+
+    /* ── SECTION BASE ── */
+    section { padding: 5rem 1.5rem; }
+    .section-eyebrow {
+      display: flex; align-items: center; gap: 0.7rem;
+      color: var(--gold); font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;
+    }
+    .section-eyebrow::before {
+      content: ''; display: block; width: 28px; height: 1px;
+      background: var(--gold); opacity: 0.45; flex-shrink: 0;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 5vw, 2.9rem);
+      font-weight: 700; line-height: 1.5; color: var(--cream); margin-bottom: 0.9rem;
+    }
+    .section-desc {
+      color: var(--text-dim); line-height: 1.9; font-size: 0.93rem; max-width: 560px;
+    }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: var(--charcoal); padding: 3rem 1.5rem;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2rem 1rem; max-width: 900px; margin: 0 auto; text-align: center;
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 6vw, 3rem); font-weight: 700;
+      color: var(--gold); line-height: 1.2; margin-bottom: 0.35rem;
+    }
+    .stat-label { font-size: 0.8rem; color: var(--text-dim); line-height: 1.7; }
+
+    /* ── PHILOSOPHY ── */
+    .philosophy {
+      background: var(--charcoal); padding: 6rem 1.5rem;
+      position: relative; overflow: hidden; text-align: center;
+    }
+    .philosophy__watermark {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(5rem, 22vw, 14rem); font-weight: 700;
+      color: rgba(201,169,110,0.04); white-space: nowrap;
+      pointer-events: none; user-select: none; line-height: 1;
+    }
+    .philosophy__inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+    .philosophy__quote {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(1.45rem, 4vw, 2.3rem); font-weight: 400;
+      line-height: 1.75; color: var(--cream); margin-bottom: 1.75rem;
+    }
+    .philosophy__author {
+      font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; margin-bottom: 1.5rem;
+    }
+    .philosophy__body {
+      color: var(--text-dim); line-height: 1.9; font-size: 0.92rem;
+      max-width: 560px; margin: 0 auto;
+    }
+
+    /* ── TOURS ── */
+    .tours { background: var(--navy); padding: 5.5rem 1.5rem; }
+    .tours__hd { max-width: 900px; margin: 0 auto 4rem; }
+    .tour-item {
+      max-width: 900px; margin: 0 auto 5.5rem;
+      display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center;
+    }
+    .tour-item:last-child { margin-bottom: 0; }
+    .tour-img-wrap {
+      position: relative; overflow: hidden; border-radius: 18px;
+    }
+    .tour-img-wrap::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(201,169,110,0.13) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .tour-img {
+      width: 100%; height: 270px; object-fit: cover; display: block;
+      transition: transform 0.7s ease;
+    }
+    .tour-item:hover .tour-img { transform: scale(1.05); }
+    .tour-badge {
+      position: absolute; top: 1rem; left: 1rem;
+      background: var(--gold); color: var(--navy);
+      font-size: 0.63rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 50px;
+    }
+    .tour-num {
+      font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700;
+      color: rgba(201,169,110,0.12); line-height: 1; margin-bottom: -0.4rem;
+    }
+    .tour-title {
+      font-size: clamp(1.35rem, 4vw, 1.85rem); font-weight: 700;
+      line-height: 1.5; color: var(--cream); margin-bottom: 0.75rem;
+    }
+    .tour-desc {
+      color: var(--text-dim); line-height: 1.9; font-size: 0.88rem; margin-bottom: 1.4rem;
+    }
+    .tour-meta { display: flex; flex-wrap: wrap; gap: 1.1rem; margin-bottom: 1.75rem; }
+    .tour-meta-item {
+      display: flex; align-items: center; gap: 0.4rem;
+      color: var(--gold); font-size: 0.8rem; font-weight: 500;
+    }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid var(--gold); color: var(--gold);
+      text-decoration: none; font-size: 0.82rem; font-weight: 600;
+      padding: 0.85rem 1.75rem; border-radius: 50px; min-height: 48px;
+      transition: all 0.3s ease;
+    }
+    .btn-outline:hover {
+      background: var(--gold); color: var(--navy);
+      transform: translateY(-1px); box-shadow: 0 8px 20px rgba(201,169,110,0.25);
+    }
+
+    /* ── WHY US ── */
+    .pillars { background: var(--charcoal); padding: 5.5rem 1.5rem; }
+    .pillars__hd { max-width: 660px; margin: 0 auto 3.5rem; text-align: center; }
+    .pillars__hd .section-eyebrow { justify-content: center; }
+    .pillars__hd .section-eyebrow::before { display: none; }
+    .pillars__hd .section-desc { margin: 0 auto; }
+    .pillar-list { max-width: 860px; margin: 0 auto; }
+    .pillar-item {
+      display: grid; grid-template-columns: 3rem 1fr;
+      gap: 1.25rem; padding: 2.25rem 1rem;
+      border-bottom: 1px solid rgba(201,169,110,0.1);
+      border-radius: 10px; transition: background 0.3s ease;
+    }
+    .pillar-item:hover { background: rgba(201,169,110,0.04); }
+    .pillar-n {
+      font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700;
+      color: rgba(201,169,110,0.22); line-height: 1; padding-top: 0.3rem;
+    }
+    .pillar-body h3 {
+      font-size: 1.1rem; font-weight: 700; color: var(--cream);
+      margin-bottom: 0.45rem; line-height: 1.6;
+    }
+    .pillar-body p { font-size: 0.87rem; color: var(--text-dim); line-height: 1.9; }
+    .pillar-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; background: rgba(201,169,110,0.1);
+      border-radius: 8px; color: var(--gold); margin-bottom: 0.65rem;
+    }
+
+    /* ── GALLERY ── */
+    .gallery { background: var(--navy); padding: 5.5rem 1.5rem; }
+    .gallery__hd { max-width: 660px; margin: 0 auto 3rem; text-align: center; }
+    .gallery__hd .section-eyebrow { justify-content: center; }
+    .gallery__hd .section-eyebrow::before { display: none; }
+    .gallery-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.65rem; max-width: 1100px; margin: 0 auto;
+    }
+    .g-item { overflow: hidden; border-radius: 12px; position: relative; }
+    .g-item--tall { grid-row: span 2; }
+    .g-item--wide { grid-column: span 2; }
+    .g-item img {
+      width: 100%; height: 190px; object-fit: cover; display: block;
+      transition: transform 0.65s ease;
+    }
+    .g-item--tall img { height: 392px; }
+    .g-item--wide img { height: 230px; }
+    .g-item:hover img { transform: scale(1.07); }
+    .g-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(10,14,26,0.88), transparent);
+      padding: 2rem 1rem 0.9rem; font-size: 0.78rem; color: var(--cream);
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .g-item:hover .g-caption { opacity: 1; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--charcoal); padding: 5.5rem 1.5rem; }
+    .testimonials__hd { max-width: 660px; margin: 0 auto 3.5rem; text-align: center; }
+    .testimonials__hd .section-eyebrow { justify-content: center; }
+    .testimonials__hd .section-eyebrow::before { display: none; }
+    .testi-track {
+      display: flex; gap: 1.2rem; overflow-x: auto;
+      padding: 0.5rem 0.25rem 1.5rem; scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      max-width: 1100px; margin: 0 auto; scrollbar-width: none;
+    }
+    .testi-track::-webkit-scrollbar { display: none; }
+    .testi-card {
+      flex: 0 0 290px; background: rgba(10,14,26,0.55);
+      border: 1px solid var(--glass-border); border-radius: 18px;
+      padding: 1.75rem 1.5rem; scroll-snap-align: start;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .testi-card:hover { border-color: rgba(201,169,110,0.45); transform: translateY(-4px); }
+    .testi-stars { display: flex; gap: 0.22rem; margin-bottom: 1.1rem; }
+    .testi-stars svg { fill: var(--gold); stroke: var(--gold); }
+    .testi-text {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: 0.95rem; line-height: 1.85; color: var(--cream); margin-bottom: 1.4rem;
+    }
+    .testi-author { display: flex; align-items: center; gap: 0.7rem; }
+    .testi-avatar {
+      width: 38px; height: 38px; border-radius: 50%; object-fit: cover;
+      border: 1px solid var(--glass-border); flex-shrink: 0;
+    }
+    .testi-name { font-size: 0.83rem; font-weight: 600; color: var(--cream); line-height: 1.4; }
+    .testi-origin { font-size: 0.73rem; color: var(--text-dim); }
+
+    /* ── BOOKING ── */
+    .booking {
+      background: linear-gradient(135deg, #0a0e1a 0%, #0d1528 100%);
+      padding: 6rem 1.5rem; position: relative; overflow: hidden;
+    }
+    .booking::before {
+      content: ''; position: absolute; top: -40%; right: -15%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+    }
+    .booking__inner { max-width: 660px; margin: 0 auto; position: relative; z-index: 1; }
+    .booking__hd { text-align: center; margin-bottom: 2.75rem; }
+    .booking__hd .section-eyebrow { justify-content: center; }
+    .booking__hd .section-eyebrow::before { display: none; }
+    .booking__hd .section-desc { margin: 0 auto; text-align: center; }
+    .form-grid { display: grid; grid-template-columns: 1fr; gap: 1.15rem; }
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.38rem; }
+    .form-label {
+      font-size: 0.73rem; font-weight: 600; color: var(--gold);
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .form-ctrl {
+      background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
+      border-radius: 10px; padding: 0.88rem 1.1rem; color: var(--cream);
+      font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 0.93rem;
+      line-height: 1.8; transition: border-color 0.22s; min-height: 52px; width: 100%;
+    }
+    .form-ctrl:focus { outline: none; border-color: var(--gold); }
+    .form-ctrl::placeholder { color: var(--text-dimmer); }
+    select.form-ctrl {
+      appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23c9a96e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+    select.form-ctrl option { background: #141824; color: var(--cream); }
+    textarea.form-ctrl { resize: vertical; min-height: 96px; }
+    .btn-submit {
+      display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+      background: var(--gold); color: var(--navy);
+      border: none; font-family: 'IBM Plex Sans Thai', sans-serif;
+      font-size: 0.92rem; font-weight: 700;
+      padding: 1.05rem 2rem; border-radius: 50px; cursor: pointer;
+      min-height: 54px; width: 100%; margin-top: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .btn-submit:hover {
+      background: var(--gold-light); transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(201,169,110,0.3);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); border-top: 1px solid var(--glass-border);
+      padding: 3.5rem 1.5rem 2rem;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1fr; gap: 2.5rem;
+      max-width: 1100px; margin: 0 auto 2.5rem;
+    }
+    .footer-brand p {
+      font-size: 0.82rem; color: var(--text-dim); line-height: 1.9;
+      max-width: 280px; margin-top: 0.75rem;
+    }
+    .footer-socials { display: flex; gap: 0.65rem; margin-top: 1.25rem; }
+    .social-btn {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid var(--glass-border); color: var(--text-dim);
+      text-decoration: none; transition: all 0.22s;
+    }
+    .social-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .footer-col h4 {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.6rem; }
+    .footer-col ul a {
+      color: var(--text-dim); text-decoration: none;
+      font-size: 0.84rem; line-height: 1.8; transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-contact-row {
+      display: flex; align-items: flex-start; gap: 0.55rem;
+      color: var(--text-dim); font-size: 0.82rem;
+      margin-bottom: 0.7rem; line-height: 1.7;
+    }
+    .footer-contact-row i { color: var(--gold); flex-shrink: 0; margin-top: 0.22rem; }
+    .footer-bottom {
+      border-top: 1px solid rgba(201,169,110,0.1); padding-top: 1.75rem;
+      display: flex; flex-direction: column; gap: 0.6rem;
+      align-items: center; text-align: center;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .footer-bottom p { font-size: 0.73rem; color: var(--text-dimmer); line-height: 1.7; }
+
+    /* ── DESKTOP ── */
+    @media (min-width: 768px) {
+      section { padding: 7rem 3rem; }
+      .navbar { padding: 1.5rem 3rem; }
+      .navbar.scrolled { padding: 0.9rem 3rem; }
+      .nav-links { display: flex; }
+      .hamburger { display: none; }
+      .hero__content { text-align: left; max-width: 640px; margin-left: 8vw; }
+      .philosophy { padding: 8rem 3rem; }
+      .tours { padding: 7rem 3rem; }
+      .tour-item { grid-template-columns: 1fr 1fr; gap: 4rem; }
+      .tour-item:nth-child(even) .tour-img-wrap { order: 2; }
+      .tour-item:nth-child(even) .tour-text     { order: 1; }
+      .tour-img { height: 370px; }
+      .pillars { padding: 7rem 3rem; }
+      .gallery { padding: 7rem 3rem; }
+      .gallery-grid { grid-template-columns: repeat(3,1fr); }
+      .g-item img { height: 220px; }
+      .g-item--tall img { height: 456px; }
+      .g-item--wide img { height: 270px; }
+      .testi-card { flex: 0 0 350px; }
+      .booking { padding: 8rem 3rem; }
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr 1.5fr; }
+      .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
+      .stats-strip { padding: 3.5rem 3rem; }
+      .stats-grid { grid-template-columns: repeat(4,1fr); gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a class="logo" href="#home">
+    <span class="logo__th">ภูเก็ตเลิฟพาราไดซ์</span>
+    <span class="logo__en">Phuket Love Paradise</span>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#tours"        data-lang-th="ทัวร์"       data-lang-en="Tours">ทัวร์</a></li>
+      <li><a href="#pillars"      data-lang-th="เกี่ยวกับเรา" data-lang-en="About">เกี่ยวกับเรา</a></li>
+      <li><a href="#gallery"      data-lang-th="แกลเลอรี่"   data-lang-en="Gallery">แกลเลอรี่</a></li>
+      <li><a href="#testimonials" data-lang-th="รีวิว"        data-lang-en="Reviews">รีวิว</a></li>
+      <li><a href="#booking"      data-lang-th="จองเลย"      data-lang-en="Book Now">จองเลย</a></li>
+    </ul>
+    <button class="lang-sw" aria-label="Switch language">
+      <i data-lucide="globe" width="14" height="14"></i>
+      <span class="lang-sw__label">TH</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="เมนู">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#tours"        data-lang-th="ทัวร์"       data-lang-en="Tours">ทัวร์</a>
+  <a href="#pillars"      data-lang-th="เกี่ยวกับเรา" data-lang-en="About">เกี่ยวกับเรา</a>
+  <a href="#gallery"      data-lang-th="แกลเลอรี่"   data-lang-en="Gallery">แกลเลอรี่</a>
+  <a href="#testimonials" data-lang-th="รีวิว"        data-lang-en="Reviews">รีวิว</a>
+  <a href="#booking"      data-lang-th="จองเลย"      data-lang-en="Book Now">จองเลย</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero__bg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow" data-lang-th="ทัวร์หรูหราภูเก็ต · ประสบการณ์ระดับพรีเมียม" data-lang-en="Luxury Phuket Tours · Premium Private Experiences">ทัวร์หรูหราภูเก็ต · ประสบการณ์ระดับพรีเมียม</p>
+    <h1 class="hero__title">
+      <span data-lang-th="สวรรค์แห่งความรัก" data-lang-en="Where Love Meets">สวรรค์แห่งความรัก</span><br>
+      <em data-lang-th="ริมทะเลอันดามัน" data-lang-en="The Andaman Sea">ริมทะเลอันดามัน</em>
+    </h1>
+    <p class="hero__sub" data-lang-th="ค้นพบความงามของภูเก็ตในแบบที่คุณไม่เคยสัมผัสมาก่อน ด้วยทัวร์ส่วนตัวระดับลักชูรี่ที่ออกแบบเพื่อคุณโดยเฉพาะ" data-lang-en="Discover Phuket's beauty like never before. Private luxury tours designed exclusively around you.">ค้นพบความงามของภูเก็ตในแบบที่คุณไม่เคยสัมผัสมาก่อน ด้วยทัวร์ส่วนตัวระดับลักชูรี่ที่ออกแบบเพื่อคุณโดยเฉพาะ</p>
+    <a href="#booking" class="hero__cta">
+      <i data-lucide="compass" width="16" height="16"></i>
+      <span data-lang-th="เริ่มต้นการเดินทาง" data-lang-en="Begin Your Journey">เริ่มต้นการเดินทาง</span>
+    </a>
+  </div>
+  <div class="hero__scroll">
+    <span data-lang-th="เลื่อนดู" data-lang-en="Scroll">เลื่อนดู</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- wave: hero → charcoal -->
+<svg class="wave" viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:70px;background:#0a0e1a;display:block;">
+  <path d="M0,0 C360,70 1080,0 1440,70 L1440,70 L0,70 Z" fill="#141824"/>
+</svg>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div class="reveal">
+      <div class="stat-num">15+</div>
+      <div class="stat-label" data-lang-th="ปีประสบการณ์" data-lang-en="Years of Experience">ปีประสบการณ์</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-num">10K+</div>
+      <div class="stat-label" data-lang-th="ลูกค้าทั่วโลก" data-lang-en="Happy Guests Worldwide">ลูกค้าทั่วโลก</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-num">4.9</div>
+      <div class="stat-label" data-lang-th="คะแนนเฉลี่ยจากรีวิว" data-lang-en="Average Review Rating">คะแนนเฉลี่ยจากรีวิว</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-num">100%</div>
+      <div class="stat-label" data-lang-th="ทริปส่วนตัว ไม่แชร์กรุ๊ป" data-lang-en="Private Tours, No Shared Groups">ทริปส่วนตัว ไม่แชร์กรุ๊ป</div>
+    </div>
+  </div>
+</div>
+
+<!-- wave: charcoal → charcoal (philosophy) -->
+<svg class="wave" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;background:#141824;display:block;">
+  <path d="M0,60 C480,0 960,60 1440,0 L1440,0 L0,0 Z" fill="#141824"/>
+</svg>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <div class="philosophy__watermark">LOVE</div>
+  <div class="philosophy__inner">
+    <div class="section-eyebrow reveal" style="justify-content:center;">
+      <span data-lang-th="ปรัชญาของเรา" data-lang-en="Our Philosophy">ปรัชญาของเรา</span>
+    </div>
+    <blockquote class="philosophy__quote reveal">
+      <span data-lang-th=""การเดินทางที่ดีที่สุดไม่ใช่แค่การไปถึงจุดหมาย — แต่คือทุกช่วงเวลาที่คุณได้สัมผัส"" data-lang-en=""The finest journey is not about the destination — it is about every precious moment you live along the way."">"การเดินทางที่ดีที่สุดไม่ใช่แค่การไปถึงจุดหมาย — แต่คือทุกช่วงเวลาที่คุณได้สัมผัส"</span>
+    </blockquote>
+    <p class="philosophy__author reveal" data-lang-th="— ภูเก็ตเลิฟพาราไดซ์" data-lang-en="— Phuket Love Paradise">— ภูเก็ตเลิฟพาราไดซ์</p>
+    <p class="philosophy__body reveal" data-lang-th="เราเชื่อว่าทุกการเดินทางควรเต็มไปด้วยความงดงามและความทรงจำที่ล้ำค่า เราจึงออกแบบทุกทริปด้วยความใส่ใจในรายละเอียดที่สุด เพื่อให้คุณได้สัมผัสภูเก็ตในแบบที่หรูหราและแท้จริงที่สุด" data-lang-en="We believe every journey should overflow with beauty and precious memories. That's why we design every trip with meticulous care, so you experience Phuket at its most luxurious and authentic.">เราเชื่อว่าทุกการเดินทางควรเต็มไปด้วยความงดงามและความทรงจำที่ล้ำค่า เราจึงออกแบบทุกทริปด้วยความใส่ใจในรายละเอียดที่สุด เพื่อให้คุณได้สัมผัสภูเก็ตในแบบที่หรูหราและแท้จริงที่สุด</p>
+  </div>
+</section>
+
+<!-- wave: charcoal → navy -->
+<svg class="wave" viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:70px;background:#141824;display:block;">
+  <path d="M0,0 L0,35 C240,70 480,5 720,45 C960,85 1200,15 1440,35 L1440,0 Z" fill="#0a0e1a"/>
+</svg>
+
+<!-- TOURS -->
+<section class="tours" id="tours">
+  <div class="tours__hd reveal">
+    <div class="section-eyebrow"><span data-lang-th="ประสบการณ์สุดพิเศษ" data-lang-en="Signature Experiences">ประสบการณ์สุดพิเศษ</span></div>
+    <h2 class="section-title" data-lang-th="ทัวร์ที่ออกแบบมาเพื่อคุณ" data-lang-en="Journeys Crafted For You">ทัวร์ที่ออกแบบมาเพื่อคุณ</h2>
+    <p class="section-desc" data-lang-th="แต่ละทริปคือผลงานชิ้นเอกที่เราสร้างขึ้นด้วยความรักและความเชี่ยวชาญ เพื่อให้คุณได้รับประสบการณ์ที่ไม่เหมือนใคร" data-lang-en="Each trip is a masterpiece we craft with passion and expertise, delivering an experience entirely unlike any other.">แต่ละทริปคือผลงานชิ้นเอกที่เราสร้างขึ้นด้วยความรักและความเชี่ยวชาญ เพื่อให้คุณได้รับประสบการณ์ที่ไม่เหมือนใคร</p>
+  </div>
+
+  <!-- Tour 1 -->
+  <div class="tour-item">
+    <div class="tour-img-wrap reveal-left">
+      <img class="tour-img" src="https://images.unsplash.com/photo-1681978313448-8f05ddc35b51?w=800&h=540&fit=crop" alt="Private yacht sailing at sunset Phuket">
+      <span class="tour-badge" data-lang-th="ยอดนิยม" data-lang-en="Most Popular">ยอดนิยม</span>
+    </div>
+    <div class="tour-text reveal-right">
+      <div class="tour-num">01</div>
+      <h3 class="tour-title" data-lang-th="ล่องเรือยอชท์ส่วนตัวชมพระอาทิตย์ตก" data-lang-en="Private Sunset Yacht Charter">ล่องเรือยอชท์ส่วนตัวชมพระอาทิตย์ตก</h3>
+      <p class="tour-desc" data-lang-th="สัมผัสโรแมนติกสุดพิเศษบนเรือยอชท์ส่วนตัว พร้อมแชมเปญ อาหารระดับ 5 ดาว และวิวพระอาทิตย์ตกที่ไม่มีวันลืม เหมาะสำหรับคู่รักที่ต้องการความเป็นส่วนตัวสูงสุด" data-lang-en="An ultra-romantic escape aboard a private yacht complete with champagne, five-star cuisine, and an unforgettable Andaman sunset. The ideal retreat for couples seeking absolute privacy.">สัมผัสโรแมนติกสุดพิเศษบนเรือยอชท์ส่วนตัว พร้อมแชมเปญ อาหารระดับ 5 ดาว และวิวพระอาทิตย์ตกที่ไม่มีวันลืม เหมาะสำหรับคู่รักที่ต้องการความเป็นส่วนตัวสูงสุด</p>
+      <div class="tour-meta">
+        <span class="tour-meta-item"><i data-lucide="clock" width="13" height="13"></i> <span data-lang-th="4 ชั่วโมง" data-lang-en="4 hours">4 ชั่วโมง</span></span>
+        <span class="tour-meta-item"><i data-lucide="users" width="13" height="13"></i> <span data-lang-th="สูงสุด 8 คน" data-lang-en="Up to 8 guests">สูงสุด 8 คน</span></span>
+        <span class="tour-meta-item"><i data-lucide="star" width="13" height="13"></i> <span data-lang-th="ส่วนตัว 100%" data-lang-en="100% Private">ส่วนตัว 100%</span></span>
+      </div>
+      <a href="#booking" class="btn-outline">
+        <span data-lang-th="จองทัวร์นี้" data-lang-en="Book This Tour">จองทัวร์นี้</span>
+        <i data-lucide="arrow-right" width="13" height="13"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Tour 2 -->
+  <div class="tour-item">
+    <div class="tour-img-wrap reveal-right">
+      <img class="tour-img" src="https://images.unsplash.com/photo-1660593212118-e59bdd0c1e79?w=800&h=540&fit=crop" alt="Phi Phi island speedboat Phuket">
+      <span class="tour-badge" data-lang-th="วันทริปยอดนิยม" data-lang-en="Top Day Trip">วันทริปยอดนิยม</span>
+    </div>
+    <div class="tour-text reveal-left">
+      <div class="tour-num">02</div>
+      <h3 class="tour-title" data-lang-th="เกาะพีพี & มาญา เบย์ ทัวร์สปีดโบ๊ต" data-lang-en="Phi Phi & Maya Bay Speedboat Tour">เกาะพีพี & มาญา เบย์ ทัวร์สปีดโบ๊ต</h3>
+      <p class="tour-desc" data-lang-th="พาคุณสำรวจอ่าวมายาและหมู่เกาะพีพีอันโด่งดัง ด้วยสปีดโบ๊ตส่วนตัว ดำน้ำดูปะการัง ชมทะเลสีฟ้าคราม และเพลิดเพลินกับอาหารทะเลสดใหม่กลางทะเล" data-lang-en="Explore legendary Maya Bay and Phi Phi aboard your own private speedboat — vibrant coral reefs, stunning turquoise water, and fresh seafood served on the water.">พาคุณสำรวจอ่าวมายาและหมู่เกาะพีพีอันโด่งดัง ด้วยสปีดโบ๊ตส่วนตัว ดำน้ำดูปะการัง ชมทะเลสีฟ้าคราม และเพลิดเพลินกับอาหารทะเลสดใหม่กลางทะเล</p>
+      <div class="tour-meta">
+        <span class="tour-meta-item"><i data-lucide="clock" width="13" height="13"></i> <span data-lang-th="ทั้งวัน 9–17 น." data-lang-en="Full Day 9am–5pm">ทั้งวัน 9–17 น.</span></span>
+        <span class="tour-meta-item"><i data-lucide="users" width="13" height="13"></i> <span data-lang-th="สูงสุด 12 คน" data-lang-en="Up to 12 guests">สูงสุด 12 คน</span></span>
+        <span class="tour-meta-item"><i data-lucide="anchor" width="13" height="13"></i> <span data-lang-th="รับส่งโรงแรม" data-lang-en="Hotel pickup included">รับส่งโรงแรม</span></span>
+      </div>
+      <a href="#booking" class="btn-outline">
+        <span data-lang-th="จองทัวร์นี้" data-lang-en="Book This Tour">จองทัวร์นี้</span>
+        <i data-lucide="arrow-right" width="13" height="13"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Tour 3 -->
+  <div class="tour-item">
+    <div class="tour-img-wrap reveal-left">
+      <img class="tour-img" src="https://images.unsplash.com/photo-1596178060810-72f53ce9a65c?w=800&h=540&fit=crop" alt="Luxury villa pool tropical Phuket">
+      <span class="tour-badge" data-lang-th="แนะนำ" data-lang-en="Recommended">แนะนำ</span>
+    </div>
+    <div class="tour-text reveal-right">
+      <div class="tour-num">03</div>
+      <h3 class="tour-title" data-lang-th="วิลล่าหรู & สปาคู่รัก วันเต็มวัน" data-lang-en="Luxury Villa & Couples' Spa Full Day">วิลล่าหรู & สปาคู่รัก วันเต็มวัน</h3>
+      <p class="tour-desc" data-lang-th="เพลิดเพลินกับวันที่สมบูรณ์แบบในวิลล่าพูลส่วนตัวระดับเวิลด์คลาส พร้อมนวดไทยดั้งเดิม อาหารเที่ยงริมสระ และทรีตเมนต์สปาพิเศษสำหรับคู่รัก" data-lang-en="An entire day in a world-class private pool villa — traditional Thai massage, poolside dining, and bespoke couple's spa treatments in total seclusion.">เพลิดเพลินกับวันที่สมบูรณ์แบบในวิลล่าพูลส่วนตัวระดับเวิลด์คลาส พร้อมนวดไทยดั้งเดิม อาหารเที่ยงริมสระ และทรีตเมนต์สปาพิเศษสำหรับคู่รัก</p>
+      <div class="tour-meta">
+        <span class="tour-meta-item"><i data-lucide="clock" width="13" height="13"></i> <span data-lang-th="8 ชั่วโมง" data-lang-en="8 hours">8 ชั่วโมง</span></span>
+        <span class="tour-meta-item"><i data-lucide="heart" width="13" height="13"></i> <span data-lang-th="สำหรับคู่รัก" data-lang-en="For couples">สำหรับคู่รัก</span></span>
+        <span class="tour-meta-item"><i data-lucide="sparkles" width="13" height="13"></i> <span data-lang-th="รวมอาหาร & สปา" data-lang-en="Meals & spa included">รวมอาหาร & สปา</span></span>
+      </div>
+      <a href="#booking" class="btn-outline">
+        <span data-lang-th="จองทัวร์นี้" data-lang-en="Book This Tour">จองทัวร์นี้</span>
+        <i data-lucide="arrow-right" width="13" height="13"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Tour 4 -->
+  <div class="tour-item">
+    <div class="tour-img-wrap reveal-right">
+      <img class="tour-img" src="https://images.unsplash.com/photo-1768851719811-fa5020c55dc8?w=800&h=540&fit=crop" alt="Coral reef snorkeling Andaman Sea">
+      <span class="tour-badge" data-lang-th="ใหม่" data-lang-en="New">ใหม่</span>
+    </div>
+    <div class="tour-text reveal-left">
+      <div class="tour-num">04</div>
+      <h3 class="tour-title" data-lang-th="ดำน้ำปะการัง & หาดลับสุดท้ายทะเลอันดามัน" data-lang-en="Coral Reef Dive & Hidden Beach Discovery">ดำน้ำปะการัง & หาดลับสุดท้ายทะเลอันดามัน</h3>
+      <p class="tour-desc" data-lang-th="ค้นพบโลกใต้ทะเลอันดามันด้วยการดำน้ำดูปะการังหลากสีสัน จากนั้นพักผ่อนบนหาดส่วนตัวที่นักท่องเที่ยวทั่วไปไม่มีวันเข้าถึงได้ นำโดยไกด์ผู้เชี่ยวชาญของเรา" data-lang-en="Plunge into the Andaman's underwater wonders — vibrant coral reefs and a secluded private beach no ordinary tourist can reach, led by our expert dive guides.">ค้นพบโลกใต้ทะเลอันดามันด้วยการดำน้ำดูปะการังหลากสีสัน จากนั้นพักผ่อนบนหาดส่วนตัวที่นักท่องเที่ยวทั่วไปไม่มีวันเข้าถึงได้ นำโดยไกด์ผู้เชี่ยวชาญของเรา</p>
+      <div class="tour-meta">
+        <span class="tour-meta-item"><i data-lucide="clock" width="13" height="13"></i> <span data-lang-th="6 ชั่วโมง" data-lang-en="6 hours">6 ชั่วโมง</span></span>
+        <span class="tour-meta-item"><i data-lucide="fish" width="13" height="13"></i> <span data-lang-th="รวมอุปกรณ์ดำน้ำ" data-lang-en="All equipment included">รวมอุปกรณ์ดำน้ำ</span></span>
+        <span class="tour-meta-item"><i data-lucide="shield-check" width="13" height="13"></i> <span data-lang-th="มาตรฐานความปลอดภัยสากล" data-lang-en="International safety certified">มาตรฐานความปลอดภัยสากล</span></span>
+      </div>
+      <a href="#booking" class="btn-outline">
+        <span data-lang-th="จองทัวร์นี้" data-lang-en="Book This Tour">จองทัวร์นี้</span>
+        <i data-lucide="arrow-right" width="13" height="13"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- wave: navy → charcoal -->
+<svg class="wave" viewBox="0 0 1440 75" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:75px;background:#0a0e1a;display:block;">
+  <path d="M0,0 C360,75 1080,0 1440,75 L1440,75 L0,75 Z" fill="#141824"/>
+</svg>
+
+<!-- WHY US -->
+<section class="pillars" id="pillars">
+  <div class="pillars__hd">
+    <div class="section-eyebrow reveal"><span data-lang-th="ทำไมต้องเลือกเรา" data-lang-en="Why Choose Us">ทำไมต้องเลือกเรา</span></div>
+    <h2 class="section-title reveal" data-lang-th="มาตรฐานที่เหนือกว่า" data-lang-en="Standards Above & Beyond">มาตรฐานที่เหนือกว่า</h2>
+    <p class="section-desc reveal" data-lang-th="ด้วยประสบการณ์กว่า 15 ปีในวงการทัวร์หรูหราภูเก็ต เราได้รับความไว้วางใจจากลูกค้ากว่า 10,000 คนทั่วโลก" data-lang-en="With over 15 years in Phuket's luxury travel industry, we've earned the trust of more than 10,000 guests worldwide.">ด้วยประสบการณ์กว่า 15 ปีในวงการทัวร์หรูหราภูเก็ต เราได้รับความไว้วางใจจากลูกค้ากว่า 10,000 คนทั่วโลก</p>
+  </div>
+  <div class="pillar-list">
+    <div class="pillar-item reveal">
+      <div class="pillar-n">01</div>
+      <div class="pillar-body">
+        <div class="pillar-icon"><i data-lucide="gem" width="15" height="15"></i></div>
+        <h3 data-lang-th="ประสบการณ์ลักชูรี่แท้จริง" data-lang-en="Authentic Luxury Experiences">ประสบการณ์ลักชูรี่แท้จริง</h3>
+        <p data-lang-th="เราคัดสรรเฉพาะบริการและสถานที่ที่มีคุณภาพสูงสุด ไม่มีการประนีประนอม ทุกอย่างต้องสมบูรณ์แบบสำหรับคุณ" data-lang-en="We select only the highest-quality services and venues. There is no compromise — everything must be perfect for you.">เราคัดสรรเฉพาะบริการและสถานที่ที่มีคุณภาพสูงสุด ไม่มีการประนีประนอม ทุกอย่างต้องสมบูรณ์แบบสำหรับคุณ</p>
+      </div>
+    </div>
+    <div class="pillar-item reveal">
+      <div class="pillar-n">02</div>
+      <div class="pillar-body">
+        <div class="pillar-icon"><i data-lucide="user-check" width="15" height="15"></i></div>
+        <h3 data-lang-th="ไกด์ส่วนตัวผู้เชี่ยวชาญ" data-lang-en="Expert Private Guides">ไกด์ส่วนตัวผู้เชี่ยวชาญ</h3>
+        <p data-lang-th="ไกด์ทุกคนผ่านการฝึกอบรมอย่างเข้มข้น พูดได้หลายภาษา มีความรักในท้องถิ่นอย่างแท้จริง และพร้อมดูแลคุณตลอด 24 ชั่วโมง" data-lang-en="Every guide is rigorously trained, multilingual, and genuinely passionate about the local culture — available to care for you around the clock.">ไกด์ทุกคนผ่านการฝึกอบรมอย่างเข้มข้น พูดได้หลายภาษา มีความรักในท้องถิ่นอย่างแท้จริง และพร้อมดูแลคุณตลอด 24 ชั่วโมง</p>
+      </div>
+    </div>
+    <div class="pillar-item reveal">
+      <div class="pillar-n">03</div>
+      <div class="pillar-body">
+        <div class="pillar-icon"><i data-lucide="settings-2" width="15" height="15"></i></div>
+        <h3 data-lang-th="ออกแบบทริปตามความต้องการของคุณ" data-lang-en="Fully Bespoke Itineraries">ออกแบบทริปตามความต้องการของคุณ</h3>
+        <p data-lang-th="ไม่มีแพ็กเกจสำเร็จรูป ทุกทริปถูกออกแบบขึ้นใหม่ตั้งแต่ต้นเพื่อตอบสนองความต้องการและความฝันของคุณโดยเฉพาะ" data-lang-en="No off-the-shelf packages. Every trip is designed from scratch to match exactly what you want and dream of.">ไม่มีแพ็กเกจสำเร็จรูป ทุกทริปถูกออกแบบขึ้นใหม่ตั้งแต่ต้นเพื่อตอบสนองความต้องการและความฝันของคุณโดยเฉพาะ</p>
+      </div>
+    </div>
+    <div class="pillar-item reveal">
+      <div class="pillar-n">04</div>
+      <div class="pillar-body">
+        <div class="pillar-icon"><i data-lucide="shield" width="15" height="15"></i></div>
+        <h3 data-lang-th="ความปลอดภัยสูงสุด" data-lang-en="Uncompromising Safety">ความปลอดภัยสูงสุด</h3>
+        <p data-lang-th="เรือ ยานพาหนะ และอุปกรณ์ทุกชิ้นได้รับการตรวจสอบตามมาตรฐานสากล ทีมงานของเราผ่านการฝึกฉุกเฉินและการปฐมพยาบาลระดับสูง" data-lang-en="Every vessel, vehicle, and piece of equipment meets international standards. Our crew is trained in emergency response and advanced first aid.">เรือ ยานพาหนะ และอุปกรณ์ทุกชิ้นได้รับการตรวจสอบตามมาตรฐานสากล ทีมงานของเราผ่านการฝึกฉุกเฉินและการปฐมพยาบาลระดับสูง</p>
+      </div>
+    </div>
+    <div class="pillar-item reveal">
+      <div class="pillar-n">05</div>
+      <div class="pillar-body">
+        <div class="pillar-icon"><i data-lucide="leaf" width="15" height="15"></i></div>
+        <h3 data-lang-th="การท่องเที่ยวอย่างยั่งยืน" data-lang-en="Responsible & Sustainable Tourism">การท่องเที่ยวอย่างยั่งยืน</h3>
+        <p data-lang-th="เราใช้เรือไฮบริด ลดขยะพลาสติก และสนับสนุนชุมชนท้องถิ่นในทุกทริป เพราะเราเชื่อว่าความงามของภูเก็ตต้องถูกรักษาไว้สำหรับคนรุ่นต่อไป" data-lang-en="We use hybrid vessels, eliminate single-use plastics, and actively support local communities — because Phuket's beauty must be preserved for future generations.">เราใช้เรือไฮบริด ลดขยะพลาสติก และสนับสนุนชุมชนท้องถิ่นในทุกทริป เพราะเราเชื่อว่าความงามของภูเก็ตต้องถูกรักษาไว้สำหรับคนรุ่นต่อไป</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave: charcoal → navy -->
+<svg class="wave" viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:70px;background:#141824;display:block;">
+  <path d="M0,70 C480,0 960,70 1440,0 L1440,0 L0,0 Z" fill="#0a0e1a"/>
+</svg>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery__hd">
+    <div class="section-eyebrow reveal"><span data-lang-th="ภาพความทรงจำ" data-lang-en="Captured Moments">ภาพความทรงจำ</span></div>
+    <h2 class="section-title reveal" data-lang-th="ชีวิตในพาราไดซ์" data-lang-en="Life in Paradise">ชีวิตในพาราไดซ์</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="g-item g-item--tall reveal">
+      <img src="https://images.unsplash.com/photo-1741232896843-4e00b1c4d9c8?w=600&h=800&fit=crop" alt="Phuket beach sunset colourful boats">
+      <div class="g-caption" data-lang-th="พระอาทิตย์ตกภูเก็ต" data-lang-en="Phuket Sunset">พระอาทิตย์ตกภูเก็ต</div>
+    </div>
+    <div class="g-item reveal">
+      <img src="https://images.unsplash.com/photo-1676220022985-f8de09546464?w=600&h=380&fit=crop" alt="Kayaking between limestone cliffs">
+      <div class="g-caption" data-lang-th="ล่องแคนู" data-lang-en="Kayaking">ล่องแคนู</div>
+    </div>
+    <div class="g-item reveal">
+      <img src="https://images.unsplash.com/photo-1764100105283-cccb8e48a6e3?w=600&h=380&fit=crop" alt="Paddleboarding turquoise Andaman water">
+      <div class="g-caption" data-lang-th="แพดเดิลบอร์ด" data-lang-en="Paddleboarding">แพดเดิลบอร์ด</div>
+    </div>
+    <div class="g-item g-item--wide reveal">
+      <img src="https://images.unsplash.com/photo-1674043549356-8dff137408bb?w=1200&h=500&fit=crop" alt="Poolside sunset dinner table">
+      <div class="g-caption" data-lang-th="อาหารเย็นริมสระ" data-lang-en="Poolside Dinner">อาหารเย็นริมสระ</div>
+    </div>
+    <div class="g-item reveal">
+      <img src="https://images.unsplash.com/photo-1653359092732-acd69a5a4e8a?w=600&h=380&fit=crop" alt="Couple watching ocean at sunset">
+      <div class="g-caption" data-lang-th="โรแมนติกริมชายหาด" data-lang-en="Romantic Beach">โรแมนติกริมชายหาด</div>
+    </div>
+    <div class="g-item reveal">
+      <img src="https://images.unsplash.com/photo-1768851719811-fa5020c55dc8?w=600&h=380&fit=crop" alt="Tropical coral reef snorkeling">
+      <div class="g-caption" data-lang-th="ดำน้ำดูปะการัง" data-lang-en="Coral Snorkeling">ดำน้ำดูปะการัง</div>
+    </div>
+  </div>
+</section>
+
+<!-- wave: navy → charcoal -->
+<svg class="wave" viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:70px;background:#0a0e1a;display:block;">
+  <path d="M0,0 C360,70 1080,0 1440,70 L1440,70 L0,70 Z" fill="#141824"/>
+</svg>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials__hd">
+    <div class="section-eyebrow reveal"><span data-lang-th="เสียงจากลูกค้า" data-lang-en="Guest Stories">เสียงจากลูกค้า</span></div>
+    <h2 class="section-title reveal" data-lang-th="ความทรงจำที่พวกเขาฝากไว้" data-lang-en="Memories They Left With Us">ความทรงจำที่พวกเขาฝากไว้</h2>
+  </div>
+  <div class="testi-track reveal">
+    <div class="testi-card">
+      <div class="testi-stars">
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+      </div>
+      <p class="testi-text" data-lang-th=""ทริปฮันนีมูนที่สมบูรณ์แบบที่สุดในชีวิต การล่องเรือยอชท์ชมพระอาทิตย์ตกทำให้เราทั้งสองประทับใจไม่รู้ลืม ขอบคุณทีมงานทุกคนจากใจ"" data-lang-en=""The most perfect honeymoon of our lives. The sunset yacht charter left us both utterly breathless. Heartfelt thanks to every member of the team."">"ทริปฮันนีมูนที่สมบูรณ์แบบที่สุดในชีวิต การล่องเรือยอชท์ชมพระอาทิตย์ตกทำให้เราทั้งสองประทับใจไม่รู้ลืม ขอบคุณทีมงานทุกคนจากใจ"</p>
+      <div class="testi-author">
+        <img class="testi-avatar" src="https://picsum.photos/seed/couple1/80/80" alt="Sarun & Ploy K.">
+        <div>
+          <div class="testi-name">Sarun & Ploy K.</div>
+          <div class="testi-origin" data-lang-th="กรุงเทพมหานคร, ไทย" data-lang-en="Bangkok, Thailand">กรุงเทพมหานคร, ไทย</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+      </div>
+      <p class="testi-text" data-lang-th=""บริการระดับโลกอย่างแท้จริง ไกด์ส่วนตัวเก่งมากและใจดีมาก ทริปเกาะพีพีสวยราวกับความฝัน แตกต่างจากทัวร์กรุ๊ปมาก"" data-lang-en=""Absolutely world-class service. Our private guide was knowledgeable and warm. Phi Phi was pure magic — nothing like a crowded group tour."">"บริการระดับโลกอย่างแท้จริง ไกด์ส่วนตัวเก่งมากและใจดีมาก ทริปเกาะพีพีสวยราวกับความฝัน แตกต่างจากทัวร์กรุ๊ปมาก"</p>
+      <div class="testi-author">
+        <img class="testi-avatar" src="https://picsum.photos/seed/traveler2/80/80" alt="James & Sophie M.">
+        <div>
+          <div class="testi-name">James & Sophie M.</div>
+          <div class="testi-origin" data-lang-th="ลอนดอน, สหราชอาณาจักร" data-lang-en="London, United Kingdom">ลอนดอน, สหราชอาณาจักร</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+      </div>
+      <p class="testi-text" data-lang-th=""ดำน้ำเจอปะการังสวยมากครับ ไกด์ดูแลดีและเป็นมืออาชีพ แนะนำทุกคนเลยครับ คุ้มค่ามากจริงๆ"" data-lang-en=""The coral was breathtaking. The guide was attentive and utterly professional. I've recommended you to all my friends — incredible value."">"ดำน้ำเจอปะการังสวยมากครับ ไกด์ดูแลดีและเป็นมืออาชีพ แนะนำทุกคนเลยครับ คุ้มค่ามากจริงๆ"</p>
+      <div class="testi-author">
+        <img class="testi-avatar" src="https://picsum.photos/seed/thai3/80/80" alt="Krit W.">
+        <div>
+          <div class="testi-name">Krit W.</div>
+          <div class="testi-origin" data-lang-th="เชียงใหม่, ไทย" data-lang-en="Chiang Mai, Thailand">เชียงใหม่, ไทย</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+        <i data-lucide="star" width="13" height="13"></i>
+      </div>
+      <p class="testi-text" data-lang-th=""แพ็กเกจสปาและวิลล่าคือไฮไลท์ของทริปเลยค่ะ วิลล่าสวยมาก อาหารอร่อย และการบริการอบอุ่นมากที่สุดเท่าที่เคยเจอ"" data-lang-en=""The spa villa package was the absolute highlight of our trip. Stunning villa, exquisite food, and the warmest service we have ever experienced."">"แพ็กเกจสปาและวิลล่าคือไฮไลท์ของทริปเลยค่ะ วิลล่าสวยมาก อาหารอร่อย และการบริการอบอุ่นมากที่สุดเท่าที่เคยเจอ"</p>
+      <div class="testi-author">
+        <img class="testi-avatar" src="https://picsum.photos/seed/german4/80/80" alt="Hans & Elke B.">
+        <div>
+          <div class="testi-name">Hans & Elke B.</div>
+          <div class="testi-origin" data-lang-th="มิวนิก, เยอรมนี" data-lang-en="Munich, Germany">มิวนิก, เยอรมนี</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave: charcoal → booking navy -->
+<svg class="wave" viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:70px;background:#141824;display:block;">
+  <path d="M0,70 C480,0 960,70 1440,0 L1440,0 L0,0 Z" fill="#0a0e1a"/>
+</svg>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <div class="booking__inner">
+    <div class="booking__hd">
+      <div class="section-eyebrow reveal"><span data-lang-th="เริ่มต้นการเดินทาง" data-lang-en="Start Your Journey">เริ่มต้นการเดินทาง</span></div>
+      <h2 class="section-title reveal" data-lang-th="จองทัวร์ของคุณ" data-lang-en="Book Your Tour">จองทัวร์ของคุณ</h2>
+      <p class="section-desc reveal" data-lang-th="กรอกข้อมูลด้านล่าง แล้วทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อออกแบบทริปในฝันของคุณ" data-lang-en="Fill in the details below and our team will contact you within 24 hours to design your dream trip.">กรอกข้อมูลด้านล่าง แล้วทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อออกแบบทริปในฝันของคุณ</p>
+    </div>
+    <form class="form-grid reveal" onsubmit="return false;">
+      <div class="form-row-2">
+        <div class="form-group">
+          <label class="form-label" data-lang-th="ชื่อ" data-lang-en="First Name">ชื่อ</label>
+          <input type="text" class="form-ctrl" placeholder="ชื่อของคุณ" data-placeholder-th="ชื่อของคุณ" data-placeholder-en="Your first name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-lang-th="นามสกุล" data-lang-en="Last Name">นามสกุล</label>
+          <input type="text" class="form-ctrl" placeholder="นามสกุลของคุณ" data-placeholder-th="นามสกุลของคุณ" data-placeholder-en="Your last name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-lang-th="อีเมล" data-lang-en="Email">อีเมล</label>
+        <input type="email" class="form-ctrl" placeholder="email@example.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-lang-th="เบอร์โทรศัพท์" data-lang-en="Phone Number">เบอร์โทรศัพท์</label>
+        <input type="tel" class="form-ctrl" placeholder="+66 xx xxx xxxx">
+      </div>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label class="form-label" data-lang-th="ทัวร์ที่สนใจ" data-lang-en="Tour of Interest">ทัวร์ที่สนใจ</label>
+          <select class="form-ctrl">
+            <option value="" data-lang-th="เลือกทัวร์..." data-lang-en="Select a tour...">เลือกทัวร์...</option>
+            <option data-lang-th="ล่องเรือยอชท์ส่วนตัว" data-lang-en="Private Yacht Charter">ล่องเรือยอชท์ส่วนตัว</option>
+            <option data-lang-th="ทัวร์เกาะพีพี" data-lang-en="Phi Phi Island Tour">ทัวร์เกาะพีพี</option>
+            <option data-lang-th="วิลล่าหรู & สปา" data-lang-en="Luxury Villa & Spa">วิลล่าหรู & สปา</option>
+            <option data-lang-th="ดำน้ำ & หาดลับ" data-lang-en="Coral Dive & Hidden Beach">ดำน้ำ & หาดลับ</option>
+            <option data-lang-th="ออกแบบทริปพิเศษ" data-lang-en="Bespoke Custom Trip">ออกแบบทริปพิเศษ</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-lang-th="วันที่ต้องการ" data-lang-en="Preferred Date">วันที่ต้องการ</label>
+          <input type="date" class="form-ctrl">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-lang-th="ข้อความเพิ่มเติม" data-lang-en="Message">ข้อความเพิ่มเติม</label>
+        <textarea class="form-ctrl" rows="3" placeholder="เล่าให้เราฟังเกี่ยวกับทริปในฝันของคุณ..." data-placeholder-th="เล่าให้เราฟังเกี่ยวกับทริปในฝันของคุณ..." data-placeholder-en="Tell us about your dream trip..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">
+        <i data-lucide="send" width="15" height="15"></i>
+        <span data-lang-th="ส่งคำขอจอง" data-lang-en="Send Booking Request">ส่งคำขอจอง</span>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand reveal">
+      <span class="logo__th" style="font-size:1.05rem;">ภูเก็ตเลิฟพาราไดซ์</span>
+      <span class="logo__en" style="display:block;margin-top:0.15rem;font-size:0.68rem;">Phuket Love Paradise</span>
+      <p data-lang-th="ผู้เชี่ยวชาญด้านทัวร์หรูหราส่วนตัวในภูเก็ต สร้างความทรงจำที่ล้ำค่าด้วยบริการระดับพรีเมียมตั้งแต่ปี 2009" data-lang-en="Phuket's specialist in private luxury tours, creating priceless memories through premium service since 2009.">ผู้เชี่ยวชาญด้านทัวร์หรูหราส่วนตัวในภูเก็ต สร้างความทรงจำที่ล้ำค่าด้วยบริการระดับพรีเมียมตั้งแต่ปี 2009</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="Facebook"><i data-lucide="facebook" width="14" height="14"></i></a>
+        <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram" width="14" height="14"></i></a>
+        <a href="#" class="social-btn" aria-label="Line"><i data-lucide="message-circle" width="14" height="14"></i></a>
+        <a href="#" class="social-btn" aria-label="YouTube"><i data-lucide="youtube" width="14" height="14"></i></a>
+      </div>
+    </div>
+    <div class="footer-col reveal">
+      <h4 data-lang-th="ทัวร์ของเรา" data-lang-en="Our Tours">ทัวร์ของเรา</h4>
+      <ul>
+        <li><a href="#tours" data-lang-th="ล่องเรือยอชท์ส่วนตัว" data-lang-en="Private Yacht Charter">ล่องเรือยอชท์ส่วนตัว</a></li>
+        <li><a href="#tours" data-lang-th="ทัวร์เกาะพีพี" data-lang-en="Phi Phi Island Tour">ทัวร์เกาะพีพี</a></li>
+        <li><a href="#tours" data-lang-th="วิลล่าหรู & สปา" data-lang-en="Luxury Villa & Spa">วิลล่าหรู & สปา</a></li>
+        <li><a href="#tours" data-lang-th="ดำน้ำ & หาดลับ" data-lang-en="Coral Dive & Hidden Beach">ดำน้ำ & หาดลับ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col reveal">
+      <h4 data-lang-th="เกี่ยวกับเรา" data-lang-en="Company">เกี่ยวกับเรา</h4>
+      <ul>
+        <li><a href="#pillars"      data-lang-th="ทำไมต้องเลือกเรา" data-lang-en="Why Choose Us">ทำไมต้องเลือกเรา</a></li>
+        <li><a href="#testimonials" data-lang-th="รีวิวจากลูกค้า"   data-lang-en="Guest Reviews">รีวิวจากลูกค้า</a></li>
+        <li><a href="#gallery"      data-lang-th="แกลเลอรี่"         data-lang-en="Gallery">แกลเลอรี่</a></li>
+        <li><a href="#booking"      data-lang-th="นโยบายการยกเลิก"  data-lang-en="Cancellation Policy">นโยบายการยกเลิก</a></li>
+      </ul>
+    </div>
+    <div class="footer-col reveal">
+      <h4 data-lang-th="ติดต่อเรา" data-lang-en="Contact">ติดต่อเรา</h4>
+      <div class="footer-contact-row">
+        <i data-lucide="map-pin" width="13" height="13"></i>
+        <span data-lang-th="123 ถ.ป่าตอง ต.กะรน ภูเก็ต 83120" data-lang-en="123 Patong Rd., Karon, Phuket 83120">123 ถ.ป่าตอง ต.กะรน ภูเก็ต 83120</span>
+      </div>
+      <div class="footer-contact-row">
+        <i data-lucide="phone" width="13" height="13"></i>
+        <span>+66 76 123 456</span>
+      </div>
+      <div class="footer-contact-row">
+        <i data-lucide="mail" width="13" height="13"></i>
+        <span>hello@phuketloveparadise.com</span>
+      </div>
+      <div class="footer-contact-row">
+        <i data-lucide="clock" width="13" height="13"></i>
+        <span data-lang-th="ทุกวัน 08.00–20.00 น." data-lang-en="Daily 08:00–20:00">ทุกวัน 08.00–20.00 น.</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-lang-th="© 2026 ภูเก็ตเลิฟพาราไดซ์ สงวนลิขสิทธิ์ทุกประการ" data-lang-en="© 2026 Phuket Love Paradise. All rights reserved.">© 2026 ภูเก็ตเลิฟพาราไดซ์ สงวนลิขสิทธิ์ทุกประการ</p>
+    <p data-lang-th="ออกแบบด้วยความรัก · ภูเก็ต ประเทศไทย" data-lang-en="Designed with love · Phuket, Thailand">ออกแบบด้วยความรัก · ภูเก็ต ประเทศไทย</p>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+
+<!-- Language Switcher (exact provided script) -->
+<script>(function(){var K='site-lang',L=localStorage.getItem(K)||'th';function S(l){L=l;localStorage.setItem(K,l);document.documentElement.lang=l;document.querySelectorAll('[data-lang-th]').forEach(function(e){var t=e.getAttribute('data-lang-'+l);if(t!==null){e.textContent=t}});var lb=document.querySelector('.lang-sw__label');if(lb){lb.textContent=l.toUpperCase()}}var sw=document.querySelector('.lang-sw');if(sw){sw.addEventListener('click',function(){S(L==='th'?'en':'th')});sw.style.cursor='pointer'}if(L!=='th'){S(L)}})();</script>
+
+<!-- Placeholder switcher -->
+<script>
+  function syncPlaceholders(lang) {
+    document.querySelectorAll('[data-placeholder-th]').forEach(function(el) {
+      var t = el.getAttribute('data-placeholder-' + lang);
+      if (t) el.placeholder = t;
+    });
+  }
+  syncPlaceholders(document.documentElement.lang || 'th');
+  document.querySelector('.lang-sw').addEventListener('click', function() {
+    setTimeout(function() { syncPlaceholders(document.documentElement.lang); }, 20);
+  });
+</script>
+
+<!-- Navbar scroll -->
+<script>
+  var nb = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    nb.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+</script>
+
+<!-- Hamburger -->
+<script>
+  var hb = document.getElementById('hamburger');
+  var mm = document.getElementById('mobileMenu');
+  hb.addEventListener('click', function() {
+    hb.classList.toggle('open');
+    mm.classList.toggle('open');
+  });
+  mm.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      hb.classList.remove('open');
+      mm.classList.remove('open');
+    });
+  });
+</script>
+
+<!-- Scroll reveal -->
+<script>
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el) { obs.observe(el); });
+</script>
+
+</body>
+</html>
