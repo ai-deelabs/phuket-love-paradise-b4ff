@@ -60,12 +60,16 @@ a{color:inherit;text-decoration:none}
 .nav__links a{color:rgba(255,255,255,.82);font-size:.875rem;font-weight:500;padding:.45rem 0;transition:color .2s}
 .nav__links a:hover{color:var(--gold)}
 .lang-sw{
-  display:flex;align-items:center;gap:.3rem;
-  color:rgba(255,255,255,.75);font-size:.78rem;font-weight:600;
-  padding:.3rem .45rem;border-radius:4px;transition:color .2s;
-  white-space:nowrap;
+  display:flex;align-items:center;gap:.35rem;
+  color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.04em;
+  background:rgba(10,22,40,.55);
+  border:1px solid rgba(201,160,64,.55);
+  padding:.4rem .7rem;border-radius:100px;
+  transition:color .2s,background .2s,border-color .2s;
+  white-space:nowrap;backdrop-filter:blur(6px);
 }
-.lang-sw:hover{color:var(--gold)}
+.lang-sw:hover{color:var(--gold);border-color:var(--gold);background:rgba(10,22,40,.75)}
+.lang-sw i{color:var(--gold)}
 .nav__burger{background:none;border:none;cursor:pointer;color:#fff;padding:.2rem;display:flex;align-items:center;min-height:44px;min-width:44px;justify-content:center}
 .nav__drawer{
   display:none;flex-direction:column;
@@ -528,10 +532,10 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   </div>
   <div class="nav__right">
     <ul class="nav__links" id="navLinks">
-      <li><a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About">เกี่ยวกับเรา</a></li>
-      <li><a href="#tours" data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours">โปรแกรมทัวร์</a></li>
-      <li><a href="#experiences" data-lang-th="ประสบการณ์" data-lang-en="Experiences">ประสบการณ์</a></li>
-      <li><a href="#booking" data-lang-th="จองทัวร์" data-lang-en="Book Now">จองทัวร์</a></li>
+      <li><a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About" data-lang-ru="О нас">เกี่ยวกับเรา</a></li>
+      <li><a href="#tours" data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours" data-lang-ru="Туры">โปรแกรมทัวร์</a></li>
+      <li><a href="#experiences" data-lang-th="ประสบการณ์" data-lang-en="Experiences" data-lang-ru="Впечатления">ประสบการณ์</a></li>
+      <li><a href="#booking" data-lang-th="จองทัวร์" data-lang-en="Book Now" data-lang-ru="Бронировать">จองทัวร์</a></li>
     </ul>
     <button class="lang-sw" aria-label="Switch language">
       <i data-lucide="globe" width="14" height="14"></i>
@@ -542,11 +546,11 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     </button>
   </div>
   <div class="nav__drawer" id="drawer">
-    <a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About">เกี่ยวกับเรา</a>
-    <a href="#tours" data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours">โปรแกรมทัวร์</a>
-    <a href="#experiences" data-lang-th="ประสบการณ์" data-lang-en="Experiences">ประสบการณ์</a>
-    <a href="#how" data-lang-th="ขั้นตอนการจอง" data-lang-en="How It Works">ขั้นตอนการจอง</a>
-    <a href="#booking" data-lang-th="จองทัวร์" data-lang-en="Book Now">จองทัวร์</a>
+    <a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About" data-lang-ru="О нас">เกี่ยวกับเรา</a>
+    <a href="#tours" data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours" data-lang-ru="Туры">โปรแกรมทัวร์</a>
+    <a href="#experiences" data-lang-th="ประสบการณ์" data-lang-en="Experiences" data-lang-ru="Впечатления">ประสบการณ์</a>
+    <a href="#how" data-lang-th="ขั้นตอนการจอง" data-lang-en="How It Works" data-lang-ru="Как это работает">ขั้นตอนการจอง</a>
+    <a href="#booking" data-lang-th="จองทัวร์" data-lang-en="Book Now" data-lang-ru="Бронировать">จองทัวร์</a>
   </div>
 </nav>
 
@@ -557,20 +561,20 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   <div class="hero__content">
     <div class="hero__badge">
       <i data-lucide="anchor" width="13" height="13"></i>
-      <span data-lang-th="ภูเก็ต · ทะเลอันดามัน" data-lang-en="Phuket · Andaman Sea">ภูเก็ต · ทะเลอันดามัน</span>
+      <span data-lang-th="ภูเก็ต · ทะเลอันดามัน" data-lang-en="Phuket · Andaman Sea" data-lang-ru="Пхукет · Андаманское море">ภูเก็ต · ทะเลอันดามัน</span>
     </div>
     <h1 class="hero__title">
-      <span data-lang-th="ดำดิ่งสู่สวรรค์" data-lang-en="Immerse Yourself">ดำดิ่งสู่สวรรค์</span><br>
-      <span class="gold" data-lang-th="แห่งทะเลอันดามัน" data-lang-en="in Andaman Paradise">แห่งทะเลอันดามัน</span>
+      <span data-lang-th="ดำดิ่งสู่สวรรค์" data-lang-en="Immerse Yourself" data-lang-ru="Погрузитесь">ดำดิ่งสู่สวรรค์</span><br>
+      <span class="gold" data-lang-th="แห่งทะเลอันดามัน" data-lang-en="in Andaman Paradise" data-lang-ru="в рай Андаманского моря">แห่งทะเลอันดามัน</span>
     </h1>
-    <p class="hero__sub" data-lang-th="ออกแบบประสบการณ์ท่องเที่ยวสุดหรูในภูเก็ต ด้วยทีมงานมืออาชีพที่ดูแลทุกรายละเอียด เพื่อให้การเดินทางของคุณสมบูรณ์แบบที่สุด" data-lang-en="Bespoke luxury travel experiences in Phuket, crafted by expert local guides dedicated to making every moment of your journey truly unforgettable.">ออกแบบประสบการณ์ท่องเที่ยวสุดหรูในภูเก็ต ด้วยทีมงานมืออาชีพที่ดูแลทุกรายละเอียด เพื่อให้การเดินทางของคุณสมบูรณ์แบบที่สุด</p>
+    <p class="hero__sub" data-lang-th="ออกแบบประสบการณ์ท่องเที่ยวสุดหรูในภูเก็ต ด้วยทีมงานมืออาชีพที่ดูแลทุกรายละเอียด เพื่อให้การเดินทางของคุณสมบูรณ์แบบที่สุด" data-lang-en="Bespoke luxury travel experiences in Phuket, crafted by expert local guides dedicated to making every moment of your journey truly unforgettable." data-lang-ru="Эксклюзивные люксовые путешествия по Пхукету, созданные опытными местными гидами, чтобы каждое мгновение вашего отдыха стало по-настоящему незабываемым.">ออกแบบประสบการณ์ท่องเที่ยวสุดหรูในภูเก็ต ด้วยทีมงานมืออาชีพที่ดูแลทุกรายละเอียด เพื่อให้การเดินทางของคุณสมบูรณ์แบบที่สุด</p>
     <div class="hero__btns">
       <a href="#booking" class="btn-gold">
         <i data-lucide="calendar-check" width="16" height="16"></i>
-        <span data-lang-th="จองทัวร์ตอนนี้" data-lang-en="Book Your Tour">จองทัวร์ตอนนี้</span>
+        <span data-lang-th="จองทัวร์ตอนนี้" data-lang-en="Book Your Tour" data-lang-ru="Забронировать тур">จองทัวร์ตอนนี้</span>
       </a>
       <a href="#tours" class="btn-ghost">
-        <span data-lang-th="ดูโปรแกรมทัวร์" data-lang-en="Explore Tours">ดูโปรแกรมทัวร์</span>
+        <span data-lang-th="ดูโปรแกรมทัวร์" data-lang-en="Explore Tours" data-lang-ru="Смотреть туры">ดูโปรแกรมทัวร์</span>
         <i data-lucide="arrow-right" width="16" height="16"></i>
       </a>
     </div>
@@ -595,37 +599,37 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
       <div class="about__text reveal">
         <div class="sec-label">
           <i data-lucide="sparkles" width="14" height="14"></i>
-          <span data-lang-th="เกี่ยวกับเรา" data-lang-en="About Us">เกี่ยวกับเรา</span>
+          <span data-lang-th="เกี่ยวกับเรา" data-lang-en="About Us" data-lang-ru="О нас">เกี่ยวกับเรา</span>
         </div>
-        <h2 class="sec-title lt" data-lang-th="ความหรูหราคือหัวใจของทุกการเดินทาง" data-lang-en="Luxury Is the Heart of Every Journey">ความหรูหราคือหัวใจของทุกการเดินทาง</h2>
-        <p class="sec-desc lt" data-lang-th="ภูเก็ตเลิฟพาราไดซ์ก่อตั้งขึ้นด้วยความตั้งใจให้นักเดินทางได้สัมผัสภูเก็ตในแบบที่แตกต่าง เราคัดสรรเส้นทาง จัดทีมไกด์ผู้เชี่ยวชาญ และออกแบบประสบการณ์ส่วนตัวที่ตอบโจทย์ทุกความต้องการ" data-lang-en="Founded with a passion for extraordinary travel, Phuket Love Paradise crafts personalized itineraries beyond ordinary tours — expert guides, private charters, and impeccable attention to every detail.">ภูเก็ตเลิฟพาราไดซ์ก่อตั้งขึ้นด้วยความตั้งใจให้นักเดินทางได้สัมผัสภูเก็ตในแบบที่แตกต่าง เราคัดสรรเส้นทาง จัดทีมไกด์ผู้เชี่ยวชาญ และออกแบบประสบการณ์ส่วนตัวที่ตอบโจทย์ทุกความต้องการ</p>
+        <h2 class="sec-title lt" data-lang-th="ความหรูหราคือหัวใจของทุกการเดินทาง" data-lang-en="Luxury Is the Heart of Every Journey" data-lang-ru="Роскошь — в сердце каждого путешествия">ความหรูหราคือหัวใจของทุกการเดินทาง</h2>
+        <p class="sec-desc lt" data-lang-th="ภูเก็ตเลิฟพาราไดซ์ก่อตั้งขึ้นด้วยความตั้งใจให้นักเดินทางได้สัมผัสภูเก็ตในแบบที่แตกต่าง เราคัดสรรเส้นทาง จัดทีมไกด์ผู้เชี่ยวชาญ และออกแบบประสบการณ์ส่วนตัวที่ตอบโจทย์ทุกความต้องการ" data-lang-en="Founded with a passion for extraordinary travel, Phuket Love Paradise crafts personalized itineraries beyond ordinary tours — expert guides, private charters, and impeccable attention to every detail." data-lang-ru="Phuket Love Paradise создан из любви к необыкновенным путешествиям. Мы составляем индивидуальные маршруты, выходящие за рамки обычных туров — опытные гиды, частные яхты и безупречное внимание к каждой детали.">ภูเก็ตเลิฟพาราไดซ์ก่อตั้งขึ้นด้วยความตั้งใจให้นักเดินทางได้สัมผัสภูเก็ตในแบบที่แตกต่าง เราคัดสรรเส้นทาง จัดทีมไกด์ผู้เชี่ยวชาญ และออกแบบประสบการณ์ส่วนตัวที่ตอบโจทย์ทุกความต้องการ</p>
         <div class="about__feats">
           <div class="about__feat reveal rd1">
             <div class="about__feat-ic"><i data-lucide="users" width="18" height="18"></i></div>
             <div>
-              <h4 data-lang-th="ทีมไกด์ผู้เชี่ยวชาญ" data-lang-en="Expert Local Guides">ทีมไกด์ผู้เชี่ยวชาญ</h4>
-              <p data-lang-th="ไกด์ท้องถิ่นที่รู้จักภูเก็ตดีที่สุด พร้อมดูแลคุณตลอดการเดินทาง" data-lang-en="Local guides with deep knowledge of Phuket, ensuring a seamless and enriching experience.">ไกด์ท้องถิ่นที่รู้จักภูเก็ตดีที่สุด พร้อมดูแลคุณตลอดการเดินทาง</p>
+              <h4 data-lang-th="ทีมไกด์ผู้เชี่ยวชาญ" data-lang-en="Expert Local Guides" data-lang-ru="Опытные местные гиды">ทีมไกด์ผู้เชี่ยวชาญ</h4>
+              <p data-lang-th="ไกด์ท้องถิ่นที่รู้จักภูเก็ตดีที่สุด พร้อมดูแลคุณตลอดการเดินทาง" data-lang-en="Local guides with deep knowledge of Phuket, ensuring a seamless and enriching experience." data-lang-ru="Местные гиды с глубоким знанием Пхукета обеспечивают комфортное и насыщенное путешествие.">ไกด์ท้องถิ่นที่รู้จักภูเก็ตดีที่สุด พร้อมดูแลคุณตลอดการเดินทาง</p>
             </div>
           </div>
           <div class="about__feat reveal rd2">
             <div class="about__feat-ic"><i data-lucide="ship" width="18" height="18"></i></div>
             <div>
-              <h4 data-lang-th="เรือยอชต์ส่วนตัว" data-lang-en="Private Yacht Charters">เรือยอชต์ส่วนตัว</h4>
-              <p data-lang-th="เรือยอชต์หรูพร้อมลูกเรือมืออาชีพ สำหรับประสบการณ์บนทะเลสุดเอ็กซ์คลูซีฟ" data-lang-en="Luxury yachts with professional crew for a truly exclusive Andaman Sea experience.">เรือยอชต์หรูพร้อมลูกเรือมืออาชีพ สำหรับประสบการณ์บนทะเลสุดเอ็กซ์คลูซีฟ</p>
+              <h4 data-lang-th="เรือยอชต์ส่วนตัว" data-lang-en="Private Yacht Charters" data-lang-ru="Аренда частных яхт">เรือยอชต์ส่วนตัว</h4>
+              <p data-lang-th="เรือยอชต์หรูพร้อมลูกเรือมืออาชีพ สำหรับประสบการณ์บนทะเลสุดเอ็กซ์คลูซีฟ" data-lang-en="Luxury yachts with professional crew for a truly exclusive Andaman Sea experience." data-lang-ru="Роскошные яхты с профессиональным экипажем для по-настоящему эксклюзивного отдыха в Андаманском море.">เรือยอชต์หรูพร้อมลูกเรือมืออาชีพ สำหรับประสบการณ์บนทะเลสุดเอ็กซ์คลูซีฟ</p>
             </div>
           </div>
           <div class="about__feat reveal rd3">
             <div class="about__feat-ic"><i data-lucide="shield-check" width="18" height="18"></i></div>
             <div>
-              <h4 data-lang-th="ความปลอดภัยสูงสุด" data-lang-en="Safety First, Always">ความปลอดภัยสูงสุด</h4>
-              <p data-lang-th="มาตรฐานความปลอดภัยระดับสากล ประกันการเดินทางครอบคลุมทุกกิจกรรม" data-lang-en="International safety standards and comprehensive travel insurance covering all activities.">มาตรฐานความปลอดภัยระดับสากล ประกันการเดินทางครอบคลุมทุกกิจกรรม</p>
+              <h4 data-lang-th="ความปลอดภัยสูงสุด" data-lang-en="Safety First, Always" data-lang-ru="Безопасность прежде всего">ความปลอดภัยสูงสุด</h4>
+              <p data-lang-th="มาตรฐานความปลอดภัยระดับสากล ประกันการเดินทางครอบคลุมทุกกิจกรรม" data-lang-en="International safety standards and comprehensive travel insurance covering all activities." data-lang-ru="Международные стандарты безопасности и полная туристическая страховка на все виды активности.">มาตรฐานความปลอดภัยระดับสากล ประกันการเดินทางครอบคลุมทุกกิจกรรม</p>
             </div>
           </div>
           <div class="about__feat reveal rd4">
             <div class="about__feat-ic"><i data-lucide="gem" width="18" height="18"></i></div>
             <div>
-              <h4 data-lang-th="บริการส่วนตัวพิเศษ" data-lang-en="Personalized Service">บริการส่วนตัวพิเศษ</h4>
-              <p data-lang-th="ปรับแต่งทุกรายละเอียดตามความต้องการ ตั้งแต่อาหาร ที่พัก จนถึงเส้นทาง" data-lang-en="Every detail — dining preferences, accommodation, and route — tailored specifically for you.">ปรับแต่งทุกรายละเอียดตามความต้องการ ตั้งแต่อาหาร ที่พัก จนถึงเส้นทาง</p>
+              <h4 data-lang-th="บริการส่วนตัวพิเศษ" data-lang-en="Personalized Service" data-lang-ru="Индивидуальный сервис">บริการส่วนตัวพิเศษ</h4>
+              <p data-lang-th="ปรับแต่งทุกรายละเอียดตามความต้องการ ตั้งแต่อาหาร ที่พัก จนถึงเส้นทาง" data-lang-en="Every detail — dining preferences, accommodation, and route — tailored specifically for you." data-lang-ru="Каждая деталь — питание, проживание и маршрут — подобрана специально для вас.">ปรับแต่งทุกรายละเอียดตามความต้องการ ตั้งแต่อาหาร ที่พัก จนถึงเส้นทาง</p>
             </div>
           </div>
         </div>
@@ -635,7 +639,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
         <img class="about__img-b" src="https://images.unsplash.com/photo-1704549931312-432d26dd53c3?w=480&h=360&fit=crop" alt="ชายหาดสวยงามในภูเก็ต" />
         <div class="about__badge">
           <span>10+</span>
-          <small data-lang-th="ปีแห่งประสบการณ์" data-lang-en="Years Exp.">ปีแห่งประสบการณ์</small>
+          <small data-lang-th="ปีแห่งประสบการณ์" data-lang-en="Years Exp." data-lang-ru="лет опыта">ปีแห่งประสบการณ์</small>
         </div>
       </div>
     </div>
@@ -654,38 +658,38 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   <div class="container">
     <div class="center-text reveal" style="margin-bottom:3rem">
       <div class="sec-label center">
-        <span data-lang-th="โปรแกรมทัวร์" data-lang-en="Tour Programs">โปรแกรมทัวร์</span>
+        <span data-lang-th="โปรแกรมทัวร์" data-lang-en="Tour Programs" data-lang-ru="Программы туров">โปรแกรมทัวร์</span>
       </div>
-      <h2 class="sec-title" data-lang-th="เส้นทางสู่ความประทับใจ" data-lang-en="Journeys to Remember">เส้นทางสู่ความประทับใจ</h2>
-      <p class="sec-desc" data-lang-th="คัดสรรโปรแกรมทัวร์หรูหราที่ออกแบบมาเพื่อสร้างความประทับใจที่คงอยู่ตลอดไป" data-lang-en="Curated luxury tour programs designed to create memories that last a lifetime.">คัดสรรโปรแกรมทัวร์หรูหราที่ออกแบบมาเพื่อสร้างความประทับใจที่คงอยู่ตลอดไป</p>
+      <h2 class="sec-title" data-lang-th="เส้นทางสู่ความประทับใจ" data-lang-en="Journeys to Remember" data-lang-ru="Путешествия, которые запомнятся">เส้นทางสู่ความประทับใจ</h2>
+      <p class="sec-desc" data-lang-th="คัดสรรโปรแกรมทัวร์หรูหราที่ออกแบบมาเพื่อสร้างความประทับใจที่คงอยู่ตลอดไป" data-lang-en="Curated luxury tour programs designed to create memories that last a lifetime." data-lang-ru="Тщательно подобранные люксовые туры, созданные ради воспоминаний на всю жизнь.">คัดสรรโปรแกรมทัวร์หรูหราที่ออกแบบมาเพื่อสร้างความประทับใจที่คงอยู่ตลอดไป</p>
     </div>
 
     <!-- Tour 1 -->
     <div class="tour-row reveal">
       <div class="tour-row__pic">
         <img src="https://images.unsplash.com/photo-1586302836983-d1efb5eee221?w=760&h=560&fit=crop" alt="หมู่เกาะพีพีจากมุมสูง" />
-        <div class="tour-row__tag" data-lang-th="ยอดนิยม" data-lang-en="Popular">ยอดนิยม</div>
+        <div class="tour-row__tag" data-lang-th="ยอดนิยม" data-lang-en="Popular" data-lang-ru="Популярное">ยอดนิยม</div>
       </div>
       <div class="tour-row__body">
-        <h3 data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Andaman Island Hopping">ล่องเกาะหมู่เกาะอันดามัน</h3>
-        <p data-lang-th="สำรวจความมหัศจรรย์ของหมู่เกาะในทะเลอันดามัน ตั้งแต่เกาะพีพี เกาะราชา ไปจนถึงอ่าวมาหยาอันเลื่องชื่อ ด้วยเรือสปีดโบทส่วนตัวและไกด์ผู้ชำนาญ" data-lang-en="Discover the magic of the Andaman Islands — from Phi Phi and Racha to the legendary Maya Bay — aboard a private speedboat with expert local guides.">สำรวจความมหัศจรรย์ของหมู่เกาะในทะเลอันดามัน ตั้งแต่เกาะพีพี เกาะราชา ไปจนถึงอ่าวมาหยาอันเลื่องชื่อ ด้วยเรือสปีดโบทส่วนตัวและไกด์ผู้ชำนาญ</p>
+        <h3 data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Andaman Island Hopping" data-lang-ru="Тур по островам Андаманского моря">ล่องเกาะหมู่เกาะอันดามัน</h3>
+        <p data-lang-th="สำรวจความมหัศจรรย์ของหมู่เกาะในทะเลอันดามัน ตั้งแต่เกาะพีพี เกาะราชา ไปจนถึงอ่าวมาหยาอันเลื่องชื่อ ด้วยเรือสปีดโบทส่วนตัวและไกด์ผู้ชำนาญ" data-lang-en="Discover the magic of the Andaman Islands — from Phi Phi and Racha to the legendary Maya Bay — aboard a private speedboat with expert local guides." data-lang-ru="Откройте для себя волшебство островов Андаманского моря — от Пхи-Пхи и Рача до легендарного залива Майя — на частном скоростном катере с опытными местными гидами.">สำรวจความมหัศจรรย์ของหมู่เกาะในทะเลอันดามัน ตั้งแต่เกาะพีพี เกาะราชา ไปจนถึงอ่าวมาหยาอันเลื่องชื่อ ด้วยเรือสปีดโบทส่วนตัวและไกด์ผู้ชำนาญ</p>
         <div class="tour-meta">
-          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="8 ชั่วโมง" data-lang-en="8 Hours">8 ชั่วโมง</span></div>
-          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–12 คน" data-lang-en="2–12 People">2–12 คน</span></div>
-          <div class="tour-meta-i"><i data-lucide="map-pin" width="14" height="14"></i><span data-lang-th="ออกจากภูเก็ต" data-lang-en="Departs Phuket">ออกจากภูเก็ต</span></div>
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="8 ชั่วโมง" data-lang-en="8 Hours" data-lang-ru="8 часов">8 ชั่วโมง</span></div>
+          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–12 คน" data-lang-en="2–12 People" data-lang-ru="2–12 человек">2–12 คน</span></div>
+          <div class="tour-meta-i"><i data-lucide="map-pin" width="14" height="14"></i><span data-lang-th="ออกจากภูเก็ต" data-lang-en="Departs Phuket" data-lang-ru="Отправление из Пхукета">ออกจากภูเก็ต</span></div>
         </div>
         <ul class="tour-hl">
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อ่าวมาหยา เกาะพีพีเล" data-lang-en="Maya Bay, Phi Phi Leh">อ่าวมาหยา เกาะพีพีเล</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="ดำน้ำดูปะการังสีสันสวยงาม" data-lang-en="Vibrant coral reef snorkeling">ดำน้ำดูปะการังสีสันสวยงาม</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารกลางวันบนเรือ + รับ-ส่งโรงแรม" data-lang-en="Onboard lunch + hotel transfers">อาหารกลางวันบนเรือ + รับ-ส่งโรงแรม</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อ่าวมาหยา เกาะพีพีเล" data-lang-en="Maya Bay, Phi Phi Leh" data-lang-ru="Залив Майя, Пхи-Пхи-Лей">อ่าวมาหยา เกาะพีพีเล</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="ดำน้ำดูปะการังสีสันสวยงาม" data-lang-en="Vibrant coral reef snorkeling" data-lang-ru="Снорклинг у ярких коралловых рифов">ดำน้ำดูปะการังสีสันสวยงาม</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารกลางวันบนเรือ + รับ-ส่งโรงแรม" data-lang-en="Onboard lunch + hotel transfers" data-lang-ru="Обед на борту + трансфер от отеля">อาหารกลางวันบนเรือ + รับ-ส่งโรงแรม</span></li>
         </ul>
         <div class="tour-price">
-          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From">เริ่มต้นที่</span>
+          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From" data-lang-ru="от">เริ่มต้นที่</span>
           <span class="amt">฿3,500</span>
-          <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person">/ ท่าน</span>
+          <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person" data-lang-ru="/ чел.">/ ท่าน</span>
         </div>
         <a href="#booking" class="btn-gold" style="align-self:flex-start">
-          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour">จองโปรแกรมนี้</span>
+          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
           <i data-lucide="arrow-right" width="15" height="15"></i>
         </a>
       </div>
@@ -695,28 +699,28 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     <div class="tour-row reveal rd1">
       <div class="tour-row__pic">
         <img src="https://images.unsplash.com/photo-1764462102766-7ee93c850fb3?w=760&h=560&fit=crop" alt="ล่องเรือชมพระอาทิตย์ตก" />
-        <div class="tour-row__tag" data-lang-th="โรแมนติก" data-lang-en="Romantic">โรแมนติก</div>
+        <div class="tour-row__tag" data-lang-th="โรแมนติก" data-lang-en="Romantic" data-lang-ru="Романтика">โรแมนติก</div>
       </div>
       <div class="tour-row__body">
-        <h3 data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Luxury Sunset Yacht Cruise">ล่องเรือยอชต์ชมพระอาทิตย์ตก</h3>
-        <p data-lang-th="สัมผัสบรรยากาศโรแมนติกสุดพิเศษบนเรือยอชต์หรู ล่องชมทัศนียภาพอันตระการตาของพระอาทิตย์ตกเหนือทะเลอันดามัน พร้อมอาหารค่ำสุดพิเศษโดยเชฟส่วนตัว" data-lang-en="Experience unrivalled romance on a luxury yacht as the sun dips below the Andaman horizon. Savour a private chef's curated dinner while the sky blazes gold.">สัมผัสบรรยากาศโรแมนติกสุดพิเศษบนเรือยอชต์หรู ล่องชมทัศนียภาพอันตระการตาของพระอาทิตย์ตกเหนือทะเลอันดามัน พร้อมอาหารค่ำสุดพิเศษโดยเชฟส่วนตัว</p>
+        <h3 data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Luxury Sunset Yacht Cruise" data-lang-ru="Люксовый круиз на яхте на закате">ล่องเรือยอชต์ชมพระอาทิตย์ตก</h3>
+        <p data-lang-th="สัมผัสบรรยากาศโรแมนติกสุดพิเศษบนเรือยอชต์หรู ล่องชมทัศนียภาพอันตระการตาของพระอาทิตย์ตกเหนือทะเลอันดามัน พร้อมอาหารค่ำสุดพิเศษโดยเชฟส่วนตัว" data-lang-en="Experience unrivalled romance on a luxury yacht as the sun dips below the Andaman horizon. Savour a private chef's curated dinner while the sky blazes gold." data-lang-ru="Почувствуйте непревзойдённую романтику на роскошной яхте, пока солнце опускается за горизонт Андаманского моря. Насладитесь авторским ужином от личного шефа под золотым небом.">สัมผัสบรรยากาศโรแมนติกสุดพิเศษบนเรือยอชต์หรู ล่องชมทัศนียภาพอันตระการตาของพระอาทิตย์ตกเหนือทะเลอันดามัน พร้อมอาหารค่ำสุดพิเศษโดยเชฟส่วนตัว</p>
         <div class="tour-meta">
-          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="4 ชั่วโมง" data-lang-en="4 Hours">4 ชั่วโมง</span></div>
-          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–8 คน" data-lang-en="2–8 People">2–8 คน</span></div>
-          <div class="tour-meta-i"><i data-lucide="wine" width="14" height="14"></i><span data-lang-th="รวมอาหารค่ำ" data-lang-en="Dinner Included">รวมอาหารค่ำ</span></div>
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="4 ชั่วโมง" data-lang-en="4 Hours" data-lang-ru="4 часа">4 ชั่วโมง</span></div>
+          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–8 คน" data-lang-en="2–8 People" data-lang-ru="2–8 человек">2–8 คน</span></div>
+          <div class="tour-meta-i"><i data-lucide="wine" width="14" height="14"></i><span data-lang-th="รวมอาหารค่ำ" data-lang-en="Dinner Included" data-lang-ru="Ужин включён">รวมอาหารค่ำ</span></div>
         </div>
         <ul class="tour-hl">
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="เรือยอชต์หรูส่วนตัว + ลูกเรือมืออาชีพ" data-lang-en="Private luxury yacht + professional crew">เรือยอชต์หรูส่วนตัว + ลูกเรือมืออาชีพ</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารค่ำ 5 คอร์สโดยเชฟส่วนตัว" data-lang-en="5-course private chef dinner">อาหารค่ำ 5 คอร์สโดยเชฟส่วนตัว</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="เครื่องดื่มพรีเมียมตลอดเส้นทาง" data-lang-en="Premium drinks throughout">เครื่องดื่มพรีเมียมตลอดเส้นทาง</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="เรือยอชต์หรูส่วนตัว + ลูกเรือมืออาชีพ" data-lang-en="Private luxury yacht + professional crew" data-lang-ru="Частная роскошная яхта + профессиональный экипаж">เรือยอชต์หรูส่วนตัว + ลูกเรือมืออาชีพ</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารค่ำ 5 คอร์สโดยเชฟส่วนตัว" data-lang-en="5-course private chef dinner" data-lang-ru="Ужин из 5 блюд от личного шефа">อาหารค่ำ 5 คอร์สโดยเชฟส่วนตัว</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="เครื่องดื่มพรีเมียมตลอดเส้นทาง" data-lang-en="Premium drinks throughout" data-lang-ru="Премиальные напитки на протяжении круиза">เครื่องดื่มพรีเมียมตลอดเส้นทาง</span></li>
         </ul>
         <div class="tour-price">
-          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From">เริ่มต้นที่</span>
+          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From" data-lang-ru="от">เริ่มต้นที่</span>
           <span class="amt">฿8,900</span>
-          <span class="per" data-lang-th="/ คู่" data-lang-en="/ couple">/ คู่</span>
+          <span class="per" data-lang-th="/ คู่" data-lang-en="/ couple" data-lang-ru="/ пара">/ คู่</span>
         </div>
         <a href="#booking" class="btn-gold" style="align-self:flex-start">
-          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour">จองโปรแกรมนี้</span>
+          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
           <i data-lucide="arrow-right" width="15" height="15"></i>
         </a>
       </div>
@@ -726,28 +730,28 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     <div class="tour-row reveal rd2">
       <div class="tour-row__pic">
         <img src="https://images.unsplash.com/photo-1764099906807-d25cd5fbaafc?w=760&h=560&fit=crop" alt="ดำน้ำในทะเลใสสวยงาม" />
-        <div class="tour-row__tag" data-lang-th="ผจญภัย" data-lang-en="Adventure">ผจญภัย</div>
+        <div class="tour-row__tag" data-lang-th="ผจญภัย" data-lang-en="Adventure" data-lang-ru="Приключение">ผจญภัย</div>
       </div>
       <div class="tour-row__body">
-        <h3 data-lang-th="ดำน้ำดูปะการังทะเลสวรรค์" data-lang-en="Coral Paradise Snorkeling">ดำน้ำดูปะการังทะเลสวรรค์</h3>
-        <p data-lang-th="ดำดิ่งสู่โลกใต้ทะเลอันดามันที่เต็มไปด้วยสีสัน สำรวจแนวปะการังอันอุดมสมบูรณ์ พบปลานานาชนิด และสัมผัสความสวยงามของท้องทะเลไทยในแบบที่คุณไม่เคยเห็น" data-lang-en="Plunge into the kaleidoscopic world beneath the Andaman Sea. Explore thriving coral reefs, colourful tropical fish, and the pristine underwater beauty of Thailand.">ดำดิ่งสู่โลกใต้ทะเลอันดามันที่เต็มไปด้วยสีสัน สำรวจแนวปะการังอันอุดมสมบูรณ์ พบปลานานาชนิด และสัมผัสความสวยงามของท้องทะเลไทยในแบบที่คุณไม่เคยเห็น</p>
+        <h3 data-lang-th="ดำน้ำดูปะการังทะเลสวรรค์" data-lang-en="Coral Paradise Snorkeling" data-lang-ru="Снорклинг в коралловом раю">ดำน้ำดูปะการังทะเลสวรรค์</h3>
+        <p data-lang-th="ดำดิ่งสู่โลกใต้ทะเลอันดามันที่เต็มไปด้วยสีสัน สำรวจแนวปะการังอันอุดมสมบูรณ์ พบปลานานาชนิด และสัมผัสความสวยงามของท้องทะเลไทยในแบบที่คุณไม่เคยเห็น" data-lang-en="Plunge into the kaleidoscopic world beneath the Andaman Sea. Explore thriving coral reefs, colourful tropical fish, and the pristine underwater beauty of Thailand." data-lang-ru="Погрузитесь в калейдоскопический мир под водами Андаманского моря. Исследуйте богатые коралловые рифы, ярких тропических рыб и первозданную подводную красоту Таиланда.">ดำดิ่งสู่โลกใต้ทะเลอันดามันที่เต็มไปด้วยสีสัน สำรวจแนวปะการังอันอุดมสมบูรณ์ พบปลานานาชนิด และสัมผัสความสวยงามของท้องทะเลไทยในแบบที่คุณไม่เคยเห็น</p>
         <div class="tour-meta">
-          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="6 ชั่วโมง" data-lang-en="6 Hours">6 ชั่วโมง</span></div>
-          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–10 คน" data-lang-en="2–10 People">2–10 คน</span></div>
-          <div class="tour-meta-i"><i data-lucide="package" width="14" height="14"></i><span data-lang-th="รวมอุปกรณ์ครบ" data-lang-en="Equipment Included">รวมอุปกรณ์ครบ</span></div>
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="6 ชั่วโมง" data-lang-en="6 Hours" data-lang-ru="6 часов">6 ชั่วโมง</span></div>
+          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–10 คน" data-lang-en="2–10 People" data-lang-ru="2–10 человек">2–10 คน</span></div>
+          <div class="tour-meta-i"><i data-lucide="package" width="14" height="14"></i><span data-lang-th="รวมอุปกรณ์ครบ" data-lang-en="Equipment Included" data-lang-ru="Снаряжение включено">รวมอุปกรณ์ครบ</span></div>
         </div>
         <ul class="tour-hl">
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="3 จุดดำน้ำสุดสวยในอันดามัน" data-lang-en="3 stunning Andaman snorkel spots">3 จุดดำน้ำสุดสวยในอันดามัน</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อุปกรณ์ดำน้ำมาตรฐาน + ครูฝึก" data-lang-en="Professional equipment + certified instructor">อุปกรณ์ดำน้ำมาตรฐาน + ครูฝึก</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารกลางวันอาหารทะเลสด" data-lang-en="Fresh seafood lunch onboard">อาหารกลางวันอาหารทะเลสด</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="3 จุดดำน้ำสุดสวยในอันดามัน" data-lang-en="3 stunning Andaman snorkel spots" data-lang-ru="3 потрясающих места для снорклинга">3 จุดดำน้ำสุดสวยในอันดามัน</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อุปกรณ์ดำน้ำมาตรฐาน + ครูฝึก" data-lang-en="Professional equipment + certified instructor" data-lang-ru="Профессиональное снаряжение + сертифицированный инструктор">อุปกรณ์ดำน้ำมาตรฐาน + ครูฝึก</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารกลางวันอาหารทะเลสด" data-lang-en="Fresh seafood lunch onboard" data-lang-ru="Обед из свежих морепродуктов на борту">อาหารกลางวันอาหารทะเลสด</span></li>
         </ul>
         <div class="tour-price">
-          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From">เริ่มต้นที่</span>
+          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From" data-lang-ru="от">เริ่มต้นที่</span>
           <span class="amt">฿2,800</span>
-          <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person">/ ท่าน</span>
+          <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person" data-lang-ru="/ чел.">/ ท่าน</span>
         </div>
         <a href="#booking" class="btn-gold" style="align-self:flex-start">
-          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour">จองโปรแกรมนี้</span>
+          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
           <i data-lucide="arrow-right" width="15" height="15"></i>
         </a>
       </div>
@@ -768,10 +772,10 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     <div class="exp__hdr reveal" style="margin-bottom:2rem">
       <div class="sec-label">
         <i data-lucide="star" width="14" height="14"></i>
-        <span data-lang-th="ประสบการณ์พิเศษ" data-lang-en="Exclusive Experiences">ประสบการณ์พิเศษ</span>
+        <span data-lang-th="ประสบการณ์พิเศษ" data-lang-en="Exclusive Experiences" data-lang-ru="Эксклюзивные впечатления">ประสบการณ์พิเศษ</span>
       </div>
-      <h2 class="sec-title lt" data-lang-th="สัมผัสสิ่งที่มากกว่าทัวร์ทั่วไป" data-lang-en="More Than Just a Tour">สัมผัสสิ่งที่มากกว่าทัวร์ทั่วไป</h2>
-      <p class="sec-desc lt" data-lang-th="เลือกกิจกรรมสุดพิเศษที่เพิ่มมิติใหม่ให้กับการเดินทางของคุณ" data-lang-en="Add a new dimension to your journey with our exclusive curated activities.">เลือกกิจกรรมสุดพิเศษที่เพิ่มมิติใหม่ให้กับการเดินทางของคุณ</p>
+      <h2 class="sec-title lt" data-lang-th="สัมผัสสิ่งที่มากกว่าทัวร์ทั่วไป" data-lang-en="More Than Just a Tour" data-lang-ru="Больше, чем просто тур">สัมผัสสิ่งที่มากกว่าทัวร์ทั่วไป</h2>
+      <p class="sec-desc lt" data-lang-th="เลือกกิจกรรมสุดพิเศษที่เพิ่มมิติใหม่ให้กับการเดินทางของคุณ" data-lang-en="Add a new dimension to your journey with our exclusive curated activities." data-lang-ru="Добавьте новое измерение своему путешествию с нашими эксклюзивными активностями.">เลือกกิจกรรมสุดพิเศษที่เพิ่มมิติใหม่ให้กับการเดินทางของคุณ</p>
     </div>
     <div class="exp__scroll">
       <!-- Card 1 -->
@@ -781,8 +785,8 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
         </div>
         <div class="exp-card__body">
           <div class="exp-card__ic"><i data-lucide="ship" width="18" height="18"></i></div>
-          <div class="exp-card__ttl" data-lang-th="เช่าเรือยอชต์ส่วนตัว" data-lang-en="Private Yacht Charter">เช่าเรือยอชต์ส่วนตัว</div>
-          <div class="exp-card__txt" data-lang-th="เรือยอชต์หรูพร้อมลูกเรือ ออกแบบเส้นทางตามใจคุณ" data-lang-en="Luxury yacht with full crew — chart your own course across the Andaman.">เรือยอชต์หรูพร้อมลูกเรือ ออกแบบเส้นทางตามใจคุณ</div>
+          <div class="exp-card__ttl" data-lang-th="เช่าเรือยอชต์ส่วนตัว" data-lang-en="Private Yacht Charter" data-lang-ru="Аренда частной яхты">เช่าเรือยอชต์ส่วนตัว</div>
+          <div class="exp-card__txt" data-lang-th="เรือยอชต์หรูพร้อมลูกเรือ ออกแบบเส้นทางตามใจคุณ" data-lang-en="Luxury yacht with full crew — chart your own course across the Andaman." data-lang-ru="Роскошная яхта с полным экипажем — проложите собственный маршрут по Андаманскому морю.">เรือยอชต์หรูพร้อมลูกเรือ ออกแบบเส้นทางตามใจคุณ</div>
         </div>
       </div>
       <!-- Card 2 -->
@@ -792,8 +796,8 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
         </div>
         <div class="exp-card__body">
           <div class="exp-card__ic"><i data-lucide="waves" width="18" height="18"></i></div>
-          <div class="exp-card__ttl" data-lang-th="สกูบาไดฟ์วิ่ง" data-lang-en="Scuba Diving">สกูบาไดฟ์วิ่ง</div>
-          <div class="exp-card__txt" data-lang-th="ดำน้ำลึกกับครูผู้เชี่ยวชาญ สัมผัสโลกใต้ทะเลที่ลึกกว่า" data-lang-en="Dive deep with certified instructors into Phuket's stunning underwater world.">ดำน้ำลึกกับครูผู้เชี่ยวชาญ สัมผัสโลกใต้ทะเลที่ลึกกว่า</div>
+          <div class="exp-card__ttl" data-lang-th="สกูบาไดฟ์วิ่ง" data-lang-en="Scuba Diving" data-lang-ru="Дайвинг">สกูบาไดฟ์วิ่ง</div>
+          <div class="exp-card__txt" data-lang-th="ดำน้ำลึกกับครูผู้เชี่ยวชาญ สัมผัสโลกใต้ทะเลที่ลึกกว่า" data-lang-en="Dive deep with certified instructors into Phuket's stunning underwater world." data-lang-ru="Погрузитесь с сертифицированными инструкторами в потрясающий подводный мир Пхукета.">ดำน้ำลึกกับครูผู้เชี่ยวชาญ สัมผัสโลกใต้ทะเลที่ลึกกว่า</div>
         </div>
       </div>
       <!-- Card 3 -->
@@ -803,8 +807,8 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
         </div>
         <div class="exp-card__body">
           <div class="exp-card__ic"><i data-lucide="map" width="18" height="18"></i></div>
-          <div class="exp-card__ttl" data-lang-th="พายคายัคป่าโกงกาง" data-lang-en="Mangrove Kayaking">พายคายัคป่าโกงกาง</div>
-          <div class="exp-card__txt" data-lang-th="สำรวจระบบนิเวศป่าโกงกางอันเงียบสงบ ท่ามกลางธรรมชาติที่งดงาม" data-lang-en="Glide through serene mangrove forests and discover Phuket's hidden natural side.">สำรวจระบบนิเวศป่าโกงกางอันเงียบสงบ ท่ามกลางธรรมชาติที่งดงาม</div>
+          <div class="exp-card__ttl" data-lang-th="พายคายัคป่าโกงกาง" data-lang-en="Mangrove Kayaking" data-lang-ru="Каякинг по мангровым зарослям">พายคายัคป่าโกงกาง</div>
+          <div class="exp-card__txt" data-lang-th="สำรวจระบบนิเวศป่าโกงกางอันเงียบสงบ ท่ามกลางธรรมชาติที่งดงาม" data-lang-en="Glide through serene mangrove forests and discover Phuket's hidden natural side." data-lang-ru="Скользите по тихим мангровым лесам и откройте скрытую природу Пхукета.">สำรวจระบบนิเวศป่าโกงกางอันเงียบสงบ ท่ามกลางธรรมชาติที่งดงาม</div>
         </div>
       </div>
       <!-- Card 4 -->
@@ -814,8 +818,8 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
         </div>
         <div class="exp-card__body">
           <div class="exp-card__ic"><i data-lucide="sunrise" width="18" height="18"></i></div>
-          <div class="exp-card__ttl" data-lang-th="ทัวร์ชมพระอาทิตย์ขึ้น" data-lang-en="Sunrise Boat Tour">ทัวร์ชมพระอาทิตย์ขึ้น</div>
-          <div class="exp-card__txt" data-lang-th="ตื่นเช้าออกเรือชมพระอาทิตย์ขึ้นเหนือทะเลอันดามัน ประสบการณ์ที่หาที่ไหนไม่ได้" data-lang-en="Rise early and watch the Andaman sunrise from the deck — an experience like no other.">ตื่นเช้าออกเรือชมพระอาทิตย์ขึ้นเหนือทะเลอันดามัน ประสบการณ์ที่หาที่ไหนไม่ได้</div>
+          <div class="exp-card__ttl" data-lang-th="ทัวร์ชมพระอาทิตย์ขึ้น" data-lang-en="Sunrise Boat Tour" data-lang-ru="Лодочный тур на рассвете">ทัวร์ชมพระอาทิตย์ขึ้น</div>
+          <div class="exp-card__txt" data-lang-th="ตื่นเช้าออกเรือชมพระอาทิตย์ขึ้นเหนือทะเลอันดามัน ประสบการณ์ที่หาที่ไหนไม่ได้" data-lang-en="Rise early and watch the Andaman sunrise from the deck — an experience like no other." data-lang-ru="Встаньте пораньше и встретьте рассвет над Андаманским морем с палубы — незабываемые впечатления.">ตื่นเช้าออกเรือชมพระอาทิตย์ขึ้นเหนือทะเลอันดามัน ประสบการณ์ที่หาที่ไหนไม่ได้</div>
         </div>
       </div>
       <!-- Card 5 -->
@@ -825,8 +829,8 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
         </div>
         <div class="exp-card__body">
           <div class="exp-card__ic"><i data-lucide="utensils" width="18" height="18"></i></div>
-          <div class="exp-card__ttl" data-lang-th="เรียนทำอาหารไทย" data-lang-en="Thai Cooking Class">เรียนทำอาหารไทย</div>
-          <div class="exp-card__txt" data-lang-th="เรียนรู้ศิลปะการทำอาหารไทยแท้ กับเชฟท้องถิ่นผู้มากประสบการณ์" data-lang-en="Master authentic Thai cuisine alongside experienced local chefs in a hands-on class.">เรียนรู้ศิลปะการทำอาหารไทยแท้ กับเชฟท้องถิ่นผู้มากประสบการณ์</div>
+          <div class="exp-card__ttl" data-lang-th="เรียนทำอาหารไทย" data-lang-en="Thai Cooking Class" data-lang-ru="Кулинарный мастер-класс">เรียนทำอาหารไทย</div>
+          <div class="exp-card__txt" data-lang-th="เรียนรู้ศิลปะการทำอาหารไทยแท้ กับเชฟท้องถิ่นผู้มากประสบการณ์" data-lang-en="Master authentic Thai cuisine alongside experienced local chefs in a hands-on class." data-lang-ru="Освойте настоящую тайскую кухню вместе с опытными местными шеф-поварами.">เรียนรู้ศิลปะการทำอาหารไทยแท้ กับเชฟท้องถิ่นผู้มากประสบการณ์</div>
         </div>
       </div>
       <!-- Card 6 -->
@@ -836,8 +840,8 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
         </div>
         <div class="exp-card__body">
           <div class="exp-card__ic"><i data-lucide="leaf" width="18" height="18"></i></div>
-          <div class="exp-card__ttl" data-lang-th="เยี่ยมชมช้างไทย" data-lang-en="Elephant Sanctuary Visit">เยี่ยมชมช้างไทย</div>
-          <div class="exp-card__txt" data-lang-th="ใกล้ชิดช้างไทยในสถานที่ดูแลที่มีจริยธรรม ไม่มีการขี่ช้าง" data-lang-en="A close and ethical encounter with Thailand's beloved elephants — no riding, just respect.">ใกล้ชิดช้างไทยในสถานที่ดูแลที่มีจริยธรรม ไม่มีการขี่ช้าง</div>
+          <div class="exp-card__ttl" data-lang-th="เยี่ยมชมช้างไทย" data-lang-en="Elephant Sanctuary Visit" data-lang-ru="Посещение слоновьего заповедника">เยี่ยมชมช้างไทย</div>
+          <div class="exp-card__txt" data-lang-th="ใกล้ชิดช้างไทยในสถานที่ดูแลที่มีจริยธรรม ไม่มีการขี่ช้าง" data-lang-en="A close and ethical encounter with Thailand's beloved elephants — no riding, just respect." data-lang-ru="Близкое и этичное знакомство с любимыми слонами Таиланда — без катания, только уважение.">ใกล้ชิดช้างไทยในสถานที่ดูแลที่มีจริยธรรม ไม่มีการขี่ช้าง</div>
         </div>
       </div>
     </div>
@@ -849,23 +853,23 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   <div class="stats__bg"></div>
   <div class="stats__veil"></div>
   <div class="stats__inner">
-    <h2 class="stats__ttl reveal" data-lang-th="ความไว้วางใจจากนักเดินทางทั่วโลก" data-lang-en="Trusted by Travellers Worldwide">ความไว้วางใจจากนักเดินทางทั่วโลก</h2>
+    <h2 class="stats__ttl reveal" data-lang-th="ความไว้วางใจจากนักเดินทางทั่วโลก" data-lang-en="Trusted by Travellers Worldwide" data-lang-ru="Нам доверяют путешественники по всему миру">ความไว้วางใจจากนักเดินทางทั่วโลก</h2>
     <div class="stats__grid">
       <div class="reveal rd1">
         <span class="stat__num">10+</span>
-        <span class="stat__lbl" data-lang-th="ปีแห่งประสบการณ์" data-lang-en="Years of Experience">ปีแห่งประสบการณ์</span>
+        <span class="stat__lbl" data-lang-th="ปีแห่งประสบการณ์" data-lang-en="Years of Experience" data-lang-ru="лет опыта">ปีแห่งประสบการณ์</span>
       </div>
       <div class="reveal rd2">
         <span class="stat__num">5,000+</span>
-        <span class="stat__lbl" data-lang-th="นักเดินทางพึงพอใจ" data-lang-en="Happy Travellers">นักเดินทางพึงพอใจ</span>
+        <span class="stat__lbl" data-lang-th="นักเดินทางพึงพอใจ" data-lang-en="Happy Travellers" data-lang-ru="довольных путешественников">นักเดินทางพึงพอใจ</span>
       </div>
       <div class="reveal rd3">
         <span class="stat__num">4.9</span>
-        <span class="stat__lbl" data-lang-th="คะแนนเฉลี่ยจากลูกค้า" data-lang-en="Average Rating">คะแนนเฉลี่ยจากลูกค้า</span>
+        <span class="stat__lbl" data-lang-th="คะแนนเฉลี่ยจากลูกค้า" data-lang-en="Average Rating" data-lang-ru="средняя оценка">คะแนนเฉลี่ยจากลูกค้า</span>
       </div>
       <div class="reveal rd4">
         <span class="stat__num">25+</span>
-        <span class="stat__lbl" data-lang-th="จุดหมายสุดพิเศษ" data-lang-en="Unique Destinations">จุดหมายสุดพิเศษ</span>
+        <span class="stat__lbl" data-lang-th="จุดหมายสุดพิเศษ" data-lang-en="Unique Destinations" data-lang-ru="уникальных направлений">จุดหมายสุดพิเศษ</span>
       </div>
     </div>
   </div>
@@ -876,37 +880,37 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   <div class="container">
     <div class="center-text reveal" style="margin-bottom:3rem">
       <div class="sec-label center">
-        <span data-lang-th="ขั้นตอนการจอง" data-lang-en="How It Works">ขั้นตอนการจอง</span>
+        <span data-lang-th="ขั้นตอนการจอง" data-lang-en="How It Works" data-lang-ru="Как это работает">ขั้นตอนการจอง</span>
       </div>
-      <h2 class="sec-title" data-lang-th="เริ่มต้นการเดินทางง่ายๆ ใน 4 ขั้นตอน" data-lang-en="Start Your Journey in 4 Simple Steps">เริ่มต้นการเดินทางง่ายๆ ใน 4 ขั้นตอน</h2>
+      <h2 class="sec-title" data-lang-th="เริ่มต้นการเดินทางง่ายๆ ใน 4 ขั้นตอน" data-lang-en="Start Your Journey in 4 Simple Steps" data-lang-ru="Начните путешествие за 4 простых шага">เริ่มต้นการเดินทางง่ายๆ ใน 4 ขั้นตอน</h2>
     </div>
     <div class="steps">
       <div class="step reveal">
         <div class="step__n">1</div>
         <div class="step__body">
-          <h4 data-lang-th="เลือกโปรแกรมที่ใช่" data-lang-en="Choose Your Program">เลือกโปรแกรมที่ใช่</h4>
-          <p data-lang-th="เลือกจากโปรแกรมทัวร์ที่คัดสรรแล้ว หรือแจ้งความต้องการพิเศษกับทีมงานของเรา" data-lang-en="Browse our curated programs or tell us your dream trip and we'll design it just for you.">เลือกจากโปรแกรมทัวร์ที่คัดสรรแล้ว หรือแจ้งความต้องการพิเศษกับทีมงานของเรา</p>
+          <h4 data-lang-th="เลือกโปรแกรมที่ใช่" data-lang-en="Choose Your Program" data-lang-ru="Выберите программу">เลือกโปรแกรมที่ใช่</h4>
+          <p data-lang-th="เลือกจากโปรแกรมทัวร์ที่คัดสรรแล้ว หรือแจ้งความต้องการพิเศษกับทีมงานของเรา" data-lang-en="Browse our curated programs or tell us your dream trip and we'll design it just for you." data-lang-ru="Выберите из готовых программ или расскажите о путешествии мечты — мы создадим его для вас.">เลือกจากโปรแกรมทัวร์ที่คัดสรรแล้ว หรือแจ้งความต้องการพิเศษกับทีมงานของเรา</p>
         </div>
       </div>
       <div class="step reveal rd1">
         <div class="step__n">2</div>
         <div class="step__body">
-          <h4 data-lang-th="ปรับแต่งตามใจคุณ" data-lang-en="Customize Your Itinerary">ปรับแต่งตามใจคุณ</h4>
-          <p data-lang-th="ทีมงานจะช่วยปรับแต่งทุกรายละเอียด ตั้งแต่เส้นทาง อาหาร ไปจนถึงกิจกรรมเสริม" data-lang-en="We'll tailor every detail — route, dining preferences, and add-on activities — to your wishes.">ทีมงานจะช่วยปรับแต่งทุกรายละเอียด ตั้งแต่เส้นทาง อาหาร ไปจนถึงกิจกรรมเสริม</p>
+          <h4 data-lang-th="ปรับแต่งตามใจคุณ" data-lang-en="Customize Your Itinerary" data-lang-ru="Настройте маршрут">ปรับแต่งตามใจคุณ</h4>
+          <p data-lang-th="ทีมงานจะช่วยปรับแต่งทุกรายละเอียด ตั้งแต่เส้นทาง อาหาร ไปจนถึงกิจกรรมเสริม" data-lang-en="We'll tailor every detail — route, dining preferences, and add-on activities — to your wishes." data-lang-ru="Мы подстроим каждую деталь — маршрут, питание и дополнительные активности — под ваши пожелания.">ทีมงานจะช่วยปรับแต่งทุกรายละเอียด ตั้งแต่เส้นทาง อาหาร ไปจนถึงกิจกรรมเสริม</p>
         </div>
       </div>
       <div class="step reveal rd2">
         <div class="step__n">3</div>
         <div class="step__body">
-          <h4 data-lang-th="ยืนยันและชำระเงิน" data-lang-en="Confirm & Pay Securely">ยืนยันและชำระเงิน</h4>
-          <p data-lang-th="ยืนยันการจองและชำระเงินอย่างปลอดภัย รับใบยืนยันการจองทันที" data-lang-en="Confirm your booking and pay securely online. Receive an instant booking confirmation.">ยืนยันการจองและชำระเงินอย่างปลอดภัย รับใบยืนยันการจองทันที</p>
+          <h4 data-lang-th="ยืนยันและชำระเงิน" data-lang-en="Confirm & Pay Securely" data-lang-ru="Подтвердите и оплатите безопасно">ยืนยันและชำระเงิน</h4>
+          <p data-lang-th="ยืนยันการจองและชำระเงินอย่างปลอดภัย รับใบยืนยันการจองทันที" data-lang-en="Confirm your booking and pay securely online. Receive an instant booking confirmation." data-lang-ru="Подтвердите бронирование и оплатите безопасно онлайн. Получите мгновенное подтверждение.">ยืนยันการจองและชำระเงินอย่างปลอดภัย รับใบยืนยันการจองทันที</p>
         </div>
       </div>
       <div class="step reveal rd3">
         <div class="step__n">4</div>
         <div class="step__body">
-          <h4 data-lang-th="เพลิดเพลินกับสวรรค์" data-lang-en="Enjoy Paradise">เพลิดเพลินกับสวรรค์</h4>
-          <p data-lang-th="ทีมงานรับท่านถึงโรงแรม พร้อมดูแลตลอดการเดินทาง ให้คุณเพลิดเพลินได้เต็มที่" data-lang-en="We pick you up from your hotel and take care of everything — just sit back and enjoy.">ทีมงานรับท่านถึงโรงแรม พร้อมดูแลตลอดการเดินทาง ให้คุณเพลิดเพลินได้เต็มที่</p>
+          <h4 data-lang-th="เพลิดเพลินกับสวรรค์" data-lang-en="Enjoy Paradise" data-lang-ru="Наслаждайтесь раем">เพลิดเพลินกับสวรรค์</h4>
+          <p data-lang-th="ทีมงานรับท่านถึงโรงแรม พร้อมดูแลตลอดการเดินทาง ให้คุณเพลิดเพลินได้เต็มที่" data-lang-en="We pick you up from your hotel and take care of everything — just sit back and enjoy." data-lang-ru="Мы заберём вас из отеля и позаботимся обо всём — просто расслабьтесь и наслаждайтесь.">ทีมงานรับท่านถึงโรงแรม พร้อมดูแลตลอดการเดินทาง ให้คุณเพลิดเพลินได้เต็มที่</p>
         </div>
       </div>
     </div>
@@ -925,9 +929,9 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   <div class="container">
     <div class="center-text reveal" style="margin-bottom:2.75rem">
       <div class="sec-label center">
-        <span data-lang-th="รีวิวจากลูกค้า" data-lang-en="Guest Reviews">รีวิวจากลูกค้า</span>
+        <span data-lang-th="รีวิวจากลูกค้า" data-lang-en="Guest Reviews" data-lang-ru="Отзывы гостей">รีวิวจากลูกค้า</span>
       </div>
-      <h2 class="sec-title lt" data-lang-th="เสียงจากนักเดินทางของเรา" data-lang-en="Words from Our Travellers">เสียงจากนักเดินทางของเรา</h2>
+      <h2 class="sec-title lt" data-lang-th="เสียงจากนักเดินทางของเรา" data-lang-en="Words from Our Travellers" data-lang-ru="Слова наших путешественников">เสียงจากนักเดินทางของเรา</h2>
     </div>
     <div class="testi__grid">
       <div class="testi-card reveal">
@@ -938,12 +942,12 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
           <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
           <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
         </div>
-        <p class="testi-txt" data-lang-th="&quot;ประสบการณ์ที่ดีที่สุดในชีวิต ทีมงานดูแลทุกอย่างอย่างเป็นมืออาชีพ ตั้งแต่รับจากโรงแรมจนถึงส่งกลับ ไม่มีอะไรให้ต้องกังวลเลย แนะนำ 100%&quot;" data-lang-en="&quot;The best experience of our lives. Every detail was handled flawlessly — from hotel pickup to sunset drop-off. We didn't have to worry about a single thing. 100% recommended.&quot;">"ประสบการณ์ที่ดีที่สุดในชีวิต ทีมงานดูแลทุกอย่างอย่างเป็นมืออาชีพ ตั้งแต่รับจากโรงแรมจนถึงส่งกลับ ไม่มีอะไรให้ต้องกังวลเลย แนะนำ 100%"</p>
+        <p class="testi-txt" data-lang-th="&quot;ประสบการณ์ที่ดีที่สุดในชีวิต ทีมงานดูแลทุกอย่างอย่างเป็นมืออาชีพ ตั้งแต่รับจากโรงแรมจนถึงส่งกลับ ไม่มีอะไรให้ต้องกังวลเลย แนะนำ 100%&quot;" data-lang-en="&quot;The best experience of our lives. Every detail was handled flawlessly — from hotel pickup to sunset drop-off. We didn't have to worry about a single thing. 100% recommended.&quot;" data-lang-ru="&quot;Лучшее впечатление в нашей жизни. Всё было организовано безупречно — от трансфера из отеля до проводов на закате. Нам не о чем было беспокоиться. Рекомендуем на 100%.&quot;">"ประสบการณ์ที่ดีที่สุดในชีวิต ทีมงานดูแลทุกอย่างอย่างเป็นมืออาชีพ ตั้งแต่รับจากโรงแรมจนถึงส่งกลับ ไม่มีอะไรให้ต้องกังวลเลย แนะนำ 100%"</p>
         <div class="testi-author">
           <img class="testi-avatar" src="https://images.unsplash.com/photo-1564856629496-2ee8f8d05fde?w=100&h=100&fit=crop&faces" alt="นลิน วงศ์สุวรรณ" />
           <div>
             <strong class="testi-name">นลิน วงศ์สุวรรณ</strong>
-            <span class="testi-origin" data-lang-th="กรุงเทพฯ, ประเทศไทย" data-lang-en="Bangkok, Thailand">กรุงเทพฯ, ประเทศไทย</span>
+            <span class="testi-origin" data-lang-th="กรุงเทพฯ, ประเทศไทย" data-lang-en="Bangkok, Thailand" data-lang-ru="Бангкок, Таиланд">กรุงเทพฯ, ประเทศไทย</span>
           </div>
         </div>
       </div>
@@ -955,12 +959,12 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
           <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
           <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
         </div>
-        <p class="testi-txt" data-lang-th="&quot;โปรแกรม Sunset Yacht Cruise สุดยอดมาก อาหารอร่อยมาก วิวสวยงาม ทีมงานเป็นกันเองและมืออาชีพมาก จะกลับมาอีกแน่นอน&quot;" data-lang-en="&quot;The Sunset Yacht Cruise was absolutely spectacular. The food, the views, the crew — everything was perfect. We've already booked our return trip with Phuket Love Paradise.&quot;">"โปรแกรม Sunset Yacht Cruise สุดยอดมาก อาหารอร่อยมาก วิวสวยงาม ทีมงานเป็นกันเองและมืออาชีพมาก จะกลับมาอีกแน่นอน"</p>
+        <p class="testi-txt" data-lang-th="&quot;โปรแกรม Sunset Yacht Cruise สุดยอดมาก อาหารอร่อยมาก วิวสวยงาม ทีมงานเป็นกันเองและมืออาชีพมาก จะกลับมาอีกแน่นอน&quot;" data-lang-en="&quot;The Sunset Yacht Cruise was absolutely spectacular. The food, the views, the crew — everything was perfect. We've already booked our return trip with Phuket Love Paradise.&quot;" data-lang-ru="&quot;Круиз на яхте на закате был просто потрясающим. Еда, виды, экипаж — всё было идеально. Мы уже забронировали повторную поездку с Phuket Love Paradise.&quot;">"โปรแกรม Sunset Yacht Cruise สุดยอดมาก อาหารอร่อยมาก วิวสวยงาม ทีมงานเป็นกันเองและมืออาชีพมาก จะกลับมาอีกแน่นอน"</p>
         <div class="testi-author">
           <img class="testi-avatar" src="https://picsum.photos/seed/sarah-t/100/100" alt="Sarah Thompson" />
           <div>
             <strong class="testi-name">Sarah &amp; James Thompson</strong>
-            <span class="testi-origin" data-lang-th="ลอนดอน, สหราชอาณาจักร" data-lang-en="London, United Kingdom">ลอนดอน, สหราชอาณาจักร</span>
+            <span class="testi-origin" data-lang-th="ลอนดอน, สหราชอาณาจักร" data-lang-en="London, United Kingdom" data-lang-ru="Лондон, Великобритания">ลอนดอน, สหราชอาณาจักร</span>
           </div>
         </div>
       </div>
@@ -972,12 +976,12 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
           <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
           <i data-lucide="star" width="15" height="15" style="fill:currentColor"></i>
         </div>
-        <p class="testi-txt" data-lang-th="&quot;พาครอบครัวมาเที่ยว ทีมงานดูแลทั้งผู้ใหญ่และเด็กได้ดีมาก ไกด์พูดภาษาไทยและอังกฤษได้คล่อง ทุกคนประทับใจมาก ขอบคุณมากครับ&quot;" data-lang-en="&quot;Brought the whole family and the guides were brilliant with everyone — adults and children alike. Fluent Thai and English, endlessly patient, and genuinely knowledgeable. Truly remarkable.&quot;">"พาครอบครัวมาเที่ยว ทีมงานดูแลทั้งผู้ใหญ่และเด็กได้ดีมาก ไกด์พูดภาษาไทยและอังกฤษได้คล่อง ทุกคนประทับใจมาก ขอบคุณมากครับ"</p>
+        <p class="testi-txt" data-lang-th="&quot;พาครอบครัวมาเที่ยว ทีมงานดูแลทั้งผู้ใหญ่และเด็กได้ดีมาก ไกด์พูดภาษาไทยและอังกฤษได้คล่อง ทุกคนประทับใจมาก ขอบคุณมากครับ&quot;" data-lang-en="&quot;Brought the whole family and the guides were brilliant with everyone — adults and children alike. Fluent Thai and English, endlessly patient, and genuinely knowledgeable. Truly remarkable.&quot;" data-lang-ru="&quot;Приехали всей семьёй, и гиды были великолепны со всеми — и со взрослыми, и с детьми. Свободный тайский и английский, бесконечное терпение и настоящие знания. Поистине замечательно.&quot;">"พาครอบครัวมาเที่ยว ทีมงานดูแลทั้งผู้ใหญ่และเด็กได้ดีมาก ไกด์พูดภาษาไทยและอังกฤษได้คล่อง ทุกคนประทับใจมาก ขอบคุณมากครับ"</p>
         <div class="testi-author">
           <img class="testi-avatar" src="https://picsum.photos/seed/wipada/100/100" alt="วิภาดา ศรีสุข" />
           <div>
             <strong class="testi-name">วิภาดา ศรีสุข</strong>
-            <span class="testi-origin" data-lang-th="เชียงใหม่, ประเทศไทย" data-lang-en="Chiang Mai, Thailand">เชียงใหม่, ประเทศไทย</span>
+            <span class="testi-origin" data-lang-th="เชียงใหม่, ประเทศไทย" data-lang-en="Chiang Mai, Thailand" data-lang-ru="Чиангмай, Таиланд">เชียงใหม่, ประเทศไทย</span>
           </div>
         </div>
       </div>
@@ -997,9 +1001,9 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   <div class="container">
     <div class="center-text reveal" style="margin-bottom:2.25rem">
       <div class="sec-label center">
-        <span data-lang-th="แกลเลอรีภาพ" data-lang-en="Photo Gallery">แกลเลอรีภาพ</span>
+        <span data-lang-th="แกลเลอรีภาพ" data-lang-en="Photo Gallery" data-lang-ru="Фотогалерея">แกลเลอรีภาพ</span>
       </div>
-      <h2 class="sec-title" data-lang-th="ความงามที่รอให้คุณค้นพบ" data-lang-en="Beauty Waiting to Be Discovered">ความงามที่รอให้คุณค้นพบ</h2>
+      <h2 class="sec-title" data-lang-th="ความงามที่รอให้คุณค้นพบ" data-lang-en="Beauty Waiting to Be Discovered" data-lang-ru="Красота, которую стоит открыть">ความงามที่รอให้คุณค้นพบ</h2>
     </div>
     <div class="gallery__grid">
       <div class="gal-item reveal">
@@ -1035,59 +1039,59 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
       <div class="booking__text reveal-left">
         <div class="sec-label">
           <i data-lucide="calendar" width="14" height="14"></i>
-          <span data-lang-th="จองทัวร์" data-lang-en="Book a Tour">จองทัวร์</span>
+          <span data-lang-th="จองทัวร์" data-lang-en="Book a Tour" data-lang-ru="Бронирование тура">จองทัวร์</span>
         </div>
-        <h2 class="sec-title lt" data-lang-th="พร้อมออกเดินทางสู่สวรรค์แล้วหรือยัง?" data-lang-en="Ready to Journey to Paradise?">พร้อมออกเดินทางสู่สวรรค์แล้วหรือยัง?</h2>
-        <p class="sec-desc lt" data-lang-th="กรอกแบบฟอร์มด้านข้าง และทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อช่วยวางแผนการเดินทางที่สมบูรณ์แบบสำหรับคุณ" data-lang-en="Fill in the form and our team will respond within 24 hours to plan the perfect journey for you.">กรอกแบบฟอร์มด้านข้าง และทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อช่วยวางแผนการเดินทางที่สมบูรณ์แบบสำหรับคุณ</p>
+        <h2 class="sec-title lt" data-lang-th="พร้อมออกเดินทางสู่สวรรค์แล้วหรือยัง?" data-lang-en="Ready to Journey to Paradise?" data-lang-ru="Готовы отправиться в рай?">พร้อมออกเดินทางสู่สวรรค์แล้วหรือยัง?</h2>
+        <p class="sec-desc lt" data-lang-th="กรอกแบบฟอร์มด้านข้าง และทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อช่วยวางแผนการเดินทางที่สมบูรณ์แบบสำหรับคุณ" data-lang-en="Fill in the form and our team will respond within 24 hours to plan the perfect journey for you." data-lang-ru="Заполните форму, и наша команда ответит в течение 24 часов, чтобы спланировать идеальное путешествие для вас.">กรอกแบบฟอร์มด้านข้าง และทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อช่วยวางแผนการเดินทางที่สมบูรณ์แบบสำหรับคุณ</p>
         <div class="booking__perks">
-          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ทีมงานตอบกลับภายใน 24 ชั่วโมง" data-lang-en="Team responds within 24 hours">ทีมงานตอบกลับภายใน 24 ชั่วโมง</span></div>
-          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ไม่มีค่าใช้จ่ายในการสอบถาม" data-lang-en="No charge for enquiries">ไม่มีค่าใช้จ่ายในการสอบถาม</span></div>
-          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ปรับแต่งโปรแกรมได้ตามต้องการ" data-lang-en="Fully customizable itinerary">ปรับแต่งโปรแกรมได้ตามต้องการ</span></div>
-          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="บริการรับ-ส่งโรงแรมฟรี" data-lang-en="Complimentary hotel transfers">บริการรับ-ส่งโรงแรมฟรี</span></div>
+          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ทีมงานตอบกลับภายใน 24 ชั่วโมง" data-lang-en="Team responds within 24 hours" data-lang-ru="Ответ команды в течение 24 часов">ทีมงานตอบกลับภายใน 24 ชั่วโมง</span></div>
+          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ไม่มีค่าใช้จ่ายในการสอบถาม" data-lang-en="No charge for enquiries" data-lang-ru="Бесплатные консультации">ไม่มีค่าใช้จ่ายในการสอบถาม</span></div>
+          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ปรับแต่งโปรแกรมได้ตามต้องการ" data-lang-en="Fully customizable itinerary" data-lang-ru="Полностью настраиваемый маршрут">ปรับแต่งโปรแกรมได้ตามต้องการ</span></div>
+          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="บริการรับ-ส่งโรงแรมฟรี" data-lang-en="Complimentary hotel transfers" data-lang-ru="Бесплатный трансфер от отеля">บริการรับ-ส่งโรงแรมฟรี</span></div>
         </div>
       </div>
       <div class="booking__form reveal-right">
         <div class="form-row">
           <div class="fg">
-            <label data-lang-th="ชื่อ" data-lang-en="First Name">ชื่อ</label>
-            <input type="text" placeholder="ชื่อของคุณ" data-ph-th="ชื่อของคุณ" data-ph-en="Your first name" />
+            <label data-lang-th="ชื่อ" data-lang-en="First Name" data-lang-ru="Имя">ชื่อ</label>
+            <input type="text" placeholder="ชื่อของคุณ" data-ph-th="ชื่อของคุณ" data-ph-en="Your first name" data-ph-ru="Ваше имя" />
           </div>
           <div class="fg">
-            <label data-lang-th="นามสกุล" data-lang-en="Last Name">นามสกุล</label>
-            <input type="text" placeholder="นามสกุลของคุณ" data-ph-th="นามสกุลของคุณ" data-ph-en="Your last name" />
+            <label data-lang-th="นามสกุล" data-lang-en="Last Name" data-lang-ru="Фамилия">นามสกุล</label>
+            <input type="text" placeholder="นามสกุลของคุณ" data-ph-th="นามสกุลของคุณ" data-ph-en="Your last name" data-ph-ru="Ваша фамилия" />
           </div>
         </div>
         <div class="fg">
-          <label data-lang-th="อีเมล" data-lang-en="Email">อีเมล</label>
+          <label data-lang-th="อีเมล" data-lang-en="Email" data-lang-ru="Эл. почта">อีเมล</label>
           <input type="email" placeholder="your@email.com" />
         </div>
         <div class="fg">
-          <label data-lang-th="เบอร์โทรศัพท์" data-lang-en="Phone Number">เบอร์โทรศัพท์</label>
+          <label data-lang-th="เบอร์โทรศัพท์" data-lang-en="Phone Number" data-lang-ru="Номер телефона">เบอร์โทรศัพท์</label>
           <input type="tel" placeholder="+66 8x-xxxx-xxxx" />
         </div>
         <div class="form-row">
           <div class="fg">
-            <label data-lang-th="โปรแกรมที่สนใจ" data-lang-en="Tour of Interest">โปรแกรมที่สนใจ</label>
+            <label data-lang-th="โปรแกรมที่สนใจ" data-lang-en="Tour of Interest" data-lang-ru="Интересующий тур">โปรแกรมที่สนใจ</label>
             <select>
-              <option value="" data-lang-th="เลือกโปรแกรม" data-lang-en="Select a tour">เลือกโปรแกรม</option>
-              <option value="island" data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Andaman Island Hopping">ล่องเกาะหมู่เกาะอันดามัน</option>
-              <option value="sunset" data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Luxury Sunset Yacht Cruise">ล่องเรือยอชต์ชมพระอาทิตย์ตก</option>
-              <option value="snorkel" data-lang-th="ดำน้ำดูปะการัง" data-lang-en="Coral Paradise Snorkeling">ดำน้ำดูปะการัง</option>
-              <option value="custom" data-lang-th="ออกแบบเองตามต้องการ" data-lang-en="Custom Itinerary">ออกแบบเองตามต้องการ</option>
+              <option value="" data-lang-th="เลือกโปรแกรม" data-lang-en="Select a tour" data-lang-ru="Выберите тур">เลือกโปรแกรม</option>
+              <option value="island" data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Andaman Island Hopping" data-lang-ru="Тур по островам Андаманского моря">ล่องเกาะหมู่เกาะอันดามัน</option>
+              <option value="sunset" data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Luxury Sunset Yacht Cruise" data-lang-ru="Люксовый круиз на яхте на закате">ล่องเรือยอชต์ชมพระอาทิตย์ตก</option>
+              <option value="snorkel" data-lang-th="ดำน้ำดูปะการัง" data-lang-en="Coral Paradise Snorkeling" data-lang-ru="Снорклинг в коралловом раю">ดำน้ำดูปะการัง</option>
+              <option value="custom" data-lang-th="ออกแบบเองตามต้องการ" data-lang-en="Custom Itinerary" data-lang-ru="Индивидуальный маршрут">ออกแบบเองตามต้องการ</option>
             </select>
           </div>
           <div class="fg">
-            <label data-lang-th="จำนวนผู้เดินทาง" data-lang-en="Number of Travellers">จำนวนผู้เดินทาง</label>
+            <label data-lang-th="จำนวนผู้เดินทาง" data-lang-en="Number of Travellers" data-lang-ru="Количество путешественников">จำนวนผู้เดินทาง</label>
             <input type="number" min="1" max="20" placeholder="2" />
           </div>
         </div>
         <div class="fg">
-          <label data-lang-th="ข้อความเพิ่มเติม" data-lang-en="Additional Message">ข้อความเพิ่มเติม</label>
-          <textarea placeholder="บอกเราเพิ่มเติมเกี่ยวกับทริปในฝันของคุณ..." data-ph-th="บอกเราเพิ่มเติมเกี่ยวกับทริปในฝันของคุณ..." data-ph-en="Tell us more about your dream trip..."></textarea>
+          <label data-lang-th="ข้อความเพิ่มเติม" data-lang-en="Additional Message" data-lang-ru="Дополнительное сообщение">ข้อความเพิ่มเติม</label>
+          <textarea placeholder="บอกเราเพิ่มเติมเกี่ยวกับทริปในฝันของคุณ..." data-ph-th="บอกเราเพิ่มเติมเกี่ยวกับทริปในฝันของคุณ..." data-ph-en="Tell us more about your dream trip..." data-ph-ru="Расскажите подробнее о путешествии вашей мечты..."></textarea>
         </div>
         <button type="submit" class="btn-gold" style="width:100%;justify-content:center">
           <i data-lucide="send" width="16" height="16"></i>
-          <span data-lang-th="ส่งคำขอจอง" data-lang-en="Send Booking Request">ส่งคำขอจอง</span>
+          <span data-lang-th="ส่งคำขอจอง" data-lang-en="Send Booking Request" data-lang-ru="Отправить заявку">ส่งคำขอจอง</span>
         </button>
       </div>
     </div>
@@ -1101,7 +1105,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
       <div class="footer__brand-col">
         <div class="footer__brand-name">Phuket Love Paradise</div>
         <div class="footer__brand-sub">ภูเก็ตเลิฟพาราไดซ์</div>
-        <p data-lang-th="บริการทัวร์หรูหราในภูเก็ต ออกแบบประสบการณ์สุดพิเศษบนทะเลอันดามัน กับทีมงานมืออาชีพที่ใส่ใจในทุกรายละเอียด" data-lang-en="Luxury tour specialists in Phuket, crafting extraordinary Andaman Sea experiences with an expert team dedicated to every detail.">บริการทัวร์หรูหราในภูเก็ต ออกแบบประสบการณ์สุดพิเศษบนทะเลอันดามัน กับทีมงานมืออาชีพที่ใส่ใจในทุกรายละเอียด</p>
+        <p data-lang-th="บริการทัวร์หรูหราในภูเก็ต ออกแบบประสบการณ์สุดพิเศษบนทะเลอันดามัน กับทีมงานมืออาชีพที่ใส่ใจในทุกรายละเอียด" data-lang-en="Luxury tour specialists in Phuket, crafting extraordinary Andaman Sea experiences with an expert team dedicated to every detail." data-lang-ru="Специалисты по люксовым турам на Пхукете. Создаём незабываемые впечатления на Андаманском море с командой профессионалов, внимательной к каждой детали.">บริการทัวร์หรูหราในภูเก็ต ออกแบบประสบการณ์สุดพิเศษบนทะเลอันดามัน กับทีมงานมืออาชีพที่ใส่ใจในทุกรายละเอียด</p>
         <div class="footer__socials">
           <a href="#" class="footer__soc" aria-label="Facebook"><i data-lucide="facebook" width="16" height="16"></i></a>
           <a href="#" class="footer__soc" aria-label="Instagram"><i data-lucide="instagram" width="16" height="16"></i></a>
@@ -1110,25 +1114,25 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
         </div>
       </div>
       <div class="footer__col">
-        <h5 data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours">โปรแกรมทัวร์</h5>
+        <h5 data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours" data-lang-ru="Туры">โปรแกรมทัวร์</h5>
         <ul class="footer__links">
-          <li><a href="#tours" data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Island Hopping">ล่องเกาะหมู่เกาะอันดามัน</a></li>
-          <li><a href="#tours" data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Sunset Yacht Cruise">ล่องเรือยอชต์ชมพระอาทิตย์ตก</a></li>
-          <li><a href="#tours" data-lang-th="ดำน้ำดูปะการัง" data-lang-en="Snorkeling">ดำน้ำดูปะการัง</a></li>
-          <li><a href="#experiences" data-lang-th="ประสบการณ์พิเศษทั้งหมด" data-lang-en="All Experiences">ประสบการณ์พิเศษทั้งหมด</a></li>
+          <li><a href="#tours" data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Island Hopping" data-lang-ru="Туры по островам">ล่องเกาะหมู่เกาะอันดามัน</a></li>
+          <li><a href="#tours" data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Sunset Yacht Cruise" data-lang-ru="Круиз на яхте на закате">ล่องเรือยอชต์ชมพระอาทิตย์ตก</a></li>
+          <li><a href="#tours" data-lang-th="ดำน้ำดูปะการัง" data-lang-en="Snorkeling" data-lang-ru="Снорклинг">ดำน้ำดูปะการัง</a></li>
+          <li><a href="#experiences" data-lang-th="ประสบการณ์พิเศษทั้งหมด" data-lang-en="All Experiences" data-lang-ru="Все впечатления">ประสบการณ์พิเศษทั้งหมด</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h5 data-lang-th="บริษัท" data-lang-en="Company">บริษัท</h5>
+        <h5 data-lang-th="บริษัท" data-lang-en="Company" data-lang-ru="Компания">บริษัท</h5>
         <ul class="footer__links">
-          <li><a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About Us">เกี่ยวกับเรา</a></li>
-          <li><a href="#testimonials" data-lang-th="รีวิวจากลูกค้า" data-lang-en="Reviews">รีวิวจากลูกค้า</a></li>
-          <li><a href="#booking" data-lang-th="ติดต่อเรา" data-lang-en="Contact Us">ติดต่อเรา</a></li>
-          <li><a href="#" data-lang-th="นโยบายความเป็นส่วนตัว" data-lang-en="Privacy Policy">นโยบายความเป็นส่วนตัว</a></li>
+          <li><a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About Us" data-lang-ru="О нас">เกี่ยวกับเรา</a></li>
+          <li><a href="#testimonials" data-lang-th="รีวิวจากลูกค้า" data-lang-en="Reviews" data-lang-ru="Отзывы">รีวิวจากลูกค้า</a></li>
+          <li><a href="#booking" data-lang-th="ติดต่อเรา" data-lang-en="Contact Us" data-lang-ru="Связаться с нами">ติดต่อเรา</a></li>
+          <li><a href="#" data-lang-th="นโยบายความเป็นส่วนตัว" data-lang-en="Privacy Policy" data-lang-ru="Политика конфиденциальности">นโยบายความเป็นส่วนตัว</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h5 data-lang-th="ติดต่อ" data-lang-en="Contact">ติดต่อ</h5>
+        <h5 data-lang-th="ติดต่อ" data-lang-en="Contact" data-lang-ru="Контакты">ติดต่อ</h5>
         <div class="footer__ci">
           <div class="footer__ci-item">
             <i data-lucide="phone" width="14" height="14"></i>
@@ -1140,17 +1144,17 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
           </div>
           <div class="footer__ci-item">
             <i data-lucide="map-pin" width="14" height="14"></i>
-            <span data-lang-th="ภูเก็ต, ประเทศไทย 83000" data-lang-en="Phuket, Thailand 83000">ภูเก็ต, ประเทศไทย 83000</span>
+            <span data-lang-th="ภูเก็ต, ประเทศไทย 83000" data-lang-en="Phuket, Thailand 83000" data-lang-ru="Пхукет, Таиланд 83000">ภูเก็ต, ประเทศไทย 83000</span>
           </div>
           <div class="footer__ci-item">
             <i data-lucide="clock" width="14" height="14"></i>
-            <span data-lang-th="ทุกวัน 08:00–20:00 น." data-lang-en="Daily 08:00–20:00">ทุกวัน 08:00–20:00 น.</span>
+            <span data-lang-th="ทุกวัน 08:00–20:00 น." data-lang-en="Daily 08:00–20:00" data-lang-ru="Ежедневно 08:00–20:00">ทุกวัน 08:00–20:00 น.</span>
           </div>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <p data-lang-th="© 2025 ภูเก็ตเลิฟพาราไดซ์ สงวนลิขสิทธิ์" data-lang-en="© 2025 Phuket Love Paradise. All rights reserved.">© 2025 ภูเก็ตเลิฟพาราไดซ์ สงวนลิขสิทธิ์</p>
+      <p data-lang-th="© 2025 ภูเก็ตเลิฟพาราไดซ์ สงวนลิขสิทธิ์" data-lang-en="© 2025 Phuket Love Paradise. All rights reserved." data-lang-ru="© 2025 Phuket Love Paradise. Все права защищены.">© 2025 ภูเก็ตเลิฟพาราไดซ์ สงวนลิขสิทธิ์</p>
     </div>
   </div>
 </footer>
@@ -1179,7 +1183,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealEls.forEach(el => revealObserver.observe(el));
 </script>
 
-<!-- Language switcher (exact required JS) -->
-<script>(function(){var K='site-lang',L=localStorage.getItem(K)||'th';function S(l){L=l;localStorage.setItem(K,l);document.documentElement.lang=l;document.querySelectorAll('[data-lang-th]').forEach(function(e){var t=e.getAttribute('data-lang-'+l);if(t!==null){e.textContent=t}});var lb=document.querySelector('.lang-sw__label');if(lb){lb.textContent=l.toUpperCase()}}var sw=document.querySelector('.lang-sw');if(sw){sw.addEventListener('click',function(){S(L==='th'?'en':'th')});sw.style.cursor='pointer'}if(L!=='th'){S(L)}})();</script>
+<!-- Language switcher (TH / EN / RU) -->
+<script>(function(){var K='site-lang',LANGS=['th','en','ru'],L=localStorage.getItem(K)||'th';if(LANGS.indexOf(L)<0){L='th'}function S(l){L=l;localStorage.setItem(K,l);document.documentElement.lang=l;document.querySelectorAll('[data-lang-th]').forEach(function(e){var t=e.getAttribute('data-lang-'+l);if(t!==null){e.textContent=t}});document.querySelectorAll('[data-ph-th]').forEach(function(e){var t=e.getAttribute('data-ph-'+l);if(t!==null){e.placeholder=t}});var lb=document.querySelector('.lang-sw__label');if(lb){lb.textContent=l.toUpperCase()}}var sw=document.querySelector('.lang-sw');if(sw){sw.addEventListener('click',function(){S(LANGS[(LANGS.indexOf(L)+1)%LANGS.length])});sw.style.cursor='pointer'}if(L!=='th'){S(L)}})();</script>
 </body>
 </html>
