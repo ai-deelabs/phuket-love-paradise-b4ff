@@ -580,6 +580,46 @@ html[lang="th"] .ptable th{letter-spacing:0}
 .gtk-contacts .op{color:#fff;font-size:.82rem;font-weight:600}
 .gtk-contacts .op span{display:block;color:rgba(240,234,214,.6);font-size:.78rem;font-weight:400}
 
+/* ── CONTACT ── */
+.contact{background:var(--navy);position:relative;overflow:hidden}
+.contact::before{
+  content:'';position:absolute;bottom:-140px;left:-100px;
+  width:440px;height:440px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,160,64,.1) 0%,transparent 70%);
+}
+.contact__inner{position:relative;z-index:2}
+.contact__lead{display:flex;flex-direction:column;gap:.3rem;margin-bottom:2.25rem}
+.contact__person{
+  display:inline-flex;align-items:center;gap:.7rem;margin-top:1rem;
+  color:rgba(240,234,214,.8);font-size:.9rem;
+}
+.contact__person img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.contact__person strong{color:#fff;font-weight:600;display:block;font-size:.92rem}
+.contact__person span{color:rgba(240,234,214,.55);font-size:.8rem}
+.contact__grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:560px){.contact__grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.contact__grid{grid-template-columns:repeat(3,1fr)}}
+.ccard{
+  display:flex;align-items:center;gap:1rem;
+  background:rgba(255,255,255,.05);border:1px solid rgba(201,160,64,.2);
+  border-radius:16px;padding:1.25rem;
+  transition:background .3s,border-color .3s,transform .3s;
+}
+.ccard:hover{background:rgba(201,160,64,.09);border-color:rgba(201,160,64,.5);transform:translateY(-4px)}
+.ccard__ic{
+  width:48px;height:48px;border-radius:12px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.ccard__ic.phone{background:linear-gradient(135deg,#c9a040,#9a7830)}
+.ccard__ic.wa{background:#25D366}
+.ccard__ic.line{background:#06C755}
+.ccard__ic.fb{background:#1877F2}
+.ccard__ic.mail{background:linear-gradient(135deg,#c9a040,#9a7830)}
+.ccard__ic.map{background:rgba(201,160,64,.2);color:var(--gold)}
+.ccard__tx{min-width:0}
+.ccard__tx h4{color:#fff;font-size:.85rem;font-weight:600;margin-bottom:.15rem;line-height:1.4}
+.ccard__tx p{color:rgba(240,234,214,.62);font-size:.82rem;line-height:1.5;word-break:break-word}
+
 /* ── REVEAL ANIMATIONS ── */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -629,7 +669,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
       <li><a href="#tours" data-lang-th="ทัวร์ทางทะเล" data-lang-en="Sea Tours" data-lang-ru="Морские туры">ทัวร์ทางทะเล</a></li>
       <li><a href="#land" data-lang-th="ทัวร์บนบก" data-lang-en="Land Tours" data-lang-ru="Туры по суше">ทัวร์บนบก</a></li>
       <li><a href="#experiences" data-lang-th="ประสบการณ์" data-lang-en="Experiences" data-lang-ru="Впечатления">ประสบการณ์</a></li>
-      <li><a href="#booking" data-lang-th="จองทัวร์" data-lang-en="Book Now" data-lang-ru="Бронировать">จองทัวร์</a></li>
+      <li><a href="#contact" data-lang-th="จองทัวร์" data-lang-en="Book Now" data-lang-ru="Бронировать">จองทัวร์</a></li>
     </ul>
     <button class="lang-sw" aria-label="Switch language">
       <i data-lucide="globe" width="14" height="14"></i>
@@ -646,7 +686,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     <a href="#experiences" data-lang-th="ประสบการณ์" data-lang-en="Experiences" data-lang-ru="Впечатления">ประสบการณ์</a>
     <a href="#info" data-lang-th="ข้อมูลที่ควรรู้" data-lang-en="Good to Know" data-lang-ru="Полезно знать">ข้อมูลที่ควรรู้</a>
     <a href="#how" data-lang-th="ขั้นตอนการจอง" data-lang-en="How It Works" data-lang-ru="Как это работает">ขั้นตอนการจอง</a>
-    <a href="#booking" data-lang-th="จองทัวร์" data-lang-en="Book Now" data-lang-ru="Бронировать">จองทัวร์</a>
+    <a href="#contact" data-lang-th="จองทัวร์" data-lang-en="Book Now" data-lang-ru="Бронировать">จองทัวร์</a>
   </div>
 </nav>
 
@@ -665,7 +705,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     </h1>
     <p class="hero__sub" data-lang-th="ออกแบบประสบการณ์ท่องเที่ยวสุดหรูในภูเก็ต ด้วยทีมงานมืออาชีพที่ดูแลทุกรายละเอียด เพื่อให้การเดินทางของคุณสมบูรณ์แบบที่สุด" data-lang-en="Bespoke luxury travel experiences in Phuket, crafted by expert local guides dedicated to making every moment of your journey truly unforgettable." data-lang-ru="Эксклюзивные люксовые путешествия по Пхукету, созданные опытными местными гидами, чтобы каждое мгновение вашего отдыха стало по-настоящему незабываемым.">ออกแบบประสบการณ์ท่องเที่ยวสุดหรูในภูเก็ต ด้วยทีมงานมืออาชีพที่ดูแลทุกรายละเอียด เพื่อให้การเดินทางของคุณสมบูรณ์แบบที่สุด</p>
     <div class="hero__btns">
-      <a href="#booking" class="btn-gold">
+      <a href="#contact" class="btn-gold">
         <i data-lucide="calendar-check" width="16" height="16"></i>
         <span data-lang-th="จองทัวร์ตอนนี้" data-lang-en="Book Your Tour" data-lang-ru="Забронировать тур">จองทัวร์ตอนนี้</span>
       </a>
@@ -812,7 +852,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
           <span class="amt">฿3,700</span>
           <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person" data-lang-ru="/ чел.">/ ท่าน</span>
         </div>
-        <a href="#booking" class="btn-gold" style="align-self:flex-start">
+        <a href="#contact" class="btn-gold" style="align-self:flex-start">
           <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
           <i data-lucide="arrow-right" width="15" height="15"></i>
         </a>
@@ -874,7 +914,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
           <span class="amt">฿3,200</span>
           <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person" data-lang-ru="/ чел.">/ ท่าน</span>
         </div>
-        <a href="#booking" class="btn-gold" style="align-self:flex-start">
+        <a href="#contact" class="btn-gold" style="align-self:flex-start">
           <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
           <i data-lucide="arrow-right" width="15" height="15"></i>
         </a>
@@ -921,7 +961,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
           <span class="amt">฿7,500</span>
           <span class="per" data-lang-th="/ เจ็ตสกี (2 ท่าน)" data-lang-en="/ ski (2 pax)" data-lang-ru="/ гидроцикл (2 чел.)">/ เจ็ตสกี (2 ท่าน)</span>
         </div>
-        <a href="#booking" class="btn-gold" style="align-self:flex-start">
+        <a href="#contact" class="btn-gold" style="align-self:flex-start">
           <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
           <i data-lucide="arrow-right" width="15" height="15"></i>
         </a>
@@ -1010,7 +1050,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
           <span class="amt">฿4,600</span>
           <span class="per" data-lang-th="/ ท่าน (Try-Dive)" data-lang-en="/ person (Try-Dive)" data-lang-ru="/ чел. (пробное)">/ ท่าน (Try-Dive)</span>
         </div>
-        <a href="#booking" class="btn-gold" style="align-self:flex-start">
+        <a href="#contact" class="btn-gold" style="align-self:flex-start">
           <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
           <i data-lucide="arrow-right" width="15" height="15"></i>
         </a>
@@ -1066,7 +1106,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
           <span class="amt">฿2,200</span>
           <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person" data-lang-ru="/ чел.">/ ท่าน</span>
         </div>
-        <a href="#booking" class="btn-gold" style="align-self:flex-start">
+        <a href="#contact" class="btn-gold" style="align-self:flex-start">
           <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
           <i data-lucide="arrow-right" width="15" height="15"></i>
         </a>
@@ -1127,7 +1167,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
               <span class="lbl" data-lang-th="เริ่มต้น (30 นาที)" data-lang-en="From (30 min)" data-lang-ru="от (30 мин)">เริ่มต้น (30 นาที)</span>
               <span class="amt">฿1,400</span>
             </div>
-            <a href="#booking" class="land-card__btn">
+            <a href="#contact" class="land-card__btn">
               <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
               <i data-lucide="arrow-right" width="14" height="14"></i>
             </a>
@@ -1171,7 +1211,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
               <span class="lbl" data-lang-th="ผู้ใหญ่ เริ่มต้น" data-lang-en="Adult from" data-lang-ru="Взрослый от">ผู้ใหญ่ เริ่มต้น</span>
               <span class="amt">฿1,600</span>
             </div>
-            <a href="#booking" class="land-card__btn">
+            <a href="#contact" class="land-card__btn">
               <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
               <i data-lucide="arrow-right" width="14" height="14"></i>
             </a>
@@ -1206,7 +1246,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
               <span class="lbl" data-lang-th="ผู้ใหญ่ เริ่มต้น" data-lang-en="Adult from" data-lang-ru="Взрослый от">ผู้ใหญ่ เริ่มต้น</span>
               <span class="amt">฿1,450</span>
             </div>
-            <a href="#booking" class="land-card__btn">
+            <a href="#contact" class="land-card__btn">
               <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
               <i data-lucide="arrow-right" width="14" height="14"></i>
             </a>
@@ -1242,7 +1282,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
               <span class="lbl" data-lang-th="ผู้ใหญ่ เริ่มต้น" data-lang-en="Adult from" data-lang-ru="Взрослый от">ผู้ใหญ่ เริ่มต้น</span>
               <span class="amt">฿2,750</span>
             </div>
-            <a href="#booking" class="land-card__btn">
+            <a href="#contact" class="land-card__btn">
               <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
               <i data-lucide="arrow-right" width="14" height="14"></i>
             </a>
@@ -1277,7 +1317,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
               <span class="lbl" data-lang-th="ผู้ใหญ่ เริ่มต้น" data-lang-en="Adult from" data-lang-ru="Взрослый от">ผู้ใหญ่ เริ่มต้น</span>
               <span class="amt">฿3,350</span>
             </div>
-            <a href="#booking" class="land-card__btn">
+            <a href="#contact" class="land-card__btn">
               <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
               <i data-lucide="arrow-right" width="14" height="14"></i>
             </a>
@@ -1330,7 +1370,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
               <span class="lbl" data-lang-th="เริ่มต้น" data-lang-en="From" data-lang-ru="от">เริ่มต้น</span>
               <span class="amt">฿1,500</span>
             </div>
-            <a href="#booking" class="land-card__btn">
+            <a href="#contact" class="land-card__btn">
               <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
               <i data-lucide="arrow-right" width="14" height="14"></i>
             </a>
@@ -1697,75 +1737,67 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   </div>
 </section>
 
-<!-- ═══════════════════════ BOOKING ═══════════════════════ -->
-<section class="sec booking" id="booking">
-  <div class="container">
-    <div class="booking__inner">
-      <div class="booking__text reveal-left">
-        <div class="sec-label">
-          <i data-lucide="calendar" width="14" height="14"></i>
-          <span data-lang-th="จองทัวร์" data-lang-en="Book a Tour" data-lang-ru="Бронирование тура">จองทัวร์</span>
-        </div>
-        <h2 class="sec-title lt" data-lang-th="พร้อมออกเดินทางสู่สวรรค์แล้วหรือยัง?" data-lang-en="Ready to Journey to Paradise?" data-lang-ru="Готовы отправиться в рай?">พร้อมออกเดินทางสู่สวรรค์แล้วหรือยัง?</h2>
-        <p class="sec-desc lt" data-lang-th="กรอกแบบฟอร์มด้านข้าง และทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อช่วยวางแผนการเดินทางที่สมบูรณ์แบบสำหรับคุณ" data-lang-en="Fill in the form and our team will respond within 24 hours to plan the perfect journey for you." data-lang-ru="Заполните форму, и наша команда ответит в течение 24 часов, чтобы спланировать идеальное путешествие для вас.">กรอกแบบฟอร์มด้านข้าง และทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อช่วยวางแผนการเดินทางที่สมบูรณ์แบบสำหรับคุณ</p>
-        <div class="booking__perks">
-          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ทีมงานตอบกลับภายใน 24 ชั่วโมง" data-lang-en="Team responds within 24 hours" data-lang-ru="Ответ команды в течение 24 часов">ทีมงานตอบกลับภายใน 24 ชั่วโมง</span></div>
-          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ไม่มีค่าใช้จ่ายในการสอบถาม" data-lang-en="No charge for enquiries" data-lang-ru="Бесплатные консультации">ไม่มีค่าใช้จ่ายในการสอบถาม</span></div>
-          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="ปรับแต่งโปรแกรมได้ตามต้องการ" data-lang-en="Fully customizable itinerary" data-lang-ru="Полностью настраиваемый маршрут">ปรับแต่งโปรแกรมได้ตามต้องการ</span></div>
-          <div class="booking__perk"><i data-lucide="check-circle" width="16" height="16"></i><span data-lang-th="บริการรับ-ส่งโรงแรมฟรี" data-lang-en="Complimentary hotel transfers" data-lang-ru="Бесплатный трансфер от отеля">บริการรับ-ส่งโรงแรมฟรี</span></div>
-        </div>
+<!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+<section class="sec contact" id="contact">
+  <div class="container contact__inner">
+    <div class="contact__lead reveal">
+      <div class="sec-label">
+        <i data-lucide="message-circle" width="14" height="14"></i>
+        <span data-lang-th="ติดต่อเรา" data-lang-en="Get in Touch" data-lang-ru="Связаться с нами">ติดต่อเรา</span>
       </div>
-      <div class="booking__form reveal-right">
-        <div class="form-row">
-          <div class="fg">
-            <label data-lang-th="ชื่อ" data-lang-en="First Name" data-lang-ru="Имя">ชื่อ</label>
-            <input type="text" placeholder="ชื่อของคุณ" data-ph-th="ชื่อของคุณ" data-ph-en="Your first name" data-ph-ru="Ваше имя" />
-          </div>
-          <div class="fg">
-            <label data-lang-th="นามสกุล" data-lang-en="Last Name" data-lang-ru="Фамилия">นามสกุล</label>
-            <input type="text" placeholder="นามสกุลของคุณ" data-ph-th="นามสกุลของคุณ" data-ph-en="Your last name" data-ph-ru="Ваша фамилия" />
-          </div>
+      <h2 class="sec-title lt" data-lang-th="พร้อมช่วยวางแผนทริปในฝันของคุณ" data-lang-en="Ready to Plan Your Dream Trip" data-lang-ru="Готовы спланировать поездку вашей мечты">พร้อมช่วยวางแผนทริปในฝันของคุณ</h2>
+      <p class="sec-desc lt" data-lang-th="เลือกช่องทางที่สะดวกสำหรับคุณ ทีมงานของเราพร้อมตอบทุกคำถามและช่วยจองทัวร์ให้คุณ" data-lang-en="Reach us through whichever channel suits you best — our team is ready to answer your questions and book your tour." data-lang-ru="Свяжитесь с нами удобным способом — наша команда ответит на вопросы и забронирует тур.">เลือกช่องทางที่สะดวกสำหรับคุณ ทีมงานของเราพร้อมตอบทุกคำถามและช่วยจองทัวร์ให้คุณ</p>
+      <div class="contact__person">
+        <img src="https://picsum.photos/seed/nira/100/100" alt="ที่ปรึกษาการเดินทาง" />
+        <span>
+          <strong>คุณนิรา จันทรวงศ์ · Nira Chandrawong</strong>
+          <span data-lang-th="ที่ปรึกษาการเดินทางส่วนตัวของคุณ" data-lang-en="Your personal travel consultant" data-lang-ru="Ваш персональный консультант">ที่ปรึกษาการเดินทางส่วนตัวของคุณ</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="contact__grid">
+      <a class="ccard reveal" href="tel:+66881234567">
+        <div class="ccard__ic phone"><i data-lucide="phone" width="22" height="22"></i></div>
+        <div class="ccard__tx">
+          <h4 data-lang-th="โทรศัพท์" data-lang-en="Phone" data-lang-ru="Телефон">โทรศัพท์</h4>
+          <p>+66 88 123 4567</p>
         </div>
-        <div class="fg">
-          <label data-lang-th="อีเมล" data-lang-en="Email" data-lang-ru="Эл. почта">อีเมล</label>
-          <input type="email" placeholder="your@email.com" />
+      </a>
+      <a class="ccard reveal rd1" href="https://wa.me/66881234567" target="_blank" rel="noopener">
+        <div class="ccard__ic wa"><i data-lucide="message-circle" width="22" height="22"></i></div>
+        <div class="ccard__tx">
+          <h4>WhatsApp</h4>
+          <p>+66 88 123 4567</p>
         </div>
-        <div class="fg">
-          <label data-lang-th="เบอร์โทรศัพท์" data-lang-en="Phone Number" data-lang-ru="Номер телефона">เบอร์โทรศัพท์</label>
-          <input type="tel" placeholder="+66 8x-xxxx-xxxx" />
+      </a>
+      <a class="ccard reveal rd2" href="https://line.me/R/ti/p/@phuketlove" target="_blank" rel="noopener">
+        <div class="ccard__ic line"><i data-lucide="message-square" width="22" height="22"></i></div>
+        <div class="ccard__tx">
+          <h4>LINE</h4>
+          <p>@phuketlove</p>
         </div>
-        <div class="form-row">
-          <div class="fg">
-            <label data-lang-th="โปรแกรมที่สนใจ" data-lang-en="Tour of Interest" data-lang-ru="Интересующий тур">โปรแกรมที่สนใจ</label>
-            <select>
-              <option value="" data-lang-th="เลือกโปรแกรม" data-lang-en="Select a tour" data-lang-ru="Выберите тур">เลือกโปรแกรม</option>
-              <option value="phiphi" data-lang-th="ทัวร์เกาะพีพี + เกาะไข่" data-lang-en="Phi Phi + Khai Island Day Trip" data-lang-ru="Острова Пхи-Пхи + остров Кхай">ทัวร์เกาะพีพี + เกาะไข่</option>
-              <option value="jamesbond" data-lang-th="เจมส์บอนด์ ซันเซ็ต + แพลงก์ตอนเรืองแสง" data-lang-en="James Bond Sunset & Glowing Plankton" data-lang-ru="Джеймс Бонд на закате + светящийся планктон">เจมส์บอนด์ ซันเซ็ต + แพลงก์ตอนเรืองแสง</option>
-              <option value="phangnga" data-lang-th="เจมส์บอนด์ + อ่าวพังงา (เรือหางยาว)" data-lang-en="James Bond + Phang Nga Bay (Longtail)" data-lang-ru="Джеймс Бонд + залив Пханг-Нга">เจมส์บอนด์ + อ่าวพังงา (เรือหางยาว)</option>
-              <option value="jetski" data-lang-th="เจ็ตสกี 6 เกาะ 4 ชั่วโมง" data-lang-en="Jet Ski — 6 Islands, 4 Hours" data-lang-ru="Гидроцикл — 6 островов, 4 часа">เจ็ตสกี 6 เกาะ 4 ชั่วโมง</option>
-              <option value="diving" data-lang-th="ดำน้ำลึก PADI" data-lang-en="Scuba Diving (PADI)" data-lang-ru="Дайвинг (PADI)">ดำน้ำลึก PADI</option>
-              <option value="atv" data-lang-th="ATV ลุยป่า + จุดชมวิวพระใหญ่" data-lang-en="ATV Jungle Ride + Big Buddha" data-lang-ru="ATV по джунглям + Большой Будда">ATV ลุยป่า + จุดชมวิวพระใหญ่</option>
-              <option value="elephant" data-lang-th="ดูแลและให้อาหารช้าง" data-lang-en="Elephant Care & Feeding" data-lang-ru="Уход за слонами и кормление">ดูแลและให้อาหารช้าง</option>
-              <option value="city" data-lang-th="ซิตี้ทัวร์ภูเก็ต" data-lang-en="Phuket City Tour" data-lang-ru="Сити-тур по Пхукету">ซิตี้ทัวร์ภูเก็ต</option>
-              <option value="zipline" data-lang-th="ซิปไลน์ + ATV ครึ่งวัน" data-lang-en="Zipline + ATV Half-Day" data-lang-ru="Зиплайн + ATV полдня">ซิปไลน์ + ATV ครึ่งวัน</option>
-              <option value="tiger" data-lang-th="ซิตี้ทัวร์ + ประสบการณ์เสือ" data-lang-en="City Tour & Tiger Experience" data-lang-ru="Сити-тур + тигры">ซิตี้ทัวร์ + ประสบการณ์เสือ</option>
-              <option value="buggy" data-lang-th="บักกี้ออฟโรด + โกคาร์ท" data-lang-en="Off-Road Buggy + Go-Kart" data-lang-ru="Багги + картинг">บักกี้ออฟโรด + โกคาร์ท</option>
-              <option value="custom" data-lang-th="ออกแบบเองตามต้องการ" data-lang-en="Custom Itinerary" data-lang-ru="Индивидуальный маршрут">ออกแบบเองตามต้องการ</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label data-lang-th="จำนวนผู้เดินทาง" data-lang-en="Number of Travellers" data-lang-ru="Количество путешественников">จำนวนผู้เดินทาง</label>
-            <input type="number" min="1" max="20" placeholder="2" />
-          </div>
+      </a>
+      <a class="ccard reveal" href="https://facebook.com/phuketloveparadise" target="_blank" rel="noopener">
+        <div class="ccard__ic fb"><i data-lucide="facebook" width="22" height="22"></i></div>
+        <div class="ccard__tx">
+          <h4>Facebook</h4>
+          <p>Phuket Love Paradise</p>
         </div>
-        <div class="fg">
-          <label data-lang-th="ข้อความเพิ่มเติม" data-lang-en="Additional Message" data-lang-ru="Дополнительное сообщение">ข้อความเพิ่มเติม</label>
-          <textarea placeholder="บอกเราเพิ่มเติมเกี่ยวกับทริปในฝันของคุณ..." data-ph-th="บอกเราเพิ่มเติมเกี่ยวกับทริปในฝันของคุณ..." data-ph-en="Tell us more about your dream trip..." data-ph-ru="Расскажите подробнее о путешествии вашей мечты..."></textarea>
+      </a>
+      <a class="ccard reveal rd1" href="mailto:hello@phuketloveparadise.com">
+        <div class="ccard__ic mail"><i data-lucide="mail" width="22" height="22"></i></div>
+        <div class="ccard__tx">
+          <h4 data-lang-th="อีเมล" data-lang-en="Email" data-lang-ru="Эл. почта">อีเมล</h4>
+          <p>hello@phuketloveparadise.com</p>
         </div>
-        <button type="submit" class="btn-gold" style="width:100%;justify-content:center">
-          <i data-lucide="send" width="16" height="16"></i>
-          <span data-lang-th="ส่งคำขอจอง" data-lang-en="Send Booking Request" data-lang-ru="Отправить заявку">ส่งคำขอจอง</span>
-        </button>
+      </a>
+      <div class="ccard reveal rd2">
+        <div class="ccard__ic map"><i data-lucide="map-pin" width="22" height="22"></i></div>
+        <div class="ccard__tx">
+          <h4 data-lang-th="ที่ตั้ง · เวลาทำการ" data-lang-en="Location · Hours" data-lang-ru="Адрес · Часы">ที่ตั้ง · เวลาทำการ</h4>
+          <p data-lang-th="ภูเก็ต ประเทศไทย · ทุกวัน 08:00–20:00 น." data-lang-en="Phuket, Thailand · Daily 08:00–20:00" data-lang-ru="Пхукет, Таиланд · Ежедневно 08:00–20:00">ภูเก็ต ประเทศไทย · ทุกวัน 08:00–20:00 น.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1800,7 +1832,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
         <ul class="footer__links">
           <li><a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About Us" data-lang-ru="О нас">เกี่ยวกับเรา</a></li>
           <li><a href="#testimonials" data-lang-th="รีวิวจากลูกค้า" data-lang-en="Reviews" data-lang-ru="Отзывы">รีวิวจากลูกค้า</a></li>
-          <li><a href="#booking" data-lang-th="ติดต่อเรา" data-lang-en="Contact Us" data-lang-ru="Связаться с нами">ติดต่อเรา</a></li>
+          <li><a href="#contact" data-lang-th="ติดต่อเรา" data-lang-en="Contact Us" data-lang-ru="Связаться с нами">ติดต่อเรา</a></li>
           <li><a href="#" data-lang-th="นโยบายความเป็นส่วนตัว" data-lang-en="Privacy Policy" data-lang-ru="Политика конфиденциальности">นโยบายความเป็นส่วนตัว</a></li>
         </ul>
       </div>
