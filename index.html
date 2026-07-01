@@ -99,7 +99,7 @@ a{color:inherit;text-decoration:none}
 }
 .hero__bg{
   position:absolute;inset:0;
-  background:url('https://images.unsplash.com/photo-1697160527165-b8c94eabcff7?w=1600&h=900&fit=crop') center/cover no-repeat;
+  background:url('assets/view_3.jpg') center/cover no-repeat;
   animation:kbzoom 20s ease-in-out infinite alternate;
 }
 @keyframes kbzoom{from{transform:scale(1)}to{transform:scale(1.07)}}
@@ -274,6 +274,49 @@ a{color:inherit;text-decoration:none}
   .tour-row__pic{flex:0 0 380px;height:320px}
   .tour-row__body{flex:1;display:flex;flex-direction:column;justify-content:center}
 }
+
+/* ── LAND TOURS ── */
+.land{background:var(--ivory-dk)}
+.land__grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media(min-width:640px){.land__grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.land__grid{grid-template-columns:repeat(3,1fr)}}
+.land-card{
+  background:#fff;border-radius:18px;overflow:hidden;
+  box-shadow:0 4px 24px rgba(0,0,0,.06);
+  display:flex;flex-direction:column;
+  transition:transform .3s,box-shadow .3s;
+}
+.land-card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(0,0,0,.12)}
+.land-card__pic{position:relative;height:200px;overflow:hidden}
+.land-card__pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.land-card:hover .land-card__pic img{transform:scale(1.06)}
+.land-card__tag{
+  position:absolute;top:.8rem;left:.8rem;
+  background:var(--gold);color:var(--navy);
+  font-size:.68rem;font-weight:700;padding:.28rem .75rem;border-radius:100px;
+}
+.land-card__body{padding:1.4rem;display:flex;flex-direction:column;flex:1}
+.land-card__body h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.15rem;font-weight:700;color:var(--navy);
+  line-height:1.5;margin-bottom:.5rem;
+}
+.land-card__body p{color:var(--txt-mid);font-size:.85rem;line-height:1.85;margin-bottom:1rem;flex:1}
+.land-card__foot{
+  display:flex;align-items:center;justify-content:space-between;gap:.5rem;
+  margin-top:auto;padding-top:.85rem;border-top:1px solid rgba(0,0,0,.07);
+}
+.land-card__price{display:flex;flex-direction:column;line-height:1.25}
+.land-card__price .lbl{font-size:.7rem;color:var(--txt-mid)}
+.land-card__price .amt{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--navy)}
+.land-card__btn{
+  display:inline-flex;align-items:center;gap:.35rem;
+  background:transparent;border:1px solid var(--gold);color:var(--gold-dim);
+  font-family:inherit;font-weight:600;font-size:.78rem;
+  padding:.55rem 1rem;border-radius:100px;cursor:pointer;
+  transition:background .25s,color .25s;white-space:nowrap;
+}
+.land-card__btn:hover{background:var(--gold);color:var(--navy)}
 
 /* ── EXPERIENCES ── */
 .exp{background:var(--navy)}
@@ -487,6 +530,56 @@ a{color:inherit;text-decoration:none}
   .footer__col{flex:1}
 }
 
+/* ── DETAILS / PRICE TABLES ── */
+.tdetails{margin:.4rem 0 1.1rem;border:1px solid rgba(201,160,64,.3);border-radius:12px;overflow:hidden;background:rgba(201,160,64,.05)}
+.tdetails+.tdetails{margin-top:-.4rem}
+.tdetails>summary{
+  list-style:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:.5rem;
+  padding:.75rem 1rem;font-weight:600;font-size:.82rem;color:var(--navy);
+}
+.tdetails>summary::-webkit-details-marker{display:none}
+.tdetails>summary .sm-l{display:flex;align-items:center;gap:.5rem}
+.tdetails>summary .sm-l svg{color:var(--gold-dim);flex-shrink:0}
+.tdetails>summary .chev{transition:transform .3s;color:var(--gold-dim);flex-shrink:0}
+.tdetails[open]>summary .chev{transform:rotate(180deg)}
+.tdetails__inner{padding:0 1rem 1rem}
+.ptable{width:100%;border-collapse:collapse;font-size:.8rem}
+.ptable caption{text-align:left;font-size:.74rem;font-weight:700;color:var(--gold-dim);padding:.5rem 0 .3rem}
+.ptable th,.ptable td{text-align:left;padding:.4rem .45rem;border-bottom:1px solid rgba(0,0,0,.08);line-height:1.5}
+.ptable th{color:var(--gold-dim);font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.02em}
+.ptable td:not(:first-child),.ptable th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ptable tr:last-child td{border-bottom:none}
+.tdetails__note{font-size:.76rem;color:var(--txt-mid);line-height:1.75;margin-top:.75rem}
+.tdetails__note strong{color:var(--navy)}
+.itin-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;font-size:.8rem;color:var(--txt-mid);line-height:1.55}
+.itin-list li{display:flex;gap:.65rem}
+.itin-list .t{color:var(--gold-dim);font-weight:700;flex:0 0 3.4rem;font-variant-numeric:tabular-nums}
+html[lang="th"] .ptable th{letter-spacing:0}
+
+/* ── GOOD TO KNOW ── */
+.gtk{background:var(--navy)}
+.gtk__grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+@media(min-width:640px){.gtk__grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.gtk__grid{grid-template-columns:repeat(3,1fr)}}
+.gtk-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(201,160,64,.18);
+  border-radius:16px;padding:1.5rem;
+}
+.gtk-card__ic{
+  width:40px;height:40px;border-radius:10px;
+  background:rgba(201,160,64,.15);display:flex;align-items:center;justify-content:center;
+  color:var(--gold);margin-bottom:.9rem;
+}
+.gtk-card h3{font-family:'Playfair Display',serif;color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:.7rem;line-height:1.5}
+.gtk-card ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.gtk-card li{display:flex;align-items:flex-start;gap:.55rem;color:rgba(240,234,214,.72);font-size:.83rem;line-height:1.7}
+.gtk-card li svg{color:var(--gold);flex-shrink:0;margin-top:.25rem}
+.gtk-card p{color:rgba(240,234,214,.72);font-size:.83rem;line-height:1.85}
+.gtk-contacts{display:flex;flex-direction:column;gap:.55rem}
+.gtk-contacts .op{color:#fff;font-size:.82rem;font-weight:600}
+.gtk-contacts .op span{display:block;color:rgba(240,234,214,.6);font-size:.78rem;font-weight:400}
+
 /* ── REVEAL ANIMATIONS ── */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -533,7 +626,8 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   <div class="nav__right">
     <ul class="nav__links" id="navLinks">
       <li><a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About" data-lang-ru="О нас">เกี่ยวกับเรา</a></li>
-      <li><a href="#tours" data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours" data-lang-ru="Туры">โปรแกรมทัวร์</a></li>
+      <li><a href="#tours" data-lang-th="ทัวร์ทางทะเล" data-lang-en="Sea Tours" data-lang-ru="Морские туры">ทัวร์ทางทะเล</a></li>
+      <li><a href="#land" data-lang-th="ทัวร์บนบก" data-lang-en="Land Tours" data-lang-ru="Туры по суше">ทัวร์บนบก</a></li>
       <li><a href="#experiences" data-lang-th="ประสบการณ์" data-lang-en="Experiences" data-lang-ru="Впечатления">ประสบการณ์</a></li>
       <li><a href="#booking" data-lang-th="จองทัวร์" data-lang-en="Book Now" data-lang-ru="Бронировать">จองทัวร์</a></li>
     </ul>
@@ -547,8 +641,10 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   </div>
   <div class="nav__drawer" id="drawer">
     <a href="#about" data-lang-th="เกี่ยวกับเรา" data-lang-en="About" data-lang-ru="О нас">เกี่ยวกับเรา</a>
-    <a href="#tours" data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours" data-lang-ru="Туры">โปรแกรมทัวร์</a>
+    <a href="#tours" data-lang-th="ทัวร์ทางทะเล" data-lang-en="Sea Tours" data-lang-ru="Морские туры">ทัวร์ทางทะเล</a>
+    <a href="#land" data-lang-th="ทัวร์บนบก" data-lang-en="Land Tours" data-lang-ru="Туры по суше">ทัวร์บนบก</a>
     <a href="#experiences" data-lang-th="ประสบการณ์" data-lang-en="Experiences" data-lang-ru="Впечатления">ประสบการณ์</a>
+    <a href="#info" data-lang-th="ข้อมูลที่ควรรู้" data-lang-en="Good to Know" data-lang-ru="Полезно знать">ข้อมูลที่ควรรู้</a>
     <a href="#how" data-lang-th="ขั้นตอนการจอง" data-lang-en="How It Works" data-lang-ru="Как это работает">ขั้นตอนการจอง</a>
     <a href="#booking" data-lang-th="จองทัวร์" data-lang-en="Book Now" data-lang-ru="Бронировать">จองทัวร์</a>
   </div>
@@ -635,8 +731,8 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
         </div>
       </div>
       <div class="about__imgs reveal-right">
-        <img class="about__img-a" src="https://images.unsplash.com/photo-1618161851494-df498fc0123c?w=700&h=520&fit=crop" alt="เรือยอชต์ชมพระอาทิตย์ตก" />
-        <img class="about__img-b" src="https://images.unsplash.com/photo-1704549931312-432d26dd53c3?w=480&h=360&fit=crop" alt="ชายหาดสวยงามในภูเก็ต" />
+        <img class="about__img-a" src="assets/view_4.jpg" alt="อ่าวมาหยา เกาะพีพีเล" />
+        <img class="about__img-b" src="assets/diving_8.jpg" alt="ดำน้ำกับเต่าทะเลในอันดามัน" />
         <div class="about__badge">
           <span>10+</span>
           <small data-lang-th="ปีแห่งประสบการณ์" data-lang-en="Years Exp." data-lang-ru="лет опыта">ปีแห่งประสบการณ์</small>
@@ -667,25 +763,53 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     <!-- Tour 1 -->
     <div class="tour-row reveal">
       <div class="tour-row__pic">
-        <img src="https://images.unsplash.com/photo-1586302836983-d1efb5eee221?w=760&h=560&fit=crop" alt="หมู่เกาะพีพีจากมุมสูง" />
+        <img src="assets/view_4.jpg" alt="อ่าวมาหยา เกาะพีพี" />
         <div class="tour-row__tag" data-lang-th="ยอดนิยม" data-lang-en="Popular" data-lang-ru="Популярное">ยอดนิยม</div>
       </div>
       <div class="tour-row__body">
-        <h3 data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Andaman Island Hopping" data-lang-ru="Тур по островам Андаманского моря">ล่องเกาะหมู่เกาะอันดามัน</h3>
-        <p data-lang-th="สำรวจความมหัศจรรย์ของหมู่เกาะในทะเลอันดามัน ตั้งแต่เกาะพีพี เกาะราชา ไปจนถึงอ่าวมาหยาอันเลื่องชื่อ ด้วยเรือสปีดโบทส่วนตัวและไกด์ผู้ชำนาญ" data-lang-en="Discover the magic of the Andaman Islands — from Phi Phi and Racha to the legendary Maya Bay — aboard a private speedboat with expert local guides." data-lang-ru="Откройте для себя волшебство островов Андаманского моря — от Пхи-Пхи и Рача до легендарного залива Майя — на частном скоростном катере с опытными местными гидами.">สำรวจความมหัศจรรย์ของหมู่เกาะในทะเลอันดามัน ตั้งแต่เกาะพีพี เกาะราชา ไปจนถึงอ่าวมาหยาอันเลื่องชื่อ ด้วยเรือสปีดโบทส่วนตัวและไกด์ผู้ชำนาญ</p>
+        <h3 data-lang-th="ทัวร์เกาะพีพี + เกาะไข่ (วันเดย์ทริป)" data-lang-en="Phi Phi Islands + Khai Island Day Trip" data-lang-ru="Острова Пхи-Пхи + остров Кхай (однодневный тур)">ทัวร์เกาะพีพี + เกาะไข่ (วันเดย์ทริป)</h3>
+        <p data-lang-th="ทริปหนึ่งวันสุดคุ้มสู่อ่าวมาหยาอันลือเลื่อง ปีเลห์ลากูนน้ำสีมรกต ถ้ำไวกิ้ง อ่าวลิง ดำน้ำดูปะการังที่เกาะพีพีดอน พร้อมอาหารกลางวันบุฟเฟต์ และปิดท้ายด้วยหาดทรายขาวที่เกาะไข่นอก" data-lang-en="A full day to the legendary Maya Bay, emerald Pileh Lagoon, Viking Cave and Monkey Bay — snorkel at Phi Phi Don, enjoy a buffet lunch, then relax on the white sands of Khai Nok Island." data-lang-ru="Целый день у легендарного залива Майя, изумрудной лагуны Пиле, пещеры викингов и Обезьяньей бухты — снорклинг у Пхи-Пхи-Дон, обед-буфет и отдых на белых песках острова Кхай-Нок.">ทริปหนึ่งวันสุดคุ้มสู่อ่าวมาหยาอันลือเลื่อง ปีเลห์ลากูนน้ำสีมรกต ถ้ำไวกิ้ง อ่าวลิง ดำน้ำดูปะการังที่เกาะพีพีดอน พร้อมอาหารกลางวันบุฟเฟต์ และปิดท้ายด้วยหาดทรายขาวที่เกาะไข่นอก</p>
         <div class="tour-meta">
-          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="8 ชั่วโมง" data-lang-en="8 Hours" data-lang-ru="8 часов">8 ชั่วโมง</span></div>
-          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–12 คน" data-lang-en="2–12 People" data-lang-ru="2–12 человек">2–12 คน</span></div>
-          <div class="tour-meta-i"><i data-lucide="map-pin" width="14" height="14"></i><span data-lang-th="ออกจากภูเก็ต" data-lang-en="Departs Phuket" data-lang-ru="Отправление из Пхукета">ออกจากภูเก็ต</span></div>
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="07:30–17:10 น." data-lang-en="07:30–17:10" data-lang-ru="07:30–17:10">07:30–17:10 น.</span></div>
+          <div class="tour-meta-i"><i data-lucide="utensils" width="14" height="14"></i><span data-lang-th="รวมอาหารกลางวันบุฟเฟต์" data-lang-en="Buffet lunch included" data-lang-ru="Обед-буфет включён">รวมอาหารกลางวันบุฟเฟต์</span></div>
+          <div class="tour-meta-i"><i data-lucide="map-pin" width="14" height="14"></i><span data-lang-th="รับ-ส่งถึงโรงแรม" data-lang-en="Hotel pickup" data-lang-ru="Трансфер от отеля">รับ-ส่งถึงโรงแรม</span></div>
         </div>
         <ul class="tour-hl">
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อ่าวมาหยา เกาะพีพีเล" data-lang-en="Maya Bay, Phi Phi Leh" data-lang-ru="Залив Майя, Пхи-Пхи-Лей">อ่าวมาหยา เกาะพีพีเล</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="ดำน้ำดูปะการังสีสันสวยงาม" data-lang-en="Vibrant coral reef snorkeling" data-lang-ru="Снорклинг у ярких коралловых рифов">ดำน้ำดูปะการังสีสันสวยงาม</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารกลางวันบนเรือ + รับ-ส่งโรงแรม" data-lang-en="Onboard lunch + hotel transfers" data-lang-ru="Обед на борту + трансфер от отеля">อาหารกลางวันบนเรือ + รับ-ส่งโรงแรม</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อ่าวมาหยา · ปีเลห์ลากูน · ถ้ำไวกิ้ง · อ่าวลิง" data-lang-en="Maya Bay · Pileh Lagoon · Viking Cave · Monkey Bay" data-lang-ru="Залив Майя · Лагуна Пиле · Пещера викингов · Обезьянья бухта">อ่าวมาหยา · ปีเลห์ลากูน · ถ้ำไวกิ้ง · อ่าวลิง</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="ดำน้ำตื้นที่เกาะพีพีดอน + พักผ่อนที่เกาะไข่นอก" data-lang-en="Snorkeling at Phi Phi Don + relaxing on Khai Nok" data-lang-ru="Снорклинг у Пхи-Пхи-Дон + отдых на Кхай-Нок">ดำน้ำตื้นที่เกาะพีพีดอน + พักผ่อนที่เกาะไข่นอก</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="รวมค่าธรรมเนียมอุทยาน ไกด์ ประกัน และรับ-ส่งโรงแรม" data-lang-en="National park fee, guide, insurance & hotel transfers included" data-lang-ru="Сбор нацпарка, гид, страховка и трансфер включены">รวมค่าธรรมเนียมอุทยาน ไกด์ ประกัน และรับ-ส่งโรงแรม</span></li>
+          <li><i data-lucide="users" width="14" height="14"></i><span data-lang-th="เด็ก (4–11 ปี) ฿2,700 · ทารก (1–3 ปี) ฟรี" data-lang-en="Child (4–11 yrs) ฿2,700 · Infant (1–3 yrs) free" data-lang-ru="Дети (4–11 лет) ฿2,700 · Младенцы (1–3 года) бесплатно">เด็ก (4–11 ปี) ฿2,700 · ทารก (1–3 ปี) ฟรี</span></li>
         </ul>
+
+        <details class="tdetails">
+          <summary><span class="sm-l"><i data-lucide="route" width="15" height="15"></i><span data-lang-th="กำหนดการเต็ม" data-lang-en="Full itinerary" data-lang-ru="Полная программа">กำหนดการเต็ม</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+          <div class="tdetails__inner">
+            <ul class="itin-list">
+              <li><span class="t">07:30</span><span data-lang-th="รับจากโรงแรมในภูเก็ต" data-lang-en="Pickup from hotels in Phuket" data-lang-ru="Трансфер из отелей Пхукета">รับจากโรงแรมในภูเก็ต</span></li>
+              <li><span class="t">09:00</span><span data-lang-th="เช็คอิน เครื่องดื่มต้อนรับ" data-lang-en="Check-in, welcome drinks" data-lang-ru="Регистрация, приветственные напитки">เช็คอิน เครื่องดื่มต้อนรับ</span></li>
+              <li><span class="t">09:30</span><span data-lang-th="ออกเดินทางจากท่าเรือ" data-lang-en="Depart from the pier" data-lang-ru="Отправление от пирса">ออกเดินทางจากท่าเรือ</span></li>
+              <li><span class="t">10:30</span><span data-lang-th="อ่าวมาหยา — พักผ่อนบนชายหาด" data-lang-en="Maya Bay — beach time" data-lang-ru="Залив Майя — отдых на пляже">อ่าวมาหยา — พักผ่อนบนชายหาด</span></li>
+              <li><span class="t">11:30</span><span data-lang-th="ปีเลห์ลากูน — ว่ายน้ำ / กระโดดน้ำ" data-lang-en="Pileh Lagoon — swim / jump" data-lang-ru="Лагуна Пиле — плавание / прыжки">ปีเลห์ลากูน — ว่ายน้ำ / กระโดดน้ำ</span></li>
+              <li><span class="t">12:20</span><span data-lang-th="ถ้ำไวกิ้ง — ชมวิว" data-lang-en="Viking Cave — sightseeing" data-lang-ru="Пещера викингов — осмотр">ถ้ำไวกิ้ง — ชมวิว</span></li>
+              <li><span class="t">12:30</span><span data-lang-th="อ่าวลิง — ชมวิว" data-lang-en="Monkey Bay — sightseeing" data-lang-ru="Обезьянья бухта — осмотр">อ่าวลิง — ชมวิว</span></li>
+              <li><span class="t">12:45</span><span data-lang-th="เกาะพีพีดอน — ดำน้ำตื้น" data-lang-en="Phi Phi Don — snorkeling" data-lang-ru="Пхи-Пхи-Дон — снорклинг">เกาะพีพีดอน — ดำน้ำตื้น</span></li>
+              <li><span class="t">13:30</span><span data-lang-th="อาหารกลางวันที่เกาะพีพีดอน" data-lang-en="Lunch at Phi Phi Don" data-lang-ru="Обед на Пхи-Пхи-Дон">อาหารกลางวันที่เกาะพีพีดอน</span></li>
+              <li><span class="t">15:20</span><span data-lang-th="เกาะไข่นอก — พักผ่อนบนชายหาด" data-lang-en="Khai Nok Island — beach time" data-lang-ru="Остров Кхай-Нок — отдых">เกาะไข่นอก — พักผ่อนบนชายหาด</span></li>
+              <li><span class="t">17:10</span><span data-lang-th="กลับถึงท่าเรือ" data-lang-en="Arrive back at the pier" data-lang-ru="Возвращение к пирсу">กลับถึงท่าเรือ</span></li>
+            </ul>
+            <p class="tdetails__note"><strong data-lang-th="มีให้เลือกอีกโปรแกรม:" data-lang-en="Also available:" data-lang-ru="Также доступно:">มีให้เลือกอีกโปรแกรม:</strong> <span data-lang-th="ทัวร์เกาะพีพี + เกาะไม้ไผ่ (Bamboo Island) ราคาเท่ากัน — อ่าวมาหยา 10:00 · ปีเลห์ลากูน 11:00 · ถ้ำไวกิ้ง 11:50 · อ่าวลิง 12:00 · ดำน้ำพีพีดอน 12:15 · อาหารกลางวัน 13:00 · เกาะไม้ไผ่ 14:20 · กลับถึงท่าเรือ 16:30" data-lang-en="Phi Phi + Bamboo Island (same price) — Maya Bay 10:00 · Pileh Lagoon 11:00 · Viking Cave 11:50 · Monkey Bay 12:00 · Phi Phi Don snorkel 12:15 · lunch 13:00 · Bamboo Island 14:20 · pier 16:30" data-lang-ru="Пхи-Пхи + остров Бамбу (та же цена) — Майя 10:00 · Пиле 11:00 · Пещера викингов 11:50 · Обезьянья бухта 12:00 · снорклинг Пхи-Пхи-Дон 12:15 · обед 13:00 · остров Бамбу 14:20 · пирс 16:30">ทัวร์เกาะพีพี + เกาะไม้ไผ่ (Bamboo Island) ราคาเท่ากัน — อ่าวมาหยา 10:00 · ปีเลห์ลากูน 11:00 · ถ้ำไวกิ้ง 11:50 · อ่าวลิง 12:00 · ดำน้ำพีพีดอน 12:15 · อาหารกลางวัน 13:00 · เกาะไม้ไผ่ 14:20 · กลับถึงท่าเรือ 16:30</span></p>
+          </div>
+        </details>
+        <details class="tdetails">
+          <summary><span class="sm-l"><i data-lucide="package-check" width="15" height="15"></i><span data-lang-th="รวมในราคา" data-lang-en="What's included" data-lang-ru="Что включено">รวมในราคา</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+          <div class="tdetails__inner">
+            <p class="tdetails__note" data-lang-th="รับ-ส่งไป-กลับ · อาหารเช้า · ผลไม้ เครื่องดื่ม ของว่าง และอาหารกลางวัน · ค่าธรรมเนียมอุทยานแห่งชาติ · ไกด์พูดภาษาอังกฤษ · อุปกรณ์ดำน้ำตื้นและเสื้อชูชีพ · ประกันชีวิตและการเดินทาง" data-lang-en="Round-trip transfer · breakfast · fruits, drinks, snacks & lunch · national park tickets · English-speaking guide · snorkeling equipment & life jackets · life and travel insurance" data-lang-ru="Трансфер туда-обратно · завтрак · фрукты, напитки, закуски и обед · билеты в нацпарк · англоговорящий гид · снаряжение для снорклинга и спасжилеты · страхование жизни и путешествия">รับ-ส่งไป-กลับ · อาหารเช้า · ผลไม้ เครื่องดื่ม ของว่าง และอาหารกลางวัน · ค่าธรรมเนียมอุทยานแห่งชาติ · ไกด์พูดภาษาอังกฤษ · อุปกรณ์ดำน้ำตื้นและเสื้อชูชีพ · ประกันชีวิตและการเดินทาง</p>
+          </div>
+        </details>
+
         <div class="tour-price">
-          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From" data-lang-ru="от">เริ่มต้นที่</span>
-          <span class="amt">฿3,500</span>
+          <span class="lbl" data-lang-th="ผู้ใหญ่" data-lang-en="Adult" data-lang-ru="Взрослый">ผู้ใหญ่</span>
+          <span class="amt">฿3,700</span>
           <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person" data-lang-ru="/ чел.">/ ท่าน</span>
         </div>
         <a href="#booking" class="btn-gold" style="align-self:flex-start">
@@ -698,26 +822,57 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     <!-- Tour 2 -->
     <div class="tour-row reveal rd1">
       <div class="tour-row__pic">
-        <img src="https://images.unsplash.com/photo-1764462102766-7ee93c850fb3?w=760&h=560&fit=crop" alt="ล่องเรือชมพระอาทิตย์ตก" />
-        <div class="tour-row__tag" data-lang-th="โรแมนติก" data-lang-en="Romantic" data-lang-ru="Романтика">โรแมนติก</div>
+        <img src="assets/view_3.jpg" alt="อ่าวพังงา หน้าผาหินปูน" />
+        <div class="tour-row__tag" data-lang-th="พระอาทิตย์ตก" data-lang-en="Sunset" data-lang-ru="Закат">พระอาทิตย์ตก</div>
       </div>
       <div class="tour-row__body">
-        <h3 data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Luxury Sunset Yacht Cruise" data-lang-ru="Люксовый круиз на яхте на закате">ล่องเรือยอชต์ชมพระอาทิตย์ตก</h3>
-        <p data-lang-th="สัมผัสบรรยากาศโรแมนติกสุดพิเศษบนเรือยอชต์หรู ล่องชมทัศนียภาพอันตระการตาของพระอาทิตย์ตกเหนือทะเลอันดามัน พร้อมอาหารค่ำสุดพิเศษโดยเชฟส่วนตัว" data-lang-en="Experience unrivalled romance on a luxury yacht as the sun dips below the Andaman horizon. Savour a private chef's curated dinner while the sky blazes gold." data-lang-ru="Почувствуйте непревзойдённую романтику на роскошной яхте, пока солнце опускается за горизонт Андаманского моря. Насладитесь авторским ужином от личного шефа под золотым небом.">สัมผัสบรรยากาศโรแมนติกสุดพิเศษบนเรือยอชต์หรู ล่องชมทัศนียภาพอันตระการตาของพระอาทิตย์ตกเหนือทะเลอันดามัน พร้อมอาหารค่ำสุดพิเศษโดยเชฟส่วนตัว</p>
+        <h3 data-lang-th="เจมส์บอนด์ ซันเซ็ต + แพลงก์ตอนเรืองแสง" data-lang-en="James Bond Sunset & Glowing Plankton" data-lang-ru="Джеймс Бонд на закате + светящийся планктон">เจมส์บอนด์ ซันเซ็ต + แพลงก์ตอนเรืองแสง</h3>
+        <p data-lang-th="ทริปบ่ายสู่ค่ำสุดโรแมนติกในอ่าวพังงา สำรวจถ้ำเกาะปันหยี ชมวิวเกาะเจมส์บอนด์ พักผ่อนที่หาดนาคา อาหารค่ำบนเรือพร้อมชมพระอาทิตย์ตก และไฮไลต์พายเรือแคนูชมแพลงก์ตอนเรืองแสงยามค่ำคืนที่เกาะห้อง" data-lang-en="A romantic afternoon-to-night cruise through Phang Nga Bay — explore the Panak Island cave, take in the James Bond Island viewpoint, relax on Na Care Beach, dine onboard at sunset, then kayak among glowing bioluminescent plankton at Hong Island." data-lang-ru="Романтический круиз с полудня до ночи по заливу Пханг-Нга — пещера острова Панак, смотровая площадка острова Джеймса Бонда, отдых на пляже На-Каре, ужин на борту на закате и каякинг среди светящегося планктона у острова Хонг.">ทริปบ่ายสู่ค่ำสุดโรแมนติกในอ่าวพังงา สำรวจถ้ำเกาะปันหยี ชมวิวเกาะเจมส์บอนด์ พักผ่อนที่หาดนาคา อาหารค่ำบนเรือพร้อมชมพระอาทิตย์ตก และไฮไลต์พายเรือแคนูชมแพลงก์ตอนเรืองแสงยามค่ำคืนที่เกาะห้อง</p>
         <div class="tour-meta">
-          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="4 ชั่วโมง" data-lang-en="4 Hours" data-lang-ru="4 часа">4 ชั่วโมง</span></div>
-          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–8 คน" data-lang-en="2–8 People" data-lang-ru="2–8 человек">2–8 คน</span></div>
-          <div class="tour-meta-i"><i data-lucide="wine" width="14" height="14"></i><span data-lang-th="รวมอาหารค่ำ" data-lang-en="Dinner Included" data-lang-ru="Ужин включён">รวมอาหารค่ำ</span></div>
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="13:30–21:00 น." data-lang-en="13:30–21:00" data-lang-ru="13:30–21:00">13:30–21:00 น.</span></div>
+          <div class="tour-meta-i"><i data-lucide="calendar" width="14" height="14"></i><span data-lang-th="อังคาร · พฤหัส · เสาร์ · อาทิตย์" data-lang-en="Tue · Thu · Sat · Sun" data-lang-ru="Вт · Чт · Сб · Вс">อังคาร · พฤหัส · เสาร์ · อาทิตย์</span></div>
+          <div class="tour-meta-i"><i data-lucide="wine" width="14" height="14"></i><span data-lang-th="รวมอาหารค่ำบนเรือ" data-lang-en="Dinner onboard" data-lang-ru="Ужин на борту">รวมอาหารค่ำบนเรือ</span></div>
         </div>
         <ul class="tour-hl">
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="เรือยอชต์หรูส่วนตัว + ลูกเรือมืออาชีพ" data-lang-en="Private luxury yacht + professional crew" data-lang-ru="Частная роскошная яхта + профессиональный экипаж">เรือยอชต์หรูส่วนตัว + ลูกเรือมืออาชีพ</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารค่ำ 5 คอร์สโดยเชฟส่วนตัว" data-lang-en="5-course private chef dinner" data-lang-ru="Ужин из 5 блюд от личного шефа">อาหารค่ำ 5 คอร์สโดยเชฟส่วนตัว</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="เครื่องดื่มพรีเมียมตลอดเส้นทาง" data-lang-en="Premium drinks throughout" data-lang-ru="Премиальные напитки на протяжении круиза">เครื่องดื่มพรีเมียมตลอดเส้นทาง</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="จุดชมวิวเกาะเจมส์บอนด์ + ถ้ำเกาะปันหยี" data-lang-en="James Bond Island viewpoint + Panak cave" data-lang-ru="Смотровая острова Джеймса Бонда + пещера Панак">จุดชมวิวเกาะเจมส์บอนด์ + ถ้ำเกาะปันหยี</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="พายเรือแคนูชมแพลงก์ตอนเรืองแสงยามค่ำคืน" data-lang-en="Night kayaking among bioluminescent plankton" data-lang-ru="Ночной каякинг среди светящегося планктона">พายเรือแคนูชมแพลงก์ตอนเรืองแสงยามค่ำคืน</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="2 มื้อบนเรือ · พายเรือแคนู 2 รอบ · รวมประกันและรับ-ส่ง" data-lang-en="2 onboard meals · 2 canoe sessions · insurance & transfers" data-lang-ru="2 приёма пищи на борту · 2 каякинга · страховка и трансфер">2 มื้อบนเรือ · พายเรือแคนู 2 รอบ · รวมประกันและรับ-ส่ง</span></li>
+          <li><i data-lucide="users" width="14" height="14"></i><span data-lang-th="เด็ก ฿2,200 · ทารก (อายุไม่เกิน 3 ปี) ฟรี" data-lang-en="Child ฿2,200 · Infant (under 3) free" data-lang-ru="Дети ฿2,200 · Младенцы (до 3 лет) бесплатно">เด็ก ฿2,200 · ทารก (อายุไม่เกิน 3 ปี) ฟรี</span></li>
         </ul>
+
+        <details class="tdetails">
+          <summary><span class="sm-l"><i data-lucide="route" width="15" height="15"></i><span data-lang-th="กำหนดการเต็ม" data-lang-en="Full itinerary" data-lang-ru="Полная программа">กำหนดการเต็ม</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+          <div class="tdetails__inner">
+            <ul class="itin-list">
+              <li><span class="t">13:30</span><span data-lang-th="ออกเดินทางจากท่าเรือ" data-lang-en="Depart from the pier" data-lang-ru="Отправление от пирса">ออกเดินทางจากท่าเรือ</span></li>
+              <li><span class="t">14:00</span><span data-lang-th="อาหารว่างเสิร์ฟบนเรือ" data-lang-en="Light meal served on board" data-lang-ru="Лёгкая закуска на борту">อาหารว่างเสิร์ฟบนเรือ</span></li>
+              <li><span class="t">14:30</span><span data-lang-th="เกาะปันหยี (Panak) — สำรวจถ้ำ" data-lang-en="Panak Island — explore the cave" data-lang-ru="Остров Панак — пещера">เกาะปันหยี (Panak) — สำรวจถ้ำ</span></li>
+              <li><span class="t">15:30</span><span data-lang-th="เกาะเจมส์บอนด์ — จุดชมวิว" data-lang-en="James Bond Island — viewpoint" data-lang-ru="Остров Джеймса Бонда — смотровая">เกาะเจมส์บอนด์ — จุดชมวิว</span></li>
+              <li><span class="t">16:30</span><span data-lang-th="หาดนาคา — พักผ่อน" data-lang-en="Na Care Beach — relaxing" data-lang-ru="Пляж На-Каре — отдых">หาดนาคา — พักผ่อน</span></li>
+              <li><span class="t">18:00</span><span data-lang-th="อาหารค่ำบนเรือ ชมพระอาทิตย์ตก" data-lang-en="Dinner on board at sunset" data-lang-ru="Ужин на борту на закате">อาหารค่ำบนเรือ ชมพระอาทิตย์ตก</span></li>
+              <li><span class="t">19:00</span><span data-lang-th="เกาะห้อง — พายเรือแคนู ชมแพลงก์ตอนเรืองแสง" data-lang-en="Hong Island — canoeing & bioluminescent plankton" data-lang-ru="Остров Хонг — каякинг и светящийся планктон">เกาะห้อง — พายเรือแคนู ชมแพลงก์ตอนเรืองแสง</span></li>
+              <li><span class="t">21:00</span><span data-lang-th="กลับถึงท่าเรือ" data-lang-en="Return to the pier" data-lang-ru="Возвращение к пирсу">กลับถึงท่าเรือ</span></li>
+            </ul>
+          </div>
+        </details>
+        <details class="tdetails">
+          <summary><span class="sm-l"><i data-lucide="package-check" width="15" height="15"></i><span data-lang-th="รวมในราคา" data-lang-en="What's included" data-lang-ru="Что включено">รวมในราคา</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+          <div class="tdetails__inner">
+            <p class="tdetails__note" data-lang-th="อาหาร 2 มื้อบนเรือ · เครื่องดื่มต้อนรับ · พายเรือแคนู 2 รอบ · ค่าธรรมเนียมอุทยานแห่งชาติ · ประกันการเดินทาง · ผลไม้ตามฤดูกาล · น้ำอัดลม ชา กาแฟ · ถุงกันน้ำสำหรับโทรศัพท์ · รับ-ส่งไป-กลับ · ไกด์ · ค่าขึ้นท่าเรือ" data-lang-en="2 meals on board · welcome drink · canoeing (2 times) · national park entrance fee · travel insurance · seasonal fruits · soft drinks, tea & coffee · waterproof phone bag · round-trip transport · tour guide · pier fee" data-lang-ru="2 приёма пищи на борту · приветственный напиток · каякинг (2 раза) · вход в нацпарк · страховка · сезонные фрукты · безалкогольные напитки, чай и кофе · водонепроницаемый чехол для телефона · трансфер туда-обратно · гид · портовый сбор">อาหาร 2 มื้อบนเรือ · เครื่องดื่มต้อนรับ · พายเรือแคนู 2 รอบ · ค่าธรรมเนียมอุทยานแห่งชาติ · ประกันการเดินทาง · ผลไม้ตามฤดูกาล · น้ำอัดลม ชา กาแฟ · ถุงกันน้ำสำหรับโทรศัพท์ · รับ-ส่งไป-กลับ · ไกด์ · ค่าขึ้นท่าเรือ</p>
+          </div>
+        </details>
+        <details class="tdetails">
+          <summary><span class="sm-l"><i data-lucide="shield-alert" width="15" height="15"></i><span data-lang-th="ข้อควรทราบ · สิ่งที่ควรนำไป" data-lang-en="Safety notes · what to bring" data-lang-ru="Правила безопасности · что взять">ข้อควรทราบ · สิ่งที่ควรนำไป</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+          <div class="tdetails__inner">
+            <p class="tdetails__note"><strong data-lang-th="ข้อจำกัด:" data-lang-en="Restrictions:" data-lang-ru="Ограничения:">ข้อจำกัด:</strong> <span data-lang-th="ไม่อนุญาตสตรีมีครรภ์ · ไม่แนะนำเด็กอายุต่ำกว่า 1 ปี · ไม่อนุญาตผู้มีปัญหากระดูกสันหลัง · ไม่อนุญาตผู้ป่วยโรคหัวใจหรือมีปัญหาสุขภาพร้ายแรง · ไม่เหมาะกับผู้กลัวที่มืดและที่แคบ" data-lang-en="Pregnant travellers not allowed · infants under 1 year not recommended · travellers with spinal problems not allowed · those with heart disease or serious health issues not allowed · not for those afraid of the dark or tight spaces" data-lang-ru="Беременным нельзя · младенцам до 1 года не рекомендуется · с проблемами позвоночника нельзя · с болезнями сердца или серьёзными проблемами со здоровьем нельзя · не подходит боящимся темноты и тесноты">ไม่อนุญาตสตรีมีครรภ์ · ไม่แนะนำเด็กอายุต่ำกว่า 1 ปี · ไม่อนุญาตผู้มีปัญหากระดูกสันหลัง · ไม่อนุญาตผู้ป่วยโรคหัวใจหรือมีปัญหาสุขภาพร้ายแรง · ไม่เหมาะกับผู้กลัวที่มืดและที่แคบ</span></p>
+            <p class="tdetails__note"><strong data-lang-th="ควรนำไป:" data-lang-en="Bring:" data-lang-ru="Взять с собой:">ควรนำไป:</strong> <span data-lang-th="ชุดว่ายน้ำ · กล้องถ่ายรูป · ครีมกันแดดที่เป็นมิตรกับสิ่งแวดล้อม · หมวก · แว่นกันแดด · เงินสด" data-lang-en="Swimming suit · camera · eco-friendly sunscreen · cap · sunglasses · cash" data-lang-ru="Купальник · камера · эко-солнцезащитный крем · кепка · солнцезащитные очки · наличные">ชุดว่ายน้ำ · กล้องถ่ายรูป · ครีมกันแดดที่เป็นมิตรกับสิ่งแวดล้อม · หมวก · แว่นกันแดด · เงินสด</span></p>
+          </div>
+        </details>
+
         <div class="tour-price">
-          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From" data-lang-ru="от">เริ่มต้นที่</span>
-          <span class="amt">฿8,900</span>
-          <span class="per" data-lang-th="/ คู่" data-lang-en="/ couple" data-lang-ru="/ пара">/ คู่</span>
+          <span class="lbl" data-lang-th="ผู้ใหญ่" data-lang-en="Adult" data-lang-ru="Взрослый">ผู้ใหญ่</span>
+          <span class="amt">฿3,200</span>
+          <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person" data-lang-ru="/ чел.">/ ท่าน</span>
         </div>
         <a href="#booking" class="btn-gold" style="align-self:flex-start">
           <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
@@ -729,25 +884,186 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     <!-- Tour 3 -->
     <div class="tour-row reveal rd2">
       <div class="tour-row__pic">
-        <img src="https://images.unsplash.com/photo-1764099906807-d25cd5fbaafc?w=760&h=560&fit=crop" alt="ดำน้ำในทะเลใสสวยงาม" />
+        <img src="assets/view_1.jpg" alt="เจ็ตสกีบนชายหาดภูเก็ต" />
         <div class="tour-row__tag" data-lang-th="ผจญภัย" data-lang-en="Adventure" data-lang-ru="Приключение">ผจญภัย</div>
       </div>
       <div class="tour-row__body">
-        <h3 data-lang-th="ดำน้ำดูปะการังทะเลสวรรค์" data-lang-en="Coral Paradise Snorkeling" data-lang-ru="Снорклинг в коралловом раю">ดำน้ำดูปะการังทะเลสวรรค์</h3>
-        <p data-lang-th="ดำดิ่งสู่โลกใต้ทะเลอันดามันที่เต็มไปด้วยสีสัน สำรวจแนวปะการังอันอุดมสมบูรณ์ พบปลานานาชนิด และสัมผัสความสวยงามของท้องทะเลไทยในแบบที่คุณไม่เคยเห็น" data-lang-en="Plunge into the kaleidoscopic world beneath the Andaman Sea. Explore thriving coral reefs, colourful tropical fish, and the pristine underwater beauty of Thailand." data-lang-ru="Погрузитесь в калейдоскопический мир под водами Андаманского моря. Исследуйте богатые коралловые рифы, ярких тропических рыб и первозданную подводную красоту Таиланда.">ดำดิ่งสู่โลกใต้ทะเลอันดามันที่เต็มไปด้วยสีสัน สำรวจแนวปะการังอันอุดมสมบูรณ์ พบปลานานาชนิด และสัมผัสความสวยงามของท้องทะเลไทยในแบบที่คุณไม่เคยเห็น</p>
+        <h3 data-lang-th="เจ็ตสกี 6 เกาะ 4 ชั่วโมง" data-lang-en="Jet Ski — 6 Islands, 4 Hours" data-lang-ru="Гидроцикл — 6 островов, 4 часа">เจ็ตสกี 6 เกาะ 4 ชั่วโมง</h3>
+        <p data-lang-th="ขับเจ็ตสกีของคุณเองตะลุย 6 เกาะรอบภูเก็ต ออกจากท่าเรือยามู ผ่านเกาะแพ อ่าวปอแกรนด์มารีน่า ป่าโกงกาง เกาะลิง และเกาะนาคาใหญ่สำหรับมื้อกลางวัน สนุกกับการดำน้ำตื้น ให้อาหารลิง และถ่ายรูปสุดประทับใจ" data-lang-en="Ride your own jet ski across 6 islands around Phuket — from Yamu Pier to Phae Island, Ao Por Grand Marina, the mangrove forest, Monkey Island and Naka Yai for lunch. Snorkel, feed the monkeys and capture unforgettable photos." data-lang-ru="Управляйте собственным гидроциклом по 6 островам вокруг Пхукета — от пирса Яму к острову Пхае, марине Ао-Пор, мангровому лесу, Обезьяньему острову и Нака-Яй на обед. Снорклинг, кормление обезьян и незабываемые фото.">ขับเจ็ตสกีของคุณเองตะลุย 6 เกาะรอบภูเก็ต ออกจากท่าเรือยามู ผ่านเกาะแพ อ่าวปอแกรนด์มารีน่า ป่าโกงกาง เกาะลิง และเกาะนาคาใหญ่สำหรับมื้อกลางวัน สนุกกับการดำน้ำตื้น ให้อาหารลิง และถ่ายรูปสุดประทับใจ</p>
         <div class="tour-meta">
-          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="6 ชั่วโมง" data-lang-en="6 Hours" data-lang-ru="6 часов">6 ชั่วโมง</span></div>
-          <div class="tour-meta-i"><i data-lucide="users" width="14" height="14"></i><span data-lang-th="2–10 คน" data-lang-en="2–10 People" data-lang-ru="2–10 человек">2–10 คน</span></div>
-          <div class="tour-meta-i"><i data-lucide="package" width="14" height="14"></i><span data-lang-th="รวมอุปกรณ์ครบ" data-lang-en="Equipment Included" data-lang-ru="Снаряжение включено">รวมอุปกรณ์ครบ</span></div>
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="4 ชั่วโมง (เช้า/บ่าย)" data-lang-en="4 Hours (AM/PM)" data-lang-ru="4 часа (утро/день)">4 ชั่วโมง (เช้า/บ่าย)</span></div>
+          <div class="tour-meta-i"><i data-lucide="map-pin" width="14" height="14"></i><span data-lang-th="6 เกาะ" data-lang-en="6 Islands" data-lang-ru="6 островов">6 เกาะ</span></div>
+          <div class="tour-meta-i"><i data-lucide="life-buoy" width="14" height="14"></i><span data-lang-th="เสื้อชูชีพ + ไกด์" data-lang-en="Life jacket + guide" data-lang-ru="Спасжилет + гид">เสื้อชูชีพ + ไกด์</span></div>
         </div>
         <ul class="tour-hl">
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="3 จุดดำน้ำสุดสวยในอันดามัน" data-lang-en="3 stunning Andaman snorkel spots" data-lang-ru="3 потрясающих места для снорклинга">3 จุดดำน้ำสุดสวยในอันดามัน</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อุปกรณ์ดำน้ำมาตรฐาน + ครูฝึก" data-lang-en="Professional equipment + certified instructor" data-lang-ru="Профессиональное снаряжение + сертифицированный инструктор">อุปกรณ์ดำน้ำมาตรฐาน + ครูฝึก</span></li>
-          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="อาหารกลางวันอาหารทะเลสด" data-lang-en="Fresh seafood lunch onboard" data-lang-ru="Обед из свежих морепродуктов на борту">อาหารกลางวันอาหารทะเลสด</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="ขับเจ็ตสกี Sea-Doo / Yamaha ของคุณเอง" data-lang-en="Ride your own Sea-Doo / Yamaha jet ski" data-lang-ru="Свой гидроцикл Sea-Doo / Yamaha">ขับเจ็ตสกี Sea-Doo / Yamaha ของคุณเอง</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="เกาะลิง ป่าโกงกาง ดำน้ำตื้น และมื้อกลางวัน" data-lang-en="Monkey Island, mangroves, snorkeling & lunch" data-lang-ru="Обезьяний остров, мангры, снорклинг и обед">เกาะลิง ป่าโกงกาง ดำน้ำตื้น และมื้อกลางวัน</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="รวมรับ-ส่ง อาหาร ไกด์ ดำน้ำตื้น และประกัน" data-lang-en="Transfer, food, guide, snorkeling & insurance included" data-lang-ru="Трансфер, питание, гид, снорклинг и страховка включены">รวมรับ-ส่ง อาหาร ไกด์ ดำน้ำตื้น และประกัน</span></li>
+          <li><i data-lucide="zap" width="14" height="14"></i><span data-lang-th="Sea-Doo GTX Pro 1630cc ฿9,000 (เจ็ตสกี 2 ท่าน)" data-lang-en="Sea-Doo GTX Pro 1630cc ฿9,000 (2 pax per ski)" data-lang-ru="Sea-Doo GTX Pro 1630cc ฿9,000 (2 чел. на гидроцикл)">Sea-Doo GTX Pro 1630cc ฿9,000 (เจ็ตสกี 2 ท่าน)</span></li>
         </ul>
+
+        <details class="tdetails">
+          <summary><span class="sm-l"><i data-lucide="list" width="15" height="15"></i><span data-lang-th="รุ่นเจ็ตสกีและราคา" data-lang-en="Jet ski models & prices" data-lang-ru="Модели гидроциклов и цены">รุ่นเจ็ตสกีและราคา</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+          <div class="tdetails__inner">
+            <table class="ptable">
+              <thead><tr><th>Model</th><th data-lang-th="น้ำหนักสูงสุด" data-lang-en="Max weight" data-lang-ru="Макс. вес">น้ำหนักสูงสุด</th><th data-lang-th="ราคา (2 ท่าน)" data-lang-en="Price (2 pax)" data-lang-ru="Цена (2 чел.)">ราคา (2 ท่าน)</th></tr></thead>
+              <tbody>
+                <tr><td>Sea-Doo GTX Pro 130 · 1630cc</td><td>180 kg</td><td>฿9,000</td></tr>
+                <tr><td>Yamaha VX Deluxe · 1100cc</td><td>120 kg</td><td>฿7,500</td></tr>
+              </tbody>
+            </table>
+            <p class="tdetails__note" data-lang-th="เวลา: เช้า 09:30–13:30 น. · บ่าย 14:00–18:00 น. · เช็คอินที่ท่าเรือยามู · ประกันเจ็ตสกีไม่รวมในราคาทัวร์ มีให้ซื้อเพิ่มที่ท่าเรือ" data-lang-en="Times: morning 09:30–13:30 · afternoon 14:00–18:00 · check-in at Yamu Pier · jet ski insurance excluded from the tour price, available as an add-on at the pier" data-lang-ru="Время: утро 09:30–13:30 · день 14:00–18:00 · регистрация на пирсе Яму · страховка гидроцикла не входит в цену, доступна на пирсе">เวลา: เช้า 09:30–13:30 น. · บ่าย 14:00–18:00 น. · เช็คอินที่ท่าเรือยามู · ประกันเจ็ตสกีไม่รวมในราคาทัวร์ มีให้ซื้อเพิ่มที่ท่าเรือ</p>
+          </div>
+        </details>
+
         <div class="tour-price">
           <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From" data-lang-ru="от">เริ่มต้นที่</span>
-          <span class="amt">฿2,800</span>
+          <span class="amt">฿7,500</span>
+          <span class="per" data-lang-th="/ เจ็ตสกี (2 ท่าน)" data-lang-en="/ ski (2 pax)" data-lang-ru="/ гидроцикл (2 чел.)">/ เจ็ตสกี (2 ท่าน)</span>
+        </div>
+        <a href="#booking" class="btn-gold" style="align-self:flex-start">
+          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
+          <i data-lucide="arrow-right" width="15" height="15"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Tour 4 -->
+    <div class="tour-row reveal rd3">
+      <div class="tour-row__pic">
+        <img src="assets/diving_4.jpg" alt="ดำน้ำลึกชมเรือจมและฝูงปลา" />
+        <div class="tour-row__tag" data-lang-th="ดำน้ำลึก PADI" data-lang-en="PADI Diving" data-lang-ru="Дайвинг PADI">ดำน้ำลึก PADI</div>
+      </div>
+      <div class="tour-row__body">
+        <h3 data-lang-th="ดำน้ำลึก สัมผัสโลกใต้ทะเลอันดามัน" data-lang-en="Scuba Diving — Andaman Underwater World" data-lang-ru="Дайвинг — подводный мир Андаманского моря">ดำน้ำลึก สัมผัสโลกใต้ทะเลอันดามัน</h3>
+        <p data-lang-th="ดำดิ่งสู่โลกใต้ทะเลกับศูนย์ดำน้ำ PADI ไม่ว่าจะเป็นมือใหม่ที่ลองดำน้ำครั้งแรก (Try-Dive) หรือนักดำน้ำที่มีใบรับรอง ดำน้ำที่เกาะราชาใหญ่ ราชาน้อย และเกาะพีพี พบแนวปะการัง เรือจม เต่าทะเล และฝูงปลาหลากสีสัน" data-lang-en="Descend into the underwater world with a PADI dive centre. Whether it's your first Try-Dive or you're a certified diver, explore the reefs, wrecks, turtles and shoals of Racha Yai, Racha Noi and Phi Phi." data-lang-ru="Погрузитесь в подводный мир с дайв-центром PADI. Первое пробное погружение или сертифицированный дайвер — исследуйте рифы, затонувшие корабли, черепах и стаи рыб у Рача-Яй, Рача-Ной и Пхи-Пхи.">ดำดิ่งสู่โลกใต้ทะเลกับศูนย์ดำน้ำ PADI ไม่ว่าจะเป็นมือใหม่ที่ลองดำน้ำครั้งแรก (Try-Dive) หรือนักดำน้ำที่มีใบรับรอง ดำน้ำที่เกาะราชาใหญ่ ราชาน้อย และเกาะพีพี พบแนวปะการัง เรือจม เต่าทะเล และฝูงปลาหลากสีสัน</p>
+        <div class="tour-meta">
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="เต็มวัน" data-lang-en="Full Day" data-lang-ru="Целый день">เต็มวัน</span></div>
+          <div class="tour-meta-i"><i data-lucide="award" width="14" height="14"></i><span data-lang-th="ศูนย์ดำน้ำ PADI" data-lang-en="PADI dive centre" data-lang-ru="Дайв-центр PADI">ศูนย์ดำน้ำ PADI</span></div>
+          <div class="tour-meta-i"><i data-lucide="package" width="14" height="14"></i><span data-lang-th="รวมอุปกรณ์ + ครูฝึก" data-lang-en="Gear + instructor" data-lang-ru="Снаряжение + инструктор">รวมอุปกรณ์ + ครูฝึก</span></div>
+        </div>
+        <ul class="tour-hl">
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="Try-Dive สำหรับมือใหม่ ไม่ต้องมีประสบการณ์" data-lang-en="Try-Dive for beginners — no experience needed" data-lang-ru="Пробное погружение для новичков — без опыта">Try-Dive สำหรับมือใหม่ ไม่ต้องมีประสบการณ์</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="จุดดำน้ำเกาะราชาและเกาะพีพี" data-lang-en="Racha & Phi Phi dive sites" data-lang-ru="Дайв-сайты Рача и Пхи-Пхи">จุดดำน้ำเกาะราชาและเกาะพีพี</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="รวมอุปกรณ์ครบ ครูฝึก อาหารกลางวัน และประกัน" data-lang-en="Full gear, instructor, lunch & insurance included" data-lang-ru="Полное снаряжение, инструктор, обед и страховка">รวมอุปกรณ์ครบ ครูฝึก อาหารกลางวัน และประกัน</span></li>
+          <li><i data-lucide="award" width="14" height="14"></i><span data-lang-th="คอร์ส Open Water ฿11,400–13,400" data-lang-en="Open Water course ฿11,400–13,400" data-lang-ru="Курс Open Water ฿11,400–13,400">คอร์ส Open Water ฿11,400–13,400</span></li>
+        </ul>
+
+        <details class="tdetails">
+          <summary><span class="sm-l"><i data-lucide="list" width="15" height="15"></i><span data-lang-th="ทริปดำน้ำรายวัน (ราคา)" data-lang-en="Day dive trips (prices)" data-lang-ru="Дневные дайв-туры (цены)">ทริปดำน้ำรายวัน (ราคา)</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+          <div class="tdetails__inner">
+            <table class="ptable">
+              <caption data-lang-th="เกาะราชาใหญ่ — 2 ไดฟ์" data-lang-en="Racha Yai Island — 2 dives" data-lang-ru="Остров Рача-Яй — 2 погружения">เกาะราชาใหญ่ — 2 ไดฟ์</caption>
+              <tbody>
+                <tr><td data-lang-th="ฟันไดฟ์ (แท็งก์+ตะกั่ว)" data-lang-en="Fun diver (tanks & weights)" data-lang-ru="Фандайвер (баллоны и грузы)">ฟันไดฟ์ (แท็งก์+ตะกั่ว)</td><td>฿3,600</td></tr>
+                <tr><td data-lang-th="ฟันไดฟ์ (อุปกรณ์ครบ)" data-lang-en="Fun diver (full equipment)" data-lang-ru="Фандайвер (полное снаряжение)">ฟันไดฟ์ (อุปกรณ์ครบ)</td><td>฿4,300</td></tr>
+                <tr><td>PADI Try-Dive (DSD)</td><td>฿4,600</td></tr>
+                <tr><td data-lang-th="PADI Refresher" data-lang-en="PADI Refresher" data-lang-ru="PADI Refresher">PADI Refresher</td><td>฿4,600</td></tr>
+                <tr><td data-lang-th="ผู้ใหญ่ (สน็อร์เกิล 13 ปีขึ้นไป)" data-lang-en="Adult snorkeler (13 yrs+)" data-lang-ru="Взрослый сноркелер (13+)">ผู้ใหญ่ (สน็อร์เกิล 13+)</td><td>฿2,600</td></tr>
+                <tr><td data-lang-th="เด็ก (สน็อร์เกิล 7–12 ปี)" data-lang-en="Child snorkeler (7–12 yrs)" data-lang-ru="Ребёнок-сноркелер (7–12)">เด็ก (สน็อร์เกิล 7–12)</td><td>฿1,500</td></tr>
+              </tbody>
+            </table>
+            <table class="ptable" style="margin-top:.8rem">
+              <caption data-lang-th="เกาะราชาน้อย — 3 ไดฟ์" data-lang-en="Racha Noi Island — 3 dives" data-lang-ru="Остров Рача-Ной — 3 погружения">เกาะราชาน้อย — 3 ไดฟ์</caption>
+              <tbody>
+                <tr><td data-lang-th="ฟันไดฟ์ (แท็งก์+ตะกั่ว)" data-lang-en="Fun diver (tanks & weights)" data-lang-ru="Фандайвер (баллоны и грузы)">ฟันไดฟ์ (แท็งก์+ตะกั่ว)</td><td>฿3,900</td></tr>
+                <tr><td data-lang-th="ฟันไดฟ์ (อุปกรณ์ครบ)" data-lang-en="Fun diver (full equipment)" data-lang-ru="Фандайвер (полное снаряжение)">ฟันไดฟ์ (อุปกรณ์ครบ)</td><td>฿4,600</td></tr>
+                <tr><td data-lang-th="PADI Refresher" data-lang-en="PADI Refresher" data-lang-ru="PADI Refresher">PADI Refresher</td><td>฿5,600</td></tr>
+                <tr><td data-lang-th="ผู้ใหญ่ (สน็อร์เกิล)" data-lang-en="Adult snorkeler" data-lang-ru="Взрослый сноркелер">ผู้ใหญ่ (สน็อร์เกิล)</td><td>฿2,900</td></tr>
+                <tr><td data-lang-th="เด็ก (สน็อร์เกิล)" data-lang-en="Child snorkeler" data-lang-ru="Ребёнок-сноркелер">เด็ก (สน็อร์เกิล)</td><td>฿1,800</td></tr>
+              </tbody>
+            </table>
+            <table class="ptable" style="margin-top:.8rem">
+              <caption data-lang-th="เกาะพีพี — 2 ไดฟ์ (ต้องเป็น Advanced Diver)" data-lang-en="Phi Phi Islands — 2 dives (Advanced Diver required)" data-lang-ru="Пхи-Пхи — 2 погружения (нужен Advanced Diver)">เกาะพีพี — 2 ไดฟ์ (ต้องเป็น Advanced Diver)</caption>
+              <tbody>
+                <tr><td data-lang-th="ฟันไดฟ์ (แท็งก์+ตะกั่ว)" data-lang-en="Fun diver (tanks & weights)" data-lang-ru="Фандайвер (баллоны и грузы)">ฟันไดฟ์ (แท็งก์+ตะกั่ว)</td><td>฿4,500</td></tr>
+                <tr><td data-lang-th="ฟันไดฟ์ (อุปกรณ์ครบ)" data-lang-en="Fun diver (full equipment)" data-lang-ru="Фандайвер (полное снаряжение)">ฟันไดฟ์ (อุปกรณ์ครบ)</td><td>฿5,200</td></tr>
+                <tr><td data-lang-th="ผู้ใหญ่ (สน็อร์เกิล 13 ปีขึ้นไป)" data-lang-en="Adult snorkeler (13 yrs+)" data-lang-ru="Взрослый сноркелер (13+)">ผู้ใหญ่ (สน็อร์เกิล 13+)</td><td>฿3,200</td></tr>
+                <tr><td data-lang-th="เด็ก (สน็อร์เกิล 7–12 ปี)" data-lang-en="Child snorkeler (7–12 yrs)" data-lang-ru="Ребёнок-сноркелер (7–12)">เด็ก (สน็อร์เกิล 7–12)</td><td>฿2,100</td></tr>
+              </tbody>
+            </table>
+            <p class="tdetails__note" data-lang-th="ค่าธรรมเนียมอุทยาน (จ่ายเงินสดหน้างาน): นักดำน้ำ ฿600 · ผู้ใหญ่ ฿400 · เด็ก ฿300 · รวมในทริป: รับ-ส่ง อาหารเช้า ผลไม้ อาหารกลางวันบุฟเฟต์ น้ำ น้ำอัดลม ชา กาแฟ ประกัน แท็งก์และตะกั่ว · ไม่รวม: ภาพถ่าย/วิดีโอใต้น้ำ ฿1,000 ทิปทีมงาน" data-lang-en="National park fees (cash on arrival): diver ฿600 · adult ฿400 · child ฿300 · Included: transfers, breakfast, fruits, buffet lunch, water, soft drinks, tea, coffee, insurance, tanks & weights · Excludes: underwater photos/videos ฿1,000, crew tips" data-lang-ru="Сборы нацпарка (наличными на месте): дайвер ฿600 · взрослый ฿400 · ребёнок ฿300 · Включено: трансфер, завтрак, фрукты, обед-буфет, вода, напитки, чай, кофе, страховка, баллоны и грузы · Не включено: подводные фото/видео ฿1,000, чаевые">ค่าธรรมเนียมอุทยาน (จ่ายเงินสดหน้างาน): นักดำน้ำ ฿600 · ผู้ใหญ่ ฿400 · เด็ก ฿300 · รวมในทริป: รับ-ส่ง อาหารเช้า ผลไม้ อาหารกลางวันบุฟเฟต์ น้ำ น้ำอัดลม ชา กาแฟ ประกัน แท็งก์และตะกั่ว · ไม่รวม: ภาพถ่าย/วิดีโอใต้น้ำ ฿1,000 ทิปทีมงาน</p>
+          </div>
+        </details>
+        <details class="tdetails">
+          <summary><span class="sm-l"><i data-lucide="award" width="15" height="15"></i><span data-lang-th="คอร์สเรียนดำน้ำ PADI (ราคา)" data-lang-en="PADI courses (prices)" data-lang-ru="Курсы PADI (цены)">คอร์สเรียนดำน้ำ PADI (ราคา)</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+          <div class="tdetails__inner">
+            <table class="ptable">
+              <tbody>
+                <tr><td>PADI Try-Dive (DSD) — 1 day</td><td>฿4,600</td></tr>
+                <tr><td data-lang-th="PADI Refresher — 2 ไดฟ์" data-lang-en="PADI Refresher — 2 dives" data-lang-ru="PADI Refresher — 2 погружения">PADI Refresher — 2 ไดฟ์</td><td>฿4,600</td></tr>
+                <tr><td data-lang-th="PADI Refresher — 3 ไดฟ์" data-lang-en="PADI Refresher — 3 dives" data-lang-ru="PADI Refresher — 3 погружения">PADI Refresher — 3 ไดฟ์</td><td>฿5,600</td></tr>
+                <tr><td>Open Water (3 days) — Budget · 4 dives</td><td>฿11,400</td></tr>
+                <tr><td>Open Water (3 days) — Standard · 5 dives</td><td>฿12,400</td></tr>
+                <tr><td>Open Water (3 days) — Premium · 6 dives</td><td>฿13,400</td></tr>
+                <tr><td>Advanced OW (2 days) — Budget · 5 dives</td><td>฿9,900</td></tr>
+                <tr><td>Advanced OW (2 days) — Standard · 6 dives</td><td>฿10,900</td></tr>
+                <tr><td>Advanced OW (2 days) — Premium · 6 dives + Phi Phi</td><td>฿11,900</td></tr>
+              </tbody>
+            </table>
+            <p class="tdetails__note" data-lang-th="ค่าใบรับรอง PADI ฿3,500 (จ่ายแยก) · รวม: รับ-ส่ง อาหารเช้า อาหารกลางวันบุฟเฟต์ น้ำ น้ำอัดลม ผลไม้ อุปกรณ์ครบ ค่าครูฝึก ประกัน · ไม่รวม: ค่าใบรับรอง ทิป ภาพถ่ายใต้น้ำ ฿2,000 ค่าอุทยาน" data-lang-en="PADI certification fee ฿3,500 (separate) · Includes: transfers, breakfast, buffet lunch, water, soft drinks, fruits, full equipment, instructor fee, insurance · Excludes: certification fee, tips, underwater photos ฿2,000, national park fees" data-lang-ru="Сертификация PADI ฿3,500 (отдельно) · Включено: трансфер, завтрак, обед-буфет, вода, напитки, фрукты, полное снаряжение, инструктор, страховка · Не включено: сертификация, чаевые, подводные фото ฿2,000, сборы нацпарка">ค่าใบรับรอง PADI ฿3,500 (จ่ายแยก) · รวม: รับ-ส่ง อาหารเช้า อาหารกลางวันบุฟเฟต์ น้ำ น้ำอัดลม ผลไม้ อุปกรณ์ครบ ค่าครูฝึก ประกัน · ไม่รวม: ค่าใบรับรอง ทิป ภาพถ่ายใต้น้ำ ฿2,000 ค่าอุทยาน</p>
+          </div>
+        </details>
+
+        <div class="tour-price">
+          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From" data-lang-ru="от">เริ่มต้นที่</span>
+          <span class="amt">฿4,600</span>
+          <span class="per" data-lang-th="/ ท่าน (Try-Dive)" data-lang-en="/ person (Try-Dive)" data-lang-ru="/ чел. (пробное)">/ ท่าน (Try-Dive)</span>
+        </div>
+        <a href="#booking" class="btn-gold" style="align-self:flex-start">
+          <span data-lang-th="จองโปรแกรมนี้" data-lang-en="Book This Tour" data-lang-ru="Забронировать тур">จองโปรแกรมนี้</span>
+          <i data-lucide="arrow-right" width="15" height="15"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Tour 5 -->
+    <div class="tour-row reveal rd1">
+      <div class="tour-row__pic">
+        <img src="https://images.unsplash.com/photo-1608788524926-41b5181b89a2?w=760&h=560&fit=crop" alt="เกาะเจมส์บอนด์ อ่าวพังงา" />
+        <div class="tour-row__tag" data-lang-th="อ่าวพังงา" data-lang-en="Phang Nga" data-lang-ru="Пханг-Нга">อ่าวพังงา</div>
+      </div>
+      <div class="tour-row__body">
+        <h3 data-lang-th="เจมส์บอนด์ + อ่าวพังงา (เรือหางยาว)" data-lang-en="James Bond + Phang Nga Bay by Longtail" data-lang-ru="Джеймс Бонд + залив Пханг-Нга на лонгтейле">เจมส์บอนด์ + อ่าวพังงา (เรือหางยาว)</h3>
+        <p data-lang-th="ทริปเต็มวันสู่อ่าวพังงาโดยเรือหางยาว เยือนวัดสุวรรณคูหา (ถ้ำลิง) พายเรือแคนูธรรมชาติที่เกาะทะลุ ชมเกาะเจมส์บอนด์และเขาพิงกัน และรับประทานอาหารกลางวันที่หมู่บ้านชาวประมงมุสลิมเกาะปันหยี" data-lang-en="A full day into Phang Nga Bay by longtail boat — visit Suwankuha Temple (Monkey Cave), sea canoe through Talu Island, see James Bond Island and Khao Ping Gun, and lunch at the Muslim fishing village of Koh Panyee." data-lang-ru="Целый день в заливе Пханг-Нга на лонгтейле — храм Суванкуха (Пещера обезьян), морской каякинг у острова Талу, остров Джеймса Бонда и Кхао-Пинг-Ган, обед в мусульманской рыбацкой деревне Ко-Панйи.">ทริปเต็มวันสู่อ่าวพังงาโดยเรือหางยาว เยือนวัดสุวรรณคูหา (ถ้ำลิง) พายเรือแคนูธรรมชาติที่เกาะทะลุ ชมเกาะเจมส์บอนด์และเขาพิงกัน และรับประทานอาหารกลางวันที่หมู่บ้านชาวประมงมุสลิมเกาะปันหยี</p>
+        <div class="tour-meta">
+          <div class="tour-meta-i"><i data-lucide="clock" width="14" height="14"></i><span data-lang-th="08:30–17:30 น." data-lang-en="08:30–17:30" data-lang-ru="08:30–17:30">08:30–17:30 น.</span></div>
+          <div class="tour-meta-i"><i data-lucide="sailboat" width="14" height="14"></i><span data-lang-th="เรือหางยาว" data-lang-en="Longtail boat" data-lang-ru="Лодка-лонгтейл">เรือหางยาว</span></div>
+          <div class="tour-meta-i"><i data-lucide="utensils" width="14" height="14"></i><span data-lang-th="อาหารกลางวันที่เกาะปันหยี" data-lang-en="Lunch at Koh Panyee" data-lang-ru="Обед на Ко-Панйи">อาหารกลางวันที่เกาะปันหยี</span></div>
+        </div>
+        <ul class="tour-hl">
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="วัดสุวรรณคูหา (ถ้ำลิง)" data-lang-en="Suwankuha Temple (Monkey Cave)" data-lang-ru="Храм Суванкуха (Пещера обезьян)">วัดสุวรรณคูหา (ถ้ำลิง)</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="พายเรือแคนูธรรมชาติที่เกาะทะลุ" data-lang-en="Natural sea canoeing at Talu Island" data-lang-ru="Морской каякинг у острова Талу">พายเรือแคนูธรรมชาติที่เกาะทะลุ</span></li>
+          <li><i data-lucide="check-circle" width="14" height="14"></i><span data-lang-th="เกาะเจมส์บอนด์ + เขาพิงกัน + หมู่บ้านเกาะปันหยี" data-lang-en="James Bond Island + Khao Ping Gun + Koh Panyee village" data-lang-ru="Остров Джеймса Бонда + Кхао-Пинг-Ган + деревня Ко-Панйи">เกาะเจมส์บอนด์ + เขาพิงกัน + หมู่บ้านเกาะปันหยี</span></li>
+          <li><i data-lucide="users" width="14" height="14"></i><span data-lang-th="โปรแกรม A (มีพายเรือแคนู) ผู้ใหญ่ ฿2,500 · เด็ก ฿2,100" data-lang-en="Program A (with canoeing) Adult ฿2,500 · Child ฿2,100" data-lang-ru="Программа A (с каякингом) Взрослый ฿2,500 · Ребёнок ฿2,100">โปรแกรม A (มีพายเรือแคนู) ผู้ใหญ่ ฿2,500 · เด็ก ฿2,100</span></li>
+        </ul>
+
+        <details class="tdetails">
+          <summary><span class="sm-l"><i data-lucide="route" width="15" height="15"></i><span data-lang-th="กำหนดการ + โปรแกรม A/B" data-lang-en="Itinerary + Programs A/B" data-lang-ru="Программа + варианты A/B">กำหนดการ + โปรแกรม A/B</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+          <div class="tdetails__inner">
+            <ul class="itin-list">
+              <li><span class="t">08:30</span><span data-lang-th="รับจากโรงแรมโดยรถตู้" data-lang-en="Pickup from your hotel by minibus" data-lang-ru="Трансфер из отеля на минивэне">รับจากโรงแรมโดยรถตู้</span></li>
+              <li><span class="t">—</span><span data-lang-th="วัดสุวรรณคูหา (ถ้ำลิง)" data-lang-en="Suwankuha Temple (Monkey Cave)" data-lang-ru="Храм Суванкуха (Пещера обезьян)">วัดสุวรรณคูหา (ถ้ำลิง)</span></li>
+              <li><span class="t">—</span><span data-lang-th="ถึงท่าเรือกะสม ชมอุทยานอ่าวพังงาโดยเรือหางยาว" data-lang-en="Kasom Pier — Phang Nga Bay by longtail boat" data-lang-ru="Пирс Касом — залив Пханг-Нга на лонгтейле">ถึงท่าเรือกะสม ชมอ่าวพังงาโดยเรือหางยาว</span></li>
+              <li><span class="t">—</span><span data-lang-th="พายเรือแคนูที่เกาะทะลุ (โปรแกรม A)" data-lang-en="Sea canoeing at Talu Island (Program A)" data-lang-ru="Каякинг у острова Талу (Программа A)">พายเรือแคนูที่เกาะทะลุ (โปรแกรม A)</span></li>
+              <li><span class="t">—</span><span data-lang-th="เกาะเจมส์บอนด์และเขาพิงกัน" data-lang-en="James Bond Island & Khao Ping Gun" data-lang-ru="Остров Джеймса Бонда и Кхао-Пинг-Ган">เกาะเจมส์บอนด์และเขาพิงกัน</span></li>
+              <li><span class="t">—</span><span data-lang-th="อาหารกลางวันที่เกาะปันหยี" data-lang-en="Lunch at Koh Panyee fishing village" data-lang-ru="Обед в деревне Ко-Панйи">อาหารกลางวันที่เกาะปันหยี</span></li>
+              <li><span class="t">17:30</span><span data-lang-th="กลับถึงโรงแรม" data-lang-en="Arrive back at your hotel" data-lang-ru="Возвращение в отель">กลับถึงโรงแรม</span></li>
+            </ul>
+            <table class="ptable" style="margin-top:.8rem">
+              <thead><tr><th data-lang-th="โปรแกรม" data-lang-en="Program" data-lang-ru="Программа">โปรแกรม</th><th data-lang-th="ผู้ใหญ่" data-lang-en="Adult" data-lang-ru="Взрослый">ผู้ใหญ่</th><th data-lang-th="เด็ก (4–11)" data-lang-en="Child (4–11)" data-lang-ru="Ребёнок (4–11)">เด็ก (4–11)</th></tr></thead>
+              <tbody>
+                <tr><td data-lang-th="A — มีพายเรือแคนู" data-lang-en="A — with canoeing" data-lang-ru="A — с каякингом">A — มีพายเรือแคนู</td><td>฿2,500</td><td>฿2,100</td></tr>
+                <tr><td data-lang-th="B — ชมวิว ไม่พายเรือแคนู" data-lang-en="B — sightseeing, no canoeing" data-lang-ru="B — осмотр, без каякинга">B — ชมวิว ไม่พายเรือแคนู</td><td>฿2,200</td><td>฿1,800</td></tr>
+              </tbody>
+            </table>
+            <p class="tdetails__note" data-lang-th="โปรแกรมอาจปรับเปลี่ยนตามระดับน้ำทะเล" data-lang-en="Program may be modified depending on the ocean tides." data-lang-ru="Программа может меняться в зависимости от приливов.">โปรแกรมอาจปรับเปลี่ยนตามระดับน้ำทะเล</p>
+          </div>
+        </details>
+
+        <div class="tour-price">
+          <span class="lbl" data-lang-th="เริ่มต้นที่" data-lang-en="From" data-lang-ru="от">เริ่มต้นที่</span>
+          <span class="amt">฿2,200</span>
           <span class="per" data-lang-th="/ ท่าน" data-lang-en="/ person" data-lang-ru="/ чел.">/ ท่าน</span>
         </div>
         <a href="#booking" class="btn-gold" style="align-self:flex-start">
@@ -759,8 +1075,275 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
   </div>
 </section>
 
-<!-- wave tours(ivory)→exp(navy) -->
-<div class="wsep" style="background:var(--ivory)">
+<!-- ═══════════════════════ LAND TOURS ═══════════════════════ -->
+<section class="sec land" id="land">
+  <div class="container">
+    <div class="center-text reveal" style="margin-bottom:3rem">
+      <div class="sec-label center">
+        <span data-lang-th="ทัวร์บนบกและในเมือง" data-lang-en="Land & City Tours" data-lang-ru="Туры по суше и городу">ทัวร์บนบกและในเมือง</span>
+      </div>
+      <h2 class="sec-title" data-lang-th="ผจญภัยบนบก ค้นพบภูเก็ตอีกมุม" data-lang-en="Land Adventures & City Discovery" data-lang-ru="Приключения на суше и знакомство с городом">ผจญภัยบนบก ค้นพบภูเก็ตอีกมุม</h2>
+      <p class="sec-desc" data-lang-th="ครบทุกประสบการณ์บนแผ่นดินภูเก็ต ตั้งแต่ขับ ATV ลุยป่า ดูแลช้างอย่างมีจริยธรรม ไปจนถึงทัวร์วัฒนธรรมและจุดชมวิวพระใหญ่" data-lang-en="The full Phuket land experience — from off-road ATV trails and ethical elephant care to culture tours and the Big Buddha viewpoint." data-lang-ru="Полный наземный опыт Пхукета — от внедорожных маршрутов на квадроциклах и этичного ухода за слонами до культурных туров и смотровой Большого Будды.">ครบทุกประสบการณ์บนแผ่นดินภูเก็ต ตั้งแต่ขับ ATV ลุยป่า ดูแลช้างอย่างมีจริยธรรม ไปจนถึงทัวร์วัฒนธรรมและจุดชมวิวพระใหญ่</p>
+    </div>
+    <div class="land__grid">
+
+      <!-- ATV -->
+      <div class="land-card reveal">
+        <div class="land-card__pic">
+          <img src="https://images.unsplash.com/photo-1742277810740-f702b8977a73?w=600&h=400&fit=crop" alt="ขับ ATV ลุยป่า" />
+          <div class="land-card__tag" data-lang-th="ผจญภัย" data-lang-en="Adventure" data-lang-ru="Приключение">ผจญภัย</div>
+        </div>
+        <div class="land-card__body">
+          <h3 data-lang-th="ATV ลุยป่า + จุดชมวิวพระใหญ่" data-lang-en="ATV Jungle Ride + Big Buddha Viewpoint" data-lang-ru="ATV по джунглям + смотровая Большого Будды">ATV ลุยป่า + จุดชมวิวพระใหญ่</h3>
+          <p data-lang-th="ขับ ATV ตะลุยเส้นทางธรรมชาติสู่จุดชมวิวสุดสวย เลือกได้ทั้งรุ่น 200cc และ 520cc รวมการสอนขับเบื้องต้น หมวกกันน็อก ประกัน และรับ-ส่งโรงแรม" data-lang-en="Ride an ATV along jungle trails to a stunning viewpoint. Choose 200cc or 520cc — includes basic training, helmet, insurance and hotel transfer." data-lang-ru="Прокатитесь на квадроцикле по лесным тропам к потрясающей смотровой. 200cc или 520cc — инструктаж, шлем, страховка и трансфер включены.">ขับ ATV ตะลุยเส้นทางธรรมชาติสู่จุดชมวิวสุดสวย เลือกได้ทั้งรุ่น 200cc และ 520cc รวมการสอนขับเบื้องต้น หมวกกันน็อก ประกัน และรับ-ส่งโรงแรม</p>
+          <details class="tdetails">
+            <summary><span class="sm-l"><i data-lucide="list" width="15" height="15"></i><span data-lang-th="ตารางราคา ATV" data-lang-en="ATV price table" data-lang-ru="Цены на ATV">ตารางราคา ATV</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+            <div class="tdetails__inner">
+              <table class="ptable">
+                <caption>ATV 200cc</caption>
+                <thead><tr><th data-lang-th="ระยะเวลา" data-lang-en="Duration" data-lang-ru="Длит.">ระยะเวลา</th><th data-lang-th="ผู้ขับ" data-lang-en="Rider" data-lang-ru="Водитель">ผู้ขับ</th><th data-lang-th="ผู้ซ้อน" data-lang-en="Passenger" data-lang-ru="Пассажир">ผู้ซ้อน</th></tr></thead>
+                <tbody>
+                  <tr><td>30 min</td><td>฿1,400</td><td>฿800</td></tr>
+                  <tr><td>45 min</td><td>฿1,600</td><td>฿1,000</td></tr>
+                  <tr><td>1 hr</td><td>฿1,800</td><td>฿1,200</td></tr>
+                  <tr><td>1.30 hr</td><td>฿2,000</td><td>฿1,500</td></tr>
+                  <tr><td>2 hr</td><td>฿2,200</td><td>฿1,800</td></tr>
+                </tbody>
+              </table>
+              <table class="ptable" style="margin-top:.8rem">
+                <caption>ATV 520cc</caption>
+                <thead><tr><th data-lang-th="ระยะเวลา" data-lang-en="Duration" data-lang-ru="Длит.">ระยะเวลา</th><th data-lang-th="ผู้ขับ" data-lang-en="Rider" data-lang-ru="Водитель">ผู้ขับ</th><th data-lang-th="ผู้ซ้อน" data-lang-en="Passenger" data-lang-ru="Пассажир">ผู้ซ้อน</th></tr></thead>
+                <tbody>
+                  <tr><td>30 min</td><td>฿1,800</td><td>฿1,600</td></tr>
+                  <tr><td>45 min</td><td>฿2,200</td><td>฿1,800</td></tr>
+                  <tr><td>1 hr</td><td>฿2,600</td><td>฿2,000</td></tr>
+                  <tr><td>1.30 hr</td><td>฿3,600</td><td>฿2,600</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div class="land-card__foot">
+            <div class="land-card__price">
+              <span class="lbl" data-lang-th="เริ่มต้น (30 นาที)" data-lang-en="From (30 min)" data-lang-ru="от (30 мин)">เริ่มต้น (30 นาที)</span>
+              <span class="amt">฿1,400</span>
+            </div>
+            <a href="#booking" class="land-card__btn">
+              <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
+              <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elephant -->
+      <div class="land-card reveal rd1">
+        <div class="land-card__pic">
+          <img src="https://images.unsplash.com/photo-1611605834890-a4f92858c823?w=600&h=400&fit=crop" alt="ดูแลและให้อาหารช้าง" />
+          <div class="land-card__tag" data-lang-th="เป็นมิตรกับสัตว์" data-lang-en="Ethical" data-lang-ru="Этично">เป็นมิตรกับสัตว์</div>
+        </div>
+        <div class="land-card__body">
+          <h3 data-lang-th="ดูแลและให้อาหารช้าง (อนุรักษ์)" data-lang-en="Elephant Care & Feeding (Ethical)" data-lang-ru="Уход за слонами и кормление (этично)">ดูแลและให้อาหารช้าง (อนุรักษ์)</h3>
+          <p data-lang-th="ใกล้ชิดช้างอย่างมีจริยธรรม เตรียมอาหารและป้อนช้าง เรียนรู้พฤติกรรม ถ่ายรูปกับลูกช้าง พร้อมจุดถ่ายรูปวิวรูปหัวใจ และแวะจุดชมวิวพระใหญ่" data-lang-en="An ethical close encounter — prepare food and feed the elephants, learn their behaviour, take photos with a baby elephant, plus the heart-shaped viewpoint and Big Buddha stop." data-lang-ru="Этичное близкое знакомство — приготовьте корм и покормите слонов, узнайте об их поведении, сфотографируйтесь со слонёнком, смотровая «сердце» и остановка у Большого Будды.">ใกล้ชิดช้างอย่างมีจริยธรรม เตรียมอาหารและป้อนช้าง เรียนรู้พฤติกรรม ถ่ายรูปกับลูกช้าง พร้อมจุดถ่ายรูปวิวรูปหัวใจ และแวะจุดชมวิวพระใหญ่</p>
+          <details class="tdetails">
+            <summary><span class="sm-l"><i data-lucide="list" width="15" height="15"></i><span data-lang-th="แพ็กเกจช้างและราคา" data-lang-en="Elephant packages & prices" data-lang-ru="Пакеты со слонами и цены">แพ็กเกจช้างและราคา</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+            <div class="tdetails__inner">
+              <table class="ptable">
+                <thead><tr><th data-lang-th="แพ็กเกจ" data-lang-en="Package" data-lang-ru="Пакет">แพ็กเกจ</th><th data-lang-th="ผู้ใหญ่" data-lang-en="Adult" data-lang-ru="Взрослый">ผู้ใหญ่</th><th data-lang-th="เด็ก" data-lang-en="Child" data-lang-ru="Ребёнок">เด็ก</th></tr></thead>
+                <tbody>
+                  <tr><td data-lang-th="ให้อาหาร & ดูแล (Sky Walk 1)" data-lang-en="Feed & Care (Sky Walk 1)" data-lang-ru="Кормление и уход (Sky Walk 1)">ให้อาหาร & ดูแล (Sky Walk 1)</td><td>฿1,600</td><td>฿1,400</td></tr>
+                  <tr><td data-lang-th="อาบน้ำ & ดูแลช้าง" data-lang-en="Bathing & Care" data-lang-ru="Купание и уход">อาบน้ำ & ดูแลช้าง</td><td>฿2,200</td><td>฿2,000</td></tr>
+                  <tr><td data-lang-th="ธรรมชาติ & ดูแลช้าง" data-lang-en="Nature & Care" data-lang-ru="Природа и уход">ธรรมชาติ & ดูแลช้าง</td><td>฿2,400</td><td>฿2,200</td></tr>
+                </tbody>
+              </table>
+              <table class="ptable" style="margin-top:.8rem">
+                <caption data-lang-th="รวมกับ ATV / บักกี้ (60 นาที)" data-lang-en="Combined with ATV / Buggy (60 min)" data-lang-ru="С ATV / багги (60 мин)">รวมกับ ATV / บักกี้ (60 นาที)</caption>
+                <thead><tr><th data-lang-th="แพ็กเกจ" data-lang-en="Package" data-lang-ru="Пакет">แพ็กเกจ</th><th data-lang-th="ผู้ขับ" data-lang-en="Driver" data-lang-ru="Водитель">ผู้ขับ</th><th data-lang-th="ผู้ซ้อน" data-lang-en="Passenger" data-lang-ru="Пассажир">ผู้ซ้อน</th></tr></thead>
+                <tbody>
+                  <tr><td data-lang-th="ให้อาหารช้าง + ATV (Sky Walk 2)" data-lang-en="Elephant feeding + ATV (Sky Walk 2)" data-lang-ru="Кормление + ATV (Sky Walk 2)">ให้อาหารช้าง + ATV (Sky Walk 2)</td><td>฿2,400</td><td>฿2,200</td></tr>
+                  <tr><td data-lang-th="ดูแลช้างวิวทะเล + ATV" data-lang-en="Seaview elephant care + ATV" data-lang-ru="Уход со смотровой + ATV">ดูแลช้างวิวทะเล + ATV</td><td>฿2,600</td><td>฿2,400</td></tr>
+                  <tr><td data-lang-th="ให้อาหารช้าง + บักกี้" data-lang-en="Elephant feeding + Buggy" data-lang-ru="Кормление + багги">ให้อาหารช้าง + บักกี้</td><td>฿3,200</td><td>฿2,600</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div class="land-card__foot">
+            <div class="land-card__price">
+              <span class="lbl" data-lang-th="ผู้ใหญ่ เริ่มต้น" data-lang-en="Adult from" data-lang-ru="Взрослый от">ผู้ใหญ่ เริ่มต้น</span>
+              <span class="amt">฿1,600</span>
+            </div>
+            <a href="#booking" class="land-card__btn">
+              <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
+              <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- City Tour -->
+      <div class="land-card reveal rd2">
+        <div class="land-card__pic">
+          <img src="https://images.unsplash.com/photo-1577375837944-47617314bfd9?w=600&h=400&fit=crop" alt="พระใหญ่ภูเก็ต" />
+          <div class="land-card__tag" data-lang-th="วัฒนธรรม" data-lang-en="Culture" data-lang-ru="Культура">วัฒนธรรม</div>
+        </div>
+        <div class="land-card__body">
+          <h3 data-lang-th="ซิตี้ทัวร์ภูเก็ต พระใหญ่ + เมืองเก่า" data-lang-en="Phuket City Tour — Big Buddha + Old Town" data-lang-ru="Сити-тур по Пхукету — Большой Будда + Старый город">ซิตี้ทัวร์ภูเก็ต พระใหญ่ + เมืองเก่า</h3>
+          <p data-lang-th="เที่ยวครบไฮไลต์เมืองภูเก็ต จุดชมวิวพระใหญ่ วัดฉลอง ย่านเมืองเก่า ฟาร์มผึ้ง โรงงานเม็ดมะม่วงหิมพานต์ และตลาดกลางคืน รวมไกด์พูดอังกฤษและรับ-ส่ง" data-lang-en="All the city highlights — Big Buddha viewpoint, Chalong Temple, Old Town, honey farm, cashew factory and night market. English-speaking guide and transfers included." data-lang-ru="Все главные места города — смотровая Большого Будды, храм Чалонг, Старый город, пасека, фабрика кешью и ночной рынок. Англоговорящий гид и трансфер включены.">เที่ยวครบไฮไลต์เมืองภูเก็ต จุดชมวิวพระใหญ่ วัดฉลอง ย่านเมืองเก่า ฟาร์มผึ้ง โรงงานเม็ดมะม่วงหิมพานต์ และตลาดกลางคืน รวมไกด์พูดอังกฤษและรับ-ส่ง</p>
+          <details class="tdetails">
+            <summary><span class="sm-l"><i data-lucide="list" width="15" height="15"></i><span data-lang-th="โปรแกรมและราคา" data-lang-en="Programs & prices" data-lang-ru="Программы и цены">โปรแกรมและราคา</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+            <div class="tdetails__inner">
+              <table class="ptable">
+                <thead><tr><th data-lang-th="โปรแกรม" data-lang-en="Program" data-lang-ru="Программа">โปรแกรม</th><th data-lang-th="ผู้ใหญ่" data-lang-en="Adult" data-lang-ru="Взрослый">ผู้ใหญ่</th><th data-lang-th="เด็ก" data-lang-en="Child" data-lang-ru="Ребёнок">เด็ก</th></tr></thead>
+                <tbody>
+                  <tr><td data-lang-th="E — ซิตี้ทัวร์ + เมืองเก่า + ตลาดกลางคืน" data-lang-en="E — city tour + Old Town + night market" data-lang-ru="E — сити-тур + Старый город + ночной рынок">E — ซิตี้ทัวร์ + เมืองเก่า + ตลาดกลางคืน</td><td>฿1,450</td><td>฿950</td></tr>
+                  <tr><td data-lang-th="D — ซิตี้ทัวร์ + ขี่ช้าง 30 นาที" data-lang-en="D — city tour + elephant trekking 30 min" data-lang-ru="D — сити-тур + слоны 30 мин">D — ซิตี้ทัวร์ + ขี่ช้าง 30 นาที</td><td>฿1,950</td><td>฿1,650</td></tr>
+                </tbody>
+              </table>
+              <p class="tdetails__note" data-lang-th="3 รอบต่อวัน: เช้า 07:30 · สาย 10:00 · บ่าย 13:00 · แวะพระใหญ่ วัดฉลอง ฟาร์มผึ้ง โรงงานเม็ดมะม่วงหิมพานต์ จุดพักกาแฟ" data-lang-en="3 rounds/day: morning 07:30 · late morning 10:00 · afternoon 13:00 · stops at Big Buddha, Chalong Temple, honey farm, cashew factory, coffee break" data-lang-ru="3 заезда/день: утро 07:30 · полдень 10:00 · день 13:00 · остановки: Большой Будда, храм Чалонг, пасека, фабрика кешью, кофе-пауза">3 รอบต่อวัน: เช้า 07:30 · สาย 10:00 · บ่าย 13:00 · แวะพระใหญ่ วัดฉลอง ฟาร์มผึ้ง โรงงานเม็ดมะม่วงหิมพานต์ จุดพักกาแฟ</p>
+            </div>
+          </details>
+          <div class="land-card__foot">
+            <div class="land-card__price">
+              <span class="lbl" data-lang-th="ผู้ใหญ่ เริ่มต้น" data-lang-en="Adult from" data-lang-ru="Взрослый от">ผู้ใหญ่ เริ่มต้น</span>
+              <span class="amt">฿1,450</span>
+            </div>
+            <a href="#booking" class="land-card__btn">
+              <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
+              <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zipline + ATV -->
+      <div class="land-card reveal rd1">
+        <div class="land-card__pic">
+          <img src="https://images.unsplash.com/photo-1648853070657-6d58398bee93?w=600&h=400&fit=crop" alt="ซิปไลน์ผ่านป่า" />
+          <div class="land-card__tag" data-lang-th="ครึ่งวัน" data-lang-en="Half Day" data-lang-ru="Полдня">ครึ่งวัน</div>
+        </div>
+        <div class="land-card__body">
+          <h3 data-lang-th="ซิปไลน์ + ATV ครึ่งวัน" data-lang-en="Zipline + ATV Half-Day Combo" data-lang-ru="Зиплайн + ATV — полдня">ซิปไลน์ + ATV ครึ่งวัน</h3>
+          <p data-lang-th="แพ็กเกจครึ่งวันสุดมันส์ ซิปไลน์ 30 นาที ขับ ATV ลุยป่า แวะพระใหญ่และวัดฉลอง เลือกได้ 3 รอบต่อวัน รวมประกัน เครื่องดื่ม ไกด์ และรับ-ส่ง" data-lang-en="An action-packed half day — 30-min zipline, ATV jungle ride, plus Big Buddha and Chalong Temple. Three daily rounds; insurance, drinks, guide and transfer included." data-lang-ru="Насыщенные полдня — 30-мин зиплайн, ATV по джунглям, Большой Будда и храм Чалонг. Три заезда в день; страховка, напитки, гид и трансфер включены.">แพ็กเกจครึ่งวันสุดมันส์ ซิปไลน์ 30 นาที ขับ ATV ลุยป่า แวะพระใหญ่และวัดฉลอง เลือกได้ 3 รอบต่อวัน รวมประกัน เครื่องดื่ม ไกด์ และรับ-ส่ง</p>
+          <details class="tdetails">
+            <summary><span class="sm-l"><i data-lucide="list" width="15" height="15"></i><span data-lang-th="โปรแกรม A / B / C" data-lang-en="Programs A / B / C" data-lang-ru="Программы A / B / C">โปรแกรม A / B / C</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+            <div class="tdetails__inner">
+              <table class="ptable">
+                <thead><tr><th data-lang-th="โปรแกรม" data-lang-en="Program" data-lang-ru="Программа">โปรแกรม</th><th data-lang-th="ผู้ใหญ่" data-lang-en="Adult" data-lang-ru="Взрослый">ผู้ใหญ่</th><th data-lang-th="เด็ก" data-lang-en="Child" data-lang-ru="Ребёнок">เด็ก</th></tr></thead>
+                <tbody>
+                  <tr><td data-lang-th="A — ซิปไลน์ 30 นาที" data-lang-en="A — zipline 30 min" data-lang-ru="A — зиплайн 30 мин">A — ซิปไลน์ 30 นาที</td><td>฿2,750</td><td>฿2,550</td></tr>
+                  <tr><td data-lang-th="B — ซิปไลน์ + ATV 30 นาที" data-lang-en="B — zipline + ATV 30 min" data-lang-ru="B — зиплайн + ATV 30 мин">B — ซิปไลน์ + ATV 30 นาที</td><td>฿3,150</td><td>฿2,850</td></tr>
+                  <tr><td data-lang-th="C — ATV + ขี่ช้าง 30 นาที" data-lang-en="C — ATV + elephant trekking 30 min" data-lang-ru="C — ATV + слоны 30 мин">C — ATV + ขี่ช้าง 30 นาที</td><td>฿2,850</td><td>฿2,550</td></tr>
+                </tbody>
+              </table>
+              <p class="tdetails__note" data-lang-th="ทุกโปรแกรมแวะพระใหญ่และวัดฉลอง · ซิปไลน์จำกัดน้ำหนัก 120 กก. · 3 รอบต่อวัน (07:30 / 10:00 / 13:00)" data-lang-en="All programs include Big Buddha & Chalong Temple · zipline weight limit 120 kg · 3 rounds/day (07:30 / 10:00 / 13:00)" data-lang-ru="Все программы включают Большого Будду и храм Чалонг · лимит веса на зиплайне 120 кг · 3 заезда/день (07:30 / 10:00 / 13:00)">ทุกโปรแกรมแวะพระใหญ่และวัดฉลอง · ซิปไลน์จำกัดน้ำหนัก 120 กก. · 3 รอบต่อวัน (07:30 / 10:00 / 13:00)</p>
+            </div>
+          </details>
+          <div class="land-card__foot">
+            <div class="land-card__price">
+              <span class="lbl" data-lang-th="ผู้ใหญ่ เริ่มต้น" data-lang-en="Adult from" data-lang-ru="Взрослый от">ผู้ใหญ่ เริ่มต้น</span>
+              <span class="amt">฿2,750</span>
+            </div>
+            <a href="#booking" class="land-card__btn">
+              <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
+              <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tiger Experience -->
+      <div class="land-card reveal rd2">
+        <div class="land-card__pic">
+          <img src="https://images.unsplash.com/photo-1584112168367-91212b5bee76?w=600&h=400&fit=crop" alt="ประสบการณ์เสือ" />
+          <div class="land-card__tag" data-lang-th="พิเศษ" data-lang-en="Premium" data-lang-ru="Премиум">พิเศษ</div>
+        </div>
+        <div class="land-card__body">
+          <h3 data-lang-th="ซิตี้ทัวร์ + ประสบการณ์เสือ" data-lang-en="City Tour & Tiger Experience" data-lang-ru="Сити-тур + знакомство с тиграми">ซิตี้ทัวร์ + ประสบการณ์เสือ</h3>
+          <p data-lang-th="แพ็กเกจครบรสรวมประสบการณ์ถ่ายรูปกับเสือ ซิปไลน์หรือ ATV ขี่ช้าง พระใหญ่ และวัดฉลอง รวมประกัน ไกด์พูดอังกฤษ น้ำดื่ม และรับ-ส่งโรงแรม" data-lang-en="A complete package featuring a tiger photo experience, zipline or ATV, elephant trekking, Big Buddha and Chalong Temple. Insurance, English guide, water and transfer included." data-lang-ru="Полный пакет: фото с тигром, зиплайн или ATV, катание на слонах, Большой Будда и храм Чалонг. Страховка, англогид, вода и трансфер включены.">แพ็กเกจครบรสรวมประสบการณ์ถ่ายรูปกับเสือ ซิปไลน์หรือ ATV ขี่ช้าง พระใหญ่ และวัดฉลอง รวมประกัน ไกด์พูดอังกฤษ น้ำดื่ม และรับ-ส่งโรงแรม</p>
+          <details class="tdetails">
+            <summary><span class="sm-l"><i data-lucide="list" width="15" height="15"></i><span data-lang-th="โปรแกรมและราคา" data-lang-en="Programs & prices" data-lang-ru="Программы и цены">โปรแกรมและราคา</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+            <div class="tdetails__inner">
+              <table class="ptable">
+                <thead><tr><th data-lang-th="โปรแกรม" data-lang-en="Program" data-lang-ru="Программа">โปรแกรม</th><th data-lang-th="ผู้ใหญ่" data-lang-en="Adult" data-lang-ru="Взрослый">ผู้ใหญ่</th><th data-lang-th="เด็ก" data-lang-en="Child" data-lang-ru="Ребёнок">เด็ก</th></tr></thead>
+                <tbody>
+                  <tr><td data-lang-th="5 — ซิปไลน์ + เสือ" data-lang-en="5 — zipline + tiger" data-lang-ru="5 — зиплайн + тигр">5 — ซิปไลน์ + เสือ</td><td>฿3,350</td><td>฿3,150</td></tr>
+                  <tr><td data-lang-th="4 — ATV + ขี่ช้าง + เสือ" data-lang-en="4 — ATV + elephant trekking + tiger" data-lang-ru="4 — ATV + слоны + тигр">4 — ATV + ขี่ช้าง + เสือ</td><td>฿3,850</td><td>฿3,650</td></tr>
+                </tbody>
+              </table>
+              <p class="tdetails__note" data-lang-th="อายุ 16 ปีขึ้นไปถ่ายรูปกับเสือได้ทุกขนาด · เด็กอายุต่ำกว่า 16 ปีถ่ายรูปกับเสือขนาดเล็กที่สุด · แวะพระใหญ่และวัดฉลอง" data-lang-en="16 years and up: photo with any tiger size · under 16: smallest tiger only · includes Big Buddha & Chalong Temple" data-lang-ru="От 16 лет: фото с тигром любого размера · до 16 лет: только самый маленький тигр · включает Большого Будду и храм Чалонг">อายุ 16 ปีขึ้นไปถ่ายรูปกับเสือได้ทุกขนาด · เด็กอายุต่ำกว่า 16 ปีถ่ายรูปกับเสือขนาดเล็กที่สุด · แวะพระใหญ่และวัดฉลอง</p>
+            </div>
+          </details>
+          <div class="land-card__foot">
+            <div class="land-card__price">
+              <span class="lbl" data-lang-th="ผู้ใหญ่ เริ่มต้น" data-lang-en="Adult from" data-lang-ru="Взрослый от">ผู้ใหญ่ เริ่มต้น</span>
+              <span class="amt">฿3,350</span>
+            </div>
+            <a href="#booking" class="land-card__btn">
+              <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
+              <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buggy / Go-Kart -->
+      <div class="land-card reveal rd3">
+        <div class="land-card__pic">
+          <img src="https://images.unsplash.com/photo-1765517889303-26d377ee3d84?w=600&h=400&fit=crop" alt="บักกี้ออฟโรด" />
+          <div class="land-card__tag" data-lang-th="ครอบครัว" data-lang-en="Family" data-lang-ru="Семья">ครอบครัว</div>
+        </div>
+        <div class="land-card__body">
+          <h3 data-lang-th="บักกี้ออฟโรด + โกคาร์ท" data-lang-en="Off-Road Buggy + Go-Kart" data-lang-ru="Внедорожный багги + картинг">บักกี้ออฟโรด + โกคาร์ท</h3>
+          <p data-lang-th="สนุกกันได้ทั้งครอบครัว ขับบักกี้ 600–660cc ลุยเส้นทางธรรมชาติ หรือซิ่งโกคาร์ท 250cc 10 รอบสนาม มี ATV สำหรับเด็ก (110cc) รวมหมวกกันน็อกและประกัน" data-lang-en="Family fun for everyone — drive a 600–660cc buggy on nature trails or race a 250cc go-kart for 10 laps. Kids' ATV (110cc) available; helmet and insurance included." data-lang-ru="Веселье для всей семьи — багги 600–660cc по природным тропам или картинг 250cc на 10 кругов. Детский ATV (110cc); шлем и страховка включены.">สนุกกันได้ทั้งครอบครัว ขับบักกี้ 600–660cc ลุยเส้นทางธรรมชาติ หรือซิ่งโกคาร์ท 250cc 10 รอบสนาม มี ATV สำหรับเด็ก (110cc) รวมหมวกกันน็อกและประกัน</p>
+          <details class="tdetails">
+            <summary><span class="sm-l"><i data-lucide="list" width="15" height="15"></i><span data-lang-th="ตารางราคา บักกี้ / โกคาร์ท" data-lang-en="Buggy / Go-Kart prices" data-lang-ru="Цены багги / картинг">ตารางราคา บักกี้ / โกคาร์ท</span></span><i class="chev" data-lucide="chevron-down" width="16" height="16"></i></summary>
+            <div class="tdetails__inner">
+              <table class="ptable">
+                <caption>Buggy 600cc</caption>
+                <thead><tr><th data-lang-th="ระยะเวลา" data-lang-en="Duration" data-lang-ru="Длит.">ระยะเวลา</th><th data-lang-th="ผู้ขับ" data-lang-en="Driver" data-lang-ru="Водитель">ผู้ขับ</th><th data-lang-th="ผู้ซ้อน" data-lang-en="Passenger" data-lang-ru="Пассажир">ผู้ซ้อน</th></tr></thead>
+                <tbody>
+                  <tr><td>30 min</td><td>฿1,800</td><td>฿1,600</td></tr>
+                  <tr><td>45 min</td><td>฿2,200</td><td>฿1,800</td></tr>
+                  <tr><td>1 hr</td><td>฿2,600</td><td>฿2,000</td></tr>
+                  <tr><td>1.30 hr</td><td>฿3,600</td><td>฿2,600</td></tr>
+                </tbody>
+              </table>
+              <table class="ptable" style="margin-top:.8rem">
+                <caption>Buggy 660cc</caption>
+                <thead><tr><th data-lang-th="ระยะเวลา" data-lang-en="Duration" data-lang-ru="Длит.">ระยะเวลา</th><th data-lang-th="ผู้ขับ" data-lang-en="Driver" data-lang-ru="Водитель">ผู้ขับ</th><th data-lang-th="ผู้ซ้อน" data-lang-en="Passenger" data-lang-ru="Пассажир">ผู้ซ้อน</th></tr></thead>
+                <tbody>
+                  <tr><td>30 min</td><td>฿2,000</td><td>฿1,800</td></tr>
+                  <tr><td>45 min</td><td>฿2,400</td><td>฿2,000</td></tr>
+                  <tr><td>1 hr</td><td>฿2,800</td><td>฿2,200</td></tr>
+                  <tr><td>1.30 hr</td><td>฿3,800</td><td>฿2,800</td></tr>
+                </tbody>
+              </table>
+              <table class="ptable" style="margin-top:.8rem">
+                <tbody>
+                  <tr><td>Go Kart 250cc — 10 <span data-lang-th="รอบ" data-lang-en="laps" data-lang-ru="кругов">รอบ</span></td><td>฿1,500</td></tr>
+                  <tr><td data-lang-th="ATV เด็ก 110cc (อายุ 10–15) — 10 รอบ" data-lang-en="Kids ATV 110cc (ages 10–15) — 10 laps" data-lang-ru="Детский ATV 110cc (10–15 лет) — 10 кругов">ATV เด็ก 110cc (อายุ 10–15) — 10 รอบ</td><td>฿1,500</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div class="land-card__foot">
+            <div class="land-card__price">
+              <span class="lbl" data-lang-th="เริ่มต้น" data-lang-en="From" data-lang-ru="от">เริ่มต้น</span>
+              <span class="amt">฿1,500</span>
+            </div>
+            <a href="#booking" class="land-card__btn">
+              <span data-lang-th="จอง" data-lang-en="Book" data-lang-ru="Бронь">จอง</span>
+              <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- wave land(ivory-dk)→exp(navy) -->
+<div class="wsep" style="background:var(--ivory-dk)">
   <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0,70 C360,0 1080,70 1440,0 L1440,70 L0,70 Z" fill="#0a1628"/>
   </svg>
@@ -781,7 +1364,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
       <!-- Card 1 -->
       <div class="exp-card">
         <div class="exp-card__img">
-          <img src="https://images.unsplash.com/photo-1587691254941-bbd1faa13154?w=500&h=320&fit=crop" alt="เช่าเรือยอชต์ส่วนตัว" />
+          <img src="assets/view_2.jpg" alt="เรือทัวร์ส่วนตัว" />
         </div>
         <div class="exp-card__body">
           <div class="exp-card__ic"><i data-lucide="ship" width="18" height="18"></i></div>
@@ -792,7 +1375,7 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
       <!-- Card 2 -->
       <div class="exp-card">
         <div class="exp-card__img">
-          <img src="https://images.unsplash.com/photo-1776347645256-844c8d7302fb?w=500&h=320&fit=crop" alt="ดำน้ำลึกสกูบาไดฟ์วิ่ง" />
+          <img src="assets/diving_8.jpg" alt="ดำน้ำลึกกับเต่าทะเล" />
         </div>
         <div class="exp-card__body">
           <div class="exp-card__ic"><i data-lucide="waves" width="18" height="18"></i></div>
@@ -1007,19 +1590,19 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     </div>
     <div class="gallery__grid">
       <div class="gal-item reveal">
-        <img src="https://images.unsplash.com/photo-1708656705549-14bcdf9b4921?w=1000&h=500&fit=crop" alt="ชายหาดภูเก็ตและเรือหลากสี" />
+        <img src="assets/view_3.jpg" alt="ปีเลห์ลากูน เกาะพีพี" />
       </div>
       <div class="gal-item reveal rd1">
-        <img src="https://images.unsplash.com/photo-1704549931312-432d26dd53c3?w=500&h=400&fit=crop" alt="ชายหาดสวยล้อมด้วยต้นไม้" />
+        <img src="assets/view_4.jpg" alt="อ่าวมาหยา" />
       </div>
       <div class="gal-item reveal rd2">
-        <img src="https://images.unsplash.com/photo-1729717809162-c661ad4046d8?w=500&h=400&fit=crop" alt="สระว่ายน้ำอินฟินิตี้ริมทะเล" />
+        <img src="assets/view_1.jpg" alt="เจ็ตสกีบนชายหาด" />
       </div>
       <div class="gal-item reveal rd1">
-        <img src="https://images.unsplash.com/photo-1618161851494-df498fc0123c?w=900&h=450&fit=crop" alt="เงาเรือบนทะเลยามพระอาทิตย์ตก" />
+        <img src="assets/diving_4.jpg" alt="ดำน้ำลึกชมเรือจมและฝูงปลา" />
       </div>
       <div class="gal-item reveal rd2">
-        <img src="https://images.unsplash.com/photo-1776347645256-844c8d7302fb?w=500&h=400&fit=crop" alt="เรือใบบนทะเลสีฟ้า" />
+        <img src="assets/diving_8.jpg" alt="ดำน้ำกับเต่าทะเล" />
       </div>
     </div>
   </div>
@@ -1031,6 +1614,88 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
     <path d="M0,70 C360,0 1080,70 1440,0 L1440,70 L0,70 Z" fill="#0a1628"/>
   </svg>
 </div>
+
+<!-- ═══════════════════════ GOOD TO KNOW ═══════════════════════ -->
+<section class="sec gtk" id="info">
+  <div class="container">
+    <div class="center-text reveal" style="margin-bottom:2.75rem">
+      <div class="sec-label center">
+        <span data-lang-th="ข้อมูลที่ควรรู้" data-lang-en="Good to Know" data-lang-ru="Полезно знать">ข้อมูลที่ควรรู้</span>
+      </div>
+      <h2 class="sec-title lt" data-lang-th="รายละเอียดก่อนออกเดินทาง" data-lang-en="Everything Before You Go" data-lang-ru="Всё перед поездкой">รายละเอียดก่อนออกเดินทาง</h2>
+    </div>
+    <div class="gtk__grid">
+
+      <div class="gtk-card reveal">
+        <div class="gtk-card__ic"><i data-lucide="clock" width="20" height="20"></i></div>
+        <h3 data-lang-th="เวลารับ" data-lang-en="Pickup Times" data-lang-ru="Время трансфера">เวลารับ</h3>
+        <ul>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="ทัวร์เกาะพีพี: รับ 07:30–08:00 น. จากโรงแรม" data-lang-en="Phi Phi tours: hotel pickup 07:30–08:00" data-lang-ru="Туры Пхи-Пхи: трансфер из отеля 07:30–08:00">ทัวร์เกาะพีพี: รับ 07:30–08:00 น. จากโรงแรม</span></li>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="ATV / ทัวร์บนบก: ป่าตอง 08:00 · กะตะ-กะรน 08:30 (บ่าย 12:00 / 12:30)" data-lang-en="ATV / land tours: Patong 08:00 · Kata-Karon 08:30 (afternoon 12:00 / 12:30)" data-lang-ru="ATV / наземные: Патонг 08:00 · Ката-Карон 08:30 (день 12:00 / 12:30)">ATV / ทัวร์บนบก: ป่าตอง 08:00 · กะตะ-กะรน 08:30 (บ่าย 12:00 / 12:30)</span></li>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="ซิตี้ทัวร์: 3 รอบต่อวัน 07:30 / 10:00 / 13:00 น." data-lang-en="City tours: 3 daily rounds 07:30 / 10:00 / 13:00" data-lang-ru="Сити-туры: 3 заезда 07:30 / 10:00 / 13:00">ซิตี้ทัวร์: 3 รอบต่อวัน 07:30 / 10:00 / 13:00 น.</span></li>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="เจ็ตสกี: เช้า 09:30 · บ่าย 14:00 น. ที่ท่าเรือยามู" data-lang-en="Jet ski: morning 09:30 · afternoon 14:00 at Yamu Pier" data-lang-ru="Гидроцикл: утро 09:30 · день 14:00, пирс Яму">เจ็ตสกี: เช้า 09:30 · บ่าย 14:00 น. ที่ท่าเรือยามู</span></li>
+        </ul>
+      </div>
+
+      <div class="gtk-card reveal rd1">
+        <div class="gtk-card__ic"><i data-lucide="backpack" width="20" height="20"></i></div>
+        <h3 data-lang-th="สิ่งที่ควรนำไป" data-lang-en="What to Bring" data-lang-ru="Что взять с собой">สิ่งที่ควรนำไป</h3>
+        <ul>
+          <li><i data-lucide="check" width="16" height="16"></i><span data-lang-th="ชุดว่ายน้ำ ผ้าเช็ดตัว และชุดสำรอง" data-lang-en="Swimsuit, towel & a change of clothes" data-lang-ru="Купальник, полотенце и сменная одежда">ชุดว่ายน้ำ ผ้าเช็ดตัว และชุดสำรอง</span></li>
+          <li><i data-lucide="check" width="16" height="16"></i><span data-lang-th="ครีมกันแดดที่เป็นมิตรกับแนวปะการัง" data-lang-en="Reef-safe sunscreen" data-lang-ru="Безопасный для рифов крем">ครีมกันแดดที่เป็นมิตรกับแนวปะการัง</span></li>
+          <li><i data-lucide="check" width="16" height="16"></i><span data-lang-th="หมวก แว่นกันแดด และกล้องถ่ายรูป" data-lang-en="Cap, sunglasses & camera" data-lang-ru="Кепка, очки и камера">หมวก แว่นกันแดด และกล้องถ่ายรูป</span></li>
+          <li><i data-lucide="check" width="16" height="16"></i><span data-lang-th="เงินสด (ค่าธรรมเนียมอุทยาน / ค่าใช้จ่ายส่วนตัว)" data-lang-en="Cash (park fees / personal expenses)" data-lang-ru="Наличные (сборы парка / личные расходы)">เงินสด (ค่าธรรมเนียมอุทยาน / ค่าใช้จ่ายส่วนตัว)</span></li>
+        </ul>
+      </div>
+
+      <div class="gtk-card reveal rd2">
+        <div class="gtk-card__ic"><i data-lucide="utensils" width="20" height="20"></i></div>
+        <h3 data-lang-th="เมนูบนทริปเกาะพีพี" data-lang-en="Phi Phi Trip Menu" data-lang-ru="Меню тура Пхи-Пхи">เมนูบนทริปเกาะพีพี</h3>
+        <ul>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="สปาเกตตีซอสมะเขือเทศ" data-lang-en="Spaghetti tomato sauce" data-lang-ru="Спагетти в томатном соусе">สปาเกตตีซอสมะเขือเทศ</span></li>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="ต้มข่าไก่ · ต้มยำรวมมิตร" data-lang-en="Chicken coconut soup · mixed tom yum" data-lang-ru="Куриный суп с кокосом · том-ям">ต้มข่าไก่ · ต้มยำรวมมิตร</span></li>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="ไก่ทอด · ข้าวสวย" data-lang-en="Fried chicken · steamed rice" data-lang-ru="Жареная курица · рис">ไก่ทอด · ข้าวสวย</span></li>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="ผลไม้ · ชา และกาแฟ" data-lang-en="Fruit · coffee & tea" data-lang-ru="Фрукты · кофе и чай">ผลไม้ · ชา และกาแฟ</span></li>
+        </ul>
+      </div>
+
+      <div class="gtk-card reveal">
+        <div class="gtk-card__ic"><i data-lucide="shield-check" width="20" height="20"></i></div>
+        <h3 data-lang-th="ความปลอดภัยและเงื่อนไข" data-lang-en="Safety & Requirements" data-lang-ru="Безопасность и условия">ความปลอดภัยและเงื่อนไข</h3>
+        <ul>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="เสื้อชูชีพ ไกด์มืออาชีพ และประกันการเดินทางทุกทริป" data-lang-en="Life jackets, professional guides & travel insurance on every trip" data-lang-ru="Спасжилеты, гиды и страховка на каждом туре">เสื้อชูชีพ ไกด์มืออาชีพ และประกันการเดินทางทุกทริป</span></li>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="ทริปแพลงก์ตอนเจมส์บอนด์: ไม่อนุญาตสตรีมีครรภ์ ผู้ป่วยโรคหัวใจ/กระดูกสันหลัง" data-lang-en="James Bond plankton trip: no pregnant, heart or spinal conditions" data-lang-ru="Тур со светящимся планктоном: нельзя беременным, с болезнями сердца/позвоночника">ทริปแพลงก์ตอนเจมส์บอนด์: ไม่อนุญาตสตรีมีครรภ์ ผู้ป่วยโรคหัวใจ/กระดูกสันหลัง</span></li>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="ซิปไลน์จำกัดน้ำหนัก 120 กก. · ถ่ายรูปกับเสือ 16 ปีขึ้นไป" data-lang-en="Zipline weight limit 120 kg · tiger photo 16 yrs+" data-lang-ru="Зиплайн лимит 120 кг · фото с тигром от 16 лет">ซิปไลน์จำกัดน้ำหนัก 120 กก. · ถ่ายรูปกับเสือ 16 ปีขึ้นไป</span></li>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="โปรแกรมอาจปรับเปลี่ยนตามสภาพอากาศและน้ำขึ้นน้ำลง" data-lang-en="Programs may change with weather and tide conditions" data-lang-ru="Программы могут меняться из-за погоды и приливов">โปรแกรมอาจปรับเปลี่ยนตามสภาพอากาศและน้ำขึ้นน้ำลง</span></li>
+        </ul>
+      </div>
+
+      <div class="gtk-card reveal rd1">
+        <div class="gtk-card__ic"><i data-lucide="badge-check" width="20" height="20"></i></div>
+        <h3 data-lang-th="โดยทั่วไปรวม / ไม่รวม" data-lang-en="Generally Included / Excluded" data-lang-ru="Обычно включено / не включено">โดยทั่วไปรวม / ไม่รวม</h3>
+        <ul>
+          <li><i data-lucide="check" width="16" height="16"></i><span data-lang-th="รวม: รับ-ส่งโรงแรม อาหาร ไกด์ ประกัน อุปกรณ์ และน้ำดื่ม" data-lang-en="Included: hotel transfer, meals, guide, insurance, equipment & water" data-lang-ru="Включено: трансфер, питание, гид, страховка, снаряжение и вода">รวม: รับ-ส่งโรงแรม อาหาร ไกด์ ประกัน อุปกรณ์ และน้ำดื่ม</span></li>
+          <li><i data-lucide="x" width="16" height="16"></i><span data-lang-th="ไม่รวม: ค่าธรรมเนียมอุทยาน ภาพถ่ายใต้น้ำ ทิป และค่าใช้จ่ายส่วนตัว" data-lang-en="Excluded: national park fees, underwater photos, tips & personal expenses" data-lang-ru="Не включено: сборы нацпарка, подводные фото, чаевые и личные расходы">ไม่รวม: ค่าธรรมเนียมอุทยาน ภาพถ่ายใต้น้ำ ทิป และค่าใช้จ่ายส่วนตัว</span></li>
+          <li><i data-lucide="dot" width="16" height="16"></i><span data-lang-th="ค่าอุทยานเกาะพีพี (เงินสด): ผู้ใหญ่ ฿400 · เด็ก ฿300 · นักดำน้ำ ฿600" data-lang-en="Phi Phi park fee (cash): adult ฿400 · child ฿300 · diver ฿600" data-lang-ru="Сбор парка Пхи-Пхи (наличные): взрослый ฿400 · ребёнок ฿300 · дайвер ฿600">ค่าอุทยานเกาะพีพี (เงินสด): ผู้ใหญ่ ฿400 · เด็ก ฿300 · นักดำน้ำ ฿600</span></li>
+        </ul>
+      </div>
+
+      <div class="gtk-card reveal rd2">
+        <div class="gtk-card__ic"><i data-lucide="phone" width="20" height="20"></i></div>
+        <h3 data-lang-th="ผู้ให้บริการและติดต่อ" data-lang-en="Operators & Contacts" data-lang-ru="Операторы и контакты">ผู้ให้บริการและติดต่อ</h3>
+        <div class="gtk-contacts">
+          <div class="op">Sawanu Travel<span data-lang-th="เกาะพีพี / เกาะไข่ · +66 97 982 0999 · LINE @sawanutravel" data-lang-en="Phi Phi / Khai · +66 97 982 0999 · LINE @sawanutravel" data-lang-ru="Пхи-Пхи / Кхай · +66 97 982 0999 · LINE @sawanutravel">เกาะพีพี / เกาะไข่ · +66 97 982 0999 · LINE @sawanutravel</span></div>
+          <div class="op">Sri Thara Marine<span data-lang-th="เจมส์บอนด์ ซันเซ็ต · +66 96 096 0751 · LINE srithara.op" data-lang-en="James Bond Sunset · +66 96 096 0751 · LINE srithara.op" data-lang-ru="Джеймс Бонд закат · +66 96 096 0751 · LINE srithara.op">เจมส์บอนด์ ซันเซ็ต · +66 96 096 0751 · LINE srithara.op</span></div>
+          <div class="op">KB Phuket Jetski<span>+66 62 487 9559 · kbjetskiphuket@gmail.com</span></div>
+          <div class="op">ATV Seaview on Tour<span data-lang-th="+66 81 895 9345 · สายด่วน 065 919 4461 · TAT 33/04712" data-lang-en="+66 81 895 9345 · hotline 065 919 4461 · TAT 33/04712" data-lang-ru="+66 81 895 9345 · горячая линия 065 919 4461 · TAT 33/04712">+66 81 895 9345 · สายด่วน 065 919 4461 · TAT 33/04712</span></div>
+          <div class="op">SunBright Tour Co., Ltd.<span data-lang-th="ซิตี้ทัวร์ / เสือ · +66 61 174 7421, +66 82 432 2702" data-lang-en="City tours / Tiger · +66 61 174 7421, +66 82 432 2702" data-lang-ru="Сити-туры / тигр · +66 61 174 7421, +66 82 432 2702">ซิตี้ทัวร์ / เสือ · +66 61 174 7421, +66 82 432 2702</span></div>
+          <div class="op">Golden Region Dive Centre<span data-lang-th="ดำน้ำ PADI · จองผ่านแบบฟอร์มด้านล่าง" data-lang-en="PADI diving · book via the form below" data-lang-ru="Дайвинг PADI · бронь через форму ниже">ดำน้ำ PADI · จองผ่านแบบฟอร์มด้านล่าง</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- ═══════════════════════ BOOKING ═══════════════════════ -->
 <section class="sec booking" id="booking">
@@ -1074,9 +1739,17 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
             <label data-lang-th="โปรแกรมที่สนใจ" data-lang-en="Tour of Interest" data-lang-ru="Интересующий тур">โปรแกรมที่สนใจ</label>
             <select>
               <option value="" data-lang-th="เลือกโปรแกรม" data-lang-en="Select a tour" data-lang-ru="Выберите тур">เลือกโปรแกรม</option>
-              <option value="island" data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Andaman Island Hopping" data-lang-ru="Тур по островам Андаманского моря">ล่องเกาะหมู่เกาะอันดามัน</option>
-              <option value="sunset" data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Luxury Sunset Yacht Cruise" data-lang-ru="Люксовый круиз на яхте на закате">ล่องเรือยอชต์ชมพระอาทิตย์ตก</option>
-              <option value="snorkel" data-lang-th="ดำน้ำดูปะการัง" data-lang-en="Coral Paradise Snorkeling" data-lang-ru="Снорклинг в коралловом раю">ดำน้ำดูปะการัง</option>
+              <option value="phiphi" data-lang-th="ทัวร์เกาะพีพี + เกาะไข่" data-lang-en="Phi Phi + Khai Island Day Trip" data-lang-ru="Острова Пхи-Пхи + остров Кхай">ทัวร์เกาะพีพี + เกาะไข่</option>
+              <option value="jamesbond" data-lang-th="เจมส์บอนด์ ซันเซ็ต + แพลงก์ตอนเรืองแสง" data-lang-en="James Bond Sunset & Glowing Plankton" data-lang-ru="Джеймс Бонд на закате + светящийся планктон">เจมส์บอนด์ ซันเซ็ต + แพลงก์ตอนเรืองแสง</option>
+              <option value="phangnga" data-lang-th="เจมส์บอนด์ + อ่าวพังงา (เรือหางยาว)" data-lang-en="James Bond + Phang Nga Bay (Longtail)" data-lang-ru="Джеймс Бонд + залив Пханг-Нга">เจมส์บอนด์ + อ่าวพังงา (เรือหางยาว)</option>
+              <option value="jetski" data-lang-th="เจ็ตสกี 6 เกาะ 4 ชั่วโมง" data-lang-en="Jet Ski — 6 Islands, 4 Hours" data-lang-ru="Гидроцикл — 6 островов, 4 часа">เจ็ตสกี 6 เกาะ 4 ชั่วโมง</option>
+              <option value="diving" data-lang-th="ดำน้ำลึก PADI" data-lang-en="Scuba Diving (PADI)" data-lang-ru="Дайвинг (PADI)">ดำน้ำลึก PADI</option>
+              <option value="atv" data-lang-th="ATV ลุยป่า + จุดชมวิวพระใหญ่" data-lang-en="ATV Jungle Ride + Big Buddha" data-lang-ru="ATV по джунглям + Большой Будда">ATV ลุยป่า + จุดชมวิวพระใหญ่</option>
+              <option value="elephant" data-lang-th="ดูแลและให้อาหารช้าง" data-lang-en="Elephant Care & Feeding" data-lang-ru="Уход за слонами и кормление">ดูแลและให้อาหารช้าง</option>
+              <option value="city" data-lang-th="ซิตี้ทัวร์ภูเก็ต" data-lang-en="Phuket City Tour" data-lang-ru="Сити-тур по Пхукету">ซิตี้ทัวร์ภูเก็ต</option>
+              <option value="zipline" data-lang-th="ซิปไลน์ + ATV ครึ่งวัน" data-lang-en="Zipline + ATV Half-Day" data-lang-ru="Зиплайн + ATV полдня">ซิปไลน์ + ATV ครึ่งวัน</option>
+              <option value="tiger" data-lang-th="ซิตี้ทัวร์ + ประสบการณ์เสือ" data-lang-en="City Tour & Tiger Experience" data-lang-ru="Сити-тур + тигры">ซิตี้ทัวร์ + ประสบการณ์เสือ</option>
+              <option value="buggy" data-lang-th="บักกี้ออฟโรด + โกคาร์ท" data-lang-en="Off-Road Buggy + Go-Kart" data-lang-ru="Багги + картинг">บักกี้ออฟโรด + โกคาร์ท</option>
               <option value="custom" data-lang-th="ออกแบบเองตามต้องการ" data-lang-en="Custom Itinerary" data-lang-ru="Индивидуальный маршрут">ออกแบบเองตามต้องการ</option>
             </select>
           </div>
@@ -1116,10 +1789,10 @@ html[lang="th"] .hero__badge span{letter-spacing:0}
       <div class="footer__col">
         <h5 data-lang-th="โปรแกรมทัวร์" data-lang-en="Tours" data-lang-ru="Туры">โปรแกรมทัวร์</h5>
         <ul class="footer__links">
-          <li><a href="#tours" data-lang-th="ล่องเกาะหมู่เกาะอันดามัน" data-lang-en="Island Hopping" data-lang-ru="Туры по островам">ล่องเกาะหมู่เกาะอันดามัน</a></li>
-          <li><a href="#tours" data-lang-th="ล่องเรือยอชต์ชมพระอาทิตย์ตก" data-lang-en="Sunset Yacht Cruise" data-lang-ru="Круиз на яхте на закате">ล่องเรือยอชต์ชมพระอาทิตย์ตก</a></li>
-          <li><a href="#tours" data-lang-th="ดำน้ำดูปะการัง" data-lang-en="Snorkeling" data-lang-ru="Снорклинг">ดำน้ำดูปะการัง</a></li>
-          <li><a href="#experiences" data-lang-th="ประสบการณ์พิเศษทั้งหมด" data-lang-en="All Experiences" data-lang-ru="Все впечатления">ประสบการณ์พิเศษทั้งหมด</a></li>
+          <li><a href="#tours" data-lang-th="ทัวร์เกาะพีพี + เกาะไข่" data-lang-en="Phi Phi + Khai Island" data-lang-ru="Пхи-Пхи + остров Кхай">ทัวร์เกาะพีพี + เกาะไข่</a></li>
+          <li><a href="#tours" data-lang-th="เจมส์บอนด์ ซันเซ็ต + แพลงก์ตอน" data-lang-en="James Bond Sunset & Plankton" data-lang-ru="Джеймс Бонд + планктон">เจมส์บอนด์ ซันเซ็ต + แพลงก์ตอน</a></li>
+          <li><a href="#tours" data-lang-th="เจ็ตสกี 6 เกาะ" data-lang-en="Jet Ski 6 Islands" data-lang-ru="Гидроцикл 6 островов">เจ็ตสกี 6 เกาะ</a></li>
+          <li><a href="#tours" data-lang-th="ดำน้ำลึก PADI" data-lang-en="PADI Scuba Diving" data-lang-ru="Дайвинг PADI">ดำน้ำลึก PADI</a></li>
         </ul>
       </div>
       <div class="footer__col">
