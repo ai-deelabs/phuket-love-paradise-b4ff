@@ -51,6 +51,7 @@ export default function TourView({ lang, tour }: Props) {
       title: t('booking.title'),
       selectProgram: t('booking.selectProgram'),
       date: t('common.date'),
+      dateRequired: t('booking.dateRequired'),
       total: t('common.total'),
       bookNow: t('common.bookNow'),
       addToCart: t('common.addToCart'),

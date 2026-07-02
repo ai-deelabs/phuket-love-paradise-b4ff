@@ -909,3 +909,7 @@ body.has-sbar{padding-bottom:76px}
 .testi-stars svg{fill:currentColor}
 /* tour page: reserve room for the sticky book bar */
 .tourpg-wrap{padding-bottom:76px}@media(min-width:1024px){.tourpg-wrap{padding-bottom:0}}
+
+/* ── BOOKING VALIDATION ── */
+.bbox .fg input.fg--error{border-color:#b3413a;background:rgba(179,65,58,.06)}
+.fg__err{color:#b3413a;font-size:.74rem;line-height:1.6;margin-top:.35rem}

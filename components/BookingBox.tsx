@@ -20,6 +20,7 @@ export interface BookingBoxProps {
     title: string;
     selectProgram: string;
     date: string;
+    dateRequired: string;
     total: string;
     bookNow: string;
     addToCart: string;
@@ -38,6 +39,8 @@ export default function BookingBox({ tourId, cartUrl, labels, variants }: Bookin
   const [children, setChildren] = useState(0);
   const [added, setAdded] = useState(false);
   const [minDate, setMinDate] = useState('');
+  const [dateError, setDateError] = useState(false);
+  const dateRef = useRef<HTMLInputElement | null>(null);
   const addedTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -62,25 +65,33 @@ export default function BookingBox({ tourId, cartUrl, labels, variants }: Bookin
     if (v && v.child === null) setChildren(0);
   }
 
-  function add() {
+  /** Requires a travel date; returns false (and flags the field) without one. */
+  function add(): boolean {
+    if (!date) {
+      setDateError(true);
+      dateRef.current?.focus();
+      dateRef.current?.showPicker?.();
+      return false;
+    }
     addItem({
       tour: tourId,
       variant: variant.id,
-      date: date || '',
+      date,
       adults,
       children,
     });
+    return true;
   }
 
   function onAdd() {
-    add();
+    if (!add()) return;
     setAdded(true);
     if (addedTimer.current) clearTimeout(addedTimer.current);
     addedTimer.current = setTimeout(() => setAdded(false), 1600);
   }
 
   function onBook() {
-    add();
+    if (!add()) return;
     window.location.href = cartUrl;
   }
 
@@ -102,10 +113,18 @@ export default function BookingBox({ tourId, cartUrl, labels, variants }: Bookin
         <input
           type="date"
           id="bkDate"
+          ref={dateRef}
+          className={dateError ? 'fg--error' : undefined}
           min={minDate || undefined}
           value={date}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={(e) => {
+            setDate(e.target.value);
+            if (e.target.value) setDateError(false);
+          }}
+          required
+          aria-invalid={dateError}
         />
+        {dateError && <p className="fg__err">{labels.dateRequired}</p>}
       </div>
       <div className="bbox__row">
         <div className="stepper">
