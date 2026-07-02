@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import Icon from '../Icon';
 import type { Lang } from '@/lib/i18n';
 import { heroSrc } from '@/lib/images';
@@ -40,7 +41,10 @@ export default function Hero({ lang }: Props) {
   }[lang];
 
   return (
-    <section className="hero" style={{ ['--hero-bg' as any]: `url(${heroSrc('view_3.jpg')})` }}>
+    <section
+      className="hero"
+      style={{ '--hero-bg': `url(${heroSrc('view_3.jpg')})` } as CSSProperties}
+    >
       <div className="hero__bg"></div>
       <div className="hero__veil"></div>
       <div className="hero__content">

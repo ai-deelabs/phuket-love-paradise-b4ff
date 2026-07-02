@@ -16,7 +16,7 @@ export default function SiteShell({ lang, alternates, children }: Props) {
   return (
     <>
       <Nav lang={lang} alternates={alternates} />
-      {children}
+      <main>{children}</main>
       <Footer lang={lang} />
       <SiteBehaviors />
     </>

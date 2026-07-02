@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import type { Lang } from '@/lib/i18n';
 import { heroSrc } from '@/lib/images';
 
@@ -52,7 +53,10 @@ export default function Stats({ lang }: Props) {
   ];
 
   return (
-    <section className="stats" style={{ ['--stats-bg' as any]: `url(${heroSrc('stats_bg.jpg')})` }}>
+    <section
+      className="stats"
+      style={{ '--stats-bg': `url(${heroSrc('stats_bg.jpg')})` } as CSSProperties}
+    >
       <div className="stats__bg"></div>
       <div className="stats__veil"></div>
       <div className="stats__inner">
