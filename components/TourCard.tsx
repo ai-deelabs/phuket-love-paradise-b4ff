@@ -51,10 +51,10 @@ export default function TourCard({ tour, lang, loading = 'lazy' }: Props) {
               {formatBaht(d.priceFrom)} <small>{perLabel}</small>
             </span>
           </div>
-          <span className="pcard__btn">
+          <a className="pcard__btn" href={url}>
             {t('common.viewDetails')}
             <Icon name="arrow-right" size={13} />
-          </span>
+          </a>
         </div>
       </div>
     </article>
