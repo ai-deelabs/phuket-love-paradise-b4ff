@@ -9,8 +9,6 @@ export function generateStaticParams() {
   return PREFIXED_LOCALES.map((lang) => ({ lang }));
 }
 
-export const dynamicParams = false;
-
 export default async function LocalizedRootLayout({
   children,
   params,
@@ -19,8 +17,10 @@ export default async function LocalizedRootLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  // This segment also serves the top-level Thai keyword pages (see [lang]/page.tsx).
+  const htmlLang = (PREFIXED_LOCALES as string[]).includes(lang) ? (lang as Lang) : 'th';
   return (
-    <html lang={lang}>
+    <html lang={htmlLang}>
       <body>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

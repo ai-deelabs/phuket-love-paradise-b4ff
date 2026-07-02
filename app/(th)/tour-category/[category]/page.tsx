@@ -4,11 +4,14 @@ import CategoryView from '@/components/views/CategoryView';
 import { getCategories } from '@/lib/content';
 import { pageMeta } from '@/lib/meta';
 import { categoryAlternates } from '@/lib/routes';
+import { devEncodedVariants } from '@/lib/dev-params';
 
 type Params = Promise<{ category: string }>;
 
 export function generateStaticParams() {
-  return getCategories().map((c) => ({ category: c.data.slugs.th }));
+  return getCategories().flatMap((c) =>
+    devEncodedVariants(c.data.slugs.th).map((category) => ({ category })),
+  );
 }
 export const dynamicParams = false;
 

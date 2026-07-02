@@ -5,11 +5,14 @@ import { getTours } from '@/lib/content';
 import { heroSrc } from '@/lib/images';
 import { pageMeta } from '@/lib/meta';
 import { tourAlternates } from '@/lib/routes';
+import { devEncodedVariants } from '@/lib/dev-params';
 
 type Params = Promise<{ slug: string }>;
 
 export function generateStaticParams() {
-  return getTours().map((tour) => ({ slug: tour.data.slugs.th }));
+  return getTours().flatMap((tour) =>
+    devEncodedVariants(tour.data.slugs.th).map((slug) => ({ slug })),
+  );
 }
 export const dynamicParams = false;
 
