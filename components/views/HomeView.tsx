@@ -3,7 +3,6 @@ import JsonLd from '../JsonLd';
 import SiteShell from '../SiteShell';
 import WaveSep from '../WaveSep';
 import Hero from '../home/Hero';
-import About from '../home/About';
 import FeaturedTours from '../home/FeaturedTours';
 import Experiences from '../home/Experiences';
 import Stats from '../home/Stats';
@@ -52,11 +51,8 @@ export default function HomeView({ lang }: { lang: Lang }) {
 
       <Hero lang={lang} />
 
-      {/* wave hero→about */}
-      <WaveSep bg="var(--navy)" fill="#0a1628" shape="hero" />
-
-      {/* About renders its own trailing wave: about(navy)→tours(ivory) */}
-      <About lang={lang} />
+      {/* wave hero(dark)→tours(ivory) */}
+      <WaveSep bg="var(--navy)" fill="#faf6ee" shape="dip" />
 
       <FeaturedTours lang={lang} />
 
