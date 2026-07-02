@@ -1,11 +1,11 @@
-// Pre-optimizes src/assets JPGs into public/img WebP variants for the static
+// Pre-optimizes assets/ JPGs into public/img WebP variants for the static
 // export (next/image optimization is unavailable with output:'export').
 // Idempotent: skips outputs that already exist and are newer than the source.
 import { existsSync, mkdirSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import sharp from 'sharp';
 
-const SRC = 'src/assets';
+const SRC = 'assets';
 const OUT = 'public/img';
 const VARIANTS = [
   { suffix: '-1600', width: 1600, quality: 72 },

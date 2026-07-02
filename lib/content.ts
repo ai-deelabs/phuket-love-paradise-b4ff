@@ -1,4 +1,4 @@
-// Build-time content loader for the JSON collections in src/content/.
+// Build-time content loader for the JSON collections in content/.
 // Server-only (uses fs); every page is statically generated so this never
 // runs in the browser.
 import 'server-only';
@@ -62,7 +62,7 @@ export type CategoryData = z.output<typeof categorySchema>;
 export type TourData = z.output<typeof tourSchema>;
 export type Variant = TourData['variants'][number];
 
-/** Mirrors Astro's CollectionEntry shape so ported components keep `entry.data.x`. */
+/** A content entry: file id plus its validated data. */
 export interface Entry<T> {
   id: string;
   data: T;
@@ -71,7 +71,7 @@ export type Category = Entry<CategoryData>;
 export type Tour = Entry<TourData>;
 
 function load<T>(dir: string, schema: z.ZodType<T, z.ZodTypeDef, unknown>): Entry<T>[] {
-  const base = join(process.cwd(), 'src/content', dir);
+  const base = join(process.cwd(), 'content', dir);
   return readdirSync(base)
     .filter((f) => f.endsWith('.json'))
     .map((f) => ({

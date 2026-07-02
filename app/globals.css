@@ -900,12 +900,12 @@ body.has-sbar{padding-bottom:76px}
   .cart-sum{position:sticky;top:90px}
 }
 
-/* ── LANG SWITCHER OPTIONS (was Nav.astro scoped style) ── */
+/* ── LANG SWITCHER OPTIONS ── */
 .lang-sw__opt{color:rgba(255,255,255,.6);padding:0 .15rem;transition:color .2s}
 .lang-sw__opt:hover{color:var(--gold-light)}
 .lang-sw__opt.active{color:var(--gold)}
 .lang-sw__opt:not(:last-child)::after{content:'·';color:rgba(255,255,255,.25);padding-left:.3rem}
-/* star fill for testimonial icons (was Testimonials.astro is:global) */
+/* star fill for testimonial icons */
 .testi-stars svg{fill:currentColor}
-/* tour page: reserve room for the sticky book bar (was body.has-sbar in Astro) */
+/* tour page: reserve room for the sticky book bar */
 .tourpg-wrap{padding-bottom:76px}@media(min-width:1024px){.tourpg-wrap{padding-bottom:0}}
