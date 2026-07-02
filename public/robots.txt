@@ -3,5 +3,8 @@ Allow: /
 Disallow: /cart/
 Disallow: /en/cart/
 Disallow: /ru/cart/
+Disallow: /payment-success/
+Disallow: /en/payment-success/
+Disallow: /ru/payment-success/
 
 Sitemap: https://phuketloveparadise.com/sitemap.xml

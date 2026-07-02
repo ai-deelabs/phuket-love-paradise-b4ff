@@ -913,3 +913,16 @@ body.has-sbar{padding-bottom:76px}
 /* ── BOOKING VALIDATION ── */
 .bbox .fg input.fg--error{border-color:#b3413a;background:rgba(179,65,58,.06)}
 .fg__err{color:#b3413a;font-size:.74rem;line-height:1.6;margin-top:.35rem}
+
+/* ── STRIPE DEPOSIT CHECKOUT ── */
+.cart-sum__deposit{color:var(--gold-light);font-weight:600;padding-top:.1rem}
+.cart-sum__or{text-align:center;color:rgba(240,234,214,.45);font-size:.78rem;margin:1rem 0 .2rem}
+.btn-pay{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  background:#635BFF;color:#fff;font-family:inherit;font-weight:700;font-size:.9rem;
+  padding:.9rem 1.5rem;border-radius:100px;border:none;cursor:pointer;
+  transition:filter .25s,transform .25s;min-height:48px;
+}
+.btn-pay:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.btn-pay:disabled{opacity:.6;cursor:default;transform:none}
+.cart-pay-err{color:#ff9d96;font-size:.78rem;line-height:1.7;margin-top:.6rem;text-align:center}

@@ -44,6 +44,7 @@ export default function CartView({ lang }: { lang: Lang }) {
   }
 
   const config: CartConfig = {
+    lang,
     lineId: LINE_ID,
     waNumber: WHATSAPP_NUMBER,
     email: EMAIL,
@@ -60,6 +61,11 @@ export default function CartView({ lang }: { lang: Lang }) {
       'cart.note',
       'cart.sent',
       'cart.clear',
+      'cart.or',
+      'cart.deposit',
+      'cart.payDeposit',
+      'cart.payNote',
+      'cart.payError',
       'common.date',
       'msg.heading',
       'msg.program',

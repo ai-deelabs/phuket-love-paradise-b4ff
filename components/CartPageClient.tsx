@@ -3,7 +3,7 @@
 // Cart page renderer + checkout composer. All prices/titles come from the
 // build-emitted catalog payload passed as props, never from localStorage.
 import { useEffect, useState } from 'react';
-import { ShoppingCart } from 'lucide-react';
+import { CreditCard, ShoppingCart } from 'lucide-react';
 import { clearCart, getCart, removeItem, updateItem, type CartItem } from '@/lib/cart';
 import { formatBaht } from '@/lib/images';
 
@@ -21,6 +21,7 @@ export interface CatalogTour {
   variants: Record<string, CatalogVariant>;
 }
 export interface CartConfig {
+  lang: string;
   lineId: string;
   waNumber: string;
   email: string;
@@ -73,6 +74,8 @@ export default function CartPageClient({ catalog, config }: Props) {
   // Hydration guard: the server renders an empty list; the cart only loads
   // client-side in the effect below. `null` = not yet read from localStorage.
   const [items, setItems] = useState<CartItem[] | null>(null);
+  const [paying, setPaying] = useState(false);
+  const [payError, setPayError] = useState(false);
 
   useEffect(() => {
     const refresh = () => {
@@ -129,7 +132,28 @@ export default function CartPageClient({ catalog, config }: Props) {
   const loaded = items !== null;
   const isEmpty = loaded && rows.length === 0;
   const grand = rows.reduce((s, l) => s + l.total, 0);
+  const deposit = grand / 2;
   const msg = checkoutMessage();
+
+  async function payDeposit() {
+    setPaying(true);
+    setPayError(false);
+    try {
+      const res = await fetch('/api/checkout/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items, lang: config.lang }),
+      });
+      const data = (await res.json()) as { url?: string };
+      if (!res.ok || !data.url) throw new Error('checkout failed');
+      // cart is NOT cleared here — the customer may cancel and come back;
+      // the success page clears it after payment.
+      window.location.href = data.url;
+    } catch {
+      setPayError(true);
+      setPaying(false);
+    }
+  }
 
   const tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
@@ -196,6 +220,10 @@ export default function CartPageClient({ catalog, config }: Props) {
                 <span className="lbl">{ui('cart.grandTotal')}</span>
                 <span className="amt">{fmt(grand)}</span>
               </div>
+              <div className="cart-sum__row cart-sum__deposit">
+                <span>{ui('cart.deposit')}</span>
+                <span>{fmt(deposit)}</span>
+              </div>
               <div className="cart-sum__btns">
                 <a
                   className="btn-line"
@@ -221,6 +249,15 @@ export default function CartPageClient({ catalog, config }: Props) {
                   {ui('cart.checkoutMail')}
                 </a>
               </p>
+              <p className="cart-sum__or">{ui('cart.or')}</p>
+              <div className="cart-sum__btns">
+                <button type="button" className="btn-pay" onClick={payDeposit} disabled={paying}>
+                  <CreditCard size={17} />
+                  {paying ? '…' : `${ui('cart.payDeposit')} — ${fmt(deposit)}`}
+                </button>
+              </div>
+              {payError && <p className="cart-pay-err">{ui('cart.payError')}</p>}
+              <p className="cart-note">{ui('cart.payNote')}</p>
               <p className="cart-note">{ui('cart.note')}</p>
               <p className="cart-sum__alt">
                 {ui('cart.sent')}

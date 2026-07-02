@@ -1,10 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   trailingSlash: true,
   images: {
-    // static export: images are pre-optimized to WebP by scripts/optimize-images.mjs
+    // images are pre-optimized to WebP by scripts/optimize-images.mjs
     unoptimized: true,
+  },
+  outputFileTracingIncludes: {
+    // lib/content.ts reads these with fs at runtime in the checkout API route
+    '/api/checkout': ['./content/**/*'],
+  },
+  async redirects() {
+    return ['/v1.html', '/v2.html', '/v3.html'].map((source) => ({
+      source,
+      destination: '/',
+      permanent: true,
+    }));
   },
 };
 
