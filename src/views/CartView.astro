@@ -1,0 +1,115 @@
+---
+import { getImage } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Icon from '../components/Icon.astro';
+import type { Lang } from '../i18n/config';
+import { uiSubset, useT } from '../i18n/ui';
+import { assetImage } from '../lib/images';
+import { cartAlternates, catalogUrl, homeUrl, tourUrl } from '../lib/routes';
+import { EMAIL, LINE_ID, WHATSAPP_NUMBER } from '../lib/site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+
+const tours = await getCollection('tours');
+
+// Per-locale catalog snapshot for the client renderer: prices/titles are
+// resolved from this build-time data, never trusted from localStorage.
+const catalog: Record<string, unknown> = {};
+for (const tour of tours) {
+  const thumb = await getImage({ src: assetImage(tour.data.hero), width: 200, height: 200, format: 'webp' });
+  catalog[tour.id] = {
+    title: tour.data.title[lang],
+    url: tourUrl(tour, lang),
+    img: thumb.src,
+    variants: Object.fromEntries(
+      tour.data.variants.map((v) => [
+        v.id,
+        {
+          label: `${v.group ? `${v.group[lang]} · ` : ''}${v.label[lang]}`,
+          adult: v.adult,
+          child: v.child,
+          adultLabel: v.adultLabel?.[lang] ?? t('common.adult'),
+          childLabel: v.childLabel?.[lang] ?? t('common.child'),
+        },
+      ]),
+    ),
+  };
+}
+
+const config = {
+  lang,
+  lineId: LINE_ID,
+  waNumber: WHATSAPP_NUMBER,
+  email: EMAIL,
+  browseUrl: catalogUrl(lang),
+  ui: uiSubset(lang, [
+    'cart.empty',
+    'cart.browse',
+    'cart.remove',
+    'cart.summary',
+    'cart.grandTotal',
+    'cart.checkoutLine',
+    'cart.checkoutWa',
+    'cart.checkoutMail',
+    'cart.note',
+    'cart.sent',
+    'cart.clear',
+    'common.date',
+    'msg.heading',
+    'msg.program',
+    'msg.date',
+    'msg.adults',
+    'msg.children',
+    'msg.subtotal',
+    'msg.total',
+    'msg.name',
+    'msg.hotel',
+    'msg.footer',
+    'msg.noDate',
+  ]),
+};
+
+const seoTitle = { th: 'ตะกร้าทัวร์ | Phuket Love Paradise', en: 'Tour Cart | Phuket Love Paradise', ru: 'Корзина туров | Phuket Love Paradise' }[lang];
+---
+
+<BaseLayout
+  lang={lang}
+  title={seoTitle}
+  description={t('cart.title')}
+  alternates={cartAlternates()}
+  noindex={true}
+  bodyClass="cartpg"
+>
+  <header class="page-hero">
+    <div class="page-hero__inner">
+      <Breadcrumbs items={[{ label: t('nav.home'), href: homeUrl(lang) }, { label: t('cart.title') }]} />
+      <h1 class="sec-title">{t('cart.title')}</h1>
+    </div>
+  </header>
+
+  <section class="sec cartpg">
+    <div class="container">
+      <div class="cartpg__grid" id="cartRoot">
+        <div class="cart-list" id="cartList"></div>
+        <div class="cart-sum" id="cartSum" hidden></div>
+      </div>
+      <div class="cart-empty" id="cartEmpty" hidden>
+        <Icon name="shopping-cart" size={40} />
+        <p>{t('cart.empty')}</p>
+        <a class="btn-gold" href={catalogUrl(lang)}>{t('cart.browse')}</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/json" id="plp-catalog" set:html={JSON.stringify(catalog)} />
+  <script type="application/json" id="plp-config" set:html={JSON.stringify(config)} />
+  <script>
+    import '../scripts/cart-page';
+  </script>
+</BaseLayout>

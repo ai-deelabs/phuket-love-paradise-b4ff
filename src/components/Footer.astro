@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import { type Lang } from '../i18n/config';
+import { useT } from '../i18n/ui';
+import { categoryUrl, howToBookUrl, tourUrl } from '../lib/routes';
+import { EMAIL, FACEBOOK_URL, LINE_ADD_URL, PHONE_DISPLAY } from '../lib/site';
+import Icon from './Icon.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+
+const tours = (await getCollection('tours')).sort((a, b) => a.data.order - b.data.order);
+const categories = (await getCollection('categories')).sort((a, b) => a.data.order - b.data.order);
+const featured = tours.filter((tr) => tr.data.featured).slice(0, 4);
+
+const brandLine = {
+  th: 'บริการทัวร์หรูหราในภูเก็ต ออกแบบประสบการณ์สุดพิเศษบนทะเลอันดามัน กับทีมงานมืออาชีพที่ใส่ใจในทุกรายละเอียด',
+  en: 'Luxury tour specialists in Phuket, crafting extraordinary Andaman Sea experiences with an expert team dedicated to every detail.',
+  ru: 'Специалисты по люксовым турам на Пхукете. Создаём незабываемые впечатления на Андаманском море с командой профессионалов, внимательной к каждой детали.',
+}[lang];
+const address = {
+  th: 'ภูเก็ต, ประเทศไทย 83000',
+  en: 'Phuket, Thailand 83000',
+  ru: 'Пхукет, Таиланд 83000',
+}[lang];
+const hoursLine = {
+  th: 'ทุกวัน 08:00–20:00 น.',
+  en: 'Daily 08:00–20:00',
+  ru: 'Ежедневно 08:00–20:00',
+}[lang];
+const copyright = {
+  th: '© 2026 ภูเก็ตเลิฟพาราไดซ์ สงวนลิขสิทธิ์',
+  en: '© 2026 Phuket Love Paradise. All rights reserved.',
+  ru: '© 2026 Phuket Love Paradise. Все права защищены.',
+}[lang];
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand-col">
+        <div class="footer__brand-name">Phuket Love Paradise</div>
+        <div class="footer__brand-sub">ภูเก็ตเลิฟพาราไดซ์</div>
+        <p>{brandLine}</p>
+        <div class="footer__socials">
+          <a href={FACEBOOK_URL} class="footer__soc" aria-label="Facebook" rel="noopener" target="_blank"><Icon name="facebook" size={16} /></a>
+          <a href={LINE_ADD_URL} class="footer__soc" aria-label="LINE" rel="noopener" target="_blank"><Icon name="message-circle" size={16} /></a>
+          <a href={`mailto:${EMAIL}`} class="footer__soc" aria-label="Email"><Icon name="mail" size={16} /></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5>{t('nav.tours')}</h5>
+        <ul class="footer__links">
+          {featured.map((tr) => (
+            <li><a href={tourUrl(tr, lang)}>{tr.data.title[lang]}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>{t('nav.categories')}</h5>
+        <ul class="footer__links">
+          {categories.map((c) => (
+            <li><a href={categoryUrl(c, lang)}>{c.data.title[lang]}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>{t('nav.contact')}</h5>
+        <div class="footer__ci">
+          <div class="footer__ci-item">
+            <Icon name="phone" size={14} />
+            <span>{PHONE_DISPLAY}</span>
+          </div>
+          <div class="footer__ci-item">
+            <Icon name="mail" size={14} />
+            <span>{EMAIL}</span>
+          </div>
+          <div class="footer__ci-item">
+            <Icon name="map-pin" size={14} />
+            <span>{address}</span>
+          </div>
+          <div class="footer__ci-item">
+            <Icon name="clock" size={14} />
+            <span>{hoursLine}</span>
+          </div>
+          <div class="footer__ci-item">
+            <Icon name="book-open" size={14} />
+            <a href={howToBookUrl(lang)}>{t('nav.howToBook')}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>{copyright}</p>
+    </div>
+  </div>
+</footer>

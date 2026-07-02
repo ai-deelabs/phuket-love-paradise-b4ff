@@ -1,0 +1,35 @@
+{
+  "order": 4,
+  "slugs": {
+    "th": "ทัวร์ครึ่งวัน",
+    "en": "phuket-half-day-tours",
+    "ru": "phuket-half-day-tours"
+  },
+  "title": {
+    "th": "ทัวร์ภูเก็ตครึ่งวัน",
+    "en": "Phuket Half-Day Tours",
+    "ru": "Туры на полдня по Пхукету"
+  },
+  "shortTitle": {
+    "th": "ครึ่งวัน",
+    "en": "Half-Day",
+    "ru": "Полдня"
+  },
+  "description": {
+    "th": "มีเวลาน้อยก็เที่ยวสนุกได้ — โปรแกรมครึ่งวันทั้งเช้าและบ่าย ATV ซิปไลน์ ช้าง ซิตี้ทัวร์ เจ็ตสกี เลือกได้ตามใจ เหลือเวลาพักผ่อนริมหาด",
+    "en": "Short on time? Morning and afternoon half-day programs — ATV, zipline, elephants, city tour, jet ski — with your beach afternoon still intact.",
+    "ru": "Мало времени? Программы на полдня утром и после обеда — ATV, зиплайн, слоны, сити-тур, гидроциклы — и пляж всё ещё ваш."
+  },
+  "seo": {
+    "title": {
+      "th": "ทัวร์ภูเก็ตครึ่งวัน 2026 ATV ซิปไลน์ ช้าง เจ็ตสกี | Phuket Love Paradise",
+      "en": "Phuket Half-Day Tours 2026 — ATV, Zipline, Elephants, Jet Ski",
+      "ru": "Туры на полдня по Пхукету 2026 — ATV, зиплайн, слоны, гидроциклы"
+    },
+    "description": {
+      "th": "จองทัวร์ครึ่งวันภูเก็ต ATV ซิปไลน์ ดูแลช้าง ซิตี้ทัวร์ เจ็ตสกี รอบเช้า-บ่าย รวมรถรับส่ง เริ่มต้น ฿1,400 จองง่ายผ่าน LINE",
+      "en": "Book Phuket half-day tours — ATV, zipline, elephant care, city tour, jet ski. Morning/afternoon rounds with transfer, from ฿1,400.",
+      "ru": "Туры на полдня: ATV, зиплайн, уход за слонами, сити-тур, гидроциклы. Утро/день, с трансфером, от ฿1,400."
+    }
+  }
+}

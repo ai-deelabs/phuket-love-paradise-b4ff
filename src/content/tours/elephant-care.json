@@ -1,0 +1,117 @@
+{
+  "order": 8,
+  "slugs": {
+    "th": "ทัวร์ดูแลช้าง",
+    "en": "ethical-elephant-care",
+    "ru": "ethical-elephant-care"
+  },
+  "title": {
+    "th": "ดูแลและให้อาหารช้าง (อนุรักษ์)",
+    "en": "Elephant Care & Feeding (Ethical)",
+    "ru": "Уход за слонами и кормление (этично)"
+  },
+  "summary": {
+    "th": "ใกล้ชิดช้างอย่างมีจริยธรรม เตรียมอาหารและป้อนช้าง เรียนรู้พฤติกรรม ถ่ายรูปกับลูกช้าง พร้อมจุดถ่ายรูปวิวรูปหัวใจ และแวะจุดชมวิวพระใหญ่",
+    "en": "An ethical close encounter — prepare food and feed the elephants, learn their behaviour, take photos with a baby elephant, plus the heart-shaped viewpoint and Big Buddha stop.",
+    "ru": "Этичное близкое знакомство — приготовьте корм и покормите слонов, узнайте об их поведении, сфотографируйтесь со слонёнком, смотровая «сердце» и остановка у Большого Будды."
+  },
+  "categories": ["land-adventure", "half-day", "cheap", "packages"],
+  "badge": {
+    "th": "เป็นมิตรกับสัตว์",
+    "en": "Ethical",
+    "ru": "Этично"
+  },
+  "hero": "elephant_care.jpg",
+  "durationLabel": {
+    "th": "ครึ่งวัน",
+    "en": "Half day",
+    "ru": "Полдня"
+  },
+  "halfDay": true,
+  "meta": [
+    { "icon": "clock", "text": { "th": "โปรแกรมครึ่งวัน", "en": "Half-day program", "ru": "Программа на полдня" } },
+    { "icon": "map-pin", "text": { "th": "จุดชมวิวพระใหญ่ ภูเก็ต", "en": "Big Buddha viewpoint, Phuket", "ru": "Смотровая Большого Будды, Пхукет" } },
+    { "icon": "users", "text": { "th": "เหมาะกับครอบครัวและเด็ก", "en": "Family and kid friendly", "ru": "Подходит для семей с детьми" } }
+  ],
+  "highlights": [
+    { "icon": "circle-check", "text": { "th": "เตรียมอาหารและป้อนช้างอย่างมีจริยธรรม", "en": "Prepare food and feed the elephants ethically", "ru": "Приготовьте корм и этично покормите слонов" } },
+    { "icon": "circle-check", "text": { "th": "เรียนรู้พฤติกรรมและถ่ายรูปกับลูกช้าง", "en": "Learn elephant behaviour and take photos with a baby elephant", "ru": "Узнайте о поведении слонов и сфотографируйтесь со слонёнком" } },
+    { "icon": "circle-check", "text": { "th": "จุดถ่ายรูปวิวรูปหัวใจ และแวะจุดชมวิวพระใหญ่", "en": "Heart-shaped viewpoint photo spot plus the Big Buddha stop", "ru": "Фотоспот со смотровой «сердце» и остановка у Большого Будды" } }
+  ],
+  "priceFrom": 1600,
+  "priceUnit": "person",
+  "variants": [
+    {
+      "id": "feed-care",
+      "group": { "th": "โปรแกรมดูแลช้าง", "en": "Elephant care programs", "ru": "Программы ухода" },
+      "label": { "th": "ให้อาหาร & ดูแล (Sky Walk 1)", "en": "Feed & Care (Sky Walk 1)", "ru": "Кормление и уход (Sky Walk 1)" },
+      "adult": 1600,
+      "child": 1400,
+      "childLabel": { "th": "เด็ก", "en": "Child", "ru": "Ребёнок" }
+    },
+    {
+      "id": "bathing-care",
+      "group": { "th": "โปรแกรมดูแลช้าง", "en": "Elephant care programs", "ru": "Программы ухода" },
+      "label": { "th": "อาบน้ำ & ดูแลช้าง", "en": "Bathing & Care", "ru": "Купание и уход" },
+      "adult": 2200,
+      "child": 2000,
+      "childLabel": { "th": "เด็ก", "en": "Child", "ru": "Ребёнок" }
+    },
+    {
+      "id": "nature-care",
+      "group": { "th": "โปรแกรมดูแลช้าง", "en": "Elephant care programs", "ru": "Программы ухода" },
+      "label": { "th": "ธรรมชาติ & ดูแลช้าง", "en": "Nature & Care", "ru": "Природа и уход" },
+      "adult": 2400,
+      "child": 2200,
+      "childLabel": { "th": "เด็ก", "en": "Child", "ru": "Ребёнок" }
+    },
+    {
+      "id": "feed-atv",
+      "group": { "th": "แพ็คเกจคอมโบ", "en": "Combo packages", "ru": "Комбо-пакеты" },
+      "label": { "th": "ให้อาหารช้าง + ATV (Sky Walk 2)", "en": "Elephant feeding + ATV (Sky Walk 2)", "ru": "Кормление + ATV (Sky Walk 2)" },
+      "adult": 2400,
+      "child": 2200,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "seaview-atv",
+      "group": { "th": "แพ็คเกจคอมโบ", "en": "Combo packages", "ru": "Комбо-пакеты" },
+      "label": { "th": "ดูแลช้างวิวทะเล + ATV", "en": "Seaview elephant care + ATV", "ru": "Уход со смотровой + ATV" },
+      "adult": 2600,
+      "child": 2400,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "feed-buggy",
+      "group": { "th": "แพ็คเกจคอมโบ", "en": "Combo packages", "ru": "Комбо-пакеты" },
+      "label": { "th": "ให้อาหารช้าง + บักกี้", "en": "Elephant feeding + Buggy", "ru": "Кормление + багги" },
+      "adult": 3200,
+      "child": 2600,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    }
+  ],
+  "includes": [
+    { "th": "ผลไม้ตามฤดูกาลสำหรับป้อนช้าง", "en": "Seasonal fruit for feeding the elephants", "ru": "Сезонные фрукты для кормления слонов" }
+  ],
+  "notes": [
+    {
+      "text": { "th": "แพ็คเกจคอมโบรวมกับ ATV / บักกี้ ระยะเวลาขับ 60 นาที", "en": "Combo packages are combined with an ATV / Buggy ride of 60 minutes.", "ru": "Комбо-пакеты включают заезд на ATV / багги продолжительностью 60 минут." }
+    }
+  ],
+  "seo": {
+    "title": {
+      "th": "ทัวร์ดูแลและให้อาหารช้าง ภูเก็ต แบบอนุรักษ์ เริ่ม ฿1,600 | Phuket Love Paradise",
+      "en": "Ethical Elephant Care & Feeding in Phuket from ฿1,600",
+      "ru": "Этичный уход за слонами и кормление на Пхукете от ฿1,600"
+    },
+    "description": {
+      "th": "จองทัวร์ดูแลช้างภูเก็ตแบบมีจริยธรรม ป้อนอาหาร อาบน้ำช้าง ถ่ายรูปกับลูกช้าง ผู้ใหญ่เริ่ม ฿1,600 เด็ก ฿1,400 มีแพ็คเกจคอมโบรวม ATV และบักกี้ พร้อมจุดชมวิวพระใหญ่",
+      "en": "Book an ethical elephant care experience in Phuket — feed and bathe the elephants and photograph a baby elephant. Adult from ฿1,600, child from ฿1,400, with ATV and buggy combo packages plus the Big Buddha viewpoint.",
+      "ru": "Этичный уход за слонами на Пхукете — кормление, купание и фото со слонёнком. Взрослый от ฿1,600, ребёнок от ฿1,400, комбо-пакеты с ATV и багги, а также смотровая Большого Будды."
+    }
+  },
+  "featured": true
+}

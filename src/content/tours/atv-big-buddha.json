@@ -1,0 +1,159 @@
+{
+  "order": 7,
+  "slugs": {
+    "th": "ทัวร์-atv-พระใหญ่",
+    "en": "atv-big-buddha-viewpoint",
+    "ru": "atv-big-buddha-viewpoint"
+  },
+  "title": {
+    "th": "ATV ลุยป่า + จุดชมวิวพระใหญ่",
+    "en": "ATV Jungle Ride + Big Buddha Viewpoint",
+    "ru": "ATV по джунглям + смотровая Большого Будды"
+  },
+  "summary": {
+    "th": "ขับ ATV ตะลุยเส้นทางธรรมชาติสู่จุดชมวิวสุดสวย เลือกได้ทั้งรุ่น 200cc และ 520cc รวมการสอนขับเบื้องต้น หมวกกันน็อก ประกัน และรับ-ส่งโรงแรม",
+    "en": "Ride an ATV along jungle trails to a stunning viewpoint. Choose 200cc or 520cc — includes basic training, helmet, insurance and hotel transfer.",
+    "ru": "Прокатитесь на квадроцикле по лесным тропам к потрясающей смотровой. 200cc или 520cc — инструктаж, шлем, страховка и трансфер включены."
+  },
+  "categories": ["land-adventure", "half-day", "cheap"],
+  "badge": {
+    "th": "ผจญภัย",
+    "en": "Adventure",
+    "ru": "Приключение"
+  },
+  "hero": "atv_jungle.jpg",
+  "durationLabel": {
+    "th": "ครึ่งวัน · ขับ 30 นาที–2 ชม.",
+    "en": "Half day · 30 min–2 hr ride",
+    "ru": "Полдня · заезд 30 мин–2 ч"
+  },
+  "halfDay": true,
+  "meta": [
+    { "icon": "clock", "text": { "th": "เลือกขับได้ 30 นาที–2 ชั่วโมง", "en": "Ride time 30 min–2 hours", "ru": "Время заезда 30 мин–2 часа" } },
+    { "icon": "map-pin", "text": { "th": "จุดชมวิวพระใหญ่ ภูเก็ต", "en": "Big Buddha viewpoint, Phuket", "ru": "Смотровая Большого Будды, Пхукет" } },
+    { "icon": "users", "text": { "th": "ราคาแยกผู้ขับ / ผู้ซ้อน", "en": "Rider / passenger pricing", "ru": "Цены для водителя / пассажира" } }
+  ],
+  "highlights": [
+    { "icon": "circle-check", "text": { "th": "ขับ ATV ตะลุยเส้นทางธรรมชาติสู่จุดชมวิวสุดสวย", "en": "ATV ride along jungle trails to a stunning viewpoint", "ru": "Заезд на ATV по лесным тропам к потрясающей смотровой" } },
+    { "icon": "circle-check", "text": { "th": "เลือกได้ทั้งรุ่น 200cc และ 520cc", "en": "Choose between 200cc and 520cc models", "ru": "На выбор модели 200cc и 520cc" } },
+    { "icon": "circle-check", "text": { "th": "ทุกโปรแกรมพาไปจุดชมวิวพระใหญ่", "en": "Every program transfers to the Big Buddha viewpoint", "ru": "Каждая программа включает смотровую Большого Будды" } }
+  ],
+  "priceFrom": 1400,
+  "priceUnit": "person",
+  "variants": [
+    {
+      "id": "atv200-30m",
+      "group": { "th": "ATV 200cc", "en": "ATV 200cc", "ru": "ATV 200cc" },
+      "label": { "th": "30 นาที", "en": "30 min", "ru": "30 мин" },
+      "adult": 1400,
+      "child": 800,
+      "adultLabel": { "th": "คนขับ", "en": "Rider", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "atv200-45m",
+      "group": { "th": "ATV 200cc", "en": "ATV 200cc", "ru": "ATV 200cc" },
+      "label": { "th": "45 นาที", "en": "45 min", "ru": "45 мин" },
+      "adult": 1600,
+      "child": 1000,
+      "adultLabel": { "th": "คนขับ", "en": "Rider", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "atv200-1h",
+      "group": { "th": "ATV 200cc", "en": "ATV 200cc", "ru": "ATV 200cc" },
+      "label": { "th": "1 ชั่วโมง", "en": "1 hr", "ru": "1 час" },
+      "adult": 1800,
+      "child": 1200,
+      "adultLabel": { "th": "คนขับ", "en": "Rider", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "atv200-130h",
+      "group": { "th": "ATV 200cc", "en": "ATV 200cc", "ru": "ATV 200cc" },
+      "label": { "th": "1.30 ชั่วโมง", "en": "1.30 hr", "ru": "1.30 ч" },
+      "adult": 2000,
+      "child": 1500,
+      "adultLabel": { "th": "คนขับ", "en": "Rider", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "atv200-2h",
+      "group": { "th": "ATV 200cc", "en": "ATV 200cc", "ru": "ATV 200cc" },
+      "label": { "th": "2 ชั่วโมง", "en": "2 hr", "ru": "2 часа" },
+      "adult": 2200,
+      "child": 1800,
+      "adultLabel": { "th": "คนขับ", "en": "Rider", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "atv520-30m",
+      "group": { "th": "ATV 520cc", "en": "ATV 520cc", "ru": "ATV 520cc" },
+      "label": { "th": "30 นาที", "en": "30 min", "ru": "30 мин" },
+      "adult": 1800,
+      "child": 1600,
+      "adultLabel": { "th": "คนขับ", "en": "Rider", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "atv520-45m",
+      "group": { "th": "ATV 520cc", "en": "ATV 520cc", "ru": "ATV 520cc" },
+      "label": { "th": "45 นาที", "en": "45 min", "ru": "45 мин" },
+      "adult": 2200,
+      "child": 1800,
+      "adultLabel": { "th": "คนขับ", "en": "Rider", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "atv520-1h",
+      "group": { "th": "ATV 520cc", "en": "ATV 520cc", "ru": "ATV 520cc" },
+      "label": { "th": "1 ชั่วโมง", "en": "1 hr", "ru": "1 час" },
+      "adult": 2600,
+      "child": 2000,
+      "adultLabel": { "th": "คนขับ", "en": "Rider", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "atv520-130h",
+      "group": { "th": "ATV 520cc", "en": "ATV 520cc", "ru": "ATV 520cc" },
+      "label": { "th": "1.30 ชั่วโมง", "en": "1.30 hr", "ru": "1.30 ч" },
+      "adult": 3600,
+      "child": 2600,
+      "adultLabel": { "th": "คนขับ", "en": "Rider", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    }
+  ],
+  "includes": [
+    { "th": "ประกันอุบัติเหตุ (ไม่ครอบคลุมความเสียหายของรถ)", "en": "Accident insurance (does not cover vehicle damage)", "ru": "Страховка от несчастных случаев (не покрывает повреждения техники)" },
+    { "th": "รถรับ-ส่งไป-กลับ", "en": "Round-trip transfer", "ru": "Трансфер туда и обратно" },
+    { "th": "การสอนขับเบื้องต้น", "en": "Basic driving training", "ru": "Базовый инструктаж по вождению" },
+    { "th": "หมวกกันน็อก", "en": "Helmet", "ru": "Шлем" },
+    { "th": "น้ำดื่ม", "en": "Drinking water", "ru": "Питьевая вода" },
+    { "th": "เสื้อกันฝน (ในวันที่ฝนตก)", "en": "Raincoat on rainy days", "ru": "Дождевик в дождливые дни" },
+    { "th": "รับ-ส่งฟรีสำหรับโซนกะตะ กะรน และป่าตอง", "en": "Free transfer for Kata, Karon and Patong", "ru": "Бесплатный трансфер для Каты, Карона и Патонга" }
+  ],
+  "notes": [
+    {
+      "text": { "th": "ทุกโปรแกรมมีบริการพาไปจุดชมวิวพระใหญ่", "en": "All programs include a transfer to the Big Buddha viewpoint.", "ru": "Все программы включают поездку на смотровую Большого Будды." }
+    },
+    {
+      "text": { "th": "เวลารับ: ป่าตอง รอบเช้า 08:00 / รอบบ่าย 12:00 · กะตะ–กะรน รอบเช้า 08:30 / รอบบ่าย 12:30", "en": "Pickup times: Patong morning 08:00 / afternoon 12:00 · Kata–Karon morning 08:30 / afternoon 12:30.", "ru": "Время трансфера: Патонг — утро 08:00 / день 12:00 · Ката–Карон — утро 08:30 / день 12:30." }
+    },
+    {
+      "text": { "th": "ผู้ประกอบการได้รับใบอนุญาต ททท. เลขที่ 33/04712", "en": "Operated under TAT License 33/04712.", "ru": "Оператор имеет лицензию TAT 33/04712." }
+    }
+  ],
+  "seo": {
+    "title": {
+      "th": "ทัวร์ ATV ลุยป่า ภูเก็ต + จุดชมวิวพระใหญ่ เริ่ม ฿1,400 | Phuket Love Paradise",
+      "en": "Phuket ATV Jungle Ride + Big Buddha Viewpoint from ฿1,400",
+      "ru": "ATV по джунглям Пхукета + смотровая Большого Будды от ฿1,400"
+    },
+    "description": {
+      "th": "จองทัวร์ ATV ลุยป่าภูเก็ต รุ่น 200cc และ 520cc ขับ 30 นาที–2 ชั่วโมง พร้อมจุดชมวิวพระใหญ่ ผู้ขับเริ่ม ฿1,400 ผู้ซ้อน ฿800 รวมประกัน หมวกกันน็อก และรถรับส่งฟรีโซนกะตะ กะรน ป่าตอง",
+      "en": "Book a Phuket ATV jungle ride — 200cc or 520cc, 30 min to 2 hours, with the Big Buddha viewpoint. Rider from ฿1,400, passenger from ฿800, with insurance, helmet and free Kata/Karon/Patong transfer.",
+      "ru": "Заезд на квадроцикле по джунглям Пхукета — 200cc или 520cc, от 30 минут до 2 часов, со смотровой Большого Будды. Водитель от ฿1,400, пассажир от ฿800, со страховкой, шлемом и бесплатным трансфером из Каты, Карона и Патонга."
+    }
+  },
+  "featured": true
+}

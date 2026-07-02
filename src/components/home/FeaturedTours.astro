@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import type { Lang } from '../../i18n/config';
+import { useT } from '../../i18n/ui';
+import { catalogUrl } from '../../lib/routes';
+import CategoryChips from '../CategoryChips.astro';
+import Icon from '../Icon.astro';
+import TourCard from '../TourCard.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+
+const tours = (await getCollection('tours'))
+  .filter((tr) => tr.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const label = {
+  th: 'โปรแกรมทัวร์',
+  en: 'Tour Programs',
+  ru: 'Туры',
+}[lang];
+const title = {
+  th: 'เส้นทางสู่ความประทับใจ',
+  en: 'Journeys to Remember',
+  ru: 'Путешествия, которые запомнятся',
+}[lang];
+const desc = {
+  th: 'คัดสรรโปรแกรมทัวร์หรูหราที่ออกแบบมาเพื่อสร้างความประทับใจที่คงอยู่ตลอดไป',
+  en: 'Curated luxury tour programs designed to create memories that last a lifetime.',
+  ru: 'Тщательно подобранные люксовые туры, созданные ради воспоминаний на всю жизнь.',
+}[lang];
+---
+
+<section class="sec tours" id="tours">
+  <div class="container">
+    <div class="center-text reveal" style="margin-bottom:3rem">
+      <div class="sec-label center">
+        <span>{label}</span>
+      </div>
+      <h2 class="sec-title">{title}</h2>
+      <p class="sec-desc">{desc}</p>
+    </div>
+    <div style="margin-bottom:2.25rem">
+      <CategoryChips lang={lang} active="" onLight />
+    </div>
+    <div class="pgrid">
+      {tours.map((tr) => <TourCard tour={tr} lang={lang} />)}
+    </div>
+    <div class="center-text" style="margin-top:2.75rem">
+      <a class="btn-navy" href={catalogUrl(lang)}>
+        {t('common.viewAllTours')}
+        <Icon name="arrow-right" size={15} />
+      </a>
+    </div>
+  </div>
+  <div id="land"></div>
+</section>

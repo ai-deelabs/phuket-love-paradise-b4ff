@@ -1,0 +1,35 @@
+{
+  "order": 6,
+  "slugs": {
+    "th": "ทัวร์ดำน้ำ",
+    "en": "phuket-diving",
+    "ru": "phuket-diving"
+  },
+  "title": {
+    "th": "ทัวร์ดำน้ำภูเก็ต",
+    "en": "Phuket Diving & Snorkeling",
+    "ru": "Дайвинг и снорклинг на Пхукете"
+  },
+  "shortTitle": {
+    "th": "ดำน้ำ",
+    "en": "Diving",
+    "ru": "Дайвинг"
+  },
+  "description": {
+    "th": "ดำดิ่งสู่โลกใต้ทะเลอันดามัน — ทริปฟันไดฟ์เกาะราชา เกาะพีพี ทดลองดำน้ำ PADI คอร์ส Open Water และสน็อร์เกิลสำหรับทั้งครอบครัว",
+    "en": "Dive into the Andaman underwater world — fun dives at Racha and Phi Phi, PADI try-dives, Open Water courses and family-friendly snorkeling.",
+    "ru": "Погрузитесь в подводный мир Андаманского моря — фан-дайвы у Рача и Пхи-Пхи, пробные погружения PADI, курсы Open Water и снорклинг для всей семьи."
+  },
+  "seo": {
+    "title": {
+      "th": "ทัวร์ดำน้ำภูเก็ต 2026 เกาะราชา พีพี คอร์ส PADI | Phuket Love Paradise",
+      "en": "Phuket Diving 2026 — Racha & Phi Phi Fun Dives, PADI Courses",
+      "ru": "Дайвинг на Пхукете 2026 — Рача, Пхи-Пхи, курсы PADI"
+    },
+    "description": {
+      "th": "จองทัวร์ดำน้ำภูเก็ต ฟันไดฟ์เกาะราชาใหญ่ ราชาน้อย พีพี ทดลองดำน้ำ DSD คอร์ส PADI Open Water สน็อร์เกิลผู้ใหญ่-เด็ก เริ่มต้น ฿1,500",
+      "en": "Book Phuket diving — fun dives at Racha Yai, Racha Noi and Phi Phi, PADI DSD try-dives, Open Water courses, adult & kid snorkeling from ฿1,500.",
+      "ru": "Дайвинг на Пхукете — фан-дайвы у Рача-Яй, Рача-Ной и Пхи-Пхи, пробные погружения, курсы PADI, снорклинг от ฿1,500."
+    }
+  }
+}

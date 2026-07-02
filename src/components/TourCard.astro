@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import type { Lang } from '../i18n/config';
+import { useT } from '../i18n/ui';
+import { assetImage, formatBaht } from '../lib/images';
+import { tourUrl } from '../lib/routes';
+import Icon from './Icon.astro';
+
+interface Props {
+  tour: CollectionEntry<'tours'>;
+  lang: Lang;
+  loading?: 'lazy' | 'eager';
+}
+const { tour, lang, loading = 'lazy' } = Astro.props;
+const t = useT(lang);
+const d = tour.data;
+const url = tourUrl(tour, lang);
+const perLabel = {
+  person: t('common.perPerson'),
+  vehicle: t('common.perVehicle'),
+  group: t('common.perGroup'),
+}[d.priceUnit];
+const metaItems = d.meta.slice(0, 2);
+---
+
+<article class="pcard">
+  <a class="pcard__pic" href={url} tabindex="-1" aria-hidden="true">
+    <Image src={assetImage(d.hero)} alt={d.title[lang]} width={760} height={560} loading={loading} />
+    {d.badge && <span class="pcard__tag">{d.badge[lang]}</span>}
+  </a>
+  <div class="pcard__body">
+    <h3><a href={url}>{d.title[lang]}</a></h3>
+    <p class="pcard__sum">{d.summary[lang]}</p>
+    {
+      metaItems.length > 0 && (
+        <div class="pcard__meta">
+          {metaItems.map((m) => (
+            <span>
+              <Icon name={m.icon} size={13} />
+              {m.text[lang]}
+            </span>
+          ))}
+        </div>
+      )
+    }
+    <div class="pcard__foot">
+      <div class="pcard__price">
+        <span class="lbl">{t('common.from')}</span>
+        <span class="amt">{formatBaht(d.priceFrom)} <small>{perLabel}</small></span>
+      </div>
+      <span class="pcard__btn">
+        {t('common.viewDetails')}
+        <Icon name="arrow-right" size={13} />
+      </span>
+    </div>
+  </div>
+</article>

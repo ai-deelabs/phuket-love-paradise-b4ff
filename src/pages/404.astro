@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { homeAlternates, catalogUrl } from '../lib/routes';
+---
+
+<BaseLayout
+  lang="th"
+  title="ไม่พบหน้านี้ | Phuket Love Paradise"
+  description="ไม่พบหน้าที่คุณต้องการ"
+  alternates={homeAlternates()}
+  noindex={true}
+>
+  <section class="sec" style="padding-top:9rem; text-align:center; min-height:60vh">
+    <div class="container">
+      <div class="sec-label center">404</div>
+      <h1 class="sec-title">ไม่พบหน้านี้ — Page Not Found</h1>
+      <p class="sec-desc" style="margin:0 auto 2rem">
+        หน้าที่คุณกำลังมองหาอาจถูกย้ายหรือไม่มีอยู่ · The page you are looking for may have moved.
+      </p>
+      <a class="btn-navy" href={catalogUrl('th')}>ดูทัวร์ทั้งหมด · View All Tours</a>
+    </div>
+  </section>
+</BaseLayout>

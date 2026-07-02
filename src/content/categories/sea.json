@@ -1,0 +1,35 @@
+{
+  "order": 5,
+  "slugs": {
+    "th": "ทัวร์ทางทะเล",
+    "en": "sea-island-tours",
+    "ru": "sea-island-tours"
+  },
+  "title": {
+    "th": "ทัวร์ทางทะเลและหมู่เกาะ",
+    "en": "Sea & Island Tours",
+    "ru": "Морские туры и острова"
+  },
+  "shortTitle": {
+    "th": "ทางทะเล",
+    "en": "Sea & Islands",
+    "ru": "Море"
+  },
+  "description": {
+    "th": "สัมผัสความงามของอันดามัน — เกาะพีพี อ่าวมาหยา เกาะไข่ เจมส์บอนด์ อ่าวพังงา แพลงก์ตอนเรืองแสง และเจ็ตสกีรอบเกาะ",
+    "en": "The Andaman at its finest — Phi Phi, Maya Bay, Khai Island, James Bond Island, Phang Nga Bay, glowing plankton and island-hopping jet ski runs.",
+    "ru": "Андаманское море во всей красе — Пхи-Пхи, залив Майя, остров Кхай, Джеймс Бонд, залив Пханг-Нга, светящийся планктон и гидроциклы."
+  },
+  "seo": {
+    "title": {
+      "th": "ทัวร์ทะเลภูเก็ต 2026 เกาะพีพี เจมส์บอนด์ อ่าวพังงา | Phuket Love Paradise",
+      "en": "Phuket Sea & Island Tours 2026 — Phi Phi, James Bond, Phang Nga Bay",
+      "ru": "Морские туры Пхукета 2026 — Пхи-Пхи, Джеймс Бонд, Пханг-Нга"
+    },
+    "description": {
+      "th": "จองทัวร์ทะเลภูเก็ต เกาะพีพี อ่าวมาหยา เกาะไผ่ เจมส์บอนด์ ซันเซ็ต แพลงก์ตอนเรืองแสง เจ็ตสกี เรือสปีดโบ๊ท รวมอาหาร รถรับส่ง จองผ่าน LINE",
+      "en": "Book Phuket sea tours — Phi Phi, Maya Bay, Bamboo Island, James Bond sunset, glowing plankton, jet ski. Speedboat trips with lunch and transfer.",
+      "ru": "Морские туры: Пхи-Пхи, Майя-Бэй, Бамбуковый остров, закат у Джеймса Бонда, планктон, гидроциклы. С обедом и трансфером."
+    }
+  }
+}

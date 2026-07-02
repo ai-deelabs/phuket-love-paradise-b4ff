@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Lang } from '../i18n/config';
+
+interface Props {
+  itinerary: CollectionEntry<'tours'>['data']['itinerary'];
+  lang: Lang;
+}
+const { itinerary, lang } = Astro.props;
+---
+
+<ul class="itin-list">
+  {
+    itinerary.map((step) => (
+      <li>
+        <span class="t">{step.time}</span>
+        <span>{step.text[lang]}</span>
+      </li>
+    ))
+  }
+</ul>

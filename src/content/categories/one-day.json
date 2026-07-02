@@ -1,0 +1,35 @@
+{
+  "order": 3,
+  "slugs": {
+    "th": "ทัวร์ภูเก็ต-1-วัน",
+    "en": "phuket-one-day-tours",
+    "ru": "phuket-one-day-tours"
+  },
+  "title": {
+    "th": "ทัวร์เที่ยวภูเก็ต 1 วัน",
+    "en": "Phuket One-Day Tours",
+    "ru": "Однодневные туры по Пхукету"
+  },
+  "shortTitle": {
+    "th": "ทัวร์ 1 วัน",
+    "en": "1-Day Tours",
+    "ru": "1 день"
+  },
+  "description": {
+    "th": "ทริปเต็มวันสุดคุ้ม ออกเช้าเย็นกลับ เที่ยวเกาะพีพี เจมส์บอนด์ ดำน้ำ หรือรอบเกาะภูเก็ต พร้อมอาหารกลางวัน รถรับ-ส่ง และไกด์ดูแลตลอดวัน",
+    "en": "Full-day trips that make the most of your day — Phi Phi, James Bond Island, diving or around Phuket, with lunch, transfers and a guide all day.",
+    "ru": "Насыщенные туры на целый день — Пхи-Пхи, остров Джеймса Бонда, дайвинг или вокруг Пхукета, с обедом, трансфером и гидом."
+  },
+  "seo": {
+    "title": {
+      "th": "ทัวร์เที่ยวภูเก็ต 1 วัน 2026 เกาะพีพี เจมส์บอนด์ ดำน้ำ | Phuket Love Paradise",
+      "en": "Phuket One-Day Tours 2026 — Phi Phi, James Bond Island, Diving",
+      "ru": "Однодневные туры по Пхукету 2026 — Пхи-Пхи, Джеймс Бонд, дайвинг"
+    },
+    "description": {
+      "th": "จองทัวร์ภูเก็ต 1 วัน เกาะพีพี เกาะไข่ เจมส์บอนด์ ดำน้ำลึก รวมอาหารกลางวัน รถรับส่งโรงแรม ประกันภัย เริ่มต้น ฿2,200 จองผ่าน LINE",
+      "en": "Book Phuket 1-day tours — Phi Phi, Khai Island, James Bond, scuba diving. Lunch, hotel transfer and insurance included, from ฿2,200.",
+      "ru": "Однодневные туры: Пхи-Пхи, остров Кхай, Джеймс Бонд, дайвинг. Обед, трансфер и страховка включены, от ฿2,200."
+    }
+  }
+}

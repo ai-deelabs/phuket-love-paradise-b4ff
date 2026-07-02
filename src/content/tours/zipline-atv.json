@@ -1,0 +1,89 @@
+{
+  "order": 10,
+  "slugs": {
+    "th": "ซิปไลน์-atv-ครึ่งวัน",
+    "en": "zipline-atv-half-day",
+    "ru": "zipline-atv-half-day"
+  },
+  "title": {
+    "th": "ซิปไลน์ + ATV ครึ่งวัน",
+    "en": "Zipline + ATV Half-Day Combo",
+    "ru": "Зиплайн + ATV — полдня"
+  },
+  "summary": {
+    "th": "แพ็กเกจครึ่งวันสุดมันส์ ซิปไลน์ 30 นาที ขับ ATV ลุยป่า แวะพระใหญ่และวัดฉลอง เลือกได้ 3 รอบต่อวัน รวมประกัน เครื่องดื่ม ไกด์ และรับ-ส่ง",
+    "en": "An action-packed half day — 30-min zipline, ATV jungle ride, plus Big Buddha and Chalong Temple. Three daily rounds; insurance, drinks, guide and transfer included.",
+    "ru": "Насыщенные полдня — 30-мин зиплайн, ATV по джунглям, Большой Будда и храм Чалонг. Три заезда в день; страховка, напитки, гид и трансфер включены."
+  },
+  "categories": ["land-adventure", "half-day", "packages"],
+  "badge": {
+    "th": "ครึ่งวัน",
+    "en": "Half Day",
+    "ru": "Полдня"
+  },
+  "hero": "zipline.jpg",
+  "durationLabel": {
+    "th": "ครึ่งวัน · 3 รอบต่อวัน",
+    "en": "Half day · 3 rounds daily",
+    "ru": "Полдня · 3 заезда в день"
+  },
+  "halfDay": true,
+  "meta": [
+    { "icon": "clock", "text": { "th": "3 รอบต่อวัน: 07:30 / 10:00 / 13:00", "en": "3 rounds/day: 07:30 / 10:00 / 13:00", "ru": "3 заезда/день: 07:30 / 10:00 / 13:00" } },
+    { "icon": "map-pin", "text": { "th": "พระใหญ่ และวัดฉลอง ภูเก็ต", "en": "Big Buddha & Chalong Temple, Phuket", "ru": "Большой Будда и храм Чалонг, Пхукет" } },
+    { "icon": "users", "text": { "th": "เด็ก 4–11 ปี", "en": "Children 4–11 yrs", "ru": "Дети 4–11 лет" } }
+  ],
+  "highlights": [
+    { "icon": "circle-check", "text": { "th": "ซิปไลน์ 30 นาที และขับ ATV ลุยป่า", "en": "30-minute zipline and ATV jungle ride", "ru": "30-минутный зиплайн и ATV по джунглям" } },
+    { "icon": "circle-check", "text": { "th": "แวะพระใหญ่และวัดฉลอง", "en": "Stops at Big Buddha and Chalong Temple", "ru": "Остановки у Большого Будды и храма Чалонг" } },
+    { "icon": "circle-check", "text": { "th": "รวมประกัน เครื่องดื่ม ไกด์ และรับ-ส่ง", "en": "Insurance, drinks, guide and transfer included", "ru": "Страховка, напитки, гид и трансфер включены" } }
+  ],
+  "priceFrom": 2750,
+  "priceUnit": "person",
+  "variants": [
+    {
+      "id": "program-a",
+      "label": { "th": "A — ซิปไลน์ 30 นาที", "en": "A — zipline 30 min", "ru": "A — зиплайн 30 мин" },
+      "adult": 2750,
+      "child": 2550,
+      "childLabel": { "th": "เด็ก (4–11 ปี)", "en": "Child (4–11 yrs)", "ru": "Ребёнок (4–11 лет)" }
+    },
+    {
+      "id": "program-b",
+      "label": { "th": "B — ซิปไลน์ + ATV 30 นาที", "en": "B — zipline + ATV 30 min", "ru": "B — зиплайн + ATV 30 мин" },
+      "adult": 3150,
+      "child": 2850,
+      "childLabel": { "th": "เด็ก (4–11 ปี)", "en": "Child (4–11 yrs)", "ru": "Ребёнок (4–11 лет)" }
+    },
+    {
+      "id": "program-c",
+      "label": { "th": "C — ATV + ขี่ช้าง 30 นาที", "en": "C — ATV + elephant trekking 30 min", "ru": "C — ATV + слоны 30 мин" },
+      "adult": 2850,
+      "child": 2550,
+      "childLabel": { "th": "เด็ก (4–11 ปี)", "en": "Child (4–11 yrs)", "ru": "Ребёнок (4–11 лет)" }
+    }
+  ],
+  "includes": [
+    { "th": "ประกันภัย", "en": "Insurance", "ru": "Страховка" },
+    { "th": "เครื่องดื่ม", "en": "Drinks", "ru": "Напитки" },
+    { "th": "ไกด์ดูแลตลอดทริป", "en": "Guide throughout the trip", "ru": "Гид на протяжении всей поездки" },
+    { "th": "รถรับ-ส่งโรงแรม", "en": "Hotel round-trip transfer", "ru": "Трансфер из отеля и обратно" }
+  ],
+  "notes": [
+    {
+      "text": { "th": "ทุกโปรแกรมแวะพระใหญ่และวัดฉลอง · ซิปไลน์จำกัดน้ำหนัก 120 กก. · 3 รอบต่อวัน (07:30 / 10:00 / 13:00)", "en": "All programs include Big Buddha & Chalong Temple · zipline weight limit 120 kg · 3 rounds/day (07:30 / 10:00 / 13:00)", "ru": "Все программы включают Большого Будду и храм Чалонг · лимит веса на зиплайне 120 кг · 3 заезда/день (07:30 / 10:00 / 13:00)" }
+    }
+  ],
+  "seo": {
+    "title": {
+      "th": "ซิปไลน์ + ATV ภูเก็ต ครึ่งวัน เริ่ม ฿2,750 | Phuket Love Paradise",
+      "en": "Phuket Zipline + ATV Half-Day Combo from ฿2,750",
+      "ru": "Зиплайн + ATV на Пхукете — полдня от ฿2,750"
+    },
+    "description": {
+      "th": "จองแพ็กเกจซิปไลน์ 30 นาที + ATV ลุยป่าภูเก็ต ครึ่งวัน แวะพระใหญ่และวัดฉลอง ผู้ใหญ่เริ่ม ฿2,750 เด็ก ฿2,550 มี 3 รอบต่อวัน รวมประกัน เครื่องดื่ม ไกด์ และรถรับส่ง",
+      "en": "Book the Phuket half-day zipline + ATV combo — 30-min zipline, jungle ATV, Big Buddha and Chalong Temple. Adult from ฿2,750, child from ฿2,550, three rounds daily with insurance, drinks, guide and transfer.",
+      "ru": "Комбо на полдня: зиплайн 30 минут + ATV по джунглям Пхукета, Большой Будда и храм Чалонг. Взрослый от ฿2,750, ребёнок от ฿2,550, три заезда в день, страховка, напитки, гид и трансфер включены."
+    }
+  }
+}

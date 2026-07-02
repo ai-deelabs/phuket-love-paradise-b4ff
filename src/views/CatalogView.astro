@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CategoryChips from '../components/CategoryChips.astro';
+import TourCard from '../components/TourCard.astro';
+import type { Lang } from '../i18n/config';
+import { useT } from '../i18n/ui';
+import { catalogAlternates, catalogUrl, homeUrl } from '../lib/routes';
+import { breadcrumbSchema, itemListSchema } from '../lib/seo';
+import { tourUrl } from '../lib/routes';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const tours = (await getCollection('tours')).sort((a, b) => a.data.order - b.data.order);
+const alternates = catalogAlternates();
+
+const heading = {
+  th: 'ทัวร์ภูเก็ตทั้งหมด',
+  en: 'All Phuket Tours',
+  ru: 'Все туры по Пхукету',
+}[lang];
+const intro = {
+  th: 'เลือกทริปที่ใช่จากทัวร์ทั้งหมดของเรา — ทะเล เกาะ ดำน้ำ ผจญภัยบนบก และแพ็คเกจคอมโบ จองง่าย ยืนยันผ่าน LINE ไม่ต้องจ่ายก่อน',
+  en: 'Pick your perfect trip from our full range — sea and island tours, diving, land adventures and combo packages. Easy booking, confirmed via LINE, no upfront payment.',
+  ru: 'Выберите идеальный тур — море и острова, дайвинг, наземные приключения и комбо-пакеты. Простое бронирование через LINE без предоплаты.',
+}[lang];
+const seoTitle = {
+  th: 'ทัวร์ภูเก็ตทั้งหมด 2026 ทะเล เกาะพีพี ดำน้ำ ผจญภัย ราคาดีที่สุด | Phuket Love Paradise',
+  en: 'All Phuket Tours 2026 — Islands, Diving, Adventures at Best Prices',
+  ru: 'Все туры по Пхукету 2026 — острова, дайвинг, приключения по лучшим ценам',
+}[lang];
+const seoDesc = {
+  th: 'รวมทัวร์ภูเก็ตทุกโปรแกรม เกาะพีพี เจมส์บอนด์ ดำน้ำ ATV ซิปไลน์ ช้าง ซิตี้ทัวร์ ราคาชัดเจน รวมรถรับส่ง จองผ่าน LINE ได้เลย',
+  en: 'Every Phuket tour in one place — Phi Phi, James Bond, diving, ATV, zipline, elephants and city tours. Clear prices with hotel transfer, book via LINE.',
+  ru: 'Все туры Пхукета — Пхи-Пхи, Джеймс Бонд, дайвинг, ATV, зиплайн, слоны и сити-туры. Честные цены с трансфером, бронирование через LINE.',
+}[lang];
+
+const site = Astro.site!;
+const jsonLd = [
+  breadcrumbSchema([
+    { name: t('nav.home'), url: new URL(homeUrl(lang), site).href },
+    { name: heading, url: new URL(catalogUrl(lang), site).href },
+  ]),
+  itemListSchema(
+    tours.map((tour) => ({ name: tour.data.title[lang], url: new URL(tourUrl(tour, lang), site).href })),
+  ),
+];
+---
+
+<BaseLayout lang={lang} title={seoTitle} description={seoDesc} alternates={alternates} jsonLd={jsonLd}>
+  <header class="page-hero">
+    <div class="page-hero__inner">
+      <Breadcrumbs items={[{ label: t('nav.home'), href: homeUrl(lang) }, { label: heading }]} />
+      <h1 class="sec-title">{heading}</h1>
+      <p class="sec-desc">{intro}</p>
+      <CategoryChips lang={lang} active="all" />
+    </div>
+  </header>
+  <section class="sec tours">
+    <div class="container">
+      <div class="pgrid">
+        {tours.map((tour, i) => <TourCard tour={tour} lang={lang} loading={i < 3 ? 'eager' : 'lazy'} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,96 @@
+{
+  "order": 4,
+  "slugs": {
+    "th": "เจ็ตสกี-6-เกาะ",
+    "en": "jet-ski-6-islands",
+    "ru": "jet-ski-6-islands"
+  },
+  "title": {
+    "th": "เจ็ตสกี 6 เกาะ 4 ชั่วโมง",
+    "en": "Jet Ski — 6 Islands, 4 Hours",
+    "ru": "Гидроцикл — 6 островов, 4 часа"
+  },
+  "summary": {
+    "th": "ขับเจ็ตสกีของคุณเองตะลุย 6 เกาะรอบภูเก็ต ออกจากท่าเรือยามู ผ่านเกาะแพ อ่าวปอแกรนด์มารีน่า ป่าโกงกาง เกาะลิง และเกาะนาคาใหญ่สำหรับมื้อกลางวัน สนุกกับการดำน้ำตื้น ให้อาหารลิง และถ่ายรูปสุดประทับใจ",
+    "en": "Ride your own jet ski across 6 islands around Phuket — from Yamu Pier to Phae Island, Ao Por Grand Marina, the mangrove forest, Monkey Island and Naka Yai for lunch. Snorkel, feed the monkeys and capture unforgettable photos.",
+    "ru": "Управляйте собственным гидроциклом по 6 островам вокруг Пхукета — от пирса Яму к острову Пхае, марине Ао-Пор, мангровому лесу, Обезьяньему острову и Нака-Яй на обед. Снорклинг, кормление обезьян и незабываемые фото."
+  },
+  "categories": ["sea", "half-day"],
+  "badge": {
+    "th": "ผจญภัย",
+    "en": "Adventure",
+    "ru": "Приключение"
+  },
+  "hero": "view_1.jpg",
+  "durationLabel": {
+    "th": "4 ชั่วโมง (เช้า/บ่าย)",
+    "en": "4 Hours (AM/PM)",
+    "ru": "4 часа (утро/день)"
+  },
+  "halfDay": true,
+  "meta": [
+    { "icon": "clock", "text": { "th": "เช้า 09:30–13:30 น. · บ่าย 14:00–18:00 น.", "en": "Morning 09:30–13:30 · Afternoon 14:00–18:00", "ru": "Утро 09:30–13:30 · день 14:00–18:00" } },
+    { "icon": "map-pin", "text": { "th": "เช็คอินที่ท่าเรือยามู", "en": "Check-in at Yamu Pier", "ru": "Регистрация на пирсе Яму" } },
+    { "icon": "life-buoy", "text": { "th": "เสื้อชูชีพ + ไกด์", "en": "Life jacket + guide", "ru": "Спасжилет + гид" } }
+  ],
+  "highlights": [
+    { "icon": "circle-check", "text": { "th": "ขับเจ็ตสกี Sea-Doo / Yamaha ของคุณเอง", "en": "Ride your own Sea-Doo / Yamaha jet ski", "ru": "Свой гидроцикл Sea-Doo / Yamaha" } },
+    { "icon": "circle-check", "text": { "th": "เกาะลิง ป่าโกงกาง ดำน้ำตื้น และมื้อกลางวัน", "en": "Monkey Island, mangroves, snorkeling & lunch", "ru": "Обезьяний остров, мангры, снорклинг и обед" } },
+    { "icon": "circle-check", "text": { "th": "รวมรับ-ส่ง อาหาร ไกด์ ดำน้ำตื้น และประกัน", "en": "Transfer, food, guide, snorkeling & insurance included", "ru": "Трансфер, питание, гид, снорклинг и страховка включены" } }
+  ],
+  "priceFrom": 7500,
+  "priceUnit": "vehicle",
+  "variants": [
+    {
+      "id": "seadoo-gtx",
+      "label": { "th": "Sea-Doo GTX Pro 130 · 1630cc (นน.รวมไม่เกิน 180 กก.)", "en": "Sea-Doo GTX Pro 130 · 1630cc (max 180 kg)", "ru": "Sea-Doo GTX Pro 130 · 1630cc (до 180 кг)" },
+      "adult": 9000,
+      "adultLabel": { "th": "ต่อลำ (2 ท่าน)", "en": "per jet ski (2 pax)", "ru": "за гидроцикл (2 чел.)" },
+      "unit": "vehicle"
+    },
+    {
+      "id": "yamaha-vx",
+      "label": { "th": "Yamaha VX Deluxe · 1100cc (นน.รวมไม่เกิน 120 กก. · เครื่องเสียง Bluetooth)", "en": "Yamaha VX Deluxe · 1100cc (max 120 kg, Bluetooth audio)", "ru": "Yamaha VX Deluxe · 1100cc (до 120 кг, Bluetooth-аудио)" },
+      "adult": 7500,
+      "adultLabel": { "th": "ต่อลำ (2 ท่าน)", "en": "per jet ski (2 pax)", "ru": "за гидроцикл (2 чел.)" },
+      "unit": "vehicle"
+    }
+  ],
+  "itinerary": [
+    { "time": "—", "text": { "th": "เช็คอินที่ท่าเรือยามู ออกเดินทาง", "en": "Check-in at Yamu Pier, departure", "ru": "Регистрация на пирсе Яму, отправление" } },
+    { "time": "—", "text": { "th": "เกาะแพ (มังกรทราย)", "en": "Phae Island (Sand Dragon)", "ru": "Остров Пхае (Песчаный дракон)" } },
+    { "time": "—", "text": { "th": "อ่าวปอ", "en": "Ao Por", "ru": "Ао-Пор" } },
+    { "time": "—", "text": { "th": "ป่าโกงกาง", "en": "Mangrove forest", "ru": "Мангровый лес" } },
+    { "time": "—", "text": { "th": "เกาะลิง (เกาะฮุม)", "en": "Monkey (Hum) Island", "ru": "Обезьяний остров (Хум)" } },
+    { "time": "—", "text": { "th": "เกาะนาคาใหญ่ — อาหารกลางวัน / ว่ายน้ำ", "en": "Naka Yai Island — lunch / swim", "ru": "Остров Нака-Яй — обед / купание" } },
+    { "time": "—", "text": { "th": "เกาะนาคาน้อย", "en": "Naka Noi Island", "ru": "Остров Нака-Ной" } },
+    { "time": "—", "text": { "th": "เกาะรังใหญ่ แล้วกลับสู่ท่าเรือ", "en": "Rang Yai Island, then return to the pier", "ru": "Остров Ранг-Яй, затем возвращение к пирсу" } }
+  ],
+  "includes": [
+    { "th": "รถรับ-ส่ง", "en": "Transfer", "ru": "Трансфер" },
+    { "th": "อาหารกลางวันและผลไม้", "en": "Food, lunch & fruit", "ru": "Питание, обед и фрукты" },
+    { "th": "ประกัน", "en": "Insurance", "ru": "Страховка" },
+    { "th": "ไกด์", "en": "Guide", "ru": "Гид" },
+    { "th": "อุปกรณ์ดำน้ำตื้น", "en": "Snorkeling gear", "ru": "Снаряжение для снорклинга" },
+    { "th": "เสื้อชูชีพ", "en": "Life jacket", "ru": "Спасжилет" },
+    { "th": "กาแฟและคุกกี้", "en": "Coffee & cookies", "ru": "Кофе и печенье" }
+  ],
+  "notes": [
+    {
+      "text": { "th": "ประกันเจ็ตสกีไม่รวมในราคาทัวร์ มีให้ซื้อเพิ่มที่ท่าเรือ", "en": "Jet ski insurance excluded from the tour price, available as an add-on at the pier", "ru": "Страховка гидроцикла не входит в цену, доступна на пирсе" }
+    }
+  ],
+  "seo": {
+    "title": {
+      "th": "เจ็ตสกี 6 เกาะ ภูเก็ต 4 ชั่วโมง เริ่ม ฿7,500/ลำ | Phuket Love Paradise",
+      "en": "Phuket Jet Ski Tour — 6 Islands in 4 Hours from ฿7,500 per ski",
+      "ru": "Тур на гидроцикле по 6 островам Пхукета от ฿7,500 за гидроцикл"
+    },
+    "description": {
+      "th": "จองทัวร์เจ็ตสกี 6 เกาะรอบภูเก็ต 4 ชั่วโมง ออกจากท่าเรือยามู เกาะแพ อ่าวปอ ป่าโกงกาง เกาะลิง เกาะนาคาใหญ่ Sea-Doo ฿9,000 · Yamaha ฿7,500 ต่อลำ (2 ท่าน) รวมอาหาร ไกด์ และประกัน",
+      "en": "Book the 4-hour Phuket jet ski tour across 6 islands from Yamu Pier — Phae Island, Ao Por, mangroves, Monkey Island and Naka Yai. Sea-Doo ฿9,000 · Yamaha ฿7,500 per ski (2 pax) with food, guide and insurance.",
+      "ru": "4-часовой тур на гидроцикле по 6 островам Пхукета от пирса Яму — остров Пхае, Ао-Пор, мангры, Обезьяний остров и Нака-Яй. Sea-Doo ฿9,000 · Yamaha ฿7,500 за гидроцикл (2 чел.), с питанием, гидом и страховкой."
+    }
+  },
+  "featured": false
+}

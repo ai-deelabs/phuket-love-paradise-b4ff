@@ -1,3 +1,6 @@
-meta.json
+.astro
 .claude-*.log
 .omc/
+dist
+meta.json
+node_modules

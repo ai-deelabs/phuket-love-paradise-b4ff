@@ -1,0 +1,254 @@
+{
+  "order": 6,
+  "slugs": {
+    "th": "ทัวร์ดำน้ำลึก-เกาะราชา-พีพี",
+    "en": "scuba-diving-racha-phi-phi",
+    "ru": "scuba-diving-racha-phi-phi"
+  },
+  "title": {
+    "th": "ดำน้ำลึก สัมผัสโลกใต้ทะเลอันดามัน",
+    "en": "Scuba Diving — Andaman Underwater World",
+    "ru": "Дайвинг — подводный мир Андаманского моря"
+  },
+  "summary": {
+    "th": "ดำดิ่งสู่โลกใต้ทะเลกับศูนย์ดำน้ำ PADI ไม่ว่าจะเป็นมือใหม่ที่ลองดำน้ำครั้งแรก (Try-Dive) หรือนักดำน้ำที่มีใบรับรอง ดำน้ำที่เกาะราชาใหญ่ ราชาน้อย และเกาะพีพี พบแนวปะการัง เรือจม เต่าทะเล และฝูงปลาหลากสีสัน",
+    "en": "Descend into the underwater world with a PADI dive centre. Whether it's your first Try-Dive or you're a certified diver, explore the reefs, wrecks, turtles and shoals of Racha Yai, Racha Noi and Phi Phi.",
+    "ru": "Погрузитесь в подводный мир с дайв-центром PADI. Первое пробное погружение или сертифицированный дайвер — исследуйте рифы, затонувшие корабли, черепах и стаи рыб у Рача-Яй, Рача-Ной и Пхи-Пхи."
+  },
+  "categories": ["diving", "one-day"],
+  "badge": {
+    "th": "ดำน้ำลึก PADI",
+    "en": "PADI Diving",
+    "ru": "Дайвинг PADI"
+  },
+  "hero": "diving_4.jpg",
+  "gallery": ["diving_1.jpg", "diving_2.jpg", "diving_8.jpg"],
+  "durationLabel": {
+    "th": "เต็มวัน",
+    "en": "Full Day",
+    "ru": "Целый день"
+  },
+  "meta": [
+    { "icon": "clock", "text": { "th": "เต็มวัน", "en": "Full Day", "ru": "Целый день" } },
+    { "icon": "award", "text": { "th": "ศูนย์ดำน้ำ PADI", "en": "PADI dive centre", "ru": "Дайв-центр PADI" } },
+    { "icon": "package", "text": { "th": "รวมอุปกรณ์ + ครูฝึก", "en": "Gear + instructor", "ru": "Снаряжение + инструктор" } }
+  ],
+  "highlights": [
+    { "icon": "circle-check", "text": { "th": "Try-Dive สำหรับมือใหม่ ไม่ต้องมีประสบการณ์", "en": "Try-Dive for beginners — no experience needed", "ru": "Пробное погружение для новичков — без опыта" } },
+    { "icon": "circle-check", "text": { "th": "จุดดำน้ำเกาะราชาและเกาะพีพี", "en": "Racha & Phi Phi dive sites", "ru": "Дайв-сайты Рача и Пхи-Пхи" } },
+    { "icon": "circle-check", "text": { "th": "รวมอุปกรณ์ครบ ครูฝึก อาหารกลางวัน และประกัน", "en": "Full gear, instructor, lunch & insurance included", "ru": "Полное снаряжение, инструктор, обед и страховка" } },
+    { "icon": "award", "text": { "th": "คอร์ส Open Water ฿11,400–13,400", "en": "Open Water course ฿11,400–13,400", "ru": "Курс Open Water ฿11,400–13,400" } }
+  ],
+  "priceFrom": 1500,
+  "priceUnit": "person",
+  "variants": [
+    {
+      "id": "racha-yai-fun-tanks",
+      "group": { "th": "เกาะราชาใหญ่ — 2 ไดฟ์", "en": "Racha Yai Island — 2 dives", "ru": "Остров Рача-Яй — 2 погружения" },
+      "label": { "th": "ฟันไดฟ์ (แท็งก์+ตะกั่ว)", "en": "Fun diver (tanks & weights)", "ru": "Фандайвер (баллоны и грузы)" },
+      "adult": 3600,
+      "child": null
+    },
+    {
+      "id": "racha-yai-fun-full",
+      "group": { "th": "เกาะราชาใหญ่ — 2 ไดฟ์", "en": "Racha Yai Island — 2 dives", "ru": "Остров Рача-Яй — 2 погружения" },
+      "label": { "th": "ฟันไดฟ์ (อุปกรณ์ครบ)", "en": "Fun diver (full equipment)", "ru": "Фандайвер (полное снаряжение)" },
+      "adult": 4300,
+      "child": null
+    },
+    {
+      "id": "racha-yai-dsd",
+      "group": { "th": "เกาะราชาใหญ่ — 2 ไดฟ์", "en": "Racha Yai Island — 2 dives", "ru": "Остров Рача-Яй — 2 погружения" },
+      "label": { "th": "PADI Try-Dive (DSD)", "en": "PADI Try-Dive (DSD)", "ru": "PADI Try-Dive (DSD)" },
+      "adult": 4600,
+      "child": null
+    },
+    {
+      "id": "racha-yai-refresher",
+      "group": { "th": "เกาะราชาใหญ่ — 2 ไดฟ์", "en": "Racha Yai Island — 2 dives", "ru": "Остров Рача-Яй — 2 погружения" },
+      "label": { "th": "PADI Refresher", "en": "PADI Refresher", "ru": "PADI Refresher" },
+      "adult": 4600,
+      "child": null
+    },
+    {
+      "id": "racha-yai-snorkel",
+      "group": { "th": "เกาะราชาใหญ่ — 2 ไดฟ์", "en": "Racha Yai Island — 2 dives", "ru": "Остров Рача-Яй — 2 погружения" },
+      "label": { "th": "สน็อร์เกิล", "en": "Snorkeler", "ru": "Сноркелер" },
+      "adult": 2600,
+      "adultLabel": { "th": "ผู้ใหญ่ (สน็อร์เกิล 13 ปีขึ้นไป)", "en": "Adult snorkeler (13 yrs+)", "ru": "Взрослый сноркелер (13+)" },
+      "child": 1500,
+      "childLabel": { "th": "เด็ก (7–12 ปี)", "en": "Child (7–12 yrs)", "ru": "Ребёнок (7–12 лет)" }
+    },
+    {
+      "id": "racha-noi-fun-tanks",
+      "group": { "th": "เกาะราชาน้อย — 3 ไดฟ์", "en": "Racha Noi Island — 3 dives", "ru": "Остров Рача-Ной — 3 погружения" },
+      "label": { "th": "ฟันไดฟ์ (แท็งก์+ตะกั่ว)", "en": "Fun diver (tanks & weights)", "ru": "Фандайвер (баллоны и грузы)" },
+      "adult": 3900,
+      "child": null
+    },
+    {
+      "id": "racha-noi-fun-full",
+      "group": { "th": "เกาะราชาน้อย — 3 ไดฟ์", "en": "Racha Noi Island — 3 dives", "ru": "Остров Рача-Ной — 3 погружения" },
+      "label": { "th": "ฟันไดฟ์ (อุปกรณ์ครบ)", "en": "Fun diver (full equipment)", "ru": "Фандайвер (полное снаряжение)" },
+      "adult": 4600,
+      "child": null
+    },
+    {
+      "id": "racha-noi-refresher",
+      "group": { "th": "เกาะราชาน้อย — 3 ไดฟ์", "en": "Racha Noi Island — 3 dives", "ru": "Остров Рача-Ной — 3 погружения" },
+      "label": { "th": "PADI Refresher", "en": "PADI Refresher", "ru": "PADI Refresher" },
+      "adult": 5600,
+      "child": null
+    },
+    {
+      "id": "racha-noi-snorkel",
+      "group": { "th": "เกาะราชาน้อย — 3 ไดฟ์", "en": "Racha Noi Island — 3 dives", "ru": "Остров Рача-Ной — 3 погружения" },
+      "label": { "th": "สน็อร์เกิล", "en": "Snorkeler", "ru": "Сноркелер" },
+      "adult": 2900,
+      "adultLabel": { "th": "ผู้ใหญ่ (สน็อร์เกิล)", "en": "Adult snorkeler", "ru": "Взрослый сноркелер" },
+      "child": 1800,
+      "childLabel": { "th": "เด็ก (7–12 ปี)", "en": "Child (7–12 yrs)", "ru": "Ребёнок (7–12 лет)" }
+    },
+    {
+      "id": "phi-phi-fun-tanks",
+      "group": { "th": "เกาะพีพี — 2 ไดฟ์ (ต้องเป็น Advanced Diver)", "en": "Phi Phi Islands — 2 dives (Advanced Diver required)", "ru": "Пхи-Пхи — 2 погружения (нужен Advanced Diver)" },
+      "label": { "th": "ฟันไดฟ์ (แท็งก์+ตะกั่ว)", "en": "Fun diver (tanks & weights)", "ru": "Фандайвер (баллоны и грузы)" },
+      "adult": 4500,
+      "child": null
+    },
+    {
+      "id": "phi-phi-fun-full",
+      "group": { "th": "เกาะพีพี — 2 ไดฟ์ (ต้องเป็น Advanced Diver)", "en": "Phi Phi Islands — 2 dives (Advanced Diver required)", "ru": "Пхи-Пхи — 2 погружения (нужен Advanced Diver)" },
+      "label": { "th": "ฟันไดฟ์ (อุปกรณ์ครบ)", "en": "Fun diver (full equipment)", "ru": "Фандайвер (полное снаряжение)" },
+      "adult": 5200,
+      "child": null
+    },
+    {
+      "id": "phi-phi-snorkel",
+      "group": { "th": "เกาะพีพี — 2 ไดฟ์ (ต้องเป็น Advanced Diver)", "en": "Phi Phi Islands — 2 dives (Advanced Diver required)", "ru": "Пхи-Пхи — 2 погружения (нужен Advanced Diver)" },
+      "label": { "th": "สน็อร์เกิล", "en": "Snorkeler", "ru": "Сноркелер" },
+      "adult": 3200,
+      "adultLabel": { "th": "ผู้ใหญ่ (สน็อร์เกิล 13 ปีขึ้นไป)", "en": "Adult snorkeler (13 yrs+)", "ru": "Взрослый сноркелер (13+)" },
+      "child": 2100,
+      "childLabel": { "th": "เด็ก (7–12 ปี)", "en": "Child (7–12 yrs)", "ru": "Ребёнок (7–12 лет)" }
+    },
+    {
+      "id": "course-dsd",
+      "group": { "th": "คอร์ส PADI", "en": "PADI Courses", "ru": "Курсы PADI" },
+      "label": { "th": "PADI Try-Dive (DSD) — 1 day", "en": "PADI Try-Dive (DSD) — 1 day", "ru": "PADI Try-Dive (DSD) — 1 day" },
+      "adult": 4600,
+      "child": null
+    },
+    {
+      "id": "course-refresher-2",
+      "group": { "th": "คอร์ส PADI", "en": "PADI Courses", "ru": "Курсы PADI" },
+      "label": { "th": "PADI Refresher — 2 ไดฟ์", "en": "PADI Refresher — 2 dives", "ru": "PADI Refresher — 2 погружения" },
+      "adult": 4600,
+      "child": null
+    },
+    {
+      "id": "course-refresher-3",
+      "group": { "th": "คอร์ส PADI", "en": "PADI Courses", "ru": "Курсы PADI" },
+      "label": { "th": "PADI Refresher — 3 ไดฟ์", "en": "PADI Refresher — 3 dives", "ru": "PADI Refresher — 3 погружения" },
+      "adult": 5600,
+      "child": null
+    },
+    {
+      "id": "course-ow-budget",
+      "group": { "th": "คอร์ส PADI", "en": "PADI Courses", "ru": "Курсы PADI" },
+      "label": { "th": "Open Water (3 days) — Budget · 4 dives", "en": "Open Water (3 days) — Budget · 4 dives", "ru": "Open Water (3 days) — Budget · 4 dives" },
+      "adult": 11400,
+      "child": null
+    },
+    {
+      "id": "course-ow-standard",
+      "group": { "th": "คอร์ส PADI", "en": "PADI Courses", "ru": "Курсы PADI" },
+      "label": { "th": "Open Water (3 days) — Standard · 5 dives", "en": "Open Water (3 days) — Standard · 5 dives", "ru": "Open Water (3 days) — Standard · 5 dives" },
+      "adult": 12400,
+      "child": null
+    },
+    {
+      "id": "course-ow-premium",
+      "group": { "th": "คอร์ส PADI", "en": "PADI Courses", "ru": "Курсы PADI" },
+      "label": { "th": "Open Water (3 days) — Premium · 6 dives", "en": "Open Water (3 days) — Premium · 6 dives", "ru": "Open Water (3 days) — Premium · 6 dives" },
+      "adult": 13400,
+      "child": null
+    },
+    {
+      "id": "course-aow-budget",
+      "group": { "th": "คอร์ส PADI", "en": "PADI Courses", "ru": "Курсы PADI" },
+      "label": { "th": "Advanced OW (2 days) — Budget · 5 dives", "en": "Advanced OW (2 days) — Budget · 5 dives", "ru": "Advanced OW (2 days) — Budget · 5 dives" },
+      "adult": 9900,
+      "child": null
+    },
+    {
+      "id": "course-aow-standard",
+      "group": { "th": "คอร์ส PADI", "en": "PADI Courses", "ru": "Курсы PADI" },
+      "label": { "th": "Advanced OW (2 days) — Standard · 6 dives", "en": "Advanced OW (2 days) — Standard · 6 dives", "ru": "Advanced OW (2 days) — Standard · 6 dives" },
+      "adult": 10900,
+      "child": null
+    },
+    {
+      "id": "course-aow-premium",
+      "group": { "th": "คอร์ส PADI", "en": "PADI Courses", "ru": "Курсы PADI" },
+      "label": { "th": "Advanced OW (2 days) — Premium · 6 dives + Phi Phi", "en": "Advanced OW (2 days) — Premium · 6 dives + Phi Phi", "ru": "Advanced OW (2 days) — Premium · 6 dives + Phi Phi" },
+      "adult": 11900,
+      "child": null
+    }
+  ],
+  "itinerary": [
+    { "time": "06:30–08:00", "text": { "th": "รับจากโรงแรม", "en": "Pickup from your hotel", "ru": "Трансфер из отеля" } },
+    { "time": "—", "text": { "th": "ถึงท่าเรืออ่าวฉลอง (Chalong Bay Marina) ออกเดินทางสู่จุดดำน้ำ", "en": "Arrive at Chalong Bay Marina and depart for the dive site", "ru": "Прибытие в марину Чалонг и отправление к дайв-сайту" } },
+    { "time": "—", "text": { "th": "ดำน้ำรอบเช้า", "en": "Morning dives", "ru": "Утренние погружения" } },
+    { "time": "—", "text": { "th": "อาหารกลางวันบุฟเฟต์บนเรือ", "en": "Buffet lunch on board", "ru": "Обед-буфет на борту" } },
+    { "time": "—", "text": { "th": "ดำน้ำลึก/สน็อร์เกิลรอบบ่าย", "en": "Afternoon dive / snorkelling", "ru": "Дневное погружение / снорклинг" } },
+    { "time": "14:30–15:30", "text": { "th": "เดินทางกลับถึงท่าเรือโดยประมาณ", "en": "Approximate return to the marina", "ru": "Примерное возвращение в марину" } }
+  ],
+  "includes": [
+    { "th": "รถรับ-ส่งโรงแรม", "en": "Hotel round-trip transfers", "ru": "Трансфер из отеля и обратно" },
+    { "th": "อาหารเช้า", "en": "Breakfast", "ru": "Завтрак" },
+    { "th": "ผลไม้", "en": "Fruits", "ru": "Фрукты" },
+    { "th": "อาหารกลางวันบุฟเฟต์", "en": "Buffet lunch", "ru": "Обед-буфет" },
+    { "th": "น้ำ น้ำอัดลม ชา กาแฟ", "en": "Water, soft drinks, tea & coffee", "ru": "Вода, напитки, чай и кофе" },
+    { "th": "ประกันการดำน้ำและการเดินทาง", "en": "Dive & travel insurance", "ru": "Страховка для дайвинга и поездки" },
+    { "th": "แท็งก์และตะกั่ว", "en": "Tanks & weights", "ru": "Баллоны и грузы" }
+  ],
+  "excludes": [
+    { "th": "ภาพถ่าย/วิดีโอใต้น้ำ ฿1,000", "en": "Underwater photos/videos ฿1,000", "ru": "Подводные фото/видео ฿1,000" },
+    { "th": "ทิปทีมงาน", "en": "Crew tips", "ru": "Чаевые команде" },
+    { "th": "ค่าธรรมเนียมอุทยานแห่งชาติ", "en": "National park fees", "ru": "Сборы национального парка" },
+    { "th": "อุปกรณ์ครบชุด (สำหรับตัวเลือกแท็งก์+ตะกั่ว)", "en": "Full equipment (for the tanks-only option)", "ru": "Полное снаряжение (для варианта только с баллонами)" }
+  ],
+  "parkFees": {
+    "th": "ค่าธรรมเนียมอุทยานแห่งชาติ (จ่ายเงินสดหน้างาน): นักดำน้ำ ฿600 · ผู้ใหญ่ ฿400 · เด็ก ฿300",
+    "en": "National park fees (cash on arrival): diver ฿600 · adult ฿400 · child ฿300",
+    "ru": "Сборы нацпарка (наличными на месте): дайвер ฿600 · взрослый ฿400 · ребёнок ฿300"
+  },
+  "notes": [
+    {
+      "text": { "th": "คอร์สเรียนมีค่าใบรับรอง PADI ฿3,500 จ่ายแยกต่างหาก", "en": "For courses, the PADI certification fee ฿3,500 is paid separately.", "ru": "Для курсов сертификация PADI ฿3,500 оплачивается отдельно." }
+    },
+    {
+      "text": { "th": "คอร์สเรียนรวมอุปกรณ์ครบชุดและค่าครูฝึกแล้ว", "en": "Courses include full equipment and instructor fee.", "ru": "Курсы включают полное снаряжение и работу инструктора." }
+    },
+    {
+      "text": { "th": "ทริปดำน้ำรายวันออกจากท่าเรืออ่าวฉลอง (Chalong Bay Marina) รับจากโรงแรม 06:30–08:00 น.", "en": "Day dives depart from Chalong Bay Marina; hotel transfer 06:30–08:00.", "ru": "Дневные дайв-туры отправляются из марины Чалонг; трансфер из отеля 06:30–08:00." }
+    },
+    {
+      "text": { "th": "เรือดำน้ำ MV Andaman Seafarer", "en": "Dive boat: MV Andaman Seafarer.", "ru": "Дайв-бот: MV Andaman Seafarer." }
+    }
+  ],
+  "seo": {
+    "title": {
+      "th": "ทัวร์ดำน้ำลึกภูเก็ต เกาะราชา เกาะพีพี Try-Dive และคอร์ส PADI เริ่ม ฿1,500 | Phuket Love Paradise",
+      "en": "Phuket Scuba Diving — Racha & Phi Phi Day Trips, PADI Try-Dive & Courses from ฿1,500",
+      "ru": "Дайвинг на Пхукете — Рача и Пхи-Пхи, PADI Try-Dive и курсы от ฿1,500"
+    },
+    "description": {
+      "th": "จองทัวร์ดำน้ำลึกภูเก็ตกับศูนย์ดำน้ำ PADI — เกาะราชาใหญ่ 2 ไดฟ์ ฿3,600 ราชาน้อย 3 ไดฟ์ ฿3,900 เกาะพีพี ฿4,500 Try-Dive ฿4,600 คอร์ส Open Water ฿11,400–13,400 สน็อร์เกิลเริ่ม ฿1,500 รวมรถรับส่ง อาหาร และประกัน",
+      "en": "Book Phuket scuba diving with a PADI dive centre — Racha Yai 2 dives ฿3,600, Racha Noi 3 dives ฿3,900, Phi Phi ฿4,500, Try-Dive ฿4,600, Open Water course ฿11,400–13,400, snorkelers from ฿1,500. Transfers, meals and insurance included.",
+      "ru": "Дайвинг на Пхукете с дайв-центром PADI — Рача-Яй 2 погружения ฿3,600, Рача-Ной 3 погружения ฿3,900, Пхи-Пхи ฿4,500, Try-Dive ฿4,600, курс Open Water ฿11,400–13,400, снорклинг от ฿1,500. Трансфер, питание и страховка включены."
+    }
+  },
+  "featured": true
+}

@@ -1,0 +1,18 @@
+---
+interface Crumb {
+  label: string;
+  href?: string;
+}
+interface Props {
+  items: Crumb[];
+}
+const { items } = Astro.props;
+---
+
+<ol class="crumbs">
+  {
+    items.map((c) => (
+      <li>{c.href ? <a href={c.href}>{c.label}</a> : c.label}</li>
+    ))
+  }
+</ol>

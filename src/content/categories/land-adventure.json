@@ -1,0 +1,35 @@
+{
+  "order": 7,
+  "slugs": {
+    "th": "ทัวร์ผจญภัยบนบก",
+    "en": "land-adventure-tours",
+    "ru": "land-adventure-tours"
+  },
+  "title": {
+    "th": "ทัวร์ผจญภัยบนบก",
+    "en": "Land Adventure Tours",
+    "ru": "Наземные приключения"
+  },
+  "shortTitle": {
+    "th": "ผจญภัยบนบก",
+    "en": "Land Adventure",
+    "ru": "На суше"
+  },
+  "description": {
+    "th": "ผจญภัยอีกมุมของภูเก็ต — ขับ ATV ลุยป่า ซิปไลน์เหนือยอดไม้ บักกี้ออฟโรด โกคาร์ท ดูแลช้างอย่างใกล้ชิด และซิตี้ทัวร์ชมพระใหญ่-เมืองเก่า",
+    "en": "Phuket beyond the beach — ATV jungle rides, treetop ziplines, off-road buggies, go-karts, ethical elephant care and Big Buddha–Old Town city tours.",
+    "ru": "Пхукет за пределами пляжа — ATV по джунглям, зиплайны, багги, картинг, этичный уход за слонами и сити-туры к Большому Будде и Старому городу."
+  },
+  "seo": {
+    "title": {
+      "th": "ทัวร์ผจญภัยภูเก็ต 2026 ATV ซิปไลน์ ช้าง บักกี้ | Phuket Love Paradise",
+      "en": "Phuket Land Adventures 2026 — ATV, Zipline, Elephants, Buggy",
+      "ru": "Наземные приключения Пхукета 2026 — ATV, зиплайн, слоны, багги"
+    },
+    "description": {
+      "th": "จองทัวร์ผจญภัยบนบกภูเก็ต ATV ลุยป่า ซิปไลน์ บักกี้ โกคาร์ท ดูแลช้าง ซิตี้ทัวร์พระใหญ่ เมืองเก่า เสือ รวมรถรับส่ง เริ่มต้น ฿1,400",
+      "en": "Book Phuket land adventures — ATV jungle rides, zipline, buggy, go-kart, elephant care, Big Buddha city tour and tiger experience from ฿1,400.",
+      "ru": "Наземные туры: ATV, зиплайн, багги, картинг, уход за слонами, Большой Будда и тигры. С трансфером, от ฿1,400."
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "order": 12,
+  "slugs": {
+    "th": "บักกี้-โกคาร์ท",
+    "en": "offroad-buggy-go-kart",
+    "ru": "offroad-buggy-go-kart"
+  },
+  "title": {
+    "th": "บักกี้ออฟโรด + โกคาร์ท",
+    "en": "Off-Road Buggy + Go-Kart",
+    "ru": "Внедорожный багги + картинг"
+  },
+  "summary": {
+    "th": "สนุกกันได้ทั้งครอบครัว ขับบักกี้ 600–660cc ลุยเส้นทางธรรมชาติ หรือซิ่งโกคาร์ท 250cc 10 รอบสนาม มี ATV สำหรับเด็ก (110cc) รวมหมวกกันน็อกและประกัน",
+    "en": "Family fun for everyone — drive a 600–660cc buggy on nature trails or race a 250cc go-kart for 10 laps. Kids' ATV (110cc) available; helmet and insurance included.",
+    "ru": "Веселье для всей семьи — багги 600–660cc по природным тропам или картинг 250cc на 10 кругов. Детский ATV (110cc); шлем и страховка включены."
+  },
+  "categories": ["land-adventure", "half-day", "cheap"],
+  "badge": {
+    "th": "ครอบครัว",
+    "en": "Family",
+    "ru": "Семья"
+  },
+  "hero": "buggy_gokart.jpg",
+  "durationLabel": {
+    "th": "ครึ่งวัน · ขับ 30 นาที–1.30 ชม.",
+    "en": "Half day · 30 min–1.30 hr ride",
+    "ru": "Полдня · заезд 30 мин–1.30 ч"
+  },
+  "halfDay": true,
+  "meta": [
+    { "icon": "clock", "text": { "th": "เลือกขับได้ 30 นาที–1.30 ชั่วโมง หรือ 10 รอบสนาม", "en": "Ride 30 min–1.30 hr or 10 track laps", "ru": "Заезд 30 мин–1.30 ч или 10 кругов по треку" } },
+    { "icon": "users", "text": { "th": "ATV เด็ก 110cc สำหรับอายุ 10–15 ปี", "en": "Kids ATV 110cc for ages 10–15", "ru": "Детский ATV 110cc для 10–15 лет" } }
+  ],
+  "highlights": [
+    { "icon": "circle-check", "text": { "th": "ขับบักกี้ 600–660cc ลุยเส้นทางธรรมชาติ", "en": "Drive a 600–660cc buggy on nature trails", "ru": "Багги 600–660cc по природным тропам" } },
+    { "icon": "circle-check", "text": { "th": "ซิ่งโกคาร์ท 250cc 10 รอบสนาม", "en": "Race a 250cc go-kart for 10 laps", "ru": "Картинг 250cc на 10 кругов" } },
+    { "icon": "circle-check", "text": { "th": "มี ATV สำหรับเด็ก (110cc) รวมหมวกกันน็อกและประกัน", "en": "Kids' ATV (110cc) available; helmet and insurance included", "ru": "Детский ATV (110cc); шлем и страховка включены" } }
+  ],
+  "priceFrom": 1500,
+  "priceUnit": "person",
+  "variants": [
+    {
+      "id": "buggy600-30m",
+      "group": { "th": "Buggy 600cc", "en": "Buggy 600cc", "ru": "Buggy 600cc" },
+      "label": { "th": "30 นาที", "en": "30 min", "ru": "30 мин" },
+      "adult": 1800,
+      "child": 1600,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "buggy600-45m",
+      "group": { "th": "Buggy 600cc", "en": "Buggy 600cc", "ru": "Buggy 600cc" },
+      "label": { "th": "45 นาที", "en": "45 min", "ru": "45 мин" },
+      "adult": 2200,
+      "child": 1800,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "buggy600-1h",
+      "group": { "th": "Buggy 600cc", "en": "Buggy 600cc", "ru": "Buggy 600cc" },
+      "label": { "th": "1 ชั่วโมง", "en": "1 hr", "ru": "1 час" },
+      "adult": 2600,
+      "child": 2000,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "buggy600-130h",
+      "group": { "th": "Buggy 600cc", "en": "Buggy 600cc", "ru": "Buggy 600cc" },
+      "label": { "th": "1.30 ชั่วโมง", "en": "1.30 hr", "ru": "1.30 ч" },
+      "adult": 3600,
+      "child": 2600,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "buggy660-30m",
+      "group": { "th": "Buggy 660cc", "en": "Buggy 660cc", "ru": "Buggy 660cc" },
+      "label": { "th": "30 นาที", "en": "30 min", "ru": "30 мин" },
+      "adult": 2000,
+      "child": 1800,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "buggy660-45m",
+      "group": { "th": "Buggy 660cc", "en": "Buggy 660cc", "ru": "Buggy 660cc" },
+      "label": { "th": "45 นาที", "en": "45 min", "ru": "45 мин" },
+      "adult": 2400,
+      "child": 2000,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "buggy660-1h",
+      "group": { "th": "Buggy 660cc", "en": "Buggy 660cc", "ru": "Buggy 660cc" },
+      "label": { "th": "1 ชั่วโมง", "en": "1 hr", "ru": "1 час" },
+      "adult": 2800,
+      "child": 2200,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "buggy660-130h",
+      "group": { "th": "Buggy 660cc", "en": "Buggy 660cc", "ru": "Buggy 660cc" },
+      "label": { "th": "1.30 ชั่วโมง", "en": "1.30 hr", "ru": "1.30 ч" },
+      "adult": 3800,
+      "child": 2800,
+      "adultLabel": { "th": "ผู้ขับ", "en": "Driver", "ru": "Водитель" },
+      "childLabel": { "th": "ผู้ซ้อน", "en": "Passenger", "ru": "Пассажир" }
+    },
+    {
+      "id": "gokart-250",
+      "group": { "th": "สนามแข่ง", "en": "Track", "ru": "Трек" },
+      "label": { "th": "โกคาร์ท 250cc — 10 รอบ", "en": "Go Kart 250cc — 10 laps", "ru": "Картинг 250cc — 10 кругов" },
+      "adult": 1500,
+      "child": null
+    },
+    {
+      "id": "kids-atv-110",
+      "group": { "th": "สนามแข่ง", "en": "Track", "ru": "Трек" },
+      "label": { "th": "ATV เด็ก 110cc (อายุ 10–15) — 10 รอบ", "en": "Kids ATV 110cc (ages 10–15) — 10 laps", "ru": "Детский ATV 110cc (10–15 лет) — 10 кругов" },
+      "adult": 1500,
+      "child": null
+    }
+  ],
+  "includes": [
+    { "th": "หมวกกันน็อก", "en": "Helmet", "ru": "Шлем" },
+    { "th": "ประกันภัย", "en": "Insurance", "ru": "Страховка" }
+  ],
+  "notes": [
+    {
+      "text": { "th": "ATV สำหรับเด็ก 110cc เหมาะสำหรับอายุ 10–15 ปี", "en": "The 110cc kids' ATV is for ages 10–15.", "ru": "Детский ATV 110cc предназначен для детей 10–15 лет." }
+    }
+  ],
+  "seo": {
+    "title": {
+      "th": "บักกี้ออฟโรด + โกคาร์ท ภูเก็ต เริ่ม ฿1,500 | Phuket Love Paradise",
+      "en": "Phuket Off-Road Buggy + Go-Kart from ฿1,500",
+      "ru": "Внедорожный багги + картинг на Пхукете от ฿1,500"
+    },
+    "description": {
+      "th": "จองบักกี้ออฟโรด 600–660cc ลุยเส้นทางธรรมชาติภูเก็ต หรือโกคาร์ท 250cc 10 รอบสนาม เริ่ม ฿1,500 มี ATV เด็ก 110cc (อายุ 10–15) รวมหมวกกันน็อกและประกัน",
+      "en": "Book a Phuket off-road buggy ride — 600–660cc on nature trails — or a 250cc go-kart for 10 laps from ฿1,500. Kids' ATV 110cc (ages 10–15) available; helmet and insurance included.",
+      "ru": "Багги 600–660cc по природным тропам Пхукета или картинг 250cc на 10 кругов от ฿1,500. Детский ATV 110cc (10–15 лет); шлем и страховка включены."
+    }
+  }
+}

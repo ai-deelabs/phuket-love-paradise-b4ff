@@ -1,0 +1,23 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  icon: string;
+  label: string;
+  open?: boolean;
+}
+const { icon, label, open = false } = Astro.props;
+---
+
+<details class="tdetails" open={open}>
+  <summary>
+    <span class="sm-l">
+      <Icon name={icon} size={15} />
+      <span>{label}</span>
+    </span>
+    <Icon name="chevron-down" size={16} class="chev" />
+  </summary>
+  <div class="tdetails__inner">
+    <slot />
+  </div>
+</details>

@@ -1,0 +1,35 @@
+{
+  "order": 2,
+  "slugs": {
+    "th": "แพ็คเกจทัวร์ภูเก็ต",
+    "en": "phuket-tour-packages",
+    "ru": "phuket-tour-packages"
+  },
+  "title": {
+    "th": "แพ็คเกจทัวร์ภูเก็ต",
+    "en": "Phuket Tour Packages",
+    "ru": "Пакетные туры по Пхукету"
+  },
+  "shortTitle": {
+    "th": "แพ็คเกจ",
+    "en": "Packages",
+    "ru": "Пакеты"
+  },
+  "description": {
+    "th": "แพ็คเกจคอมโบสุดคุ้ม รวมหลายกิจกรรมไว้ในทริปเดียว — ซิปไลน์+ATV ซิตี้ทัวร์+เสือ ช้าง+ATV และอีกมากมาย ต้องการแพ็คเกจหลายวันแบบจัดเอง ทักหาเราได้เลย",
+    "en": "Value combo packages that bundle several activities into one trip — Zipline+ATV, City Tour+Tiger, Elephant+ATV and more. Want a custom multi-day package? Just message us.",
+    "ru": "Выгодные комбо-пакеты, объединяющие несколько активностей в одной поездке — зиплайн+ATV, сити-тур+тигры, слоны+ATV и другое. Нужен индивидуальный многодневный пакет? Напишите нам."
+  },
+  "seo": {
+    "title": {
+      "th": "แพ็คเกจทัวร์ภูเก็ต 2026 คอมโบสุดคุ้ม ซิปไลน์ ATV เสือ ช้าง | Phuket Love Paradise",
+      "en": "Phuket Tour Packages 2026 — Combo Deals: Zipline, ATV, Tiger, Elephant",
+      "ru": "Пакетные туры по Пхукету 2026 — комбо: зиплайн, ATV, тигры, слоны"
+    },
+    "description": {
+      "th": "จองแพ็คเกจทัวร์ภูเก็ตสุดคุ้ม รวมหลายกิจกรรมในวันเดียว ซิปไลน์+ATV ซิตี้ทัวร์+เสือ ช้าง+บักกี้ เริ่มต้น ฿2,400 รวมรถรับส่ง จองผ่าน LINE",
+      "en": "Book value Phuket combo packages — several activities in one day: Zipline+ATV, City+Tiger, Elephant+Buggy from ฿2,400 with hotel transfer.",
+      "ru": "Комбо-пакеты на Пхукете — несколько активностей за один день: зиплайн+ATV, сити-тур+тигры, слоны+багги от ฿2,400 с трансфером."
+    }
+  }
+}

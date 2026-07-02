@@ -1,0 +1,85 @@
+{
+  "order": 11,
+  "slugs": {
+    "th": "ซิตี้ทัวร์-เสือ",
+    "en": "city-tour-tiger-experience",
+    "ru": "city-tour-tiger-experience"
+  },
+  "title": {
+    "th": "ซิตี้ทัวร์ + ประสบการณ์เสือ",
+    "en": "City Tour & Tiger Experience",
+    "ru": "Сити-тур + знакомство с тиграми"
+  },
+  "summary": {
+    "th": "แพ็กเกจครบรสรวมประสบการณ์ถ่ายรูปกับเสือ ซิปไลน์หรือ ATV ขี่ช้าง พระใหญ่ และวัดฉลอง รวมประกัน ไกด์พูดอังกฤษ น้ำดื่ม และรับ-ส่งโรงแรม",
+    "en": "A complete package featuring a tiger photo experience, zipline or ATV, elephant trekking, Big Buddha and Chalong Temple. Insurance, English guide, water and transfer included.",
+    "ru": "Полный пакет: фото с тигром, зиплайн или ATV, катание на слонах, Большой Будда и храм Чалонг. Страховка, англогид, вода и трансфер включены."
+  },
+  "categories": ["land-adventure", "half-day", "packages"],
+  "badge": {
+    "th": "พิเศษ",
+    "en": "Premium",
+    "ru": "Премиум"
+  },
+  "hero": "tiger.jpg",
+  "durationLabel": {
+    "th": "ครึ่งวัน",
+    "en": "Half day",
+    "ru": "Полдня"
+  },
+  "halfDay": true,
+  "meta": [
+    { "icon": "clock", "text": { "th": "โปรแกรมครึ่งวัน", "en": "Half-day program", "ru": "Программа на полдня" } },
+    { "icon": "map-pin", "text": { "th": "พระใหญ่ และวัดฉลอง ภูเก็ต", "en": "Big Buddha & Chalong Temple, Phuket", "ru": "Большой Будда и храм Чалонг, Пхукет" } },
+    { "icon": "users", "text": { "th": "เด็ก 3–11 ปี", "en": "Children 3–11 yrs", "ru": "Дети 3–11 лет" } }
+  ],
+  "highlights": [
+    { "icon": "circle-check", "text": { "th": "ประสบการณ์ถ่ายรูปกับเสือ", "en": "Tiger photo experience", "ru": "Фотосессия с тигром" } },
+    { "icon": "circle-check", "text": { "th": "ซิปไลน์หรือ ATV และขี่ช้าง", "en": "Zipline or ATV plus elephant trekking", "ru": "Зиплайн или ATV и катание на слонах" } },
+    { "icon": "circle-check", "text": { "th": "แวะพระใหญ่และวัดฉลอง", "en": "Big Buddha and Chalong Temple stops", "ru": "Остановки у Большого Будды и храма Чалонг" } }
+  ],
+  "priceFrom": 3350,
+  "priceUnit": "person",
+  "variants": [
+    {
+      "id": "program-5",
+      "label": { "th": "5 — ซิปไลน์ + เสือ", "en": "5 — zipline + tiger", "ru": "5 — зиплайн + тигр" },
+      "adult": 3350,
+      "child": 3150,
+      "childLabel": { "th": "เด็ก (3–11 ปี)", "en": "Child (3–11 yrs)", "ru": "Ребёнок (3–11 лет)" }
+    },
+    {
+      "id": "program-4",
+      "label": { "th": "4 — ATV + ขี่ช้าง + เสือ", "en": "4 — ATV + elephant trekking + tiger", "ru": "4 — ATV + слоны + тигр" },
+      "adult": 3850,
+      "child": 3650,
+      "childLabel": { "th": "เด็ก (3–11 ปี)", "en": "Child (3–11 yrs)", "ru": "Ребёнок (3–11 лет)" }
+    }
+  ],
+  "includes": [
+    { "th": "ประกันภัย", "en": "Insurance", "ru": "Страховка" },
+    { "th": "ไกด์พูดภาษาอังกฤษ", "en": "English-speaking guide", "ru": "Англоговорящий гид" },
+    { "th": "น้ำดื่ม", "en": "Drinking water", "ru": "Питьевая вода" },
+    { "th": "รถรับ-ส่งโรงแรม", "en": "Hotel round-trip transfer", "ru": "Трансфер из отеля и обратно" }
+  ],
+  "notes": [
+    {
+      "text": { "th": "อายุ 16 ปีขึ้นไปถ่ายรูปกับเสือได้ทุกขนาด · เด็กอายุต่ำกว่า 16 ปีถ่ายรูปกับเสือขนาดเล็กที่สุด · แวะพระใหญ่และวัดฉลอง", "en": "16 years and up: photo with any tiger size · under 16: smallest tiger only · includes Big Buddha & Chalong Temple", "ru": "От 16 лет: фото с тигром любого размера · до 16 лет: только самый маленький тигр · включает Большого Будду и храм Чалонг" }
+    },
+    {
+      "text": { "th": "ผู้เข้าชมอายุ 16 ปีขึ้นไปเลือกขนาดเสือได้ 1 ขนาด", "en": "Visitors 16 and over choose one tiger size.", "ru": "Посетители от 16 лет выбирают один размер тигра." }
+    }
+  ],
+  "seo": {
+    "title": {
+      "th": "ซิตี้ทัวร์ภูเก็ต + ถ่ายรูปกับเสือ เริ่ม ฿3,350 | Phuket Love Paradise",
+      "en": "Phuket City Tour & Tiger Photo Experience from ฿3,350",
+      "ru": "Сити-тур по Пхукету + фото с тигром от ฿3,350"
+    },
+    "description": {
+      "th": "จองแพ็กเกจซิตี้ทัวร์ภูเก็ต + ถ่ายรูปกับเสือ พร้อมซิปไลน์หรือ ATV ขี่ช้าง พระใหญ่ วัดฉลอง ผู้ใหญ่เริ่ม ฿3,350 เด็ก ฿3,150 รวมประกัน ไกด์อังกฤษ น้ำดื่ม และรถรับส่ง",
+      "en": "Book the Phuket city tour + tiger photo package with zipline or ATV, elephant trekking, Big Buddha and Chalong Temple. Adult from ฿3,350, child from ฿3,150, with insurance, English guide, water and transfer.",
+      "ru": "Сити-тур по Пхукету + фото с тигром, зиплайн или ATV, катание на слонах, Большой Будда и храм Чалонг. Взрослый от ฿3,350, ребёнок от ฿3,150, страховка, гид, вода и трансфер включены."
+    }
+  }
+}

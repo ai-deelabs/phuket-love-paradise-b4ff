@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Lang } from '../i18n/config';
+import { useT } from '../i18n/ui';
+import { formatBaht } from '../lib/images';
+
+interface Props {
+  tour: CollectionEntry<'tours'>;
+  lang: Lang;
+}
+const { tour, lang } = Astro.props;
+const t = useT(lang);
+
+type Variant = CollectionEntry<'tours'>['data']['variants'][number];
+
+// Preserve insertion order while grouping variants by their group label.
+const groups: { caption: string | null; rows: Variant[] }[] = [];
+for (const v of tour.data.variants) {
+  const caption = v.group ? v.group[lang] : null;
+  const last = groups[groups.length - 1];
+  if (last && last.caption === caption) last.rows.push(v);
+  else groups.push({ caption, rows: [v] });
+}
+---
+
+{
+  groups.map((g) => {
+    const hasChild = g.rows.some((r) => r.child !== null);
+    const adultHeader = g.rows[0]?.adultLabel?.[lang] ?? t('common.adult');
+    const childHeader =
+      g.rows.find((r) => r.childLabel)?.childLabel?.[lang] ?? t('common.child');
+    return (
+      <table class="ptable">
+        {g.caption && <caption>{g.caption}</caption>}
+        <thead>
+          <tr>
+            <th>{t('common.program')}</th>
+            <th>{adultHeader}</th>
+            {hasChild && <th>{childHeader}</th>}
+          </tr>
+        </thead>
+        <tbody>
+          {g.rows.map((r) => (
+            <tr>
+              <td>{r.label[lang]}</td>
+              <td>{formatBaht(r.adult)}</td>
+              {hasChild && <td>{r.child !== null ? formatBaht(r.child) : '—'}</td>}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+  })
+}

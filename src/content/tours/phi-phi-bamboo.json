@@ -1,0 +1,89 @@
+{
+  "order": 2,
+  "slugs": {
+    "th": "ทัวร์เกาะพีพี-เกาะไผ่",
+    "en": "phi-phi-bamboo-island-day-trip",
+    "ru": "phi-phi-bamboo-island-day-trip"
+  },
+  "title": {
+    "th": "ทัวร์เกาะพีพี + เกาะไผ่ (แบมบู)",
+    "en": "Phi Phi Islands + Bamboo Island Day Trip",
+    "ru": "Острова Пхи-Пхи + Бамбуковый остров"
+  },
+  "summary": {
+    "th": "ทริปหนึ่งวันสู่อ่าวมาหยาและปีเลห์ลากูนน้ำสีมรกต ชมถ้ำไวกิ้งและอ่าวลิง ดำน้ำตื้นที่เกาะพีพีดอนพร้อมอาหารกลางวัน แล้วปิดท้ายด้วยการพักผ่อนบนหาดทรายขาวละเอียดของเกาะไผ่ (แบมบู)",
+    "en": "A full day to Maya Bay and the emerald Pileh Lagoon, past Viking Cave and Monkey Bay — snorkel at Phi Phi Don, enjoy lunch on the island, then unwind on the powdery white sands of Bamboo Island.",
+    "ru": "Целый день у залива Майя и изумрудной лагуны Пиле, мимо пещеры викингов и Обезьяньей бухты — снорклинг у Пхи-Пхи-Дон, обед на острове и отдых на белоснежном песке Бамбукового острова."
+  },
+  "categories": ["one-day", "sea"],
+  "hero": "view_6.jpg",
+  "durationLabel": {
+    "th": "08:30–16:30 น.",
+    "en": "08:30–16:30",
+    "ru": "08:30–16:30"
+  },
+  "meta": [
+    { "icon": "clock", "text": { "th": "08:30–16:30 น.", "en": "08:30–16:30", "ru": "08:30–16:30" } },
+    { "icon": "ship", "text": { "th": "เรือสปีดโบ๊ท", "en": "Speedboat", "ru": "Спидбот" } },
+    { "icon": "utensils", "text": { "th": "อาหารกลางวันที่เกาะพีพีดอน", "en": "Lunch at Phi Phi Don", "ru": "Обед на Пхи-Пхи-Дон" } }
+  ],
+  "highlights": [
+    { "icon": "circle-check", "text": { "th": "อ่าวมาหยา + ปีเลห์ลากูน", "en": "Maya Bay + Pileh Lagoon", "ru": "Залив Майя + лагуна Пиле" } },
+    { "icon": "circle-check", "text": { "th": "ดำน้ำตื้นที่เกาะพีพีดอน", "en": "Snorkeling at Phi Phi Don", "ru": "Снорклинг у Пхи-Пхи-Дон" } },
+    { "icon": "circle-check", "text": { "th": "หาดทรายขาวที่เกาะไผ่ (แบมบู)", "en": "White-sand beach on Bamboo Island", "ru": "Белоснежный пляж Бамбукового острова" } }
+  ],
+  "priceFrom": 3700,
+  "priceUnit": "person",
+  "variants": [
+    {
+      "id": "standard",
+      "label": { "th": "ผู้ใหญ่/เด็ก มาตรฐาน", "en": "Standard program", "ru": "Стандартная программа" },
+      "adult": 3700,
+      "child": 2700,
+      "childLabel": { "th": "เด็ก (4–11 ปี)", "en": "Child (4–11 yrs)", "ru": "Ребёнок (4–11 лет)" }
+    }
+  ],
+  "itinerary": [
+    { "time": "08:30", "text": { "th": "เช็คอินที่ Sawanu Lounge", "en": "Check-in at Sawanu Lounge", "ru": "Регистрация в Sawanu Lounge" } },
+    { "time": "09:00", "text": { "th": "ออกเดินทางจากท่าเรือรอยัลภูเก็ตมารีน่า", "en": "Depart from Royal Phuket Marina", "ru": "Отправление от Royal Phuket Marina" } },
+    { "time": "10:00", "text": { "th": "อ่าวมาหยา — พักผ่อนบนชายหาด", "en": "Maya Bay — beach time", "ru": "Залив Майя — отдых на пляже" } },
+    { "time": "11:00", "text": { "th": "ปีเลห์ลากูน — ว่ายน้ำ / กระโดดน้ำ", "en": "Pileh Lagoon — swim / cliff jump", "ru": "Лагуна Пиле — плавание / прыжки" } },
+    { "time": "11:50", "text": { "th": "ถ้ำไวกิ้ง — ชมวิว", "en": "Viking Cave — sightseeing", "ru": "Пещера викингов — осмотр" } },
+    { "time": "12:00", "text": { "th": "อ่าวลิง — ชมวิว", "en": "Monkey Bay — sightseeing", "ru": "Обезьянья бухта — осмотр" } },
+    { "time": "12:15", "text": { "th": "เกาะพีพีดอน — ดำน้ำตื้น", "en": "Phi Phi Don — snorkeling", "ru": "Пхи-Пхи-Дон — снорклинг" } },
+    { "time": "13:00", "text": { "th": "อาหารกลางวันที่เกาะพีพีดอน", "en": "Lunch at Phi Phi Don", "ru": "Обед на Пхи-Пхи-Дон" } },
+    { "time": "14:20", "text": { "th": "เกาะไผ่ (แบมบู) — พักผ่อนบนชายหาด", "en": "Bamboo Island — beach time", "ru": "Бамбуковый остров — отдых на пляже" } },
+    { "time": "16:30", "text": { "th": "กลับถึงท่าเรือ", "en": "Arrive back at the pier", "ru": "Возвращение к пирсу" } }
+  ],
+  "includes": [
+    { "th": "รับ-ส่งไป-กลับ", "en": "Round-trip transfer", "ru": "Трансфер туда-обратно" },
+    { "th": "ผลไม้ เครื่องดื่ม ของว่าง และอาหารกลางวัน", "en": "Fruits, drinks, snacks & lunch", "ru": "Фрукты, напитки, закуски и обед" },
+    { "th": "ค่าธรรมเนียมอุทยานแห่งชาติ", "en": "National park tickets", "ru": "Билеты в нацпарк" },
+    { "th": "ไกด์พูดภาษาอังกฤษ", "en": "English-speaking guide", "ru": "Англоговорящий гид" },
+    { "th": "อุปกรณ์ดำน้ำตื้นและเสื้อชูชีพ", "en": "Snorkeling equipment & life jackets", "ru": "Снаряжение для снорклинга и спасжилеты" },
+    { "th": "ประกันชีวิตและการเดินทาง", "en": "Life and travel insurance", "ru": "Страхование жизни и путешествия" }
+  ],
+  "parkFees": {
+    "th": "ค่าอุทยานเกาะพีพี (เงินสด): ผู้ใหญ่ ฿400 · เด็ก ฿300",
+    "en": "Phi Phi park fee (cash): adult ฿400 · child ฿300",
+    "ru": "Сбор парка Пхи-Пхи (наличные): взрослый ฿400 · ребёнок ฿300"
+  },
+  "notes": [
+    {
+      "text": { "th": "ทารก (1–3 ปี) ฟรี", "en": "Infant (1–3 yrs) free", "ru": "Младенцы (1–3 года) бесплатно" }
+    }
+  ],
+  "seo": {
+    "title": {
+      "th": "ทัวร์เกาะพีพี เกาะไผ่ (แบมบู) วันเดย์ทริป เริ่ม ฿3,700 | Phuket Love Paradise",
+      "en": "Phi Phi Islands + Bamboo Island Day Trip from ฿3,700",
+      "ru": "Тур на острова Пхи-Пхи и Бамбуковый остров от ฿3,700"
+    },
+    "description": {
+      "th": "จองทัวร์เกาะพีพี เกาะไผ่ (แบมบู) วันเดย์ทริปโดยสปีดโบ๊ท อ่าวมาหยา ปีเลห์ลากูน ดำน้ำตื้นพีพีดอน หาดทรายขาวเกาะไผ่ ผู้ใหญ่ ฿3,700 เด็ก ฿2,700 รวมอาหารกลางวัน ไกด์ ประกัน และรถรับส่ง",
+      "en": "Book the Phi Phi + Bamboo Island speedboat day trip — Maya Bay, Pileh Lagoon, Phi Phi Don snorkeling and Bamboo Island's white sands. Adult ฿3,700, child ฿2,700 with lunch, guide, insurance and transfers.",
+      "ru": "Тур на спидботе Пхи-Пхи + Бамбуковый остров — залив Майя, лагуна Пиле, снорклинг у Пхи-Пхи-Дон и белые пески Бамбукового острова. Взрослый ฿3,700, ребёнок ฿2,700, с обедом, гидом, страховкой и трансфером."
+    }
+  },
+  "featured": false
+}

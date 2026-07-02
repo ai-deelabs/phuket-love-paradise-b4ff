@@ -1,0 +1,105 @@
+{
+  "order": 3,
+  "slugs": {
+    "th": "ทัวร์เจมส์บอนด์-ซันเซ็ต-แพลงก์ตอน",
+    "en": "james-bond-sunset-plankton",
+    "ru": "james-bond-sunset-plankton"
+  },
+  "title": {
+    "th": "เจมส์บอนด์ ซันเซ็ต + แพลงก์ตอนเรืองแสง",
+    "en": "James Bond Sunset & Glowing Plankton",
+    "ru": "Джеймс Бонд на закате + светящийся планктон"
+  },
+  "summary": {
+    "th": "ทริปบ่ายสู่ค่ำสุดโรแมนติกในอ่าวพังงา สำรวจถ้ำเกาะปันหยี ชมวิวเกาะเจมส์บอนด์ พักผ่อนที่หาดนาคา อาหารค่ำบนเรือพร้อมชมพระอาทิตย์ตก และไฮไลต์พายเรือแคนูชมแพลงก์ตอนเรืองแสงยามค่ำคืนที่เกาะห้อง",
+    "en": "A romantic afternoon-to-night cruise through Phang Nga Bay — explore the Panak Island cave, take in the James Bond Island viewpoint, relax on Na Care Beach, dine onboard at sunset, then kayak among glowing bioluminescent plankton at Hong Island.",
+    "ru": "Романтический круиз с полудня до ночи по заливу Пханг-Нга — пещера острова Панак, смотровая площадка острова Джеймса Бонда, отдых на пляже На-Каре, ужин на борту на закате и каякинг среди светящегося планктона у острова Хонг."
+  },
+  "categories": ["one-day", "sea"],
+  "badge": {
+    "th": "พระอาทิตย์ตก",
+    "en": "Sunset",
+    "ru": "Закат"
+  },
+  "hero": "view_3.jpg",
+  "durationLabel": {
+    "th": "13:30–21:00 น.",
+    "en": "13:30–21:00",
+    "ru": "13:30–21:00"
+  },
+  "operatingDays": {
+    "th": "ออกทัวร์ อังคาร · พฤหัส · เสาร์ · อาทิตย์",
+    "en": "Operates Tue · Thu · Sat · Sun",
+    "ru": "Туры: вт · чт · сб · вс"
+  },
+  "meta": [
+    { "icon": "clock", "text": { "th": "13:30–21:00 น.", "en": "13:30–21:00", "ru": "13:30–21:00" } },
+    { "icon": "calendar", "text": { "th": "อังคาร · พฤหัส · เสาร์ · อาทิตย์", "en": "Tue · Thu · Sat · Sun", "ru": "Вт · Чт · Сб · Вс" } },
+    { "icon": "wine", "text": { "th": "รวมอาหารค่ำบนเรือ", "en": "Dinner onboard", "ru": "Ужин на борту" } }
+  ],
+  "highlights": [
+    { "icon": "circle-check", "text": { "th": "จุดชมวิวเกาะเจมส์บอนด์ + ถ้ำเกาะปันหยี", "en": "James Bond Island viewpoint + Panak cave", "ru": "Смотровая острова Джеймса Бонда + пещера Панак" } },
+    { "icon": "circle-check", "text": { "th": "พายเรือแคนูชมแพลงก์ตอนเรืองแสงยามค่ำคืน", "en": "Night kayaking among bioluminescent plankton", "ru": "Ночной каякинг среди светящегося планктона" } },
+    { "icon": "circle-check", "text": { "th": "2 มื้อบนเรือ · พายเรือแคนู 2 รอบ · รวมประกันและรับ-ส่ง", "en": "2 onboard meals · 2 canoe sessions · insurance & transfers", "ru": "2 приёма пищи на борту · 2 каякинга · страховка и трансфер" } }
+  ],
+  "priceFrom": 3200,
+  "priceUnit": "person",
+  "variants": [
+    {
+      "id": "standard",
+      "label": { "th": "ผู้ใหญ่/เด็ก มาตรฐาน", "en": "Standard program", "ru": "Стандартная программа" },
+      "adult": 3200,
+      "child": 2200,
+      "childLabel": { "th": "เด็ก", "en": "Child", "ru": "Ребёнок" }
+    }
+  ],
+  "itinerary": [
+    { "time": "13:30", "text": { "th": "ออกเดินทางจากท่าเรือ", "en": "Depart from the pier", "ru": "Отправление от пирса" } },
+    { "time": "14:00", "text": { "th": "อาหารว่างเสิร์ฟบนเรือ", "en": "Light meal served on board", "ru": "Лёгкая закуска на борту" } },
+    { "time": "14:30", "text": { "th": "เกาะปันหยี (Panak) — สำรวจถ้ำ", "en": "Panak Island — explore the cave", "ru": "Остров Панак — пещера" } },
+    { "time": "15:30", "text": { "th": "เกาะเจมส์บอนด์ — จุดชมวิว", "en": "James Bond Island — viewpoint", "ru": "Остров Джеймса Бонда — смотровая" } },
+    { "time": "16:30", "text": { "th": "หาดนาคา — พักผ่อน", "en": "Na Care Beach — relaxing", "ru": "Пляж На-Каре — отдых" } },
+    { "time": "18:00", "text": { "th": "อาหารค่ำบนเรือ ชมพระอาทิตย์ตก", "en": "Dinner on board at sunset", "ru": "Ужин на борту на закате" } },
+    { "time": "19:00", "text": { "th": "เกาะห้อง — พายเรือแคนู ชมแพลงก์ตอนเรืองแสง", "en": "Hong Island — canoeing & bioluminescent plankton", "ru": "Остров Хонг — каякинг и светящийся планктон" } },
+    { "time": "21:00", "text": { "th": "กลับถึงท่าเรือ", "en": "Return to the pier", "ru": "Возвращение к пирсу" } }
+  ],
+  "includes": [
+    { "th": "อาหาร 2 มื้อบนเรือ", "en": "2 meals on board", "ru": "2 приёма пищи на борту" },
+    { "th": "เครื่องดื่มต้อนรับ", "en": "Welcome drink", "ru": "Приветственный напиток" },
+    { "th": "พายเรือแคนู 2 รอบ", "en": "Canoeing (2 times)", "ru": "Каякинг (2 раза)" },
+    { "th": "ค่าธรรมเนียมอุทยานแห่งชาติ", "en": "National park entrance fee", "ru": "Вход в нацпарк" },
+    { "th": "ประกันการเดินทาง", "en": "Travel insurance", "ru": "Страховка" },
+    { "th": "ผลไม้ตามฤดูกาล", "en": "Seasonal fruits", "ru": "Сезонные фрукты" },
+    { "th": "น้ำอัดลม ชา กาแฟ", "en": "Soft drinks, tea & coffee", "ru": "Безалкогольные напитки, чай и кофе" },
+    { "th": "ถุงกันน้ำสำหรับโทรศัพท์", "en": "Waterproof phone bag", "ru": "Водонепроницаемый чехол для телефона" },
+    { "th": "ค่าขึ้นท่าเรือ", "en": "Pier fee", "ru": "Портовый сбор" },
+    { "th": "ไกด์", "en": "Tour guide", "ru": "Гид" },
+    { "th": "รับ-ส่งไป-กลับ", "en": "Round-trip transport", "ru": "Трансфер туда-обратно" }
+  ],
+  "notes": [
+    {
+      "text": { "th": "ทารก (อายุไม่เกิน 3 ปี) ฟรี", "en": "Infant (under 3) free", "ru": "Младенцы (до 3 лет) бесплатно" }
+    },
+    {
+      "heading": { "th": "ข้อจำกัด:", "en": "Restrictions:", "ru": "Ограничения:" },
+      "text": { "th": "ไม่อนุญาตสตรีมีครรภ์ · ไม่แนะนำเด็กอายุต่ำกว่า 1 ปี · ไม่อนุญาตผู้มีปัญหากระดูกสันหลัง · ไม่อนุญาตผู้ป่วยโรคหัวใจหรือมีปัญหาสุขภาพร้ายแรง · ไม่เหมาะกับผู้กลัวที่มืดและที่แคบ", "en": "Pregnant travellers not allowed · infants under 1 year not recommended · travellers with spinal problems not allowed · those with heart disease or serious health issues not allowed · not for those afraid of the dark or tight spaces", "ru": "Беременным нельзя · младенцам до 1 года не рекомендуется · с проблемами позвоночника нельзя · с болезнями сердца или серьёзными проблемами со здоровьем нельзя · не подходит боящимся темноты и тесноты" }
+    },
+    {
+      "heading": { "th": "ควรนำไป:", "en": "Bring:", "ru": "Взять с собой:" },
+      "text": { "th": "ชุดว่ายน้ำ · กล้องถ่ายรูป · ครีมกันแดดที่เป็นมิตรกับสิ่งแวดล้อม · หมวก · แว่นกันแดด · เงินสด", "en": "Swimming suit · camera · eco-friendly sunscreen · cap · sunglasses · cash", "ru": "Купальник · камера · эко-солнцезащитный крем · кепка · солнцезащитные очки · наличные" }
+    }
+  ],
+  "seo": {
+    "title": {
+      "th": "ทัวร์เจมส์บอนด์ ซันเซ็ต แพลงก์ตอนเรืองแสง อ่าวพังงา เริ่ม ฿3,200 | Phuket Love Paradise",
+      "en": "James Bond Sunset & Glowing Plankton Tour from ฿3,200",
+      "ru": "Тур Джеймс Бонд на закате и светящийся планктон от ฿3,200"
+    },
+    "description": {
+      "th": "จองทัวร์เจมส์บอนด์ ซันเซ็ต อ่าวพังงา ถ้ำเกาะปันหยี หาดนาคา อาหารค่ำบนเรือชมพระอาทิตย์ตก พายเรือแคนูชมแพลงก์ตอนเรืองแสงที่เกาะห้อง ผู้ใหญ่ ฿3,200 เด็ก ฿2,200 รวมประกันและรถรับส่ง",
+      "en": "Book the James Bond sunset cruise through Phang Nga Bay — Panak cave, Na Care Beach, dinner onboard at sunset and night kayaking among bioluminescent plankton at Hong Island. Adult ฿3,200, child ฿2,200 with insurance and transfers.",
+      "ru": "Закатный круиз Джеймс Бонд по заливу Пханг-Нга — пещера Панак, пляж На-Каре, ужин на борту и ночной каякинг среди светящегося планктона у острова Хонг. Взрослый ฿3,200, ребёнок ฿2,200, со страховкой и трансфером."
+    }
+  },
+  "featured": true
+}

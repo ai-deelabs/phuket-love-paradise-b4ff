@@ -1,0 +1,35 @@
+{
+  "order": 1,
+  "slugs": {
+    "th": "ทัวร์ภูเก็ตราคาถูก",
+    "en": "phuket-cheap-tours",
+    "ru": "phuket-cheap-tours"
+  },
+  "title": {
+    "th": "ทัวร์ภูเก็ตราคาถูก",
+    "en": "Affordable Phuket Tours",
+    "ru": "Недорогие туры по Пхукету"
+  },
+  "shortTitle": {
+    "th": "ราคาถูก",
+    "en": "Best Value",
+    "ru": "Выгодные"
+  },
+  "description": {
+    "th": "รวมทัวร์ภูเก็ตราคาประหยัด คุณภาพเต็มร้อย เริ่มต้นเพียงหลักพัน พร้อมรถรับ-ส่งถึงโรงแรม ประกันภัย และไกด์ดูแลตลอดทริป",
+    "en": "Great-value Phuket tours without compromising quality — hotel transfers, insurance and a caring guide included on every trip.",
+    "ru": "Туры по Пхукету по выгодной цене без потери качества — трансфер из отеля, страховка и заботливый гид включены в каждую поездку."
+  },
+  "seo": {
+    "title": {
+      "th": "ทัวร์ภูเก็ตราคาถูก 2026 เริ่มต้นหลักพัน รวมรถรับส่ง | Phuket Love Paradise",
+      "en": "Cheap Phuket Tours 2026 — Best Value Day Trips with Hotel Transfer",
+      "ru": "Недорогие туры по Пхукету 2026 — выгодные экскурсии с трансфером"
+    },
+    "description": {
+      "th": "จองทัวร์ภูเก็ตราคาถูก ซิตี้ทัวร์ ทัวร์ช้าง ATV เจมส์บอนด์ เริ่มต้น ฿1,400 รวมรถรับส่งโรงแรม ประกันภัย ไกด์มืออาชีพ จองง่ายผ่าน LINE",
+      "en": "Book affordable Phuket tours — city tour, elephant care, ATV and James Bond Island from ฿1,400 with hotel transfer, insurance and pro guides.",
+      "ru": "Бронируйте недорогие туры по Пхукету — сити-тур, слоны, ATV и остров Джеймса Бонда от ฿1,400 с трансфером и страховкой."
+    }
+  }
+}

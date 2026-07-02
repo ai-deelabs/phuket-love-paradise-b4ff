@@ -1,0 +1,87 @@
+{
+  "order": 9,
+  "slugs": {
+    "th": "ซิตี้ทัวร์ภูเก็ต",
+    "en": "phuket-city-tour",
+    "ru": "phuket-city-tour"
+  },
+  "title": {
+    "th": "ซิตี้ทัวร์ภูเก็ต พระใหญ่ + เมืองเก่า",
+    "en": "Phuket City Tour — Big Buddha + Old Town",
+    "ru": "Сити-тур по Пхукету — Большой Будда + Старый город"
+  },
+  "summary": {
+    "th": "เที่ยวครบไฮไลต์เมืองภูเก็ต จุดชมวิวพระใหญ่ วัดฉลอง ย่านเมืองเก่า ฟาร์มผึ้ง โรงงานเม็ดมะม่วงหิมพานต์ และตลาดกลางคืน รวมไกด์พูดอังกฤษและรับ-ส่ง",
+    "en": "All the city highlights — Big Buddha viewpoint, Chalong Temple, Old Town, honey farm, cashew factory and night market. English-speaking guide and transfers included.",
+    "ru": "Все главные места города — смотровая Большого Будды, храм Чалонг, Старый город, пасека, фабрика кешью и ночной рынок. Англоговорящий гид и трансфер включены."
+  },
+  "categories": ["land-adventure", "half-day", "cheap", "packages"],
+  "badge": {
+    "th": "วัฒนธรรม",
+    "en": "Culture",
+    "ru": "Культура"
+  },
+  "hero": "big_buddha.jpg",
+  "durationLabel": {
+    "th": "ครึ่งวัน · 3 รอบต่อวัน",
+    "en": "Half day · 3 rounds daily",
+    "ru": "Полдня · 3 заезда в день"
+  },
+  "halfDay": true,
+  "meta": [
+    { "icon": "clock", "text": { "th": "3 รอบต่อวัน: 07:30 / 10:00 / 13:00", "en": "3 rounds/day: 07:30 / 10:00 / 13:00", "ru": "3 заезда/день: 07:30 / 10:00 / 13:00" } },
+    { "icon": "map-pin", "text": { "th": "พระใหญ่ วัดฉลอง เมืองเก่าภูเก็ต", "en": "Big Buddha, Chalong Temple, Phuket Old Town", "ru": "Большой Будда, храм Чалонг, Старый город Пхукета" } },
+    { "icon": "users", "text": { "th": "เด็ก 4–11 ปี", "en": "Children 4–11 yrs", "ru": "Дети 4–11 лет" } }
+  ],
+  "highlights": [
+    { "icon": "circle-check", "text": { "th": "จุดชมวิวพระใหญ่ วัดฉลอง และย่านเมืองเก่า", "en": "Big Buddha viewpoint, Chalong Temple and Old Town", "ru": "Смотровая Большого Будды, храм Чалонг и Старый город" } },
+    { "icon": "circle-check", "text": { "th": "ฟาร์มผึ้ง โรงงานเม็ดมะม่วงหิมพานต์ และตลาดกลางคืน", "en": "Honey farm, cashew factory and night market", "ru": "Пасека, фабрика кешью и ночной рынок" } },
+    { "icon": "circle-check", "text": { "th": "รวมไกด์พูดอังกฤษและรับ-ส่ง", "en": "English-speaking guide and transfers included", "ru": "Англоговорящий гид и трансфер включены" } }
+  ],
+  "priceFrom": 1450,
+  "priceUnit": "person",
+  "variants": [
+    {
+      "id": "program-e",
+      "label": { "th": "E — ซิตี้ทัวร์ + เมืองเก่า + ตลาดกลางคืน", "en": "E — city tour + Old Town + night market", "ru": "E — сити-тур + Старый город + ночной рынок" },
+      "adult": 1450,
+      "child": 950,
+      "childLabel": { "th": "เด็ก (4–11 ปี)", "en": "Child (4–11 yrs)", "ru": "Ребёнок (4–11 лет)" }
+    },
+    {
+      "id": "program-d",
+      "label": { "th": "D — ซิตี้ทัวร์ + ขี่ช้าง 30 นาที", "en": "D — city tour + elephant trekking 30 min", "ru": "D — сити-тур + слоны 30 мин" },
+      "adult": 1950,
+      "child": 1650,
+      "childLabel": { "th": "เด็ก (4–11 ปี)", "en": "Child (4–11 yrs)", "ru": "Ребёнок (4–11 лет)" }
+    }
+  ],
+  "includes": [
+    { "th": "ไกด์พูดภาษาอังกฤษ", "en": "English-speaking guide", "ru": "Англоговорящий гид" },
+    { "th": "รถรับ-ส่งโรงแรม", "en": "Hotel round-trip transfer", "ru": "Трансфер из отеля и обратно" }
+  ],
+  "notes": [
+    {
+      "text": { "th": "3 รอบต่อวัน: เช้า 07:30 · สาย 10:00 · บ่าย 13:00 · แวะพระใหญ่ วัดฉลอง ฟาร์มผึ้ง โรงงานเม็ดมะม่วงหิมพานต์ จุดพักกาแฟ", "en": "3 rounds/day: morning 07:30 · late morning 10:00 · afternoon 13:00 · stops at Big Buddha, Chalong Temple, honey farm, cashew factory, coffee break", "ru": "3 заезда/день: утро 07:30 · полдень 10:00 · день 13:00 · остановки: Большой Будда, храм Чалонг, пасека, фабрика кешью, кофе-пауза" }
+    },
+    {
+      "text": { "th": "เวลาแต่ละรอบ: รอบเช้า 07:30–13:00 · รอบสาย 10:00–16:30 · รอบบ่าย 13:00–19:30", "en": "Round times: morning 07:30–13:00 · late morning 10:00–16:30 · afternoon 13:00–19:30.", "ru": "Время заездов: утро 07:30–13:00 · полдень 10:00–16:30 · день 13:00–19:30." }
+    },
+    {
+      "text": { "th": "โปรแกรม E (เมืองเก่า + ตลาดกลางคืน) ให้บริการวันเสาร์–อาทิตย์", "en": "Program E (Old Town + night market) operates Saturday–Sunday.", "ru": "Программа E (Старый город + ночной рынок) проводится по субботам и воскресеньям." }
+    }
+  ],
+  "seo": {
+    "title": {
+      "th": "ซิตี้ทัวร์ภูเก็ต พระใหญ่ วัดฉลอง เมืองเก่า เริ่ม ฿1,450 | Phuket Love Paradise",
+      "en": "Phuket City Tour — Big Buddha, Chalong Temple & Old Town from ฿1,450",
+      "ru": "Сити-тур по Пхукету — Большой Будда, храм Чалонг и Старый город от ฿1,450"
+    },
+    "description": {
+      "th": "จองซิตี้ทัวร์ภูเก็ต เที่ยวพระใหญ่ วัดฉลอง เมืองเก่า ฟาร์มผึ้ง โรงงานเม็ดมะม่วงหิมพานต์ ตลาดกลางคืน ผู้ใหญ่เริ่ม ฿1,450 เด็ก ฿950 มี 3 รอบต่อวัน รวมไกด์อังกฤษและรถรับส่ง",
+      "en": "Book the Phuket city tour — Big Buddha, Chalong Temple, Old Town, honey farm, cashew factory and night market. Adult from ฿1,450, child from ฿950, three rounds daily with English guide and transfers.",
+      "ru": "Сити-тур по Пхукету — Большой Будда, храм Чалонг, Старый город, пасека, фабрика кешью и ночной рынок. Взрослый от ฿1,450, ребёнок от ฿950, три заезда в день, гид и трансфер включены."
+    }
+  },
+  "featured": true
+}
