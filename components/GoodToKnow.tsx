@@ -1,0 +1,323 @@
+import Icon from './Icon';
+import { t, type L, type Lang } from '@/lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const label: L = { th: 'ข้อมูลที่ควรรู้', en: 'Good to Know', ru: 'Полезно знать' };
+const title: L = {
+  th: 'รายละเอียดก่อนออกเดินทาง',
+  en: 'Everything Before You Go',
+  ru: 'Всё перед поездкой',
+};
+
+interface ListCard {
+  cls: string;
+  icon: string;
+  title: L;
+  items: { icon: string; text: L }[];
+}
+
+const listCards: ListCard[] = [
+  {
+    cls: 'gtk-card reveal',
+    icon: 'clock',
+    title: { th: 'เวลารับ', en: 'Pickup Times', ru: 'Время трансфера' },
+    items: [
+      {
+        icon: 'dot',
+        text: {
+          th: 'ทัวร์เกาะพีพี: รับ 07:30–08:00 น. จากโรงแรม',
+          en: 'Phi Phi tours: hotel pickup 07:30–08:00',
+          ru: 'Туры Пхи-Пхи: трансфер из отеля 07:30–08:00',
+        },
+      },
+      {
+        icon: 'dot',
+        text: {
+          th: 'ATV / ทัวร์บนบก: ป่าตอง 08:00 · กะตะ-กะรน 08:30 (บ่าย 12:00 / 12:30)',
+          en: 'ATV / land tours: Patong 08:00 · Kata-Karon 08:30 (afternoon 12:00 / 12:30)',
+          ru: 'ATV / наземные: Патонг 08:00 · Ката-Карон 08:30 (день 12:00 / 12:30)',
+        },
+      },
+      {
+        icon: 'dot',
+        text: {
+          th: 'ซิตี้ทัวร์: 3 รอบต่อวัน 07:30 / 10:00 / 13:00 น.',
+          en: 'City tours: 3 daily rounds 07:30 / 10:00 / 13:00',
+          ru: 'Сити-туры: 3 заезда 07:30 / 10:00 / 13:00',
+        },
+      },
+      {
+        icon: 'dot',
+        text: {
+          th: 'เจ็ตสกี: เช้า 09:30 · บ่าย 14:00 น. ที่ท่าเรือยามู',
+          en: 'Jet ski: morning 09:30 · afternoon 14:00 at Yamu Pier',
+          ru: 'Гидроцикл: утро 09:30 · день 14:00, пирс Яму',
+        },
+      },
+    ],
+  },
+  {
+    cls: 'gtk-card reveal rd1',
+    icon: 'backpack',
+    title: { th: 'สิ่งที่ควรนำไป', en: 'What to Bring', ru: 'Что взять с собой' },
+    items: [
+      {
+        icon: 'check',
+        text: {
+          th: 'ชุดว่ายน้ำ ผ้าเช็ดตัว และชุดสำรอง',
+          en: 'Swimsuit, towel & a change of clothes',
+          ru: 'Купальник, полотенце и сменная одежда',
+        },
+      },
+      {
+        icon: 'check',
+        text: {
+          th: 'ครีมกันแดดที่เป็นมิตรกับแนวปะการัง',
+          en: 'Reef-safe sunscreen',
+          ru: 'Безопасный для рифов крем',
+        },
+      },
+      {
+        icon: 'check',
+        text: {
+          th: 'หมวก แว่นกันแดด และกล้องถ่ายรูป',
+          en: 'Cap, sunglasses & camera',
+          ru: 'Кепка, очки и камера',
+        },
+      },
+      {
+        icon: 'check',
+        text: {
+          th: 'เงินสด (ค่าธรรมเนียมอุทยาน / ค่าใช้จ่ายส่วนตัว)',
+          en: 'Cash (park fees / personal expenses)',
+          ru: 'Наличные (сборы парка / личные расходы)',
+        },
+      },
+    ],
+  },
+  {
+    cls: 'gtk-card reveal rd2',
+    icon: 'utensils',
+    title: { th: 'เมนูบนทริปเกาะพีพี', en: 'Phi Phi Trip Menu', ru: 'Меню тура Пхи-Пхи' },
+    items: [
+      {
+        icon: 'dot',
+        text: {
+          th: 'สปาเกตตีซอสมะเขือเทศ',
+          en: 'Spaghetti tomato sauce',
+          ru: 'Спагетти в томатном соусе',
+        },
+      },
+      {
+        icon: 'dot',
+        text: {
+          th: 'ต้มข่าไก่ · ต้มยำรวมมิตร',
+          en: 'Chicken coconut soup · mixed tom yum',
+          ru: 'Куриный суп с кокосом · том-ям',
+        },
+      },
+      {
+        icon: 'dot',
+        text: {
+          th: 'ไก่ทอด · ข้าวสวย',
+          en: 'Fried chicken · steamed rice',
+          ru: 'Жареная курица · рис',
+        },
+      },
+      {
+        icon: 'dot',
+        text: {
+          th: 'ผลไม้ · ชา และกาแฟ',
+          en: 'Fruit · coffee & tea',
+          ru: 'Фрукты · кофе и чай',
+        },
+      },
+    ],
+  },
+  {
+    cls: 'gtk-card reveal',
+    icon: 'shield-check',
+    title: {
+      th: 'ความปลอดภัยและเงื่อนไข',
+      en: 'Safety & Requirements',
+      ru: 'Безопасность и условия',
+    },
+    items: [
+      {
+        icon: 'dot',
+        text: {
+          th: 'เสื้อชูชีพ ไกด์มืออาชีพ และประกันการเดินทางทุกทริป',
+          en: 'Life jackets, professional guides & travel insurance on every trip',
+          ru: 'Спасжилеты, гиды и страховка на каждом туре',
+        },
+      },
+      {
+        icon: 'dot',
+        text: {
+          th: 'ทริปแพลงก์ตอนเจมส์บอนด์: ไม่อนุญาตสตรีมีครรภ์ ผู้ป่วยโรคหัวใจ/กระดูกสันหลัง',
+          en: 'James Bond plankton trip: no pregnant, heart or spinal conditions',
+          ru: 'Тур со светящимся планктоном: нельзя беременным, с болезнями сердца/позвоночника',
+        },
+      },
+      {
+        icon: 'dot',
+        text: {
+          th: 'ซิปไลน์จำกัดน้ำหนัก 120 กก. · ถ่ายรูปกับเสือ 16 ปีขึ้นไป',
+          en: 'Zipline weight limit 120 kg · tiger photo 16 yrs+',
+          ru: 'Зиплайн лимит 120 кг · фото с тигром от 16 лет',
+        },
+      },
+      {
+        icon: 'dot',
+        text: {
+          th: 'โปรแกรมอาจปรับเปลี่ยนตามสภาพอากาศและน้ำขึ้นน้ำลง',
+          en: 'Programs may change with weather and tide conditions',
+          ru: 'Программы могут меняться из-за погоды и приливов',
+        },
+      },
+    ],
+  },
+  {
+    cls: 'gtk-card reveal rd1',
+    icon: 'badge-check',
+    title: {
+      th: 'โดยทั่วไปรวม / ไม่รวม',
+      en: 'Generally Included / Excluded',
+      ru: 'Обычно включено / не включено',
+    },
+    items: [
+      {
+        icon: 'check',
+        text: {
+          th: 'รวม: รับ-ส่งโรงแรม อาหาร ไกด์ ประกัน อุปกรณ์ และน้ำดื่ม',
+          en: 'Included: hotel transfer, meals, guide, insurance, equipment & water',
+          ru: 'Включено: трансфер, питание, гид, страховка, снаряжение и вода',
+        },
+      },
+      {
+        icon: 'x',
+        text: {
+          th: 'ไม่รวม: ค่าธรรมเนียมอุทยาน ภาพถ่ายใต้น้ำ ทิป และค่าใช้จ่ายส่วนตัว',
+          en: 'Excluded: national park fees, underwater photos, tips & personal expenses',
+          ru: 'Не включено: сборы нацпарка, подводные фото, чаевые и личные расходы',
+        },
+      },
+      {
+        icon: 'dot',
+        text: {
+          th: 'ค่าอุทยานเกาะพีพี (เงินสด): ผู้ใหญ่ ฿400 · เด็ก ฿300 · นักดำน้ำ ฿600',
+          en: 'Phi Phi park fee (cash): adult ฿400 · child ฿300 · diver ฿600',
+          ru: 'Сбор парка Пхи-Пхи (наличные): взрослый ฿400 · ребёнок ฿300 · дайвер ฿600',
+        },
+      },
+    ],
+  },
+];
+
+const contactsTitle: L = {
+  th: 'ผู้ให้บริการและติดต่อ',
+  en: 'Operators & Contacts',
+  ru: 'Операторы и контакты',
+};
+
+const operators: { name: string; info: L }[] = [
+  {
+    name: 'Sawanu Travel',
+    info: {
+      th: 'เกาะพีพี / เกาะไข่ · +66 97 982 0999 · LINE @sawanutravel',
+      en: 'Phi Phi / Khai · +66 97 982 0999 · LINE @sawanutravel',
+      ru: 'Пхи-Пхи / Кхай · +66 97 982 0999 · LINE @sawanutravel',
+    },
+  },
+  {
+    name: 'Sri Thara Marine',
+    info: {
+      th: 'เจมส์บอนด์ ซันเซ็ต · +66 96 096 0751 · LINE srithara.op',
+      en: 'James Bond Sunset · +66 96 096 0751 · LINE srithara.op',
+      ru: 'Джеймс Бонд закат · +66 96 096 0751 · LINE srithara.op',
+    },
+  },
+  {
+    name: 'KB Phuket Jetski',
+    info: {
+      th: '+66 62 487 9559 · kbjetskiphuket@gmail.com',
+      en: '+66 62 487 9559 · kbjetskiphuket@gmail.com',
+      ru: '+66 62 487 9559 · kbjetskiphuket@gmail.com',
+    },
+  },
+  {
+    name: 'ATV Seaview on Tour',
+    info: {
+      th: '+66 81 895 9345 · สายด่วน 065 919 4461 · TAT 33/04712',
+      en: '+66 81 895 9345 · hotline 065 919 4461 · TAT 33/04712',
+      ru: '+66 81 895 9345 · горячая линия 065 919 4461 · TAT 33/04712',
+    },
+  },
+  {
+    name: 'SunBright Tour Co., Ltd.',
+    info: {
+      th: 'ซิตี้ทัวร์ / เสือ · +66 61 174 7421, +66 82 432 2702',
+      en: 'City tours / Tiger · +66 61 174 7421, +66 82 432 2702',
+      ru: 'Сити-туры / тигр · +66 61 174 7421, +66 82 432 2702',
+    },
+  },
+  {
+    name: 'Golden Region Dive Centre',
+    info: {
+      th: 'ดำน้ำ PADI · จองผ่านช่องทางติดต่อด้านล่าง',
+      en: 'PADI diving · book via the contact channels below',
+      ru: 'Дайвинг PADI · бронь через контакты ниже',
+    },
+  },
+];
+
+export default function GoodToKnow({ lang }: Props) {
+  return (
+    <section className="sec gtk" id="info">
+      <div className="container">
+        <div className="center-text reveal" style={{ marginBottom: '2.75rem' }}>
+          <div className="sec-label center">
+            <span>{t(label, lang)}</span>
+          </div>
+          <h2 className="sec-title lt">{t(title, lang)}</h2>
+        </div>
+        <div className="gtk__grid">
+          {listCards.map((card) => (
+            <div className={card.cls} key={card.title.en}>
+              <div className="gtk-card__ic">
+                <Icon name={card.icon} size={20} />
+              </div>
+              <h3>{t(card.title, lang)}</h3>
+              <ul>
+                {card.items.map((item) => (
+                  <li key={item.text.en}>
+                    <Icon name={item.icon} size={16} />
+                    <span>{t(item.text, lang)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          <div className="gtk-card reveal rd2">
+            <div className="gtk-card__ic">
+              <Icon name="phone" size={20} />
+            </div>
+            <h3>{t(contactsTitle, lang)}</h3>
+            <div className="gtk-contacts">
+              {operators.map((op) => (
+                <div className="op" key={op.name}>
+                  {op.name}
+                  <span>{t(op.info, lang)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

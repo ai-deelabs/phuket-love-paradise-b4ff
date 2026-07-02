@@ -1,16 +1,26 @@
 {
   "name": "phuket-love-paradise",
-  "type": "module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "dev": "next dev",
+    "prebuild": "node scripts/optimize-images.mjs",
+    "build": "next build",
+    "start": "npx serve out"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.4.1",
-    "astro": "^5.12.0",
-    "lucide-static": "^0.525.0"
+    "lucide-react": "^0.525.0",
+    "next": "^15.4.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "server-only": "^0.0.1",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "sharp": "^0.34.0",
+    "typescript": "^5"
   }
 }

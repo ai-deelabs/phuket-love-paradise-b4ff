@@ -1,6 +1,5 @@
-.astro
-.claude-*.log
-.omc/
-dist
-meta.json
 node_modules
+dist
+.next
+out
+next-env.d.ts
